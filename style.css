@@ -582,14 +582,46 @@ img {
 
 /* === PAGE HERO (INNER PAGES) === */
 .page-hero {
-    padding: clamp(8rem, 16vh, 12rem) 0 clamp(3rem, 6vh, 5rem);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 1.25rem;
+    overflow: hidden;
+    will-change: clip-path;
+
+    /* Parallax Background - easy to swap with url('image.jpg') */
     background:
         radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.015) 0%, transparent 50%),
         radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 40%),
         var(--bg-deep);
+    background-size: cover;
+    background-position: center;
 }
+
+/* === CONTENT WRAPPER (Parallax Overlap) === */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: 60vh;
+    background-color: var(--bg-void);
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6);
+    /* Bring in the body grid texture so it matches */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
 
 .page-hero-title {
     font-family: var(--font-display);
@@ -599,6 +631,7 @@ img {
     line-height: 1;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    will-change: transform;
 }
 
 .page-hero-subtitle {
@@ -607,6 +640,7 @@ img {
     color: var(--text-secondary);
     max-width: 500px;
     margin: 0 auto;
+    will-change: opacity;
 }
 
 /* Buttons */
@@ -763,6 +797,9 @@ img {
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1.05;
+    position: sticky;
+    top: 105px;
+    z-index: 50;
 }
 
 /* === GLASS CARD === */
@@ -876,6 +913,7 @@ img {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
     letter-spacing: -0.04em;
+    line-height: 0.8;
 }
 
 .stat-suffix {
@@ -884,6 +922,7 @@ img {
     font-weight: 700;
     color: var(--text-tertiary);
     margin-left: -0.3rem;
+    line-height: 0.8;
 }
 
 .stat-label {
@@ -962,6 +1001,40 @@ img {
     gap: 1.5rem;
 }
 
+/* New giant logo-based navigation cards */
+.committee-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s, border-color 0.4s;
+}
+
+.committee-logo-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: var(--bg-glass-solid);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.committee-massive-acronym {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.05em;
+    padding-left: 0.05em;
+    /* Neutralizes negative optical kerning tracking for centered alignment */
+    background: linear-gradient(135deg, #ffffff, #8c8ca5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    pointer-events: none;
+    margin: 0;
+}
+
 .committee-card {
     padding: 2rem;
 }
@@ -1009,46 +1082,96 @@ img {
 
 /* === TEAM === */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
 }
 
+.team-card-wrapper {
+    position: relative;
+    height: 300px;
+    /* Lock structural height for uniform rendering */
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: 380px;
+    min-width: 280px;
+}
+
 .team-card {
-    text-align: center;
-    padding: 2.5rem 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: var(--glass-radius);
+    transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1), bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    text-align: left;
+    border: 1px solid var(--border-glass-mid);
+    cursor: pointer;
+    z-index: 1;
 }
 
-.team-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    color: var(--text-tertiary);
-    margin: 0 auto 1.25rem;
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+.team-card:hover {
+    top: -75px;
+    bottom: -75px;
+    transform: translateY(0);
+    /* Erased negative lift since top/bottom stretch manages it physically uniformly */
+    z-index: 10;
+    transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1), bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
 }
 
-.team-card:hover .team-avatar {
-    border-color: var(--border-glass-hover);
-    box-shadow: 0 0 40px var(--accent-glow-strong);
-    transform: scale(1.08);
+.team-img-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.team-card h3 {
+.team-card:hover .team-img-bg {
+    transform: scale(1.06);
+}
+
+.team-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+    z-index: 1;
+}
+
+.team-card-content {
+    position: relative;
+    z-index: 2;
+    transform: translateY(15px);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .team-card-content {
+    transform: translateY(0);
+}
+
+.team-card-content h3 {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
 }
 
-.team-card p {
-    font-size: 0.78rem;
-    color: var(--text-ghost);
-    font-style: italic;
+.team-card-content .team-role {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-style: normal;
 }
 
 /* === CTA === */
@@ -1186,14 +1309,85 @@ img {
     opacity: 1;
 }
 
+/* === TIMELINE / TABLES === */
+.tables-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.table-wrapper {
+    padding: 2.5rem;
+    overflow-x: auto;
+    /* for mobile responsiveness */
+}
+
+.table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.table-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-glass-mid);
+    padding-bottom: 1rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.schedule-table tr {
+    border-bottom: 1px solid var(--border-glass);
+    transition: background-color 0.2s;
+}
+
+.schedule-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.schedule-table tr:last-child {
+    border-bottom: none;
+}
+
+.schedule-table td {
+    padding: 1.25rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.time-col {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    white-space: nowrap;
+    width: 140px;
+    vertical-align: top;
+}
+
+.event-col {
+    font-weight: 400;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 992px) {
     .section-title {
         font-size: clamp(2rem, 4.5vw, 3rem);
     }
 
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .team-card-wrapper {
+        flex: 0 0 calc(50% - 1rem);
+        /* 2 columns on tablet */
     }
 }
 
@@ -1256,6 +1450,10 @@ img {
     .timeline {
         padding-left: 1.5rem;
     }
+
+    .tables-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1284,7 +1482,8 @@ img {
         padding: 2.5rem 1.5rem;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr 1fr;
+    .team-card-wrapper {
+        flex: 0 0 100%;
+        /* 1 column on extreme mobile */
     }
 }

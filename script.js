@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCardGlowTracking();
     initMagneticButtons();
     initSmoothScroll();
+    initHeroShrink();
 });
 
 /* === UNIQUE SCROLL ANIMATIONS ===
@@ -259,4 +260,88 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+/* === DYNAMIC HERO SHRINK (PARALLAX HEADER) === */
+function initHeroShrink() {
+    const hero = document.querySelector('.page-hero');
+    const title = document.querySelector('.page-hero-title');
+    const subtitle = document.querySelector('.page-hero-subtitle');
+    // Only apply on subpages that use the dedicated shrinking hero
+    if (!hero || hero.closest('body').classList.contains('home-page')) return;
+
+    let heroHeight = hero.offsetHeight;
+    let minHeight = 180; // Increased to give more room under nav
+
+    let ticking = false;
+
+    const updateHero = () => {
+        const scrollY = window.scrollY;
+        
+        // Use clip-path to crop the bottom of the fixed hero dynamically
+        const currentHeight = Math.max(minHeight, heroHeight - scrollY);
+        const clipBottom = heroHeight - currentHeight;
+        hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
+        
+        // Track visual progress of the transition (0 to 1)
+        const maxScroll = heroHeight - minHeight;
+        const progress = Math.min(scrollY / maxScroll, 1);
+        
+        // Transition title dynamically inside the clipped view
+        if (title) {
+            const scale = 1 - (0.4 * progress); // Scale down to 0.6 at final
+            
+            // Push it significantly down at the end to place it clearly beneath the navbar.
+            const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
+            
+            // MAP OVERLAP OPACITY:
+            // Query all section titles to see if any are intruding on our sticky hero slot
+            let overlapFade = 0;
+            const targetFadeSlot = 180; // Approximate point where headers stick
+            document.querySelectorAll('.section-title, .table-title').forEach(h2 => {
+                const rect = h2.getBoundingClientRect();
+                // If a section title's top bounds are between 0 and the fade slot height, it means it has overlapped!
+                if(rect.top < targetFadeSlot && rect.bottom > 0) {
+                    // Map transparency from 1 to 0 based on proximity
+                    let localOverlap = 1 - (rect.top / targetFadeSlot);
+                    if(localOverlap > overlapFade) overlapFade = Math.min(localOverlap, 1);
+                }
+            });
+
+            title.style.transform = `translateY(${translateY}px) scale(${scale})`;
+            // Maintain full opacity normally, but fade to 0 when overlap Fade kicks in
+            title.style.opacity = progress >= 1 ? (1 - overlapFade) : 1; 
+
+            // Force it to a single line when scaling reaches maximum
+            if (progress > 0.8) {
+                title.style.whiteSpace = 'nowrap';
+            } else {
+                title.style.whiteSpace = 'normal';
+            }
+        }
+        
+        // Fade out subtitle
+        if (subtitle) {
+            subtitle.style.opacity = Math.max(0, 1 - (progress * 3));
+        }
+
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHero);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+        // Clear clip temporarily to measure authentic fluid height
+        hero.style.clipPath = 'none';
+        heroHeight = hero.offsetHeight;
+        updateHero();
+    });
+    
+    // Initial run
+    updateHero();
 }
