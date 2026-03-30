@@ -1,9 +1,3 @@
-/* ============================================
-   RBSMUN 2026 — Liquid Glass + Textured Grayscale
-   Fonts: Syne (display) + Space Grotesk (headings) + Inter (body)
-   ============================================ */
-
-/* === RESET === */
 *,
 *::before,
 *::after {
@@ -425,7 +419,6 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: url('PMS01512.webp') center/cover no-repeat;
 }
 
 .hero-bg-overlay {
@@ -604,6 +597,11 @@ img {
         var(--bg-deep);
     background-size: cover;
     background-position: center;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 5;
 }
 
 /* === CONTENT WRAPPER (Parallax Overlap) === */

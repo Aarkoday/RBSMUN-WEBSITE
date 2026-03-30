@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 function initUniqueScrollAnimations() {
     const animElements = document.querySelectorAll('[data-anim]');
-    
+
     // PRE-APPLY INITIAL STATES!
     // We apply the transforms immediately on page load before scrolling.
     // This entirely prevents "scroll jitter" caused by layout bounding boxes dynamically resizing mid-scroll.
@@ -31,7 +31,7 @@ function initUniqueScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const el = entry.target;
-            
+
             if (entry.isIntersecting) {
                 if (!el.classList.contains('animated')) {
                     triggerAnimation(el);
@@ -61,9 +61,9 @@ function initUniqueScrollAnimations() {
 function applyInitialState(el) {
     el.style.opacity = '0';
     el.style.willChange = 'transform, opacity, filter';
-    
+
     const animType = el.dataset.anim || 'reveal';
-    
+
     if (animType === 'reveal') {
         const offsetY = randomBetween(30, 50);
         const rotation = randomBetween(-2, 2);
@@ -105,7 +105,7 @@ function applyInitialState(el) {
 function triggerAnimation(el) {
     const delay = parseInt(el.dataset.delay || 0);
     const animType = el.dataset.anim || 'reveal';
-    
+
     // Determine randomized duration based on animation type
     let duration = randomBetween(0.7, 1.1).toFixed(2);
     if (animType === 'tilt-in') duration = randomBetween(0.8, 1.3).toFixed(2);
@@ -116,7 +116,7 @@ function triggerAnimation(el) {
         setTimeout(() => {
             el.style.transition = `all ${duration}s cubic-bezier(0.16, 1, 0.3, 1)`;
             el.style.opacity = '1';
-            
+
             if (animType !== 'fade-in' && animType !== 'counter') {
                 el.style.transform = 'translate3d(0,0,0) rotateX(0) rotateY(0) scale(1) rotate(0deg)';
                 el.style.filter = 'blur(0px)';
@@ -124,7 +124,7 @@ function triggerAnimation(el) {
             if (animType === 'morph-in') {
                 el.style.borderRadius = ''; // Retain original CSS radius
             }
-            
+
             el.classList.add('animated');
         }, delay);
     });
@@ -277,23 +277,23 @@ function initHeroShrink() {
 
     const updateHero = () => {
         const scrollY = window.scrollY;
-        
+
         // Use clip-path to crop the bottom of the fixed hero dynamically
         const currentHeight = Math.max(minHeight, heroHeight - scrollY);
         const clipBottom = heroHeight - currentHeight;
         hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
-        
+
         // Track visual progress of the transition (0 to 1)
         const maxScroll = heroHeight - minHeight;
         const progress = Math.min(scrollY / maxScroll, 1);
-        
+
         // Transition title dynamically inside the clipped view
         if (title) {
             const scale = 1 - (0.4 * progress); // Scale down to 0.6 at final
-            
+
             // Push it significantly down at the end to place it clearly beneath the navbar.
             const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
-            
+
             // MAP OVERLAP OPACITY:
             // Query all section titles to see if any are intruding on our sticky hero slot
             let overlapFade = 0;
@@ -301,16 +301,16 @@ function initHeroShrink() {
             document.querySelectorAll('.section-title, .table-title').forEach(h2 => {
                 const rect = h2.getBoundingClientRect();
                 // If a section title's top bounds are between 0 and the fade slot height, it means it has overlapped!
-                if(rect.top < targetFadeSlot && rect.bottom > 0) {
+                if (rect.top < targetFadeSlot && rect.bottom > 0) {
                     // Map transparency from 1 to 0 based on proximity
                     let localOverlap = 1 - (rect.top / targetFadeSlot);
-                    if(localOverlap > overlapFade) overlapFade = Math.min(localOverlap, 1);
+                    if (localOverlap > overlapFade) overlapFade = Math.min(localOverlap, 1);
                 }
             });
 
             title.style.transform = `translateY(${translateY}px) scale(${scale})`;
             // Maintain full opacity normally, but fade to 0 when overlap Fade kicks in
-            title.style.opacity = progress >= 1 ? (1 - overlapFade) : 1; 
+            title.style.opacity = progress >= 1 ? (1 - overlapFade) : 1;
 
             // Force it to a single line when scaling reaches maximum
             if (progress > 0.8) {
@@ -319,7 +319,7 @@ function initHeroShrink() {
                 title.style.whiteSpace = 'normal';
             }
         }
-        
+
         // Fade out subtitle
         if (subtitle) {
             subtitle.style.opacity = Math.max(0, 1 - (progress * 3));
@@ -341,7 +341,7 @@ function initHeroShrink() {
         heroHeight = hero.offsetHeight;
         updateHero();
     });
-    
+
     // Initial run
     updateHero();
 }
