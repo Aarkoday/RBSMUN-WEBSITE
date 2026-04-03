@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initMagneticButtons();
     initSmoothScroll();
     initHeroShrink();
+    initCommitteeExpand();
+    initTeamExpand();
 });
 
 /* === UNIQUE SCROLL ANIMATIONS ===
@@ -271,14 +273,31 @@ function initHeroShrink() {
     if (!hero || hero.closest('body').classList.contains('home-page')) return;
 
     let heroHeight = hero.offsetHeight;
-    let minHeight = 180; // Increased to give more room under nav
-
+    let minHeight = 180;
     let ticking = false;
+
+    // Store original title for reverting when scrolling back up
+    const originalTitle = title ? title.textContent : '';
+    let currentDisplayedTitle = originalTitle;
+    let isFading = false;
+
+    // Crossfade: fade out → swap text → fade in
+    function crossfadeTo(newText) {
+        if (newText === currentDisplayedTitle || isFading) return;
+        isFading = true;
+        title.style.opacity = '0';
+        setTimeout(() => {
+            title.textContent = newText;
+            currentDisplayedTitle = newText;
+            title.style.opacity = '1';
+            isFading = false;
+        }, 350); // Matches the CSS transition duration
+    }
 
     const updateHero = () => {
         const scrollY = window.scrollY;
 
-        // Use clip-path to crop the bottom of the fixed hero dynamically
+        // clip-path to crop the bottom of the fixed hero dynamically
         const currentHeight = Math.max(minHeight, heroHeight - scrollY);
         const clipBottom = heroHeight - currentHeight;
         hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
@@ -289,34 +308,41 @@ function initHeroShrink() {
 
         // Transition title dynamically inside the clipped view
         if (title) {
-            const scale = 1 - (0.4 * progress); // Scale down to 0.6 at final
-
-            // Push it significantly down at the end to place it clearly beneath the navbar.
+            const scale = 1 - (0.4 * progress);
             const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
-
-            // MAP OVERLAP OPACITY:
-            // Query all section titles to see if any are intruding on our sticky hero slot
-            let overlapFade = 0;
-            const targetFadeSlot = 180; // Approximate point where headers stick
-            document.querySelectorAll('.section-title, .table-title').forEach(h2 => {
-                const rect = h2.getBoundingClientRect();
-                // If a section title's top bounds are between 0 and the fade slot height, it means it has overlapped!
-                if (rect.top < targetFadeSlot && rect.bottom > 0) {
-                    // Map transparency from 1 to 0 based on proximity
-                    let localOverlap = 1 - (rect.top / targetFadeSlot);
-                    if (localOverlap > overlapFade) overlapFade = Math.min(localOverlap, 1);
-                }
-            });
-
             title.style.transform = `translateY(${translateY}px) scale(${scale})`;
-            // Maintain full opacity normally, but fade to 0 when overlap Fade kicks in
-            title.style.opacity = progress >= 1 ? (1 - overlapFade) : 1;
 
             // Force it to a single line when scaling reaches maximum
             if (progress > 0.8) {
                 title.style.whiteSpace = 'nowrap';
             } else {
                 title.style.whiteSpace = 'normal';
+            }
+
+            // TITLE SWAP LOGIC: Only when hero is fully collapsed
+            if (progress >= 1) {
+                const heroBarBottom = minHeight;
+                const sectionTitles = document.querySelectorAll('.section-title');
+                let activeTitle = null;
+
+                sectionTitles.forEach(st => {
+                    const rect = st.getBoundingClientRect();
+                    // A section title is "active" when it has scrolled past the hero bar
+                    if (rect.top < heroBarBottom + 50) {
+                        activeTitle = st.textContent.trim();
+                    }
+                });
+
+                if (activeTitle) {
+                    crossfadeTo(activeTitle);
+                } else {
+                    crossfadeTo(originalTitle);
+                }
+            } else {
+                // Hero is still animating/open — ensure original title is shown
+                if (currentDisplayedTitle !== originalTitle && !isFading) {
+                    crossfadeTo(originalTitle);
+                }
             }
         }
 
@@ -336,7 +362,6 @@ function initHeroShrink() {
     }, { passive: true });
 
     window.addEventListener('resize', () => {
-        // Clear clip temporarily to measure authentic fluid height
         hero.style.clipPath = 'none';
         heroHeight = hero.offsetHeight;
         updateHero();
@@ -344,4 +369,120 @@ function initHeroShrink() {
 
     // Initial run
     updateHero();
+}
+
+/* === COMMITTEE IN-PLACE EXPANSION === */
+function initCommitteeExpand() {
+    const overlay = document.getElementById('committeeOverlay');
+    const closeBtn = document.getElementById('committeeOverlayClose');
+    const overlayAcronym = document.getElementById('overlayAcronym');
+    const overlayFullname = document.getElementById('overlayFullname');
+
+    if (!overlay) return;
+
+    const cards = document.querySelectorAll('.committee-logo-card[data-committee]');
+
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const acronym = card.querySelector('.committee-massive-acronym').textContent;
+            const fullname = card.dataset.fullname || '';
+
+            // Populate overlay header
+            if (overlayAcronym) overlayAcronym.textContent = acronym;
+            if (overlayFullname) overlayFullname.textContent = fullname;
+
+            // Scroll overlay to top before showing
+            overlay.scrollTop = 0;
+
+            // Activate overlay
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close overlay
+    function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeOverlay);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeOverlay();
+        }
+    });
+
+    // Close on overlay background click (not on content)
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeOverlay();
+        }
+    });
+}
+
+/* === TEAM IN-PLACE EXPANSION === */
+function initTeamExpand() {
+    const overlay = document.getElementById('teamOverlay');
+    const closeBtn = document.getElementById('teamOverlayClose');
+    const overlayTitle = document.getElementById('teamOverlayTitle');
+    const overlayRole = document.getElementById('teamOverlayRole');
+    const overlayDesc = document.getElementById('teamOverlayDesc');
+
+    if (!overlay) return;
+
+    const cards = document.querySelectorAll('.team-card[data-team]');
+
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const title = card.dataset.teamTitle || '';
+            const role = card.querySelector('.team-role')?.textContent || '';
+            const desc = card.dataset.teamDesc || '';
+
+            // Populate overlay
+            if (overlayTitle) overlayTitle.textContent = title;
+            if (overlayRole) overlayRole.textContent = role;
+            if (overlayDesc) overlayDesc.textContent = desc;
+
+            // Scroll overlay to top before showing
+            overlay.scrollTop = 0;
+
+            // Activate overlay
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close overlay
+    function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeOverlay);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeOverlay();
+        }
+    });
+
+    // Close on overlay background click (not on content)
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeOverlay();
+        }
+    });
 }

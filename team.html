@@ -58,7 +58,10 @@
                 <div class="team-grid">
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in">
+                        <div class="glass-card team-card" data-anim="tilt-in"
+                            data-team="logistics"
+                            data-team-title="Logistics"
+                            data-team-desc="The Logistics team handles all on-ground operations — from venue management and delegate registration to transportation coordination and material procurement. They are the backbone that keeps the conference running seamlessly behind the scenes.">
                             <img src="" alt="Logistics" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -69,7 +72,10 @@
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="100">
+                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="100"
+                            data-team="secretariat"
+                            data-team-title="Secretariat"
+                            data-team-desc="The Secretariat is the executive leadership of RBSMUN. Led by the Secretary-General and Deputy Secretary-General, this team sets the academic vision, oversees all committee operations, and ensures the conference upholds the highest standards of Model UN excellence.">
                             <img src="" alt="Secretariat" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -80,7 +86,10 @@
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="200">
+                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="200"
+                            data-team="it"
+                            data-team-title="Information Technology"
+                            data-team-desc="The IT team is responsible for all things digital — the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event.">
                             <img src="" alt="IT" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -92,7 +101,10 @@
 
                     <!-- Row 2 (Centered by Flexbox) -->
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="300">
+                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="300"
+                            data-team="art"
+                            data-team-title="Art & Design"
+                            data-team-desc="The Art team crafts the entire visual identity of RBSMUN — from branding, posters, and social media graphics to stage design and conference-day decor. They bring the creative vision that defines the aesthetic of each iteration.">
                             <img src="" alt="Art" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -103,7 +115,10 @@
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="400">
+                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="400"
+                            data-team="media"
+                            data-team-title="Media & Communications"
+                            data-team-desc="The Media team captures and communicates the RBSMUN story — through photography, videography, social media coverage, press releases, and the official conference newsletter. They ensure every moment is documented and shared with the world.">
                             <img src="" alt="Media" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -117,6 +132,62 @@
             </div>
         </section>
 
+    </div>
+
+    <!-- Team Overlay (Expands in-place) -->
+    <div class="committee-overlay" id="teamOverlay">
+        <button class="committee-overlay-close" id="teamOverlayClose" aria-label="Close">✕</button>
+        <div class="committee-overlay-header">
+            <h2 class="committee-overlay-acronym" id="teamOverlayTitle"></h2>
+            <p class="committee-overlay-fullname" id="teamOverlayRole"></p>
+        </div>
+        <div class="committee-overlay-body">
+
+            <!-- About This Department -->
+            <div class="committee-overlay-section">
+                <h2 class="section-title">About <span class="text-gradient">This Team</span></h2>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <p id="teamOverlayDesc">
+                        [Department description will be populated dynamically]
+                    </p>
+                </div>
+            </div>
+
+            <!-- Head -->
+            <div class="committee-overlay-section">
+                <h2 class="section-title">Head</h2>
+                <div class="team-grid" id="teamOverlayMembers">
+                    <div class="team-card-wrapper">
+                        <div class="glass-card team-card">
+                            <img src="" alt="Head" class="team-img-bg">
+                            <div class="team-card-overlay"></div>
+                            <div class="team-card-content">
+                                <h3>To be announced</h3>
+                                <p class="team-role" id="teamOverlayHeadRole">Head</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="committee-overlay-section">
+                <h2 class="section-title">Contact</h2>
+                <div class="committee-overlay-actions">
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Get In Touch</h3>
+                        <p style="font-size: 0.9rem;">
+                            Have questions about this department? Reach out to us directly.
+                        </p>
+                        <a href="mailto:contact@ratobangala.edu.np" class="btn btn-glass"
+                            style="width: 100%; margin-top: 1rem;">contact@ratobangala.edu.np</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- Footer -->

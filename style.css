@@ -629,7 +629,8 @@ img {
     line-height: 1;
     margin-bottom: 1rem;
     color: var(--text-primary);
-    will-change: transform;
+    will-change: transform, opacity;
+    transition: opacity 0.35s ease;
 }
 
 .page-hero-subtitle {
@@ -795,9 +796,6 @@ img {
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1.05;
-    position: sticky;
-    top: 105px;
-    z-index: 50;
 }
 
 /* === GLASS CARD === */
@@ -1011,7 +1009,7 @@ img {
 }
 
 .committee-logo-card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: scale(1.06);
     background: var(--bg-glass-solid);
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.05);
@@ -1078,7 +1076,158 @@ img {
     color: var(--text-ghost);
 }
 
-/* === TEAM === */
+/* === COMMITTEE OVERLAY (In-Place Expansion) === */
+.committee-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(5, 5, 5, 0.92);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.committee-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.committee-overlay-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10001;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    background: rgba(22, 22, 22, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.committee-overlay.active .committee-overlay-close {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.3s;
+}
+
+.committee-overlay-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.committee-overlay-header {
+    text-align: center;
+    padding: 6rem 2rem 3rem;
+}
+
+.committee-overlay-acronym {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, #ffffff, #8c8ca5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.committee-overlay.active .committee-overlay-acronym {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.committee-overlay-fullname {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.committee-overlay.active .committee-overlay-fullname {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.committee-overlay-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 2.5rem) 4rem;
+}
+
+.committee-overlay-section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.committee-overlay.active .committee-overlay-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.committee-overlay.active .committee-overlay-section:nth-child(1) { transition-delay: 0.35s; }
+.committee-overlay.active .committee-overlay-section:nth-child(2) { transition-delay: 0.45s; }
+.committee-overlay.active .committee-overlay-section:nth-child(3) { transition-delay: 0.55s; }
+
+.committee-overlay-section .section-eyebrow {
+    margin-bottom: 0.75rem;
+}
+
+.committee-overlay-section .section-title {
+    margin-bottom: 2rem;
+}
+
+.committee-overlay-section .glass-card {
+    padding: 2.5rem;
+}
+
+.committee-overlay-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.committee-overlay-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.committee-overlay-actions .glass-card {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.committee-logo-card {
+    cursor: pointer;
+}
+
+
 .team-grid {
     display: flex;
     flex-wrap: wrap;
