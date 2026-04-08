@@ -602,6 +602,8 @@ img {
 .page-hero .container {
     position: relative;
     z-index: 5;
+    max-width: none;
+    width: 100%;
 }
 
 /* === CONTENT WRAPPER (Parallax Overlap) === */
@@ -631,6 +633,9 @@ img {
     color: var(--text-primary);
     will-change: transform, opacity;
     transition: opacity 0.35s ease;
+    text-align: center;
+    width: 100%;
+    transform-origin: center center;
 }
 
 .page-hero-subtitle {

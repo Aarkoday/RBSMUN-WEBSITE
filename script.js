@@ -308,7 +308,7 @@ function initHeroShrink() {
 
         // Transition title dynamically inside the clipped view
         if (title) {
-            const scale = 1 - (0.4 * progress);
+            const scale = 1 - (0.55 * progress); // Shrinks to 0.45 at full collapse
             const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
             title.style.transform = `translateY(${translateY}px) scale(${scale})`;
 
