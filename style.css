@@ -7,7 +7,6 @@
 }
 
 :root {
-    /* Grayscale Palette */
     --bg-void: #050505;
     --bg-deep: #0b0b0b;
     --bg-dark: #111111;
@@ -29,12 +28,10 @@
     --accent-glow: rgba(255, 255, 255, 0.05);
     --accent-glow-strong: rgba(255, 255, 255, 0.08);
 
-    /* Fonts */
     --font-display: 'Syne', system-ui, sans-serif;
     --font-heading: 'Space Grotesk', system-ui, sans-serif;
     --font-body: 'Lora', serif;
 
-    /* Glass */
     --glass-blur: blur(14px) saturate(140%);
     --glass-blur-heavy: blur(30px) saturate(180%);
     --glass-blur-light: blur(12px) saturate(140%);
@@ -42,7 +39,6 @@
     --glass-radius-sm: 16px;
     --glass-radius-xs: 10px;
 
-    /* Spacing */
     --section-padding: clamp(6rem, 12vw, 10rem);
     --container-width: 1200px;
 }
@@ -84,7 +80,6 @@ img {
     padding: 0 clamp(1.25rem, 4vw, 2.5rem);
 }
 
-/* === NOISE TEXTURE OVERLAY === */
 .noise-overlay {
     position: fixed;
     inset: 0;
@@ -96,7 +91,6 @@ img {
     background-size: 200px 200px;
 }
 
-/* === AMBIENT FLOATING GLASS ORBS === */
 .ambient-orbs {
     position: fixed;
     inset: 0;
@@ -145,70 +139,57 @@ img {
 }
 
 @keyframes orbDrift1 {
-
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
-
     25% {
         transform: translate(80px, 40px) scale(1.1);
     }
-
     50% {
         transform: translate(30px, -60px) scale(0.9);
     }
-
     75% {
         transform: translate(-40px, 20px) scale(1.05);
     }
 }
 
 @keyframes orbDrift2 {
-
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
-
     33% {
         transform: translate(-60px, 50px) scale(1.15);
     }
-
     66% {
         transform: translate(40px, -30px) scale(0.85);
     }
 }
 
 @keyframes orbDrift3 {
-
     0%,
     100% {
         transform: translate(0, 0);
     }
-
     50% {
         transform: translate(70px, -40px);
     }
 }
 
 @keyframes orbDrift4 {
-
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
-
     40% {
         transform: translate(50px, 60px) scale(1.1);
     }
-
     80% {
         transform: translate(-30px, -20px) scale(0.95);
     }
 }
 
-/* === TEXT UTILITIES === */
 .text-gradient {
     background: linear-gradient(135deg, #e0e0e4, #78788c);
     -webkit-background-clip: text;
@@ -220,7 +201,6 @@ img {
     opacity: 0.5;
 }
 
-/* === GLASS SHARED COMPONENTS === */
 .glass-pill {
     display: inline-flex;
     align-items: center;
@@ -248,13 +228,11 @@ img {
 }
 
 @keyframes pulse {
-
     0%,
     100% {
         opacity: 1;
         box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
     }
-
     50% {
         opacity: 0.7;
         box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
@@ -272,7 +250,6 @@ img {
     border-radius: var(--glass-radius-xs);
 }
 
-/* === GLASSMORPHIC NAV === */
 .glass-nav {
     position: fixed;
     top: 0;
@@ -411,7 +388,6 @@ img {
     transform: rotate(-45deg) translateY(-4.5px);
 }
 
-/* === HERO === */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -431,7 +407,6 @@ img {
     z-index: 1;
 }
 
-/* Mesh gradient layer */
 .hero-mesh {
     position: absolute;
     inset: 0;
@@ -442,7 +417,6 @@ img {
     mix-blend-mode: screen;
 }
 
-/* Floating glass panels in hero */
 .hero-glass-panel {
     position: absolute;
     z-index: 2;
@@ -482,44 +456,36 @@ img {
 }
 
 @keyframes glassFloat1 {
-
     0%,
     100% {
         transform: rotate(-8deg) translate(0, 0);
     }
-
     33% {
         transform: rotate(-5deg) translate(20px, -15px);
     }
-
     66% {
         transform: rotate(-10deg) translate(-10px, 10px);
     }
 }
 
 @keyframes glassFloat2 {
-
     0%,
     100% {
         transform: rotate(5deg) translate(0, 0);
     }
-
     50% {
         transform: rotate(8deg) translate(-15px, -20px);
     }
 }
 
 @keyframes glassFloat3 {
-
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
-
     40% {
         transform: translate(15px, 10px) scale(1.05);
     }
-
     70% {
         transform: translate(-10px, -8px) scale(0.95);
     }
@@ -573,7 +539,6 @@ img {
     flex-wrap: wrap;
 }
 
-/* === PAGE HERO (INNER PAGES) === */
 .page-hero {
     position: fixed;
     top: 0;
@@ -589,8 +554,6 @@ img {
     padding: 0 1.25rem;
     overflow: hidden;
     will-change: clip-path;
-
-    /* Parallax Background - easy to swap with url('image.jpg') */
     background:
         radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.015) 0%, transparent 50%),
         radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 40%),
@@ -606,14 +569,12 @@ img {
     width: 100%;
 }
 
-/* === CONTENT WRAPPER (Parallax Overlap) === */
 .content-wrapper {
     position: relative;
     z-index: 10;
     margin-top: 60vh;
     background-color: var(--bg-void);
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6);
-    /* Bring in the body grid texture so it matches */
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
@@ -647,7 +608,6 @@ img {
     will-change: opacity;
 }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -701,7 +661,6 @@ img {
     font-size: 0.95rem;
 }
 
-/* Hero scroll indicator */
 .hero-scroll-indicator {
     position: absolute;
     bottom: 3rem;
@@ -730,20 +689,17 @@ img {
 }
 
 @keyframes scrollBounce {
-
     0%,
     100% {
         transform: translateY(0);
         opacity: 1;
     }
-
     50% {
         transform: translateY(12px);
         opacity: 0.3;
     }
 }
 
-/* === SECTIONS === */
 .section {
     padding: var(--section-padding) 0;
     position: relative;
@@ -757,7 +713,6 @@ img {
         var(--bg-deep);
 }
 
-/* Floating glass accent panels per section */
 .section-glass-accent {
     position: absolute;
     width: 300px;
@@ -803,7 +758,6 @@ img {
     line-height: 1.05;
 }
 
-/* === GLASS CARD === */
 .glass-card {
     background: var(--bg-glass);
     backdrop-filter: var(--glass-blur);
@@ -838,7 +792,6 @@ img {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* === ABOUT === */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -872,7 +825,6 @@ img {
     line-height: 1.7;
 }
 
-/* === STATS === */
 .stats-section {
     padding: 0;
     position: relative;
@@ -935,7 +887,6 @@ img {
     text-transform: uppercase;
 }
 
-/* === LETTER === */
 .letter-layout {
     max-width: 780px;
     margin: 0 auto;
@@ -995,14 +946,12 @@ img {
     letter-spacing: 0.05em;
 }
 
-/* === COMMITTEES === */
 .committees-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-/* New giant logo-based navigation cards */
 .committee-logo-card {
     display: flex;
     align-items: center;
@@ -1027,7 +976,6 @@ img {
     color: var(--text-primary);
     letter-spacing: -0.05em;
     padding-left: 0.05em;
-    /* Neutralizes negative optical kerning tracking for centered alignment */
     background: linear-gradient(135deg, #ffffff, #8c8ca5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1081,7 +1029,6 @@ img {
     color: var(--text-ghost);
 }
 
-/* === COMMITTEE OVERLAY (In-Place Expansion) === */
 .committee-overlay {
     position: fixed;
     inset: 0;
@@ -1243,7 +1190,6 @@ img {
 .team-card-wrapper {
     position: relative;
     height: 300px;
-    /* Lock structural height for uniform rendering */
     flex: 0 0 calc(33.333% - 1rem);
     max-width: 380px;
     min-width: 280px;
@@ -1272,7 +1218,6 @@ img {
     top: -75px;
     bottom: -75px;
     transform: translateY(0);
-    /* Erased negative lift since top/bottom stretch manages it physically uniformly */
     z-index: 10;
     transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1), bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
 }
@@ -1326,7 +1271,6 @@ img {
     font-style: normal;
 }
 
-/* === CTA === */
 .cta-section {
     text-align: center;
     position: relative;
@@ -1375,7 +1319,6 @@ img {
     line-height: 1.6;
 }
 
-/* === FOOTER === */
 .footer {
     padding: 4rem 0 2rem;
     background:
@@ -1442,13 +1385,11 @@ img {
     letter-spacing: 0.05em;
 }
 
-/* === ANIMATION STATES (initial) === */
 [data-anim]:not([data-anim="hero"]) {
     opacity: 0;
     will-change: transform, opacity;
 }
 
-/* Hero children animated individually by JS */
 .hero-content .hero-badge,
 .hero-content .hero-title,
 .hero-content .hero-subtitle,
@@ -1461,7 +1402,6 @@ img {
     opacity: 1;
 }
 
-/* === TIMELINE / TABLES === */
 .tables-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1471,7 +1411,6 @@ img {
 .table-wrapper {
     padding: 2.5rem;
     overflow-x: auto;
-    /* for mobile responsiveness */
 }
 
 .table-wrapper::-webkit-scrollbar {
@@ -1531,7 +1470,6 @@ img {
     font-weight: 400;
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 992px) {
     .section-title {
         font-size: clamp(2rem, 4.5vw, 3rem);
@@ -1539,7 +1477,6 @@ img {
 
     .team-card-wrapper {
         flex: 0 0 calc(50% - 1rem);
-        /* 2 columns on tablet */
     }
 }
 
@@ -1636,6 +1573,5 @@ img {
 
     .team-card-wrapper {
         flex: 0 0 100%;
-        /* 1 column on extreme mobile */
     }
 }

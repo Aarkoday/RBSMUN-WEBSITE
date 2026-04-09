@@ -1,7 +1,3 @@
-/* ============================================
-   RBSMUN 2026 — Unique, Unpredictable Animations
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
     initUniqueScrollAnimations();
     initNavScroll();
@@ -15,15 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initTeamExpand();
 });
 
-/* === UNIQUE SCROLL ANIMATIONS ===
-   Intersection observer for scroll reveals
-*/
 function initUniqueScrollAnimations() {
     const animElements = document.querySelectorAll('[data-anim]');
 
-    // PRE-APPLY INITIAL STATES!
-    // We apply the transforms immediately on page load before scrolling.
-    // This entirely prevents "scroll jitter" caused by layout bounding boxes dynamically resizing mid-scroll.
     animElements.forEach(el => {
         if (el.dataset.anim !== 'hero') {
             applyInitialState(el);
@@ -39,10 +29,8 @@ function initUniqueScrollAnimations() {
                     triggerAnimation(el);
                 }
             } else {
-                // User scrolled away: reset the element so it can animate again when scrolling back
                 if (el.classList.contains('animated')) {
                     el.classList.remove('animated');
-                    // Reset instantly without transition
                     el.style.transition = 'none';
                     applyInitialState(el);
                 }
@@ -98,7 +86,6 @@ function applyInitialState(el) {
     } else if (animType === 'fade-up') {
         el.style.transform = `translateY(20px)`;
     } else if (animType === 'fade-in' || animType === 'counter') {
-        // Just opacity
         el.style.transform = 'none';
         el.style.filter = 'none';
     }
@@ -108,7 +95,6 @@ function triggerAnimation(el) {
     const delay = parseInt(el.dataset.delay || 0);
     const animType = el.dataset.anim || 'reveal';
 
-    // Determine randomized duration based on animation type
     let duration = randomBetween(0.7, 1.1).toFixed(2);
     if (animType === 'tilt-in') duration = randomBetween(0.8, 1.3).toFixed(2);
     if (animType === 'scatter') duration = randomBetween(0.9, 1.5).toFixed(2);
@@ -124,7 +110,7 @@ function triggerAnimation(el) {
                 el.style.filter = 'blur(0px)';
             }
             if (animType === 'morph-in') {
-                el.style.borderRadius = ''; // Retain original CSS radius
+                el.style.borderRadius = ''; 
             }
 
             el.classList.add('animated');
@@ -136,7 +122,6 @@ function randomBetween(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-/* === NAV GLASS ON SCROLL === */
 function initNavScroll() {
     const nav = document.getElementById('mainNav');
     let ticking = false;
@@ -152,7 +137,6 @@ function initNavScroll() {
     });
 }
 
-/* === MOBILE MENU === */
 function initMobileMenu() {
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
@@ -171,7 +155,6 @@ function initMobileMenu() {
     });
 }
 
-/* === COUNT-UP === */
 function initCountUp() {
     const statNumbers = document.querySelectorAll('.stat-number[data-target]');
 
@@ -210,7 +193,6 @@ function animateCount(el, target) {
     requestAnimationFrame(update);
 }
 
-/* === CARD GLOW TRACKING === */
 function initCardGlowTracking() {
     const cards = document.querySelectorAll('.glass-card');
     cards.forEach(card => {
@@ -224,7 +206,6 @@ function initCardGlowTracking() {
     });
 }
 
-/* === MAGNETIC BUTTONS === */
 function initMagneticButtons() {
     const btns = document.querySelectorAll('.btn');
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -245,7 +226,6 @@ function initMagneticButtons() {
     });
 }
 
-/* === SMOOTH SCROLL === */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
@@ -264,24 +244,21 @@ function initSmoothScroll() {
     });
 }
 
-/* === DYNAMIC HERO SHRINK (PARALLAX HEADER) === */
 function initHeroShrink() {
     const hero = document.querySelector('.page-hero');
     const title = document.querySelector('.page-hero-title');
     const subtitle = document.querySelector('.page-hero-subtitle');
-    // Only apply on subpages that use the dedicated shrinking hero
+    
     if (!hero || hero.closest('body').classList.contains('home-page')) return;
 
     let heroHeight = hero.offsetHeight;
     let minHeight = 180;
     let ticking = false;
 
-    // Store original title for reverting when scrolling back up
     const originalTitle = title ? title.textContent : '';
     let currentDisplayedTitle = originalTitle;
     let isFading = false;
 
-    // Crossfade: fade out → swap text → fade in
     function crossfadeTo(newText) {
         if (newText === currentDisplayedTitle || isFading) return;
         isFading = true;
@@ -291,35 +268,30 @@ function initHeroShrink() {
             currentDisplayedTitle = newText;
             title.style.opacity = '1';
             isFading = false;
-        }, 350); // Matches the CSS transition duration
+        }, 350); 
     }
 
     const updateHero = () => {
         const scrollY = window.scrollY;
 
-        // clip-path to crop the bottom of the fixed hero dynamically
         const currentHeight = Math.max(minHeight, heroHeight - scrollY);
         const clipBottom = heroHeight - currentHeight;
         hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
 
-        // Track visual progress of the transition (0 to 1)
         const maxScroll = heroHeight - minHeight;
         const progress = Math.min(scrollY / maxScroll, 1);
 
-        // Transition title dynamically inside the clipped view
         if (title) {
-            const scale = 1 - (0.55 * progress); // Shrinks to 0.45 at full collapse
+            const scale = 1 - (0.55 * progress); 
             const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
             title.style.transform = `translateY(${translateY}px) scale(${scale})`;
 
-            // Force it to a single line when scaling reaches maximum
             if (progress > 0.8) {
                 title.style.whiteSpace = 'nowrap';
             } else {
                 title.style.whiteSpace = 'normal';
             }
 
-            // TITLE SWAP LOGIC: Only when hero is fully collapsed
             if (progress >= 1) {
                 const heroBarBottom = minHeight;
                 const sectionTitles = document.querySelectorAll('.section-title');
@@ -327,7 +299,6 @@ function initHeroShrink() {
 
                 sectionTitles.forEach(st => {
                     const rect = st.getBoundingClientRect();
-                    // A section title is "active" when it has scrolled past the hero bar
                     if (rect.top < heroBarBottom + 50) {
                         activeTitle = st.textContent.trim();
                     }
@@ -339,14 +310,12 @@ function initHeroShrink() {
                     crossfadeTo(originalTitle);
                 }
             } else {
-                // Hero is still animating/open — ensure original title is shown
                 if (currentDisplayedTitle !== originalTitle && !isFading) {
                     crossfadeTo(originalTitle);
                 }
             }
         }
 
-        // Fade out subtitle
         if (subtitle) {
             subtitle.style.opacity = Math.max(0, 1 - (progress * 3));
         }
@@ -367,11 +336,9 @@ function initHeroShrink() {
         updateHero();
     });
 
-    // Initial run
     updateHero();
 }
 
-/* === COMMITTEE IN-PLACE EXPANSION === */
 function initCommitteeExpand() {
     const overlay = document.getElementById('committeeOverlay');
     const closeBtn = document.getElementById('committeeOverlayClose');
@@ -389,20 +356,16 @@ function initCommitteeExpand() {
             const acronym = card.querySelector('.committee-massive-acronym').textContent;
             const fullname = card.dataset.fullname || '';
 
-            // Populate overlay header
             if (overlayAcronym) overlayAcronym.textContent = acronym;
             if (overlayFullname) overlayFullname.textContent = fullname;
 
-            // Scroll overlay to top before showing
             overlay.scrollTop = 0;
 
-            // Activate overlay
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
     });
 
-    // Close overlay
     function closeOverlay() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
@@ -412,14 +375,12 @@ function initCommitteeExpand() {
         closeBtn.addEventListener('click', closeOverlay);
     }
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && overlay.classList.contains('active')) {
             closeOverlay();
         }
     });
 
-    // Close on overlay background click (not on content)
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             closeOverlay();
@@ -427,7 +388,6 @@ function initCommitteeExpand() {
     });
 }
 
-/* === TEAM IN-PLACE EXPANSION === */
 function initTeamExpand() {
     const overlay = document.getElementById('teamOverlay');
     const closeBtn = document.getElementById('teamOverlayClose');
@@ -448,21 +408,17 @@ function initTeamExpand() {
             const role = card.querySelector('.team-role')?.textContent || '';
             const desc = card.dataset.teamDesc || '';
 
-            // Populate overlay
             if (overlayTitle) overlayTitle.textContent = title;
             if (overlayRole) overlayRole.textContent = role;
             if (overlayDesc) overlayDesc.textContent = desc;
 
-            // Scroll overlay to top before showing
             overlay.scrollTop = 0;
 
-            // Activate overlay
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
     });
 
-    // Close overlay
     function closeOverlay() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
@@ -472,14 +428,12 @@ function initTeamExpand() {
         closeBtn.addEventListener('click', closeOverlay);
     }
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && overlay.classList.contains('active')) {
             closeOverlay();
         }
     });
 
-    // Close on overlay background click (not on content)
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             closeOverlay();
