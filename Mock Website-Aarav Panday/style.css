@@ -52,16 +52,23 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--bg-void);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: center center;
-    background-attachment: fixed;
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
+    pointer-events: none;
 }
 
 a {
@@ -89,6 +96,8 @@ img {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 200px 200px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .ambient-orbs {
@@ -104,6 +113,9 @@ img {
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
     filter: blur(80px);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 .orb-1 {
@@ -252,42 +264,42 @@ img {
 
 .glass-nav {
     position: fixed;
-    top: 0;
+    top: 1.5rem;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.85rem 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
     transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .glass-nav.scrolled {
-    background: var(--bg-glass-solid);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.6);
-}
-
-.glass-nav.scrolled::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.4);
-    filter: blur(5px);
-    z-index: -1;
+    top: 1rem;
 }
 
 .nav-inner {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    pointer-events: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0.6rem 1rem 0.6rem 1.5rem;
+    border-radius: 999px;
+    background: rgba(15, 15, 18, 0.45);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-nav.scrolled .nav-inner {
+    background: rgba(5, 5, 8, 0.85);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0.8rem 0.5rem 1.25rem;
+    gap: 2.5rem;
 }
 
 .nav-logo {
@@ -302,9 +314,14 @@ img {
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 38px;
     width: auto;
     display: block;
+    transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-nav.scrolled .nav-logo img {
+    height: 34px;
 }
 
 .nav-links {
@@ -1391,10 +1408,14 @@ img {
 }
 
 .hero-content .hero-badge,
-.hero-content .hero-title,
 .hero-content .hero-subtitle,
 .hero-content .hero-actions {
     opacity: 0;
+    will-change: transform, opacity;
+}
+
+.hero-content .hero-title {
+    opacity: 1;
     will-change: transform, opacity;
 }
 
@@ -1573,5 +1594,328 @@ img {
 
     .team-card-wrapper {
         flex: 0 0 100%;
+    }
+}
+
+/* ==========================================================================
+   LENIS SMOOTH SCROLL
+   ========================================================================== */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* White overlay INSIDE the hero - sits above bg and glass panels (z-index 2) but below hero-content (z-index 3) */
+.hero-preloader-white {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   COMMITTEES GRID UPDATE
+   ========================================================================== */
+.committees-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 1.5rem;
+}
+
+.committee-logo-card {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0 !important;
+    width: 100%;
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.committee-logo-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.committee-logo-card:hover::before {
+    opacity: 0.35;
+}
+
+.committee-logo-card .committee-massive-acronym {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(2rem, 5vw, 2.5rem) !important;
+    color: var(--text-primary);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.committee-logo-card:hover .committee-massive-acronym {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* ==========================================================================
+   CONFERENCE BENTO GRID & HORIZONTAL SCROLL
+   ========================================================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+}
+
+.bento-card-main {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-card-secondary {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-card-main,
+    .bento-card-secondary {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.stacking-schedule-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stack-item {
+    position: sticky;
+    top: calc(100px + (var(--stack-index) * 15px));
+    width: 100%;
+    transform-origin: top center;
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.3);
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+
+/* Optimization for glass effects (reduce blur radius slightly or use opaque bg if lagging heavily, but for now just use will-change) */
+.glass-card {
+    will-change: transform, box-shadow;
+}
+
+/* ==========================================================================
+   INTERACTIVE GROUP PHOTO
+   ========================================================================== */
+.group-photo-section {
+    margin-bottom: 4rem;
+}
+
+.group-photo-section .section-title {
+    margin-bottom: 2rem;
+}
+
+.group-photo-container {
+    position: relative;
+    border-radius: var(--glass-radius);
+    overflow: hidden;
+    cursor: default;
+}
+
+.group-photo {
+    width: 100%;
+    display: block;
+    border-radius: var(--glass-radius);
+    transition: filter 0.4s ease;
+}
+
+.group-photo-container.has-active .group-photo {
+    filter: blur(4px) brightness(0.5);
+}
+
+.group-photo-blur-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.group-photo-container.has-active .group-photo-blur-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Invisible hotspot regions positioned over each person */
+.person-hotspot {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.person-hotspot:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.person-hotspot::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.person-hotspot:hover::after {
+    opacity: 1;
+}
+
+/* The pop-out card */
+.person-popup {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: var(--bg-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-glass-mid);
+    border-radius: var(--glass-radius);
+    padding: 1.5rem;
+    max-width: 450px;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 255, 255, 0.03);
+}
+
+.person-popup.active {
+    pointer-events: auto;
+}
+
+.popup-portrait {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--glass-radius-sm);
+    flex-shrink: 0;
+    border: 1px solid var(--border-glass-mid);
+}
+
+.popup-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.popup-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.popup-role {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.popup-bio {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 0.4rem;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-glass);
+    color: var(--text-secondary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.popup-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+    .person-popup {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .popup-portrait {
+        width: 100px;
+        height: 120px;
     }
 }

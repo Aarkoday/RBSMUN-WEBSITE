@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committees — RBSMUN 2026</title>
+    <title>TEMPLATE — RBSMUN 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .committee-hero {
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="noise-overlay" aria-hidden="true"></div>
     <div class="ambient-orbs" aria-hidden="true">
         <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
     <nav class="glass-nav" id="mainNav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"><img src="logo.webp" alt="RBSMUN Logo"></a>
+            <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="RBSMUN Logo"></a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
@@ -39,99 +42,45 @@
         </div>
     </nav>
 
-    <section class="page-hero" style="background-image: url('committees.webp');">
-        <div class="hero-bg-overlay"></div>
+    <section class="page-hero">
         <div class="container">
-            <h1 class="page-hero-title">Committees</h1>
-            <p class="page-hero-subtitle">Engage in rigorous debate and draft resolutions across our 6 specialized
-                committees.</p>
+            <h1 class="page-hero-title">Committee Acronym</h1>
+            <p class="page-hero-subtitle">Full Name of the Specialized Committee</p>
         </div>
     </section>
 
     <div class="content-wrapper">
 
-        <section class="section">
-            <div class="container">
-                <div class="committees-grid">
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="disec"
-                        data-fullname="Disarmament and International Security Committee">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">DISEC</h2>
-                    </div>
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="unsc"
-                        data-fullname="United Nations Security Council">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">UNSC</h2>
-                    </div>
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="jcc"
-                        data-fullname="Joint Crisis Committee">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">JCC</h2>
-                    </div>
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="unhrc"
-                        data-fullname="United Nations Human Rights Council">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">UNHRC</h2>
-                    </div>
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="ecofin"
-                        data-fullname="Economic and Financial Committee">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">ECOFIN</h2>
-                    </div>
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter"
-                        data-committee="ga"
-                        data-fullname="General Assembly">
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">GA</h2>
-                    </div>
-
+        <section class="section" id="mandate">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header" style="text-align: center;" data-anim="reveal">
+                    <p class="section-eyebrow">Information</p>
+                    <h2 class="section-title">Committee <span class="text-gradient">Mandate</span></h2>
                 </div>
-            </div>
-        </section>
-
-    </div>
-
-    <div class="committee-overlay" id="committeeOverlay">
-        <button class="committee-overlay-close" id="committeeOverlayClose" aria-label="Close">✕</button>
-        <div class="committee-overlay-header">
-            <h2 class="committee-overlay-acronym" id="overlayAcronym"></h2>
-            <p class="committee-overlay-fullname" id="overlayFullname"></p>
-        </div>
-        <div class="committee-overlay-body">
-
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Information</p>
-                <h2 class="section-title">Committee <span class="text-gradient">Mandate</span></h2>
-                <div class="glass-card">
+                <div class="glass-card" style="padding: 3rem;" data-anim="fade-up">
                     <div class="card-glow"></div>
-                    <p id="overlayMandate1">
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
                         [Insert Committee Mandate and general description here. Start by establishing the context of the
                         committee's scope within the United Nations framework...]
                     </p>
-                    <p id="overlayMandate2">
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
                         [Provide details about the specific agenda, conflict overviews, or key debate topics that
                         delegates will face inside this committee...]
                     </p>
                 </div>
             </div>
+        </section>
 
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Leadership</p>
-                <h2 class="section-title">Executive <span class="text-gradient">Board</span></h2>
-                <div class="team-grid">
+        <section class="section section-textured" id="eb">
+            <div class="container">
+                <div class="section-header" data-anim="reveal">
+                    <p class="section-eyebrow">Leadership</p>
+                    <h2 class="section-title">Executive <span class="text-gradient">Board</span></h2>
+                </div>
+                <div class="team-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
+                        <div class="glass-card team-card" data-anim="scatter">
                             <img src="" alt="Chairperson" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -140,8 +89,9 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
+                        <div class="glass-card team-card" data-anim="scatter" data-delay="100">
                             <img src="" alt="Vice Chairperson" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -150,8 +100,9 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
+                        <div class="glass-card team-card" data-anim="scatter" data-delay="200">
                             <img src="" alt="Moderator" class="team-img-bg">
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
@@ -160,36 +111,49 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+        </section>
 
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Resources</p>
-                <h2 class="section-title">Preparation</h2>
-                <div class="committee-overlay-actions">
-                    <div class="glass-card">
+        <section class="section">
+            <div class="container">
+                <div class="section-header" data-anim="reveal">
+                    <p class="section-eyebrow">Resources</p>
+                    <h2 class="section-title">Preparation</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                    <div class="glass-card" style="padding: 2.5rem; text-align: center;" data-anim="tilt-in">
                         <div class="card-glow"></div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Background Guide</h3>
-                        <p style="font-size: 0.9rem;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Background
+                            Guide</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
                             Download the official study guide designed by your rigorous Executive Board. This guide is
                             required reading prior to the conference.
                         </p>
-                        <a href="#" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Download PDF</a>
+                        <a href="#" class="btn btn-outline" style="width: 100%;">Download PDF</a>
                     </div>
-                    <div class="glass-card">
+
+                    <div class="glass-card" style="padding: 2.5rem; text-align: center;" data-anim="tilt-in"
+                        data-delay="100">
                         <div class="card-glow"></div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Contact Us</h3>
-                        <p style="font-size: 0.9rem;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Contact Us
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
                             If you have any questions regarding the agenda or position papers, directly email the
                             committee dais.
                         </p>
                         <a href="mailto:committee@ratobangala.edu.np" class="btn btn-glass"
-                            style="width: 100%; margin-top: 1rem;">committee@ratobangala.edu.np</a>
+                            style="width: 100%;">committee@ratobangala.edu.np</a>
                     </div>
-                </div>
-            </div>
 
-        </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 
     <footer class="footer">

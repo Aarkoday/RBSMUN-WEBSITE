@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initPreloader();
+    initLenis();
     initUniqueScrollAnimations();
     initNavScroll();
     initMobileMenu();
@@ -9,7 +11,145 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroShrink();
     initCommitteeExpand();
     initTeamExpand();
+    initGroupPhoto();
 });
+
+function initPreloader() {
+    const whiteOverlay = document.getElementById('hero-white-overlay');
+    const heroTitle = document.querySelector('.hero-title');
+    const hero = document.getElementById('hero');
+
+    if (!heroTitle || !hero) return;
+
+    // Block scrolling during preloader
+    document.body.style.overflow = 'hidden';
+    if (lenis) lenis.stop();
+
+    // Hide nav during preloader
+    const nav = document.getElementById('mainNav');
+    if (nav) gsap.set(nav, { opacity: 0 });
+
+    // Hide other hero content (badge, subtitle, buttons)
+    const otherHeroContent = hero.querySelectorAll('.hero-badge, .hero-subtitle, .hero-actions');
+    gsap.set(otherHeroContent, { opacity: 0 });
+
+    // Scramble the ACTUAL hero title characters — black on white
+    const lines = heroTitle.querySelectorAll('.title-line');
+    lines.forEach(line => {
+        const isOutline = line.classList.contains('title-outline');
+        const text = line.textContent.trim();
+        line.innerHTML = '';
+        text.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.display = 'inline-block';
+            span.style.willChange = 'transform, color';
+            // Start as black text (visible on white overlay)
+            if (isOutline) {
+                span.style.webkitTextFillColor = 'transparent';
+                span.style.webkitTextStroke = '2px #000000';
+            } else {
+                span.style.color = '#000000';
+            }
+            gsap.set(span, {
+                x: (Math.random() - 0.5) * 400,
+                y: (Math.random() - 0.5) * 300,
+                rotation: (Math.random() - 0.5) * 150,
+            });
+            line.appendChild(span);
+        });
+    });
+
+    const allSpans = heroTitle.querySelectorAll('span');
+    const solidSpans = heroTitle.querySelectorAll('.title-line:not(.title-outline) span');
+    const outlineSpans = heroTitle.querySelectorAll('.title-outline span');
+
+    // Timeline: 3s hold → unscramble → curtain reveal
+    const tl = gsap.timeline({
+        delay: 1,
+        onComplete: () => {
+            // Clean up
+            if (whiteOverlay) whiteOverlay.remove();
+            // Clear inline styles from spans so CSS takes over
+            allSpans.forEach(span => {
+                span.style.color = '';
+                span.style.webkitTextFillColor = '';
+                span.style.webkitTextStroke = '';
+                span.style.willChange = '';
+            });
+            document.body.style.overflow = '';
+            if (lenis) lenis.start();
+        }
+    });
+
+    // PHASE 1: Unscramble letters into place (still black on white)
+    tl.to(allSpans, {
+        x: 0,
+        y: 0,
+        rotation: 0,
+        duration: 0.7,
+        stagger: 0.02,
+        ease: 'power3.out'
+    }, 0);
+
+    // PHASE 2: Curtain reveal — white overlay slides up, text turns white
+    // Solid text: black → white
+    tl.to(solidSpans, {
+        color: '#f0f0f2',
+        duration: 0.8,
+        ease: 'power2.inOut'
+    }, 1.3);
+
+    // Outline text: black stroke → white stroke
+    tl.to(outlineSpans, {
+        webkitTextStroke: '1.5px #f0f0f2',
+        webkitTextFillColor: 'transparent',
+        duration: 0.8,
+        ease: 'power2.inOut'
+    }, 1.3);
+
+    // White overlay inside hero slides up
+    if (whiteOverlay) {
+        tl.to(whiteOverlay, {
+            yPercent: -100,
+            duration: 1.0,
+            ease: 'power3.inOut'
+        }, 1.1);
+    }
+
+    // Fade in other hero elements
+    tl.to(otherHeroContent, {
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out'
+    }, 1.8);
+
+    // Show nav
+    if (nav) {
+        tl.to(nav, {
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power2.out'
+        }, 2.0);
+    }
+}
+
+let lenis;
+function initLenis() {
+    lenis = new Lenis({
+        autoRaf: true,
+    });
+
+    // Listen for lenis scroll and update ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+}
 
 function initUniqueScrollAnimations() {
     const animElements = document.querySelectorAll('[data-anim]');
@@ -110,7 +250,7 @@ function triggerAnimation(el) {
                 el.style.filter = 'blur(0px)';
             }
             if (animType === 'morph-in') {
-                el.style.borderRadius = ''; 
+                el.style.borderRadius = '';
             }
 
             el.classList.add('animated');
@@ -248,7 +388,7 @@ function initHeroShrink() {
     const hero = document.querySelector('.page-hero');
     const title = document.querySelector('.page-hero-title');
     const subtitle = document.querySelector('.page-hero-subtitle');
-    
+
     if (!hero || hero.closest('body').classList.contains('home-page')) return;
 
     let heroHeight = hero.offsetHeight;
@@ -268,7 +408,7 @@ function initHeroShrink() {
             currentDisplayedTitle = newText;
             title.style.opacity = '1';
             isFading = false;
-        }, 350); 
+        }, 350);
     }
 
     const updateHero = () => {
@@ -282,7 +422,7 @@ function initHeroShrink() {
         const progress = Math.min(scrollY / maxScroll, 1);
 
         if (title) {
-            const scale = 1 - (0.55 * progress); 
+            const scale = 1 - (0.55 * progress);
             const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
             title.style.transform = `translateY(${translateY}px) scale(${scale})`;
 
@@ -294,7 +434,8 @@ function initHeroShrink() {
 
             if (progress >= 1) {
                 const heroBarBottom = minHeight;
-                const sectionTitles = document.querySelectorAll('.section-title');
+                // Exclude titles inside overlays
+                const sectionTitles = document.querySelectorAll('section .section-title');
                 let activeTitle = null;
 
                 sectionTitles.forEach(st => {
@@ -363,12 +504,14 @@ function initCommitteeExpand() {
 
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            overlay.setAttribute('data-lenis-prevent', 'true');
         });
     });
 
     function closeOverlay() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
+        overlay.removeAttribute('data-lenis-prevent');
     }
 
     if (closeBtn) {
@@ -416,12 +559,14 @@ function initTeamExpand() {
 
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            overlay.setAttribute('data-lenis-prevent', 'true');
         });
     });
 
     function closeOverlay() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
+        overlay.removeAttribute('data-lenis-prevent');
     }
 
     if (closeBtn) {
@@ -438,5 +583,98 @@ function initTeamExpand() {
         if (e.target === overlay) {
             closeOverlay();
         }
+    });
+}
+
+function initGroupPhoto() {
+    const containers = document.querySelectorAll('.group-photo-container');
+    if (!containers.length) return;
+
+    containers.forEach(container => {
+        const hotspots = container.querySelectorAll('.person-hotspot');
+        const popup = container.querySelector('.person-popup');
+        const popupPortrait = popup?.querySelector('.popup-portrait');
+        const popupName = popup?.querySelector('.popup-name');
+        const popupRole = popup?.querySelector('.popup-role');
+        const popupBio = popup?.querySelector('.popup-bio');
+        const popupClose = popup?.querySelector('.popup-close');
+
+        if (!popup) return;
+
+        let activeHotspot = null;
+
+        function showPopup(hotspot) {
+            if (activeHotspot === hotspot) return;
+            activeHotspot = hotspot;
+
+            const name = hotspot.dataset.name || '';
+            const role = hotspot.dataset.role || '';
+            const bio = hotspot.dataset.bio || '';
+            const portrait = hotspot.dataset.portrait || '';
+
+            if (popupPortrait) {
+                popupPortrait.src = portrait;
+                popupPortrait.alt = name;
+            }
+            if (popupName) popupName.textContent = name;
+            if (popupRole) popupRole.textContent = role;
+            if (popupBio) popupBio.textContent = bio;
+
+            container.classList.add('has-active');
+            popup.classList.add('active');
+
+            gsap.killTweensOf(popup);
+            gsap.to(popup, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.4,
+                ease: 'back.out(1.4)'
+            });
+        }
+
+        function hidePopup() {
+            if (!activeHotspot) return;
+            activeHotspot = null;
+
+            gsap.killTweensOf(popup);
+            gsap.to(popup, {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => {
+                    container.classList.remove('has-active');
+                    popup.classList.remove('active');
+                }
+            });
+        }
+
+        hotspots.forEach(hotspot => {
+            hotspot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeHotspot === hotspot) {
+                    hidePopup();
+                } else {
+                    showPopup(hotspot);
+                }
+            });
+
+            // Desktop hover
+            hotspot.addEventListener('mouseenter', () => showPopup(hotspot));
+        });
+
+        // Close on popup close button
+        if (popupClose) {
+            popupClose.addEventListener('click', (e) => {
+                e.stopPropagation();
+                hidePopup();
+            });
+        }
+
+        // Close when clicking outside or leaving
+        container.addEventListener('mouseleave', () => hidePopup());
+        document.addEventListener('click', (e) => {
+            if (activeHotspot && !container.contains(e.target)) hidePopup();
+        });
     });
 }

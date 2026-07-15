@@ -23,7 +23,7 @@
 
     <nav class="glass-nav" id="mainNav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"><img src="logo.webp" alt="RBSMUN Logo"></a>
+            <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="RBSMUN Logo"></a>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
@@ -39,7 +39,7 @@
         </div>
     </nav>
 
-    <section class="page-hero" style="background-image: url('PMS01025.webp');">
+    <section class="page-hero" style="background-image: url('images/PMS01025.webp');">
         <div class="hero-bg-overlay"></div>
         <div class="container">
             <h1 class="page-hero-title">Conference Details</h1>
@@ -51,17 +51,17 @@
 
         <section class="section">
             <div class="container">
-                <div class="info-grid">
-                    <div class="glass-card info-card" data-anim="tilt-in">
+                <div class="info-grid bento-grid">
+                    <div class="glass-card info-card bento-card-main" data-anim="tilt-in">
                         <div class="card-glow"></div>
-                        <h3>📍 Venue</h3>
+                        <h3>Venue</h3>
                         <p>Rato Bangala School<br>Patan Dhoka, Lalitpur, Nepal</p>
                         <p style="margin-top: 1rem;">The conference will take place across our academic blocks,
                             featuring state-of-the-art halls for the General Assembly and Plenary sessions.</p>
                     </div>
-                    <div class="glass-card info-card" data-anim="tilt-in">
+                    <div class="glass-card info-card bento-card-secondary" data-anim="tilt-in">
                         <div class="card-glow"></div>
-                        <h3>👔 Dress Code</h3>
+                        <h3>Dress Code</h3>
                         <p><strong>Western Business Attire (WBA)</strong></p>
                         <ul>
                             <li>Suits, ties, blazers, and formal trousers.</li>
@@ -69,9 +69,9 @@
                             <li>National attire is deeply encouraged on the final day of the conference.</li>
                         </ul>
                     </div>
-                    <div class="glass-card info-card" data-anim="tilt-in">
+                    <div class="glass-card info-card bento-card-secondary" data-anim="tilt-in">
                         <div class="card-glow"></div>
-                        <h3>📝 Registration</h3>
+                        <h3>Registration</h3>
                         <p>Registration is currently open for both individual delegates and school delegations.</p>
                         <ul style="margin-top: 0.5rem; margin-bottom: 1rem;">
                             <li><strong>Early Bird Deadline:</strong> To be announced</li>
@@ -92,9 +92,9 @@
                     <h2 class="section-title">Event <span class="text-gradient">Schedule</span></h2>
                 </div>
 
-                <div class="tables-container" data-anim="fade-up">
+                <div class="stacking-schedule-container" id="schedule-stack">
 
-                    <div class="glass-card table-wrapper">
+                    <div class="glass-card table-wrapper stack-item" style="--stack-index: 1;">
                         <h3 class="table-title">Day 1: Friday</h3>
                         <table class="schedule-table">
                             <tbody>
@@ -126,7 +126,7 @@
                         </table>
                     </div>
 
-                    <div class="glass-card table-wrapper">
+                    <div class="glass-card table-wrapper stack-item" style="--stack-index: 2;">
                         <h3 class="table-title">Day 2: Saturday</h3>
                         <table class="schedule-table">
                             <tbody>
@@ -158,7 +158,7 @@
                         </table>
                     </div>
 
-                    <div class="glass-card table-wrapper">
+                    <div class="glass-card table-wrapper stack-item" style="--stack-index: 3;">
                         <h3 class="table-title">Day 3: Sunday</h3>
                         <table class="schedule-table">
                             <tbody>
@@ -223,6 +223,9 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 
