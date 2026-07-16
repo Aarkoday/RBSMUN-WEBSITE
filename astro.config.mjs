@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Aarkoday.github.io',
+  site: 'https://aarkoday.github.io',
   base: '/RBSMUN-WEBSITE',
   integrations: [react(), tailwind()],
 });
