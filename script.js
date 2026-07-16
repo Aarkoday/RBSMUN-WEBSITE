@@ -135,10 +135,15 @@ function initPreloader() {
     }
 }
 
+const ENABLE_SMOOTH_SCROLL = true; // Toggle this to true/false to enable/disable Lenis
 let lenis;
+
 function initLenis() {
+    if (!ENABLE_SMOOTH_SCROLL) return;
+
     lenis = new Lenis({
-        autoRaf: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
 
     // Listen for lenis scroll and update ScrollTrigger
@@ -277,38 +282,22 @@ function initNavScroll() {
     });
 }
 
-function initMobileMenu() {
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    if (!toggle || !links) return;
 
-    toggle.addEventListener('click', () => {
-        links.classList.toggle('open');
-        toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            links.classList.remove('open');
-            toggle.classList.remove('active');
-        });
-    });
-}
 
 function initCountUp() {
-    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    const statNumbers = document.querySelectorAll('.stat-number[data-target], .about-big-number[data-target]');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const el = entry.target;
                 const target = parseInt(el.dataset.target, 10);
-                const delay = randomBetween(0, 400);
+                const delay = randomBetween(0, 200);
                 setTimeout(() => animateCount(el, target), delay);
                 observer.unobserve(el);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
     statNumbers.forEach(el => observer.observe(el));
 }
@@ -678,3 +667,81 @@ function initGroupPhoto() {
         });
     });
 }
+
+function initMobileMenu() {
+    const navToggle = document.getElementById('navToggle');
+    const navLinksContainer = document.getElementById('navLinks');
+    
+    if (!navToggle || !navLinksContainer) return;
+    
+    // Move navLinks to body to escape the .glass-nav containing block (which has will-change/transform)
+    // This allows it to properly fixed position to the viewport height.
+    function updateNavDomPosition() {
+        if (window.innerWidth <= 768) {
+            document.body.appendChild(navLinksContainer);
+        } else {
+            const navInner = document.querySelector('.nav-inner');
+            if (navInner && !navInner.contains(navLinksContainer)) {
+                // Insert it before the CTA button
+                const cta = navInner.querySelector('.nav-cta');
+                if (cta) navInner.insertBefore(navLinksContainer, cta);
+                else navInner.appendChild(navLinksContainer);
+            }
+        }
+    }
+    
+    // Add mobile CTA first so it is included when appended to body
+    const originalCta = document.querySelector('.nav-cta');
+    if (originalCta && !navLinksContainer.querySelector('.mobile-nav-cta')) {
+        const mobileCta = originalCta.cloneNode(true);
+        mobileCta.classList.add('mobile-nav-cta');
+        mobileCta.classList.remove('nav-cta');
+        mobileCta.style.opacity = '0';
+        navLinksContainer.appendChild(mobileCta);
+    }
+
+    updateNavDomPosition();
+    window.addEventListener('resize', updateNavDomPosition);
+    
+    // Query ALL links + cta in the mobile menu
+    const links = navLinksContainer.querySelectorAll('a');
+    
+    // Add reveal block to each nav link (not the CTA button)
+    navLinksContainer.querySelectorAll('a:not(.mobile-nav-cta)').forEach(link => {
+        const block = document.createElement('div');
+        block.className = 'reveal-block';
+        link.appendChild(block);
+    });
+    
+    let isMenuOpen = false;
+    let menuTl = gsap.timeline({ paused: true });
+    
+    // Animate all links + CTA to opacity 1
+    menuTl.to(links, {
+        opacity: 1,
+        duration: 0.2,
+        stagger: 0.05
+    })
+    .to(navLinksContainer.querySelectorAll('.reveal-block'), {
+        scaleX: 0,
+        transformOrigin: 'right',
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.inOut'
+    }, 0);
+    
+    navToggle.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        navToggle.classList.toggle('active');
+        navLinksContainer.classList.toggle('open');
+        
+        if (isMenuOpen) {
+            setTimeout(() => {
+                menuTl.restart();
+            }, 300);
+        } else {
+            menuTl.reverse();
+        }
+    });
+}
+
