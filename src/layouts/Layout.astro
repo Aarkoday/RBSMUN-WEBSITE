@@ -4,9 +4,16 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture in Nepal." } = Astro.props;
+const { 
+  title, 
+  description = "Welcome to RBSMUN 2026, a pioneer of MUN culture in Nepal.",
+  image = "/images/hero-bg.webp" 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://rbsmun.com');
 ---
 
 <!DOCTYPE html>
@@ -17,6 +24,24 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
     <title>{title}</title>
     <link rel="icon" type="image/webp" href="/images/logo.webp" />
     <meta name="description" content={description}>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, canonicalURL)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -31,13 +56,13 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
 
         gsap.registerPlugin(ScrollTrigger);
 
-        // ─── Expose globals for script modules ──────────────────────────────────
+        // â”€â”€â”€ Expose globals for script modules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         (window as any).gsap = gsap;
         (window as any).ScrollTrigger = ScrollTrigger;
 
         let lenis: any;
 
-        // ─── LENIS ───────────────────────────────────────────────────────────────
+        // â”€â”€â”€ LENIS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         lenis = new Lenis({
             duration: 1.2,
             easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -47,7 +72,7 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
         gsap.ticker.lagSmoothing(0);
         (window as any).lenis = lenis;
 
-        // ─── PRELOADER ────────────────────────────────────────────────────────────
+        // â”€â”€â”€ PRELOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initPreloader() {
             const whiteOverlay = document.getElementById('hero-white-overlay');
             const heroTitle = document.querySelector('.hero-title');
@@ -130,7 +155,7 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             }
         }
 
-        // ─── SCROLL ANIMATIONS ───────────────────────────────────────────────────
+        // â”€â”€â”€ SCROLL ANIMATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function randomBetween(min: number, max: number) {
             return Math.random() * (max - min) + min;
         }
@@ -221,7 +246,7 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             });
         }
 
-        // ─── NAV SCROLL ──────────────────────────────────────────────────────────
+        // â”€â”€â”€ NAV SCROLL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initNavScroll() {
             const nav = document.getElementById('mainNav');
             if (!nav) return;
@@ -235,9 +260,21 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
                     ticking = true;
                 }
             });
+
+            // Same-page nav link: scroll to top instead of reloading
+            const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+            nav.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link => {
+                const linkPath = new URL(link.href, window.location.href).pathname.replace(/\/$/, '') || '/';
+                if (linkPath === currentPath) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        window.lenis ? (window as any).lenis.scrollTo(0, { duration: 1.2 }) : window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                }
+            });
         }
 
-        // ─── COUNT UP ────────────────────────────────────────────────────────────
+        // â”€â”€â”€ COUNT UP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initCountUp() {
             const statNumbers = document.querySelectorAll<HTMLElement>('.stat-number[data-target], .about-big-number[data-target]');
             const observer = new IntersectionObserver((entries) => {
@@ -265,7 +302,7 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             statNumbers.forEach(el => observer.observe(el));
         }
 
-        // ─── CARD GLOW ───────────────────────────────────────────────────────────
+        // ─── CARD GLOW ────────────────────────────────────────────────────────────
         function initCardGlowTracking() {
             document.querySelectorAll<HTMLElement>('.glass-card').forEach(card => {
                 card.addEventListener('mousemove', (e) => {
@@ -280,10 +317,9 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
 
         // ─── MAGNETIC BUTTONS ────────────────────────────────────────────────────
         function initMagneticButtons() {
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
             document.querySelectorAll<HTMLElement>('.btn').forEach(btn => {
-                const quickX = gsap.quickTo(btn, 'x', { duration: 0.3, ease: 'power2.out' });
-                const quickY = gsap.quickTo(btn, 'y', { duration: 0.3, ease: 'power2.out' });
+                const quickX = gsap.quickTo(btn, 'x', { duration: 0.4, ease: 'power3' });
+                const quickY = gsap.quickTo(btn, 'y', { duration: 0.4, ease: 'power3' });
                 btn.addEventListener('mousemove', (e) => {
                     const rect = btn.getBoundingClientRect();
                     const x = (e.clientX - rect.left - rect.width / 2) * 0.15;
@@ -301,37 +337,116 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             const hero = document.querySelector<HTMLElement>('.page-hero');
             const title = document.querySelector<HTMLElement>('.page-hero-title');
             const subtitle = document.querySelector<HTMLElement>('.page-hero-subtitle');
+            const nav = document.querySelector<HTMLElement>('.glass-nav');
             if (!hero) return;
 
             let heroHeight = hero.offsetHeight;
-            const minHeight = 180;
             let ticking = false;
             const originalTitle = title ? title.textContent || '' : '';
             let currentDisplayedTitle = originalTitle;
             let isFading = false;
+            let lastTranslateY = 0;
+
+            // Measurements at rest (no scroll)
+            let titleStartTop = 0;
+            let titleStartHeight = 0;
+            let titleStartFontSize = 0;
+
+            function measureOriginal() {
+                heroHeight = hero.offsetHeight;
+                if (title) {
+                    const savedTransform = title.style.transform;
+                    const savedFontSize = title.style.fontSize;
+                    title.style.transform = 'none';
+                    title.style.fontSize = '';
+
+                    const heroRect = hero.getBoundingClientRect();
+                    const titleRect = title.getBoundingClientRect();
+                    titleStartTop = titleRect.top - heroRect.top;
+                    titleStartHeight = titleRect.height;
+                    
+                    // Only read the CSS font size once to avoid picking up inline styles accidentally
+                    if (!titleStartFontSize) {
+                        titleStartFontSize = parseFloat(getComputedStyle(title).fontSize);
+                    }
+
+                    title.style.transform = savedTransform;
+                    title.style.fontSize = savedFontSize;
+                }
+            }
+            measureOriginal();
 
             function crossfadeTo(newText: string) {
                 if (newText === currentDisplayedTitle || isFading || !title) return;
                 isFading = true;
                 title.style.opacity = '0';
                 setTimeout(() => {
-                    if (title) { title.textContent = newText; currentDisplayedTitle = newText; title.style.opacity = '1'; }
+                    if (title) {
+                        title.textContent = newText;
+                        currentDisplayedTitle = newText;
+                        
+                        // Clear transforms to get clean measurements for the new text block
+                        title.style.transform = 'none';
+                        title.style.fontSize = '';
+                        lastTranslateY = 0;
+                        
+                        measureOriginal();
+                        updateHero();
+                        title.style.opacity = '1';
+                    }
                     isFading = false;
                 }, 350);
             }
 
+            function getNavBottom(): number {
+                if (!nav) return 80;
+                const heroRect = hero.getBoundingClientRect();
+                const navRect = nav.getBoundingClientRect();
+                return navRect.bottom - heroRect.top;
+            }
+
+            function getMinHeight(titleH: number): number {
+                const navBottom = getNavBottom();
+                const paddingTop = 16;
+                const paddingBottom = 20;
+                return Math.ceil(navBottom + paddingTop + titleH + paddingBottom);
+            }
+
             const updateHero = () => {
                 const scrollY = window.scrollY;
-                const currentHeight = Math.max(minHeight, heroHeight - scrollY);
-                const clipBottom = heroHeight - currentHeight;
-                hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
-                const maxScroll = heroHeight - minHeight;
-                const progress = Math.min(scrollY / maxScroll, 1);
+                const approxMinHeight = getMinHeight(titleStartHeight * 0.55);
+                const maxScroll = heroHeight - approxMinHeight;
+                const progress = Math.min(scrollY / Math.max(maxScroll, 1), 1);
+
                 if (title) {
-                    const scale = 1 - (0.55 * progress);
-                    const translateY = -(heroHeight - currentHeight) / 2 + (progress * 75);
-                    title.style.transform = `translateY(${translateY}px) scale(${scale})`;
-                    title.style.whiteSpace = progress > 0.8 ? 'nowrap' : 'normal';
+                    // 1. Set font size based on scroll progress
+                    const currentFontSize = titleStartFontSize * (1 - 0.45 * progress);
+                    title.style.fontSize = `${currentFontSize}px`;
+
+                    // 2. Read actual rendered height & navbar position
+                    const titleH = title.offsetHeight;
+                    const navBottom = getNavBottom();
+                    const minHeight = getMinHeight(titleH);
+
+                    // 3. Clip hero background image safely below title
+                    const currentHeight = Math.max(minHeight, heroHeight - scrollY);
+                    const clipBottom = Math.max(0, heroHeight - currentHeight);
+                    hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
+
+                    // 4. Calculate exact desired final position
+                    const targetTop = navBottom + (minHeight - navBottom) / 2 - (titleH / 2);
+                    const desiredVisualTop = titleStartTop + (targetTop - titleStartTop) * progress;
+
+                    // 5. Compensate for Flexbox pushing the natural top downwards as font shrinks
+                    const heroRect = hero.getBoundingClientRect();
+                    const titleRect = title.getBoundingClientRect();
+                    const visualTop = titleRect.top - heroRect.top;
+                    const currentNaturalTop = visualTop - lastTranslateY;
+
+                    const newTranslateY = desiredVisualTop - currentNaturalTop;
+                    title.style.transform = `translateY(${newTranslateY}px)`;
+                    lastTranslateY = newTranslateY;
+
                     if (progress >= 1) {
                         const sectionTitles = document.querySelectorAll<HTMLElement>('section .section-title');
                         let activeTitle: string | null = null;
@@ -343,7 +458,14 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
                     } else {
                         if (currentDisplayedTitle !== originalTitle && !isFading) crossfadeTo(originalTitle);
                     }
+                } else {
+                    const navBottom = getNavBottom();
+                    const minHeight = Math.ceil(navBottom + 60);
+                    const currentHeight = Math.max(minHeight, heroHeight - scrollY);
+                    const clipBottom = Math.max(0, heroHeight - currentHeight);
+                    hero.style.clipPath = `inset(0px 0px ${clipBottom}px 0px)`;
                 }
+
                 if (subtitle) subtitle.style.opacity = String(Math.max(0, 1 - (progress * 3)));
                 ticking = false;
             };
@@ -351,45 +473,84 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             window.addEventListener('scroll', () => {
                 if (!ticking) { window.requestAnimationFrame(updateHero); ticking = true; }
             }, { passive: true });
+
             window.addEventListener('resize', () => {
                 hero.style.clipPath = 'none';
-                heroHeight = hero.offsetHeight;
+                if (title) {
+                    title.style.transform = 'none';
+                    title.style.fontSize = '';
+                    lastTranslateY = 0;
+                }
+                measureOriginal();
                 updateHero();
             });
+
             updateHero();
         }
 
-        // ─── COMMITTEE EXPAND ────────────────────────────────────────────────────
+        // â”€â”€â”€ COMMITTEE EXPAND â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initCommitteeExpand() {
             const overlay = document.getElementById('committeeOverlay');
             const closeBtn = document.getElementById('committeeOverlayClose');
             const overlayAcronym = document.getElementById('overlayAcronym');
             const overlayFullname = document.getElementById('overlayFullname');
+            const overlayEbGroupImg = document.getElementById('overlayEbGroupImg') as HTMLImageElement;
+            const overlayChairImg = document.getElementById('overlayChairImg') as HTMLImageElement;
+            const overlayViceChairImg = document.getElementById('overlayViceChairImg') as HTMLImageElement;
+            const overlayModeratorImg = document.getElementById('overlayModeratorImg') as HTMLImageElement;
+            const overlayPdfLink = document.getElementById('overlayPdfLink') as HTMLAnchorElement;
+
             if (!overlay) return;
+
+            // Block wheel/touch events from reaching Lenis when overlay is open
+            overlay.addEventListener('wheel', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
+            overlay.addEventListener('touchmove', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
 
             document.querySelectorAll<HTMLElement>('.committee-logo-card[data-committee]').forEach(card => {
                 card.addEventListener('click', (e) => {
                     e.preventDefault();
                     const acronym = card.querySelector('.committee-massive-acronym')?.textContent || '';
                     const fullname = card.dataset.fullname || '';
+                    const key = card.dataset.committee || '';
+
                     if (overlayAcronym) overlayAcronym.textContent = acronym;
                     if (overlayFullname) overlayFullname.textContent = fullname;
+
+                    if (overlayEbGroupImg) {
+                        overlayEbGroupImg.style.display = 'block';
+                        const placeholder = overlayEbGroupImg.nextElementSibling as HTMLElement;
+                        if (placeholder) placeholder.style.display = 'none';
+                        overlayEbGroupImg.src = `/images/committees/${key}/eb-group.jpg`;
+                    }
+
+                    if (overlayChairImg) overlayChairImg.src = `/images/committees/${key}/chair.jpg`;
+                    if (overlayViceChairImg) overlayViceChairImg.src = `/images/committees/${key}/vice-chair.jpg`;
+                    if (overlayModeratorImg) overlayModeratorImg.src = `/images/committees/${key}/moderator.jpg`;
+                    const guideUrl = card.dataset.guideUrl || '#';
+                    if (overlayPdfLink) overlayPdfLink.href = guideUrl;
+
                     overlay.scrollTop = 0;
                     overlay.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    if ((window as any).lenis) (window as any).lenis.stop();
                 });
             });
 
             function closeOverlay() {
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
+                if ((window as any).lenis) (window as any).lenis.start();
             }
             closeBtn?.addEventListener('click', closeOverlay);
             document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('active')) closeOverlay(); });
             overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
         }
 
-        // ─── TEAM EXPAND ─────────────────────────────────────────────────────────
+        // â”€â”€â”€ TEAM EXPAND â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initTeamExpand() {
             const overlay = document.getElementById('teamOverlay');
             const closeBtn = document.getElementById('teamOverlayClose');
@@ -397,6 +558,14 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
             const overlayRole = document.getElementById('teamOverlayRole');
             const overlayDesc = document.getElementById('teamOverlayDesc');
             if (!overlay) return;
+
+            // Block wheel/touch events from reaching Lenis when overlay is open
+            overlay.addEventListener('wheel', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
+            overlay.addEventListener('touchmove', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
 
             document.querySelectorAll<HTMLElement>('.team-card[data-team]').forEach(card => {
                 card.addEventListener('click', (e) => {
@@ -411,19 +580,21 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
                     overlay.scrollTop = 0;
                     overlay.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    if ((window as any).lenis) (window as any).lenis.stop();
                 });
             });
 
             function closeOverlay() {
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
+                if ((window as any).lenis) (window as any).lenis.start();
             }
             closeBtn?.addEventListener('click', closeOverlay);
             document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('active')) closeOverlay(); });
             overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
         }
 
-        // ─── MOBILE MENU ─────────────────────────────────────────────────────────
+        // â”€â”€â”€ MOBILE MENU â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initMobileMenu() {
             const navToggle = document.getElementById('navToggle');
             const navLinksContainer = document.getElementById('navLinks');
@@ -478,9 +649,21 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
                     menuTl.reverse();
                 }
             });
+
+            // Close mobile menu when any link is tapped
+            navLinksContainer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) {
+                        isMenuOpen = false;
+                        navToggle.classList.remove('active');
+                        navLinksContainer.classList.remove('open');
+                        menuTl.reverse();
+                    }
+                });
+            });
         }
 
-        // ─── INIT ALL ────────────────────────────────────────────────────────────
+        // â”€â”€â”€ INIT ALL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function initAll() {
             initPreloader();
             initUniqueScrollAnimations();
@@ -502,3 +685,4 @@ const { title, description = "Welcome to RBSMUN 2026, a pioneer of MUN culture i
     </script>
 </body>
 </html>
+

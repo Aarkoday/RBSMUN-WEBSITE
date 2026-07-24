@@ -47,6 +47,7 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 body {
@@ -289,6 +290,7 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
     transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    max-width: calc(100vw - 2rem);
 }
 
 .glass-nav.scrolled .nav-inner {
@@ -409,7 +411,7 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: url('/images/PMS01512.webp') center/cover no-repeat;
+    background: url('/images/miscellaneous/PMS01512.webp') center/cover no-repeat;
 }
 
 .hero-bg-overlay {
@@ -568,7 +570,7 @@ img {
     left: 0;
     right: 0;
     z-index: 20;
-    height: 60vh;
+    height: clamp(45vh, 60vh, 65vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -595,7 +597,7 @@ img {
 .content-wrapper {
     position: relative;
     z-index: 10;
-    margin-top: 60vh;
+    margin-top: clamp(45vh, 60vh, 65vh);
     background-color: var(--bg-void);
     box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6);
     background-image:
@@ -609,17 +611,22 @@ img {
 
 .page-hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: clamp(2rem, 7vw, 5rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 1;
-    margin-bottom: 1rem;
+    line-height: 1.15;
+    margin: 0 auto 1rem auto;
     color: var(--text-primary);
     will-change: transform, opacity;
     transition: opacity 0.35s ease;
     text-align: center;
     width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    text-wrap: balance;
     transform-origin: center center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .page-hero-subtitle {
@@ -971,7 +978,7 @@ img {
 
 .committees-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -994,17 +1001,20 @@ img {
 
 .committee-massive-acronym {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
     color: var(--text-primary);
-    letter-spacing: -0.05em;
-    padding-left: 0.05em;
+    letter-spacing: -0.04em;
     background: linear-gradient(135deg, #ffffff, #8c8ca5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     pointer-events: none;
     margin: 0;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.1;
 }
 
 .committee-card {
@@ -1593,7 +1603,7 @@ img {
     }
 
     .committees-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .letter-card {
@@ -1692,18 +1702,19 @@ html.lenis {
    COMMITTEES GRID UPDATE
    ========================================================================== */
 .committees-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.5rem;
 }
 
 .committee-logo-card {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     height: auto;
     min-height: 0 !important;
     width: 100%;
     background-image: none !important;
     position: relative;
     overflow: hidden;
+    padding: 2rem;
 }
 
 .committee-logo-card::before {
@@ -1727,9 +1738,11 @@ html.lenis {
 .committee-logo-card .committee-massive-acronym {
     position: relative;
     z-index: 1;
-    font-size: clamp(2rem, 5vw, 2.5rem) !important;
-    color: var(--text-primary);
+    font-size: clamp(1.4rem, 2vw, 2.6rem);
     transition: color 0.5s ease, text-shadow 0.5s ease;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 1.1;
 }
 
 .committee-logo-card:hover .committee-massive-acronym {
@@ -2092,3 +2105,167 @@ html.lenis {
         height: 120px;
     }
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS — GLOBAL IMPROVEMENTS
+   ========================================================================== */
+
+/* Prevent any element from causing horizontal scroll */
+*, *::before, *::after {
+    max-width: 100%;
+}
+
+img, video, canvas, svg {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Nav pill: shrink gap and padding on mobile */
+    .nav-inner {
+        gap: 1rem;
+        padding: 0.5rem 0.75rem 0.5rem 1rem;
+    }
+
+    /* Page hero: reduce height on mobile so title fits */
+    .page-hero {
+        height: 50vh;
+    }
+    .content-wrapper {
+        margin-top: 50vh;
+    }
+
+    /* Page hero title: smaller on mobile */
+    .page-hero-title {
+        font-size: clamp(1.6rem, 8vw, 3rem);
+        letter-spacing: -0.03em;
+        padding: 0 1rem;
+        max-width: 95%;
+        white-space: normal;
+    }
+
+    /* Page hero subtitle: smaller */
+    .page-hero-subtitle {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+
+    /* Schedule tables: stack on mobile */
+    .tables-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Schedule side-by-side: stack */
+    .schedule-scroll-track {
+        grid-template-columns: 1fr;
+    }
+
+    /* Bento grid: single column */
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-card-main,
+    .bento-card-secondary {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* About grid: single column */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Glass cards: reduce padding */
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    /* Committees grid: 2 columns on mobile */
+    .committees-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Team grid: 1 column */
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-card-wrapper {
+        flex: 0 0 100%;
+    }
+
+    /* Committee overlay: full screen padding fix */
+    .committee-overlay {
+        padding: 1rem;
+    }
+    .committee-overlay-header {
+        padding-top: 4rem;
+    }
+
+    /* Section title: smaller */
+    .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    /* Timeline: less indent */
+    .timeline {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Page hero on very small phones */
+    .page-hero {
+        height: 45vh;
+    }
+    .content-wrapper {
+        margin-top: 45vh;
+    }
+
+    .page-hero-title {
+        font-size: clamp(1.4rem, 9vw, 2.2rem);
+        padding: 0 0.5rem;
+    }
+
+    /* Committees: 1 column on tiny screens */
+    .committees-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Nav inner on tiny screens */
+    .nav-inner {
+        gap: 0.5rem;
+        padding: 0.5rem 0.6rem 0.5rem 0.8rem;
+    }
+
+    /* Stat numbers */
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Hero actions: stack buttons */
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Table wrapper: ensure it doesn't overflow */
+    .table-wrapper {
+        padding: 1.25rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule-table {
+        min-width: 280px;
+    }
+}

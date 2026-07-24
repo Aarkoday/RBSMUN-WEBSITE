@@ -1,15 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import WebGLBackground from '../components/WebGLBackground.jsx';
+import Layout from "../layouts/Layout.astro";
+import WebGLBackground from "../components/WebGLBackground.jsx";
 ---
 
 <Layout title="Committees — RBSMUN 2026">
-
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
         <div class="nav-inner">
-            <a href="/" class="nav-logo"><img src="/images/logo.webp" alt="RBSMUN Logo"></a>
+            <a href="/" class="nav-logo"
+                ><img src="/images/logo.webp" alt="RBSMUN Logo" /></a
+            >
             <div class="nav-links" id="navLinks">
                 <a href="/">Home</a>
                 <a href="/about">About Us</a>
@@ -17,159 +18,296 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
                 <a href="/conference">Conference Details</a>
                 <a href="/team">Our Team</a>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                target="_blank" class="nav-cta">Register →</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                target="_blank"
+                class="nav-cta">Register →</a
+            >
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <section class="page-hero" style="background-image: url('/images/committees.webp');">
-        <div class="hero-bg-overlay"></div>
+    <section
+        class="page-hero"
+        style="background-image: url('/images/miscellaneous/committees.webp');"
+    >
+        <!-- <div class="hero-bg-overlay"></div> -->
         <div class="container">
             <h1 class="page-hero-title">Committees</h1>
-            <p class="page-hero-subtitle">Engage in rigorous debate and draft resolutions across our 6 specialized
-                committees.</p>
+            <p class="page-hero-subtitle">
+                Engage in rigorous debate and draft resolutions across our
+                specialized committees.
+            </p>
         </div>
     </section>
 
     <div class="content-wrapper">
-
         <section class="section">
             <div class="container">
                 <div class="committees-grid">
-
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="disec" data-fullname="DISEC" style="--bg-url: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="jcc"
+                        data-fullname="Joint Crisis Committee"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800');"
+                    >
+                        <div class="card-glow"></div>
+                        <h2 class="committee-massive-acronym">JCC</h2>
+                    </div>
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="disec"
+                        data-fullname="DISEC"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">DISEC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="ecofin" data-fullname="ECOFIN" style="--bg-url: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="ecofin"
+                        data-fullname="ECOFIN"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">ECOFIN</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="icj" data-fullname="ICJ" style="--bg-url: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="icj"
+                        data-fullname="ICJ"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">ICJ</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="irc" data-fullname="The Imperial Romanov Court" style="--bg-url: url('https://images.unsplash.com/photo-1533052157796-0309191d4e78?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="irc"
+                        data-fullname="The Imperial Romanov Court"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1533052157796-0309191d4e78?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">IRC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="who" data-fullname="WHO" style="--bg-url: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="who"
+                        data-fullname="WHO"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">WHO</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="hor" data-fullname="House of Representatives" style="--bg-url: url('https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="hor"
+                        data-fullname="House of Representatives"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">HoR</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="gcmr" data-fullname="The Grand Convocation of the Mythical Realms" style="--bg-url: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="gcmr"
+                        data-fullname="The Grand Convocation of the Mythical Realms"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">GCMR</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="unsc" data-fullname="UNSC" style="--bg-url: url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="unsc"
+                        data-fullname="UNSC"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">UNSC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="picc" data-fullname="Paris International Conference on Cambodia" style="--bg-url: url('https://images.unsplash.com/photo-1502602898657-3e90760a92d8?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="picc"
+                        data-fullname="Paris International Conference on Cambodia"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1502602898657-3e90760a92d8?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">PICC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="unwomen" data-fullname="UNWOMEN" style="--bg-url: url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="unwomen"
+                        data-fullname="UNWOMEN"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">UNWOMEN</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="hrc" data-fullname="HRC" style="--bg-url: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="hrc"
+                        data-fullname="HRC"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">HRC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="uscc" data-fullname="United States Congressional Committee (Senate)" style="--bg-url: url('https://images.unsplash.com/photo-1541887088-294b2a8d381c?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="uscc"
+                        data-fullname="United States Congressional Committee (Senate)"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1541887088-294b2a8d381c?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">US Senate</h2>
+                        <h2 class="committee-massive-acronym">USCC</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="sochum" data-fullname="SOCHUM" style="--bg-url: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="sochum"
+                        data-fullname="SOCHUM"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">SOCHUM</h2>
                     </div>
 
-                    <div class="glass-card committee-logo-card" data-anim="scatter" data-committee="ipc" data-fullname="IPC" style="--bg-url: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800');">
+                    <div
+                        class="glass-card committee-logo-card"
+                        data-anim="scatter"
+                        data-committee="ipc"
+                        data-fullname="IPC"
+                        style="--bg-url: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800');"
+                    >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">IPC</h2>
                     </div>
-
                 </div>
             </div>
         </section>
-
     </div>
 
-    <div class="committee-overlay" id="committeeOverlay">
-        <button class="committee-overlay-close" id="committeeOverlayClose" aria-label="Close">✕</button>
+    <div class="committee-overlay" id="committeeOverlay" data-lenis-prevent>
+        <button
+            class="committee-overlay-close"
+            id="committeeOverlayClose"
+            aria-label="Close">✕</button
+        >
         <div class="committee-overlay-header">
             <h2 class="committee-overlay-acronym" id="overlayAcronym"></h2>
             <p class="committee-overlay-fullname" id="overlayFullname"></p>
         </div>
         <div class="committee-overlay-body">
-
             <div class="committee-overlay-section">
                 <p class="section-eyebrow">Information</p>
-                <h2 class="section-title">Committee <span class="text-gradient">Mandate</span></h2>
+                <h2 class="section-title">
+                    Committee <span class="text-gradient">Mandate</span>
+                </h2>
                 <div class="glass-card">
                     <div class="card-glow"></div>
                     <p id="overlayMandate1">
-                        [Insert Committee Mandate and general description here. Start by establishing the context of the
-                        committee's scope within the United Nations framework...]
+                        [Insert Committee Mandate and general description here.
+                        Start by establishing the context of the committee's
+                        scope within the United Nations framework...]
                     </p>
                     <p id="overlayMandate2">
-                        [Provide details about the specific agenda, conflict overviews, or key debate topics that
-                        delegates will face inside this committee...]
+                        [Provide details about the specific agenda, conflict
+                        overviews, or key debate topics that delegates will face
+                        inside this committee...]
                     </p>
                 </div>
             </div>
 
             <div class="committee-overlay-section">
                 <p class="section-eyebrow">Leadership</p>
-                <h2 class="section-title">Executive <span class="text-gradient">Board</span></h2>
+                <h2 class="section-title">
+                    Executive <span class="text-gradient">Board</span>
+                </h2>
+                
+                <!-- Executive Board Group Photo Card -->
+                <div class="glass-card eb-group-card" style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--glass-radius-md); padding: 0;">
+                    <div class="card-glow"></div>
+                    <div class="eb-group-img-wrapper" style="width: 100%; height: 320px; position: relative; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img
+                            id="overlayEbGroupImg"
+                            src=""
+                            alt="Executive Board Group Photo"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        />
+                        <div class="eb-group-placeholder" style="display: none; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-secondary); text-align: center; padding: 2rem;">
+                            <span style="font-size: 2rem;">📸</span>
+                            <span style="font-weight: 600; color: var(--text-primary);">Executive Board Group Photo</span>
+                            <span style="font-size: 0.8rem; opacity: 0.7;">Upload photo to <code>/images/committees/[id]/eb-group.jpg</code></span>
+                        </div>
+                    </div>
+                    <div style="padding: 1.25rem 1.5rem; background: rgba(0, 0, 0, 0.4); border-top: 1px solid var(--border-glass);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.25rem;">Executive Board Team</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Full Dais & Executive Board Group Photo</p>
+                    </div>
+                </div>
+
                 <div class="team-grid">
                     <div class="team-card-wrapper">
                         <div class="glass-card team-card">
-                            <img src="" alt="Chairperson" class="team-img-bg">
+                            <img id="overlayChairImg" src="" alt="Chairperson" class="team-img-bg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600'" />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
-                                <h3>To be announced</h3>
+                                <h3 id="overlayChairName">To be announced</h3>
                                 <p class="team-role">Chairperson</p>
                             </div>
                         </div>
                     </div>
                     <div class="team-card-wrapper">
                         <div class="glass-card team-card">
-                            <img src="" alt="Vice Chairperson" class="team-img-bg">
+                            <img
+                                id="overlayViceChairImg"
+                                src=""
+                                alt="Vice Chairperson"
+                                class="team-img-bg"
+                                onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
-                                <h3>To be announced</h3>
+                                <h3 id="overlayViceChairName">To be announced</h3>
                                 <p class="team-role">Vice Chairperson</p>
                             </div>
                         </div>
                     </div>
                     <div class="team-card-wrapper">
                         <div class="glass-card team-card">
-                            <img src="" alt="Moderator" class="team-img-bg">
+                            <img id="overlayModeratorImg" src="" alt="Moderator" class="team-img-bg" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600'" />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
-                                <h3>To be announced</h3>
+                                <h3 id="overlayModeratorName">To be announced</h3>
                                 <p class="team-role">Moderator</p>
                             </div>
                         </div>
@@ -183,26 +321,45 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
                 <div class="committee-overlay-actions">
                     <div class="glass-card">
                         <div class="card-glow"></div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Background Guide</h3>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;"
+                        >
+                            Background Guide
+                        </h3>
                         <p style="font-size: 0.9rem;">
-                            Download the official study guide designed by your rigorous Executive Board. This guide is
-                            required reading prior to the conference.
+                            Download the official study guide designed by your
+                            rigorous Executive Board. This guide is required
+                            reading prior to the conference.
                         </p>
-                        <a href="#" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Download PDF</a>
+                        <a
+                            id="overlayPdfLink"
+                            href="#"
+                            target="_blank"
+                            class="btn btn-outline"
+                            style="width: 100%; margin-top: 1rem;"
+                            >Download PDF</a
+                        >
                     </div>
                     <div class="glass-card">
                         <div class="card-glow"></div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Contact Us</h3>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;"
+                        >
+                            Contact Us
+                        </h3>
                         <p style="font-size: 0.9rem;">
-                            If you have any questions regarding the agenda or position papers, directly email the
-                            committee dais.
+                            If you have any questions regarding the agenda or
+                            position papers, directly email the committee dais.
                         </p>
-                        <a href="mailto:committee@ratobangala.edu.np" class="btn btn-glass"
-                            style="width: 100%; margin-top: 1rem;">committee@ratobangala.edu.np</a>
+                        <a
+                            href="mailto:committee@ratobangala.edu.np"
+                            class="btn btn-glass"
+                            style="width: 100%; margin-top: 1rem;"
+                            >committee@ratobangala.edu.np</a
+                        >
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -210,7 +367,9 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4 class="footer-logo">RBS<span class="logo-accent">MUN</span></h4>
+                    <h4 class="footer-logo">
+                        RBS<span class="logo-accent">MUN</span>
+                    </h4>
                 </div>
                 <div class="footer-col">
                     <h4>Navigate</h4>
@@ -221,7 +380,9 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <a href="mailto:contact@ratobangala.edu.np">contact@ratobangala.edu.np</a>
+                    <a href="mailto:contact@ratobangala.edu.np"
+                        >contact@ratobangala.edu.np</a
+                    >
                     <a href="tel:015447618">01-5447618</a>
                     <a href="tel:015447620">01-5447620</a>
                 </div>
@@ -231,5 +392,4 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
             </div>
         </div>
     </footer>
-
 </Layout>
