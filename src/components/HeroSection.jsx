@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 
+const getBase = () => (typeof document !== 'undefined' ? (document.querySelector('meta[name="base-url"]')?.content || '') : '');
+
 export default function HeroSection() {
   const container = useRef();
   
@@ -43,7 +45,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="hero flex items-center justify-center min-h-screen relative" id="hero" ref={container} style={{ background: "url('/images/miscellaneous/PMS01512.webp') center/cover no-repeat" }}>
+    <section className="hero flex items-center justify-center min-h-screen relative" id="hero" ref={container} style={{ background: `url('${getBase()}/images/miscellaneous/PMS01512.webp') center/cover no-repeat` }}>
         <div className="hero-bg-overlay" style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)' }}></div>
         <div className="hero-mesh"></div>
         <div className="hero-glass-panel hero-glass-1"></div>

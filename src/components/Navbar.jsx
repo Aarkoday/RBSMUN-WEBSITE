@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+const getBase = () => (typeof document !== 'undefined' ? (document.querySelector('meta[name="base-url"]')?.content || '') : '');
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const base = getBase();
   
   useEffect(() => {
     import('gsap').then(({ gsap }) => {
@@ -20,15 +23,15 @@ export default function Navbar() {
   return (
     <nav className="glass-nav" id="mainNav" style={{ opacity: 0, transform: 'translateY(-20px)' }}>
       <div className="nav-inner">
-          <a href="/" className="nav-logo">
-            <img src="/images/logo.webp" alt="RBSMUN Logo" />
+          <a href={`${base}/`} className="nav-logo">
+            <img src={`${base}/images/logo.webp`} alt="RBSMUN Logo" />
           </a>
           <div className={`nav-links${isMenuOpen ? ' active' : ''}`} id="navLinks">
-              <a href="/">Home</a>
-              <a href="/about">About Us</a>
-              <a href="/committees">Committees</a>
-              <a href="/conference">Conference Details</a>
-              <a href="/team">Our Team</a>
+              <a href={`${base}/`}>Home</a>
+              <a href={`${base}/about`}>About Us</a>
+              <a href={`${base}/committees`}>Committees</a>
+              <a href={`${base}/conference`}>Conference Details</a>
+              <a href={`${base}/team`}>Our Team</a>
               {/* Register CTA included in mobile menu */}
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
                  target="_blank" className="nav-cta" style={{ display: 'none' }}>Register →</a>

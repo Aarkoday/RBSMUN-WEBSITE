@@ -13,6 +13,7 @@ const {
   image = "/images/hero-bg.webp" 
 } = Astro.props;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://rbsmun.com');
 ---
 
@@ -22,7 +23,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://rbsmun.c
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
-    <link rel="icon" type="image/webp" href="/images/logo.webp" />
+    <link rel="icon" type="image/webp" href={`${base}/images/logo.webp`} />
+    <meta name="base-url" content={base}>
     <meta name="description" content={description}>
     
     <!-- Canonical URL -->
@@ -56,9 +58,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://rbsmun.c
 
         gsap.registerPlugin(ScrollTrigger);
 
-        // â”€â”€â”€ Expose globals for script modules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ─── Base URL for GitHub Pages / custom domain asset paths ───────────
+        const BASE_URL: string = (document.querySelector('meta[name="base-url"]') as HTMLMetaElement)?.content || '';
+
+        // ─── Expose globals for script modules ─────────────────────────────────
         (window as any).gsap = gsap;
         (window as any).ScrollTrigger = ScrollTrigger;
+        (window as any).__BASE_URL__ = BASE_URL;
 
         let lenis: any;
 
@@ -524,12 +530,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://rbsmun.c
                         overlayEbGroupImg.style.display = 'block';
                         const placeholder = overlayEbGroupImg.nextElementSibling as HTMLElement;
                         if (placeholder) placeholder.style.display = 'none';
-                        overlayEbGroupImg.src = `/images/committees/${key}/eb-group.jpg`;
+                        overlayEbGroupImg.src = `${BASE_URL}/images/committees/${key}/eb-group.jpg`;
                     }
 
-                    if (overlayChairImg) overlayChairImg.src = `/images/committees/${key}/chair.jpg`;
-                    if (overlayViceChairImg) overlayViceChairImg.src = `/images/committees/${key}/vice-chair.jpg`;
-                    if (overlayModeratorImg) overlayModeratorImg.src = `/images/committees/${key}/moderator.jpg`;
+                    if (overlayChairImg) overlayChairImg.src = `${BASE_URL}/images/committees/${key}/chair.jpg`;
+                    if (overlayViceChairImg) overlayViceChairImg.src = `${BASE_URL}/images/committees/${key}/vice-chair.jpg`;
+                    if (overlayModeratorImg) overlayModeratorImg.src = `${BASE_URL}/images/committees/${key}/moderator.jpg`;
                     const guideUrl = card.dataset.guideUrl || '#';
                     if (overlayPdfLink) overlayPdfLink.href = guideUrl;
 

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import WebGLBackground from '../components/WebGLBackground.jsx';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="About Us — RBSMUN 2026">
@@ -9,13 +10,13 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
 
     <nav class="glass-nav" id="mainNav">
         <div class="nav-inner">
-            <a href="/" class="nav-logo"><img src="/images/logo.webp" alt="RBSMUN Logo"></a>
+            <a href={`${base}/`} class="nav-logo"><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo"></a>
             <div class="nav-links" id="navLinks">
-                <a href="/">Home</a>
-                <a href="/about" class="active">About Us</a>
-                <a href="/committees">Committees</a>
-                <a href="/conference">Conference Details</a>
-                <a href="/team">Our Team</a>
+                <a href={`${base}/`}>Home</a>
+                <a href={`${base}/about`} class="active">About Us</a>
+                <a href={`${base}/committees`}>Committees</a>
+                <a href={`${base}/conference`}>Conference Details</a>
+                <a href={`${base}/team`}>Our Team</a>
             </div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
                 target="_blank" class="nav-cta">Register →</a>
@@ -25,7 +26,7 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
         </div>
     </nav>
 
-    <section class="page-hero" style="background-image: url('/images/miscellaneous/About+us+pg+background.webp');">
+    <section class="page-hero" style={`background-image: url('${base}/images/miscellaneous/About+us+pg+background.webp');`}>
         <div class="hero-bg-overlay"></div>
         <div class="container">
             <h1 class="page-hero-title">About RBSMUN</h1>
@@ -86,7 +87,7 @@ import WebGLBackground from '../components/WebGLBackground.jsx';
                     <div style="display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;">
                         <div style="flex: 0 0 260px; position: sticky; top: 200px; align-self: flex-start;">
                             <div style="width: 260px; height: 340px; border-radius: var(--glass-radius); overflow: hidden; border: 1px solid var(--border-glass-mid);">
-                                <img src="/images/PMS01512.webp" alt="Principal" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <img src={`${base}/images/PMS01512.webp`} alt="Principal" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                             </div>
                             <p style="color: var(--text-secondary); font-family: var(--font-heading); font-size: 0.9rem; margin-top: 0.75rem; text-align: center; letter-spacing: 0.02em;">
                                 Milan Dixit
