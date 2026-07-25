@@ -20,67 +20,74 @@ public/
     │   └── hero-bg.png
     │
     ├── committees/                     # Committee Specific Folders (15 Committees)
-    │   ├── jcc/                        # Joint Crisis Committee
+    │   ├── ipc/                        # International Press Corps (IPC)
     │   │   ├── logo.png                # Official Committee Crest / Logo
     │   │   ├── card-bg.jpg             # Card background photo on committee grid
     │   │   ├── eb-group.jpg            # Executive Board Group Photo
+    │   │   ├── editor-in-chief.jpg     # 1 Editor in Chief photo
+    │   │   ├── editor1.jpg             # Editor 1 photo
+    │   │   ├── editor2.jpg             # Editor 2 photo
+    │   │   └── editor3.jpg             # Editor 3 photo
+    │   │
+    │   ├── [other_committees]/         # e.g., jcc, disec, etc.
+    │   │   ├── logo.png
+    │   │   ├── card-bg.jpg
+    │   │   ├── eb-group.jpg
     │   │   ├── chair.jpg               # Chairperson photo
     │   │   ├── vice-chair.jpg          # Vice Chairperson photo
     │   │   └── moderator.jpg           # Moderator photo
     │   │
-    │   ├── disec/                      # DISEC Committee
-    │   │   ├── logo.png
-    │   │   ├── card-bg.jpg
-    │   │   ├── eb-group.jpg
-    │   │   ├── chair.jpg
-    │   │   ├── vice-chair.jpg
-    │   │   └── moderator.jpg
-    │   │
-    │   ├── ecofin/                     # ECOFIN Committee
-    │   ├── icj/                        # ICJ Committee
-    │   ├── irc/                        # Imperial Romanov Court (IRC)
-    │   ├── who/                        # World Health Organization (WHO)
-    │   ├── hor/                        # House of Representatives (HoR)
-    │   ├── gcmr/                       # Grand Convocation of the Mythical Realms (GCMR)
-    │   ├── unsc/                       # UN Security Council (UNSC)
-    │   ├── picc/                       # Paris International Conference on Cambodia (PICC)
-    │   ├── unwomen/                    # UN Women
-    │   ├── hrc/                        # Human Rights Council (HRC)
-    │   ├── uscc/                       # US Senate (USCC)
-    │   ├── sochum/                     # SOCHUM
-    │   └── ipc/                        # International Press Corps (IPC)
+    │   └── ...
     │
     └── team/                           # Department & Team Member Folders
         ├── secretariat/                # Executive Leadership & Secretariat Team
         │   ├── card-bg.jpg             # Department cover photo
-        │   ├── sec-gen.jpg             # Secretary General photo
-        │   ├── director-gen.jpg        # Director General photo
-        │   ├── deputy-sec-gen.jpg      # Deputy Secretary General photo
+        │   ├── sg.jpg                  # Secretary General photo
+        │   ├── dsg1.jpg                # Deputy Secretary General 1 photo
+        │   ├── dsg2.jpg                # Deputy Secretary General 2 photo
+        │   ├── cd.jpg                  # Crisis Director photo
         │   └── team-group.jpg          # Secretariat Group Photo
         │
-        ├── logistics/                  # Logistics Department
+        ├── logistics/                  # Logistics Department (3 Heads, 5 Core members)
         │   ├── card-bg.jpg
-        │   ├── head.jpg                # Head of Logistics photo
+        │   ├── head1.jpg               # Head of Logistics 1
+        │   ├── head2.jpg               # Head of Logistics 2
+        │   ├── head3.jpg               # Head of Logistics 3
+        │   ├── core1.jpg               # Core Logistics member 1
+        │   ├── core2.jpg               # Core Logistics member 2
+        │   ├── core3.jpg               # Core Logistics member 3
+        │   ├── core4.jpg               # Core Logistics member 4
+        │   ├── core5.jpg               # Core Logistics member 5
         │   └── team-group.jpg          # Full Logistics Team Group Photo
         │
-        ├── it/                         # Information Technology (IT) Department
+        ├── it/                         # Information Technology (IT) Department (1 Head, 2 Core members)
         │   ├── card-bg.jpg
-        │   ├── head.jpg                # Head of IT photo
+        │   ├── head.jpg                # Head of IT
+        │   ├── core1.jpg               # Core IT member 1
+        │   ├── core2.jpg               # Core IT member 2
         │   └── team-group.jpg          # Full IT Team Group Photo
         │
-        ├── art/                        # Art & Design Department
+        ├── art/                        # Art & Design Department (3 Heads)
         │   ├── card-bg.jpg
-        │   ├── head.jpg                # Head of Art photo
+        │   ├── head1.jpg               # Head of Art 1
+        │   ├── head2.jpg               # Head of Art 2
+        │   ├── head3.jpg               # Head of Art 3
         │   └── team-group.jpg          # Full Art Team Group Photo
         │
-        ├── media/                      # Media & Communications Department
+        ├── media/                      # Media & Communications Department (3 Heads)
         │   ├── card-bg.jpg
-        │   ├── head.jpg                # Head of Media photo
+        │   ├── head1.jpg               # Head of Media 1
+        │   ├── head2.jpg               # Head of Media 2
+        │   ├── head3.jpg               # Head of Media 3
         │   └── team-group.jpg          # Full Media Team Group Photo
         │
-        └── photography/                # Photography Department
+        └── photography/                # Photography Department (1 Head, 4 team members)
             ├── card-bg.jpg
-            ├── head.jpg                # Head of Photography photo
+            ├── head.jpg                # Head of Photography
+            ├── core1.jpg               # Photography Team member 1
+            ├── core2.jpg               # Photography Team member 2
+            ├── core3.jpg               # Photography Team member 3
+            ├── core4.jpg               # Photography Team member 4
             └── team-group.jpg          # Full Photography Team Group Photo
 ```
 
@@ -88,26 +95,26 @@ public/
 
 ## Committee Assets Preset Naming Table
 
-| Asset Type | File Name | Format | Target Path |
-| :--- | :--- | :--- | :--- |
-| **Committee Logo / Crest** | `logo.png` | PNG / WebP / SVG | `public/images/committees/[id]/logo.png` |
-| **EB Group Photo** | `eb-group.jpg` | JPG / WebP | `public/images/committees/[id]/eb-group.jpg` |
-| **Chairperson** | `chair.jpg` | JPG / WebP | `public/images/committees/[id]/chair.jpg` |
-| **Vice Chairperson** | `vice-chair.jpg` | JPG / WebP | `public/images/committees/[id]/vice-chair.jpg` |
-| **Moderator** | `moderator.jpg` | JPG / WebP | `public/images/committees/[id]/moderator.jpg` |
-| **Grid Card BG** | `card-bg.jpg` | JPG / WebP | `public/images/committees/[id]/card-bg.jpg` |
-
-> **Note on Background Guides**: Study guides are linked to external URLs (e.g., Google Drive / PDF links) via the `data-guide-url="..."` attribute on each committee card in `committees.astro`, so local PDF files are not stored in the image directory.
+| Committee | Asset Type | File Name | Format | Target Path |
+| :--- | :--- | :--- | :--- | :--- |
+| **IPC** | **Editor in Chief** | `editor-in-chief.jpg` | JPG / WebP | `public/images/committees/ipc/editor-in-chief.jpg` |
+| **IPC** | **Editors** | `editor1.jpg`, `editor2.jpg`, `editor3.jpg` | JPG / WebP | `public/images/committees/ipc/editor[1-3].jpg` |
+| **Others** | **Chairperson** | `chair.jpg` | JPG / WebP | `public/images/committees/[id]/chair.jpg` |
+| **Others** | **Vice Chairperson** | `vice-chair.jpg` | JPG / WebP | `public/images/committees/[id]/vice-chair.jpg` |
+| **Others** | **Moderator** | `moderator.jpg` | JPG / WebP | `public/images/committees/[id]/moderator.jpg` |
+| **All** | **Committee Logo / Crest** | `logo.png` | PNG / WebP / SVG | `public/images/committees/[id]/logo.png` |
+| **All** | **EB Group Photo** | `eb-group.jpg` | JPG / WebP | `public/images/committees/[id]/eb-group.jpg` |
+| **All** | **Grid Card BG** | `card-bg.jpg` | JPG / WebP | `public/images/committees/[id]/card-bg.jpg` |
 
 ---
 
 ## Department & Team Assets Preset Naming Table
 
-| Department | Head Photo | Group Photo | Department Folder |
+| Department | Head Photo(s) | Core Member / Team Photo(s) | Target Path |
 | :--- | :--- | :--- | :--- |
-| **Secretariat** | `sec-gen.jpg`, `director-gen.jpg` | `team-group.jpg` | `public/images/team/secretariat/` |
-| **Logistics** | `head.jpg` | `team-group.jpg` | `public/images/team/logistics/` |
-| **Information Technology** | `head.jpg` | `team-group.jpg` | `public/images/team/it/` |
-| **Art & Design** | `head.jpg` | `team-group.jpg` | `public/images/team/art/` |
-| **Media & Communications** | `head.jpg` | `team-group.jpg` | `public/images/team/media/` |
-| **Photography** | `head.jpg` | `team-group.jpg` | `public/images/team/photography/` |
+| **Secretariat** | `sec-gen.jpg`, `director-gen.jpg` | `deputy-sec-gen.jpg` | `public/images/team/secretariat/` |
+| **Logistics** | `head1.jpg`, `head2.jpg`, `head3.jpg` | `core1.jpg`, ..., `core5.jpg` | `public/images/team/logistics/` |
+| **IT** | `head.jpg` | `core1.jpg`, `core2.jpg` | `public/images/team/it/` |
+| **Art & Design** | `head1.jpg`, `head2.jpg`, `head3.jpg` | (None) | `public/images/team/art/` |
+| **Media & Comm.** | `head1.jpg`, `head2.jpg`, `head3.jpg` | (None) | `public/images/team/media/` |
+| **Photography** | `head.jpg` | `core1.jpg`, ..., `core4.jpg` | `public/images/team/photography/` |

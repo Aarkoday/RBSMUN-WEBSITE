@@ -276,43 +276,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
                 </div>
 
-                <div class="team-grid">
-                    <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
-                            <img id="overlayChairImg" src="" alt="Chairperson" class="team-img-bg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600'" />
-                            <div class="team-card-overlay"></div>
-                            <div class="team-card-content">
-                                <h3 id="overlayChairName">To be announced</h3>
-                                <p class="team-role">Chairperson</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
-                            <img
-                                id="overlayViceChairImg"
-                                src=""
-                                alt="Vice Chairperson"
-                                class="team-img-bg"
-                                onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600'"
-                            />
-                            <div class="team-card-overlay"></div>
-                            <div class="team-card-content">
-                                <h3 id="overlayViceChairName">To be announced</h3>
-                                <p class="team-role">Vice Chairperson</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-card-wrapper">
-                        <div class="glass-card team-card">
-                            <img id="overlayModeratorImg" src="" alt="Moderator" class="team-img-bg" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600'" />
-                            <div class="team-card-overlay"></div>
-                            <div class="team-card-content">
-                                <h3 id="overlayModeratorName">To be announced</h3>
-                                <p class="team-role">Moderator</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="team-grid" id="committeeOverlayMembersContainer">
+                    <!-- Dynamic Dais/EB cards will be inserted here -->
                 </div>
             </div>
 
@@ -360,6 +325,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         >
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Person Detail Popup -->
+    <div class="person-popup" id="personPopup">
+        <div class="person-popup-inner">
+            <button class="person-popup-close" id="personPopupClose" aria-label="Close">✕</button>
+            <div class="person-popup-left">
+                <div class="person-popup-photo-wrap">
+                    <img class="person-popup-photo" id="personPopupPhoto" src="" alt="Person photo" />
+                    <div class="person-popup-photo-placeholder" id="personPopupPhotoPlaceholder">
+                        <span>👤</span>
+                    </div>
+                </div>
+                <div class="person-popup-meta">
+                    <h2 class="person-popup-name" id="personPopupName"></h2>
+                    <p class="person-popup-role" id="personPopupRole"></p>
+                </div>
+            </div>
+            <div class="person-popup-right">
+                <p class="person-popup-desc" id="personPopupDesc"></p>
             </div>
         </div>
     </div>
