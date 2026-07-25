@@ -8,15 +8,16 @@ import sitemap from '@astrojs/sitemap';
 // ==============================================================================
 // Set `TARGET_ENV` to:
 //   - 'custom'  : Custom Domain (https://rbsmun.com)
-//   - 'github'  : GitHub Pages URL (https://<username>.github.io/RBSMUN/)
+//   - 'github'  : GitHub Pages URL (https://<username>.github.io/<repo-name>/)
 //
 // You can also set this via command line:
 //   $ DEPLOY_TARGET=github npm run build
 // ==============================================================================
-const TARGET_ENV = process.env.DEPLOY_TARGET || 'github'; // Change 'custom' to 'github' to test GitHub Pages
+const TARGET_ENV = process.env.DEPLOY_TARGET || 'github'; // Set 'custom' or 'github'
 
-const GITHUB_USERNAME = 'Aarkoday'; // Your GitHub Username / Org
-const GITHUB_REPO_NAME = 'RBSMUN';   // Your GitHub Repository Name
+// Auto-detect GitHub repository name if building in GitHub Actions
+const GITHUB_REPO_FULL = process.env.GITHUB_REPOSITORY || 'Aarkoday/RBSMUN-WEBSITE';
+const [githubOwner, githubRepo] = GITHUB_REPO_FULL.split('/');
 
 const configs = {
   custom: {
@@ -24,8 +25,8 @@ const configs = {
     base: '/',
   },
   github: {
-    site: `https://${GITHUB_USERNAME}.github.io`,
-    base: `/${GITHUB_REPO_NAME}/`, // Set to '/' if deploying to username.github.io root
+    site: `https://${githubOwner}.github.io`,
+    base: `/${githubRepo}/`,
   },
 };
 
