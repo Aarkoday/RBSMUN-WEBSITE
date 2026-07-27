@@ -1,10 +1,10 @@
----
+﻿---
 import Layout from "../layouts/Layout.astro";
 import WebGLBackground from "../components/WebGLBackground.jsx";
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="Committees — RBSMUN 2026">
+<Layout title="Committees â€” RBSMUN 2026">
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
                 target="_blank"
-                class="nav-cta">Register →</a
+                class="nav-cta">Register â†’</a
             >
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -53,7 +53,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="jcc"
                         data-fullname="Joint Crisis Committee"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">JCC</h2>
@@ -63,7 +62,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="disec"
                         data-fullname="DISEC"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">DISEC</h2>
@@ -74,7 +72,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="ecofin"
                         data-fullname="ECOFIN"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800');"
+                        data-mandate1="In 1945, ECOFIN was founded as the Second Committee of the United Nations General Assembly.  Its membership is open to all 193 member states. The committee addresses issues related to development economics and international finance. <br><br>Its actions involve encouraging funding for development projects and highlighting areas for sustainable development. Instruments typically used by the committee include debate and resolutions. Creating effective policies that use these instruments requires tying in academic work, so ECOFIN also hosts speakers with expertise in creating relevant policies. Since the resolutions written by the committee do not have the power of legislation,  the committee aims for unanimous support for international implementation. . Nearly forty resolutions are passed each year. Most of them move on for further consideration by G77, a United Nations coalition of developing countries, while others are tabled for smaller groups of states to consider."
+                        data-mandate2="ECOFIN has played a role in passing impactful resolutions related to debt sustainability, international taxation, and other crucial issues. As a steward of economic and financial concerns in the United Nations, ECOFIN is a principal body in helping countries develop and the world achieve sustainable development. It has played a crucial role in the UN's past and will in its future, too."
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">ECOFIN</h2>
@@ -85,7 +84,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="icj"
                         data-fullname="ICJ"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">ICJ</h2>
@@ -96,7 +94,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="irc"
                         data-fullname="The Imperial Romanov Court"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1533052157796-0309191d4e78?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">IRC</h2>
@@ -107,7 +104,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="who"
                         data-fullname="WHO"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">WHO</h2>
@@ -118,7 +114,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="hor"
                         data-fullname="House of Representatives"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">HoR</h2>
@@ -129,7 +124,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="gcmr"
                         data-fullname="The Grand Convocation of the Mythical Realms"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">GCMR</h2>
@@ -140,7 +134,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="unsc"
                         data-fullname="UNSC"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">UNSC</h2>
@@ -151,7 +144,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="picc"
                         data-fullname="Paris International Conference on Cambodia"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1502602898657-3e90760a92d8?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">PICC</h2>
@@ -162,7 +154,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="unwomen"
                         data-fullname="UNWOMEN"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">UNWOMEN</h2>
@@ -173,7 +164,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="hrc"
                         data-fullname="HRC"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">HRC</h2>
@@ -184,7 +174,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="uscc"
                         data-fullname="United States Congressional Committee (Senate)"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1541887088-294b2a8d381c?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">USCC</h2>
@@ -195,7 +184,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="sochum"
                         data-fullname="SOCHUM"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">SOCHUM</h2>
@@ -206,7 +194,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                         data-anim="scatter"
                         data-committee="ipc"
                         data-fullname="IPC"
-                        style="--bg-url: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800');"
                     >
                         <div class="card-glow"></div>
                         <h2 class="committee-massive-acronym">IPC</h2>
@@ -217,10 +204,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <div class="committee-overlay" id="committeeOverlay" data-lenis-prevent>
+        <div class="committee-overlay-bg" id="committeeOverlayBg"></div>
         <button
             class="committee-overlay-close"
             id="committeeOverlayClose"
-            aria-label="Close">✕</button
+            aria-label="Close">âœ•</button
         >
         <div class="committee-overlay-header">
             <h2 class="committee-overlay-acronym" id="overlayAcronym"></h2>
@@ -252,27 +240,39 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <h2 class="section-title">
                     Executive <span class="text-gradient">Board</span>
                 </h2>
-                
+
                 <!-- Executive Board Group Photo Card -->
-                <div class="glass-card eb-group-card" style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--glass-radius-md); padding: 0;">
+                <div
+                    class="glass-card eb-group-card"
+                    style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--glass-radius-md); padding: 0;"
+                >
                     <div class="card-glow"></div>
-                    <div class="eb-group-img-wrapper" style="width: 100%; height: 320px; position: relative; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <div
+                        class="eb-group-img-wrapper"
+                        style="width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 450px; position: relative; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; overflow: hidden;"
+                    >
                         <img
                             id="overlayEbGroupImg"
                             src=""
                             alt="Executive Board Group Photo"
-                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform 0.5s ease;"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                         />
-                        <div class="eb-group-placeholder" style="display: none; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-secondary); text-align: center; padding: 2rem;">
-                            <span style="font-size: 2rem;">📸</span>
-                            <span style="font-weight: 600; color: var(--text-primary);">Executive Board Group Photo</span>
-                            <span style="font-size: 0.8rem; opacity: 0.7;">Upload photo to <code>/images/committees/[id]/eb-group.jpg</code></span>
+                        <div
+                            class="eb-group-placeholder"
+                            style="display: none; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-secondary); text-align: center; padding: 2rem;"
+                        >
+                            <span style="font-size: 2rem;">ðŸ“¸</span>
+                            <span
+                                style="font-weight: 600; color: var(--text-primary);"
+                                >Executive Board Group Photo</span
+                            >
+                            <span style="font-size: 0.8rem; opacity: 0.7;"
+                                >Upload photo to <code
+                                    >/images/committees/[id]/eb-group.webp</code
+                                ></span
+                            >
                         </div>
-                    </div>
-                    <div style="padding: 1.25rem 1.5rem; background: rgba(0, 0, 0, 0.4); border-top: 1px solid var(--border-glass);">
-                        <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.25rem;">Executive Board Team</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Full Dais & Executive Board Group Photo</p>
                     </div>
                 </div>
 
@@ -332,12 +332,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <!-- Person Detail Popup -->
     <div class="person-popup" id="personPopup">
         <div class="person-popup-inner">
-            <button class="person-popup-close" id="personPopupClose" aria-label="Close">✕</button>
+            <button
+                class="person-popup-close"
+                id="personPopupClose"
+                aria-label="Close">âœ•</button
+            >
             <div class="person-popup-left">
                 <div class="person-popup-photo-wrap">
-                    <img class="person-popup-photo" id="personPopupPhoto" src="" alt="Person photo" />
-                    <div class="person-popup-photo-placeholder" id="personPopupPhotoPlaceholder">
-                        <span>👤</span>
+                    <img
+                        class="person-popup-photo"
+                        id="personPopupPhoto"
+                        src=""
+                        alt="Person photo"
+                    />
+                    <div
+                        class="person-popup-photo-placeholder"
+                        id="personPopupPhotoPlaceholder"
+                    >
+                        <span>ðŸ‘¤</span>
                     </div>
                 </div>
                 <div class="person-popup-meta">

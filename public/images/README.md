@@ -21,18 +21,18 @@ public/
     │
     ├── committees/                     # Committee Specific Folders (15 Committees)
     │   ├── ipc/                        # International Press Corps (IPC)
-    │   │   ├── logo.png                # Official Committee Crest / Logo
+    │   │   ├── logo.webp                # Official Committee Crest / Logo
     │   │   ├── card-bg.jpg             # Card background photo on committee grid
-    │   │   ├── eb-group.jpg            # Executive Board Group Photo
+    │   │   ├── eb-group.webp            # Executive Board Group Photo
     │   │   ├── editor-in-chief.jpg     # 1 Editor in Chief photo
     │   │   ├── editor1.jpg             # Editor 1 photo
     │   │   ├── editor2.jpg             # Editor 2 photo
     │   │   └── editor3.jpg             # Editor 3 photo
     │   │
     │   ├── [other_committees]/         # e.g., jcc, disec, etc.
-    │   │   ├── logo.png
+    │   │   ├── logo.webp
     │   │   ├── card-bg.jpg
-    │   │   ├── eb-group.jpg
+    │   │   ├── eb-group.webp
     │   │   ├── chair.jpg               # Chairperson photo
     │   │   ├── vice-chair.jpg          # Vice Chairperson photo
     │   │   └── moderator.jpg           # Moderator photo
@@ -46,49 +46,49 @@ public/
         │   ├── dsg1.jpg                # Deputy Secretary General 1 photo
         │   ├── dsg2.jpg                # Deputy Secretary General 2 photo
         │   ├── cd.jpg                  # Crisis Director photo
-        │   └── team-group.jpg          # Secretariat Group Photo
+        │   └── team-group.webp          # Secretariat Group Photo
         │
         ├── logistics/                  # Logistics Department (3 Heads, 5 Core members)
         │   ├── card-bg.jpg
-        │   ├── head1.jpg               # Head of Logistics 1
-        │   ├── head2.jpg               # Head of Logistics 2
-        │   ├── head3.jpg               # Head of Logistics 3
-        │   ├── core1.jpg               # Core Logistics member 1
-        │   ├── core2.jpg               # Core Logistics member 2
-        │   ├── core3.jpg               # Core Logistics member 3
-        │   ├── core4.jpg               # Core Logistics member 4
-        │   ├── core5.jpg               # Core Logistics member 5
-        │   └── team-group.jpg          # Full Logistics Team Group Photo
+        │   ├── head1.webp               # Head of Logistics 1
+        │   ├── head2.webp               # Head of Logistics 2
+        │   ├── head3.webp               # Head of Logistics 3
+        │   ├── core1.webp               # Core Logistics member 1
+        │   ├── core2.webp               # Core Logistics member 2
+        │   ├── core3.webp               # Core Logistics member 3
+        │   ├── core4.webp               # Core Logistics member 4
+        │   ├── core5.webp               # Core Logistics member 5
+        │   └── team-group.webp          # Full Logistics Team Group Photo
         │
         ├── it/                         # Information Technology (IT) Department (1 Head, 2 Core members)
         │   ├── card-bg.jpg
-        │   ├── head.jpg                # Head of IT
-        │   ├── core1.jpg               # Core IT member 1
-        │   ├── core2.jpg               # Core IT member 2
-        │   └── team-group.jpg          # Full IT Team Group Photo
+        │   ├── head.webp                # Head of IT
+        │   ├── core1.webp               # Core IT member 1
+        │   ├── core2.webp               # Core IT member 2
+        │   └── team-group.webp          # Full IT Team Group Photo
         │
         ├── art/                        # Art & Design Department (3 Heads)
         │   ├── card-bg.jpg
-        │   ├── head1.jpg               # Head of Art 1
-        │   ├── head2.jpg               # Head of Art 2
-        │   ├── head3.jpg               # Head of Art 3
-        │   └── team-group.jpg          # Full Art Team Group Photo
+        │   ├── head1.webp               # Head of Art 1
+        │   ├── head2.webp               # Head of Art 2
+        │   ├── head3.webp               # Head of Art 3
+        │   └── team-group.webp          # Full Art Team Group Photo
         │
         ├── media/                      # Media & Communications Department (3 Heads)
         │   ├── card-bg.jpg
-        │   ├── head1.jpg               # Head of Media 1
-        │   ├── head2.jpg               # Head of Media 2
-        │   ├── head3.jpg               # Head of Media 3
-        │   └── team-group.jpg          # Full Media Team Group Photo
+        │   ├── head1.webp               # Head of Media 1
+        │   ├── head2.webp               # Head of Media 2
+        │   ├── head3.webp               # Head of Media 3
+        │   └── team-group.webp          # Full Media Team Group Photo
         │
         └── photography/                # Photography Department (1 Head, 4 team members)
             ├── card-bg.jpg
-            ├── head.jpg                # Head of Photography
-            ├── core1.jpg               # Photography Team member 1
-            ├── core2.jpg               # Photography Team member 2
-            ├── core3.jpg               # Photography Team member 3
-            ├── core4.jpg               # Photography Team member 4
-            └── team-group.jpg          # Full Photography Team Group Photo
+            ├── head.webp                # Head of Photography
+            ├── core1.webp               # Photography Team member 1
+            ├── core2.webp               # Photography Team member 2
+            ├── core3.webp               # Photography Team member 3
+            ├── core4.webp               # Photography Team member 4
+            └── team-group.webp          # Full Photography Team Group Photo
 ```
 
 ---
@@ -102,8 +102,8 @@ public/
 | **Others** | **Chairperson** | `chair.jpg` | JPG / WebP | `public/images/committees/[id]/chair.jpg` |
 | **Others** | **Vice Chairperson** | `vice-chair.jpg` | JPG / WebP | `public/images/committees/[id]/vice-chair.jpg` |
 | **Others** | **Moderator** | `moderator.jpg` | JPG / WebP | `public/images/committees/[id]/moderator.jpg` |
-| **All** | **Committee Logo / Crest** | `logo.png` | PNG / WebP / SVG | `public/images/committees/[id]/logo.png` |
-| **All** | **EB Group Photo** | `eb-group.jpg` | JPG / WebP | `public/images/committees/[id]/eb-group.jpg` |
+| **All** | **Committee Logo / Crest** | `logo.webp` | PNG / WebP / SVG | `public/images/committees/[id]/logo.webp` |
+| **All** | **EB Group Photo** | `eb-group.webp` | JPG / WebP | `public/images/committees/[id]/eb-group.webp` |
 | **All** | **Grid Card BG** | `card-bg.jpg` | JPG / WebP | `public/images/committees/[id]/card-bg.jpg` |
 
 ---
@@ -113,8 +113,8 @@ public/
 | Department | Head Photo(s) | Core Member / Team Photo(s) | Target Path |
 | :--- | :--- | :--- | :--- |
 | **Secretariat** | `sec-gen.jpg`, `director-gen.jpg` | `deputy-sec-gen.jpg` | `public/images/team/secretariat/` |
-| **Logistics** | `head1.jpg`, `head2.jpg`, `head3.jpg` | `core1.jpg`, ..., `core5.jpg` | `public/images/team/logistics/` |
-| **IT** | `head.jpg` | `core1.jpg`, `core2.jpg` | `public/images/team/it/` |
-| **Art & Design** | `head1.jpg`, `head2.jpg`, `head3.jpg` | (None) | `public/images/team/art/` |
-| **Media & Comm.** | `head1.jpg`, `head2.jpg`, `head3.jpg` | (None) | `public/images/team/media/` |
-| **Photography** | `head.jpg` | `core1.jpg`, ..., `core4.jpg` | `public/images/team/photography/` |
+| **Logistics** | `head1.webp`, `head2.webp`, `head3.webp` | `core1.webp`, ..., `core5.webp` | `public/images/team/logistics/` |
+| **IT** | `head.webp` | `core1.webp`, `core2.webp` | `public/images/team/it/` |
+| **Art & Design** | `head1.webp`, `head2.webp`, `head3.webp` | (None) | `public/images/team/art/` |
+| **Media & Comm.** | `head1.webp`, `head2.webp`, `head3.webp` | (None) | `public/images/team/media/` |
+| **Photography** | `head.webp` | `core1.webp`, ..., `core4.webp` | `public/images/team/photography/` |
