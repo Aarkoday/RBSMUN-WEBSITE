@@ -1,16 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import WebGLBackground from '../components/WebGLBackground.jsx';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import Layout from "../layouts/Layout.astro";
+import WebGLBackground from "../components/WebGLBackground.jsx";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Our Team â€” RBSMUN 2026">
-
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
         <div class="nav-inner">
-            <a href={`${base}/`} class="nav-logo"><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo"></a>
+            <a href={`${base}/`} class="nav-logo"
+                ><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo" /></a
+            >
             <div class="nav-links" id="navLinks">
                 <a href={`${base}/`}>Home</a>
                 <a href={`${base}/about`}>About Us</a>
@@ -18,35 +19,49 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`} class="active">Our Team</a>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                target="_blank" class="nav-cta">Register â†’</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                target="_blank"
+                class="nav-cta">Register â†’</a
+            >
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <section class="page-hero" style={`background-image: url('${base}/images/miscellaneous/RBS+MUN+Posts+Bg.webp');`}>
+    <section
+        class="page-hero"
+        style={`background-image: url('${base}/images/miscellaneous/RBS+MUN+Posts+Bg.webp');`}
+    >
         <div class="hero-bg-overlay"></div>
         <div class="container">
             <h1 class="page-hero-title">Our Team</h1>
-            <p class="page-hero-subtitle">The dedicated minds working tirelessly to bring you the 21st iteration of
-                RBSMUN.</p>
+            <p class="page-hero-subtitle">
+                The dedicated minds working tirelessly to bring you the 21st
+                iteration of RBSMUN.
+            </p>
         </div>
     </section>
 
     <div class="content-wrapper">
-
         <section class="section">
             <div class="container">
                 <div class="team-grid">
-
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
                             data-team="logistics"
                             data-team-title="Logistics"
-                            data-team-desc="The Logistics team handles all on-ground operations â€” from venue management and delegate registration to transportation coordination and material procurement. They are the backbone that keeps the conference running seamlessly behind the scenes.">
-                            <img src={`${base}/images/team/logistics/card-bg.webp`} alt="Logistics" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The Logistics team handles all on-ground operations â€” from venue management and delegate registration to transportation coordination and material procurement. They are the backbone that keeps the conference running seamlessly behind the scenes."
+                        >
+                            <img
+                                src={`${base}/images/team/logistics/team-group.webp`}
+                                alt="Logistics"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Logistics</h3>
@@ -55,11 +70,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="100"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
+                            data-delay="100"
                             data-team="secretariat"
                             data-team-title="Secretariat"
-                            data-team-desc="The Secretariat is the executive leadership of RBSMUN. Led by the Secretary-General and Deputy Secretary-General, this team sets the academic vision, oversees all committee operations, and ensures the conference upholds the highest standards of Model UN excellence.">
-                            <img src={`${base}/images/team/secretariat/card-bg.webp`} alt="Secretariat" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The Secretariat is the executive leadership of RBSMUN. Led by the Secretary-General and Deputy Secretary-General, this team sets the academic vision, oversees all committee operations, and ensures the conference upholds the highest standards of Model UN excellence."
+                        >
+                            <img
+                                src={`${base}/images/team/secretariat/team-group.webp`}
+                                alt="Secretariat"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Secretariat</h3>
@@ -68,11 +92,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="200"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
+                            data-delay="200"
                             data-team="it"
                             data-team-title="Information Technology"
-                            data-team-desc="The IT team is responsible for all things digital â€” the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event.">
-                            <img src={`${base}/images/team/it/card-bg.webp`} alt="IT" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The IT team is responsible for all things digital â€” the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event."
+                        >
+                            <img
+                                src={`${base}/images/team/it/team-group.webp`}
+                                alt="IT"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Information Technology</h3>
@@ -81,11 +114,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="300"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
+                            data-delay="300"
                             data-team="art"
                             data-team-title="Art & Design"
-                            data-team-desc="The Art team crafts the entire visual identity of RBSMUN â€” from branding, posters, and social media graphics to stage design and conference-day decor. They bring the creative vision that defines the aesthetic of each iteration.">
-                            <img src={`${base}/images/team/art/card-bg.webp`} alt="Art" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The Art team crafts the entire visual identity of RBSMUN â€” from branding, posters, and social media graphics to stage design and conference-day decor. They bring the creative vision that defines the aesthetic of each iteration."
+                        >
+                            <img
+                                src={`${base}/images/team/art/team-group.webp`}
+                                alt="Art"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Art & Design</h3>
@@ -94,11 +136,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="400"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
+                            data-delay="400"
                             data-team="media"
                             data-team-title="Media & Communications"
-                            data-team-desc="The Media team captures and communicates the RBSMUN story â€” through photography, videography, social media coverage, press releases, and the official conference newsletter. They ensure every moment is documented and shared with the world.">
-                            <img src={`${base}/images/team/media/card-bg.webp`} alt="Media" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The Media team captures and communicates the RBSMUN story â€” through photography, videography, social media coverage, press releases, and the official conference newsletter. They ensure every moment is documented and shared with the world."
+                        >
+                            <img
+                                src={`${base}/images/team/media/team-group.webp`}
+                                alt="Media"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Media & Communications</h3>
@@ -107,34 +158,46 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                     </div>
 
                     <div class="team-card-wrapper">
-                        <div class="glass-card team-card" data-anim="tilt-in" data-delay="500"
+                        <div
+                            class="glass-card team-card"
+                            data-anim="tilt-in"
+                            data-delay="500"
                             data-team="photography"
                             data-team-title="Photography"
-                            data-team-desc="The Photography team is responsible for capturing the essence of the conference in still frames. From intense committee debates to the vibrant social events, they freeze the best moments of RBSMUN in time.">
-                            <img src={`${base}/images/team/photography/card-bg.webp`} alt="Photography" class="team-img-bg" onerror="this.style.display='none'">
+                            data-team-desc="The Photography team is responsible for capturing the essence of the conference in still frames. From intense committee debates to the vibrant social events, they freeze the best moments of RBSMUN in time."
+                        >
+                            <img
+                                src={`${base}/images/team/photography/team-group.webp`}
+                                alt="Photography"
+                                class="team-img-bg"
+                                onerror="this.style.display='none'"
+                            />
                             <div class="team-card-overlay"></div>
                             <div class="team-card-content">
                                 <h3>Photography</h3>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
     </div>
 
     <div class="committee-overlay" id="teamOverlay" data-lenis-prevent>
-        <button class="committee-overlay-close" id="teamOverlayClose" aria-label="Close">&times;</button>
+        <button
+            class="committee-overlay-close"
+            id="teamOverlayClose"
+            aria-label="Close">&times;</button
+        >
         <div class="committee-overlay-header">
             <h2 class="committee-overlay-acronym" id="teamOverlayTitle"></h2>
             <p class="committee-overlay-fullname" id="teamOverlayRole"></p>
         </div>
         <div class="committee-overlay-body">
-
             <div class="committee-overlay-section">
-                <h2 class="section-title">About <span class="text-gradient">This Team</span></h2>
+                <h2 class="section-title">
+                    About <span class="text-gradient">This Team</span>
+                </h2>
                 <div class="glass-card">
                     <div class="card-glow"></div>
                     <p id="teamOverlayDesc">
@@ -150,7 +213,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
             </div>
 
-            <div class="committee-overlay-section" id="teamOverlayMembersSection" style="display: none;">
+            <div
+                class="committee-overlay-section"
+                id="teamOverlayMembersSection"
+                style="display: none;"
+            >
                 <h2 class="section-title" id="teamMembersTitle">Core Team</h2>
                 <div class="team-grid" id="teamOverlayMembersContainer">
                     <!-- Dynamic member cards will be inserted here -->
@@ -162,27 +229,47 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <div class="committee-overlay-actions">
                     <div class="glass-card">
                         <div class="card-glow"></div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Get In Touch</h3>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;"
+                        >
+                            Get In Touch
+                        </h3>
                         <p style="font-size: 0.9rem;">
-                            Have questions about this department? Reach out to us directly.
+                            Have questions about this department? Reach out to
+                            us directly.
                         </p>
-                        <a href="mailto:contact@ratobangala.edu.np" class="btn btn-glass"
-                            style="width: 100%; margin-top: 1rem;">contact@ratobangala.edu.np</a>
+                        <a
+                            href="mailto:contact@ratobangala.edu.np"
+                            class="btn btn-glass"
+                            style="width: 100%; margin-top: 1rem;"
+                            >contact@ratobangala.edu.np</a
+                        >
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Person Detail Popup -->
     <div class="person-popup" id="personPopup">
         <div class="person-popup-inner">
-            <button class="person-popup-close" id="personPopupClose" aria-label="Close">&times;</button>
+            <button
+                class="person-popup-close"
+                id="personPopupClose"
+                aria-label="Close">&times;</button
+            >
             <div class="person-popup-left">
                 <div class="person-popup-photo-wrap">
-                    <img class="person-popup-photo" id="personPopupPhoto" src="" alt="Person photo" />
-                    <div class="person-popup-photo-placeholder" id="personPopupPhotoPlaceholder">
+                    <img
+                        class="person-popup-photo"
+                        id="personPopupPhoto"
+                        src=""
+                        alt="Person photo"
+                    />
+                    <div
+                        class="person-popup-photo-placeholder"
+                        id="personPopupPhotoPlaceholder"
+                    >
                         <span>ðŸ‘¤</span>
                     </div>
                 </div>
@@ -201,7 +288,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4 class="footer-logo">RBS<span class="logo-accent">MUN</span></h4>
+                    <h4 class="footer-logo">
+                        RBS<span class="logo-accent">MUN</span>
+                    </h4>
                 </div>
                 <div class="footer-col">
                     <h4>Navigate</h4>
@@ -212,7 +301,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <a href="mailto:contact@ratobangala.edu.np">contact@ratobangala.edu.np</a>
+                    <a href="mailto:contact@ratobangala.edu.np"
+                        >contact@ratobangala.edu.np</a
+                    >
                     <a href="tel:015447618">01-5447618</a>
                     <a href="tel:015447620">01-5447620</a>
                 </div>
@@ -222,5 +313,4 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </div>
         </div>
     </footer>
-
 </Layout>
