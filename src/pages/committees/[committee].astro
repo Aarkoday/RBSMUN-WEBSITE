@@ -1,0 +1,350 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import WebGLBackground from "../../components/WebGLBackground.jsx";
+import {
+    COMMITTEES,
+    COMMITTEE_DAIS_DATA,
+    DEFAULT_DAIS,
+} from "../../data/committees";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export function getStaticPaths() {
+    return COMMITTEES.map((c) => ({
+        params: { committee: c.id },
+        props: { committee: c },
+    }));
+}
+
+const { committee } = Astro.props;
+const daisMembers = COMMITTEE_DAIS_DATA[committee.id] || DEFAULT_DAIS;
+
+const hasCabinets = daisMembers.some(m => m.cabinet);
+let cabinets = [];
+if (hasCabinets) {
+    const cabMap = {};
+    daisMembers.forEach(m => {
+        const cabName = m.cabinet || "Executive Board";
+        if (!cabMap[cabName]) {
+            cabMap[cabName] = [];
+        }
+        cabMap[cabName].push(m);
+    });
+    cabinets = Object.entries(cabMap);
+}
+---
+
+<Layout title={`${committee.acronym} – RBSMUN 2026`}>
+    <WebGLBackground client:only="react" />
+
+    <nav class="glass-nav" id="mainNav">
+        <div class="nav-inner">
+            <a href={`${base}/`} class="nav-logo"
+                ><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo" /></a
+            >
+            <div class="nav-links" id="navLinks">
+                <a href={`${base}/`}>Home</a>
+                <a href={`${base}/about`}>About Us</a>
+                <a href={`${base}/committees`} class="active">Committees</a>
+                <a href={`${base}/conference`}>Conference Details</a>
+                <a href={`${base}/team`}>Our Team</a>
+            </div>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                target="_blank"
+                class="nav-cta">Register →</a
+            >
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="committee-detail-page">
+        <!-- Overlay bg image sits behind everything -->
+        <div
+            class="committee-overlay-bg"
+            id="detailBg"
+            style={`background-image: url('${base}/images/committees/${committee.id}/logo.webp');`}
+        >
+        </div>
+
+        <!-- ── HEADER ────────────────────────────────────────────── -->
+        <div class="committee-overlay-header">
+            <a
+                href={`${base}/committees`}
+                class="committee-back-link"
+                style="display:inline-block; margin-bottom: 1.5rem;"
+            >
+                ← All Committees
+            </a>
+            <h1
+                class="committee-overlay-acronym committee-detail-visible"
+                transition:name={`committee-title-${committee.id}`}
+            >
+                {committee.acronym}
+            </h1>
+            <p class="committee-overlay-fullname committee-detail-visible">
+                {committee.fullname}
+            </p>
+        </div>
+
+        <!-- ── BODY ─────────────────────────────────────────────── -->
+        <div class="committee-overlay-body">
+            <!-- Mandate -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">Information</p>
+                <h2 class="section-title">
+                    Committee <span class="text-gradient">Mandate</span>
+                </h2>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    {
+                        committee.mandate ? (
+                            <p set:html={committee.mandate} />
+                        ) : (
+                            <p style="opacity: 0.5;">
+                                [Insert Committee Mandate here. Start by
+                                establishing the context of the committee's
+                                scope within the United Nations framework...]
+                            </p>
+                        )
+                    }
+                </div>
+            </div>
+
+            <!-- Executive Board -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">Leadership</p>
+                <h2 class="section-title">
+                    Executive <span class="text-gradient">Board</span>
+                </h2>
+
+                <!-- EB group photo (hidden gracefully if missing) -->
+                <div
+                    class="glass-card eb-group-card"
+                    style="margin-bottom:2rem; overflow:hidden; padding:0;"
+                >
+                    <div class="card-glow"></div>
+                    <div
+                        style="width:100%; aspect-ratio:16/9; max-height:420px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:rgba(255,255,255,0.02);"
+                    >
+                        <img
+                            src={`${base}/images/committees/${committee.id}/eb-group.webp`}
+                            alt="Executive Board Group Photo"
+                            style="width:100%; height:100%; object-fit:cover; object-position:center;"
+                            onerror="this.closest('.glass-card').style.display='none';"
+                        />
+                    </div>
+                </div>
+
+                <!-- Individual EB cards -->
+                {
+                    hasCabinets ? (
+                        cabinets.map(([cabName, members]) => {
+                            return (
+                                <div class="cabinet-section" style="margin-top: 3rem;">
+                                    <h3 class="cabinet-title" style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--text-primary);">{cabName}</h3>
+                                    
+                                    <div class="team-grid">
+                                        {members.map((m) => {
+                                            const imgSrc = `${base}/images/committees/${committee.id}/${m.img}`;
+                                            return (
+                                                <div class="team-card-wrapper">
+                                                    <div
+                                                        class="glass-card team-card person-card"
+                                                        data-person-name={m.name}
+                                                        data-person-role={m.role}
+                                                        data-person-img={imgSrc}
+                                                        data-person-desc={m.desc || ""}
+                                                        style="cursor:pointer;"
+                                                    >
+                                                        <img
+                                                            src={imgSrc}
+                                                            alt={m.name}
+                                                            class="team-img-bg"
+                                                            onerror="this.style.display='none'"
+                                                        />
+                                                        <div class="team-card-overlay" />
+                                                        <div class="team-card-content">
+                                                            <h3>{m.name}</h3>
+                                                            <p class="team-role">{m.role}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            );
+                        })
+                    ) : (
+                        <div class="team-grid" id="ebMembersGrid">
+                            {
+                                daisMembers.map((m) => {
+                                    const imgSrc = `${base}/images/committees/${committee.id}/${m.img}`;
+                                    return (
+                                        <div class="team-card-wrapper">
+                                            <div
+                                                class="glass-card team-card person-card"
+                                                data-person-name={m.name}
+                                                data-person-role={m.role}
+                                                data-person-img={imgSrc}
+                                                data-person-desc={m.desc || ""}
+                                                style="cursor:pointer;"
+                                            >
+                                                <img
+                                                    src={imgSrc}
+                                                    alt={m.name}
+                                                    class="team-img-bg"
+                                                    onerror="this.style.display='none'"
+                                                />
+                                                <div class="team-card-overlay" />
+                                                <div class="team-card-content">
+                                                    <h3>{m.name}</h3>
+                                                    <p class="team-role">{m.role}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                    )
+                }
+            </div>
+
+            <!-- Resources -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">Resources</p>
+                <h2 class="section-title">Preparation</h2>
+                <div class="committee-overlay-actions">
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <h3
+                            style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem;"
+                        >
+                            Background Guide
+                        </h3>
+                        <p style="font-size:0.9rem;">
+                            Download the official study guide designed by your
+                            rigorous Executive Board. This guide is required
+                            reading prior to the conference.
+                        </p>
+                        <a
+                            href={`${base}/pdfs/${committee.id}-background-guide.pdf`}
+                            target="_blank"
+                            class="btn btn-outline"
+                            style="width:100%; margin-top:1rem;">Download PDF</a
+                        >
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <h3
+                            style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem;"
+                        >
+                            Contact Us
+                        </h3>
+                        <p style="font-size:0.9rem;">
+                            If you have any questions regarding the agenda or
+                            position papers, directly email the committee dais.
+                        </p>
+                        <a
+                            href="mailto:committee@ratobangala.edu.np"
+                            class="btn btn-glass"
+                            style="width:100%; margin-top:1rem;"
+                            >committee@ratobangala.edu.np</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Person Detail Popup -->
+    <div class="person-popup" id="personPopup">
+        <div class="person-popup-inner">
+            <button
+                class="person-popup-close"
+                id="personPopupClose"
+                aria-label="Close">&times;</button
+            >
+            <div class="person-popup-left">
+                <div class="person-popup-photo-wrap">
+                    <img
+                        class="person-popup-photo"
+                        id="personPopupPhoto"
+                        src=""
+                        alt="Person photo"
+                    />
+                    <div
+                        class="person-popup-photo-placeholder"
+                        id="personPopupPhotoPlaceholder"
+                    >
+                        <span>👤</span>
+                    </div>
+                </div>
+                <div class="person-popup-meta">
+                    <h2 class="person-popup-name" id="personPopupName"></h2>
+                    <p class="person-popup-role" id="personPopupRole"></p>
+                </div>
+            </div>
+            <div class="person-popup-right">
+                <p class="person-popup-desc" id="personPopupDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-logo">
+                        RBS<span class="logo-accent">MUN</span>
+                    </h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/committees">Committees</a>
+                    <a href="/conference">Conference Details</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:contact@ratobangala.edu.np"
+                        >contact@ratobangala.edu.np</a
+                    >
+                    <a href="tel:015447618">01-5447618</a>
+                    <a href="tel:015447620">01-5447620</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RBSMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function bindPersonCards() {
+            document
+                .querySelectorAll<HTMLElement>(".person-card[data-person-name]")
+                .forEach((card) => {
+                    // Avoid duplicate listeners
+                    if ((card as any).__popupBound) return;
+                    (card as any).__popupBound = true;
+                    card.addEventListener("click", () => {
+                        const name = card.dataset.personName || "";
+                        const role = card.dataset.personRole || "";
+                        const img = card.dataset.personImg || "";
+                        const desc = card.dataset.personDesc || "";
+                        if ((window as any).__openPersonPopup) {
+                            (window as any).__openPersonPopup(name, role, img, desc);
+                        }
+                    });
+                });
+        }
+        // Runs on first load AND after every View Transition
+        document.addEventListener("astro:page-load", bindPersonCards);
+    </script>
+</Layout>

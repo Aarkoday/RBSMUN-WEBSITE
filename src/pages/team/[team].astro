@@ -1,0 +1,238 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import WebGLBackground from "../../components/WebGLBackground.jsx";
+import { TEAMS } from "../../data/teams";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export function getStaticPaths() {
+    return Object.values(TEAMS).map((t) => ({
+        params: { team: t.id },
+        props: { team: t },
+    }));
+}
+
+const { team } = Astro.props;
+const isSecretariat = team.id === "secretariat";
+---
+
+<Layout title={`${team.title} – RBSMUN 2026`}>
+    <WebGLBackground client:only="react" />
+
+    <nav class="glass-nav" id="mainNav">
+        <div class="nav-inner">
+            <a href={`${base}/`} class="nav-logo"
+                ><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo" /></a
+            >
+            <div class="nav-links" id="navLinks">
+                <a href={`${base}/`}>Home</a>
+                <a href={`${base}/about`}>About Us</a>
+                <a href={`${base}/committees`}>Committees</a>
+                <a href={`${base}/conference`}>Conference Details</a>
+                <a href={`${base}/team`} class="active">Our Team</a>
+            </div>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                target="_blank"
+                class="nav-cta">Register →</a
+            >
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!--
+        ╔════════════════════════════════════════════════════╗
+        ║  TEAM DETAIL  –  mimics the old team overlay look ║
+        ╚════════════════════════════════════════════════════╝
+    -->
+    <div class="committee-detail-page">
+
+        <!-- ── HEADER ────────────────────────────────────────────── -->
+        <div class="committee-overlay-header">
+            <a href={`${base}/team`} class="committee-back-link" style="display:inline-block; margin-bottom:1.5rem;">
+                ← All Teams
+            </a>
+            <h1 class="committee-overlay-acronym committee-detail-visible"
+                transition:name={`team-title-${team.id}`}>
+                {team.title}
+            </h1>
+            <p class="committee-overlay-fullname committee-detail-visible">
+                RBSMUN 2026
+            </p>
+        </div>
+
+        <!-- ── BODY ─────────────────────────────────────────────── -->
+        <div class="committee-overlay-body">
+
+            <!-- About -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">About</p>
+                <h2 class="section-title">
+                    This <span class="text-gradient">Team</span>
+                </h2>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <p set:html={team.desc}></p>
+                </div>
+            </div>
+
+            <!-- Heads / Leadership -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">Members</p>
+                {isSecretariat ? (
+                    <h2 class="section-title">Leadership</h2>
+                ) : (
+                    <h2 class="section-title">Heads</h2>
+                )}
+                <div class="team-grid">
+                    {team.heads.map((m) => {
+                        const imgSrc = `${base}/images/team/${team.id}/${m.img}`;
+                        return (
+                            <div class="team-card-wrapper">
+                                <div
+                                    class="glass-card team-card person-card"
+                                    data-person-name={m.name}
+                                    data-person-role={m.role}
+                                    data-person-img={imgSrc}
+                                    data-person-desc={m.desc || ""}
+                                    style="cursor:pointer;"
+                                >
+                                    <img
+                                        src={imgSrc}
+                                        alt={m.name}
+                                        class="team-img-bg"
+                                        onerror="this.style.display='none'"
+                                    />
+                                    <div class="team-card-overlay" />
+                                    <div class="team-card-content">
+                                        <h3>{m.name}</h3>
+                                        <p class="team-role">{m.role}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            <!-- Core Team (only if populated) -->
+            {team.core.length > 0 && (
+                <div class="committee-overlay-section committee-detail-visible">
+                    <p class="section-eyebrow">Members</p>
+                    <h2 class="section-title">Core Team</h2>
+                    <div class="team-grid">
+                        {team.core.map((m) => {
+                            const imgSrc = `${base}/images/team/${team.id}/${m.img}`;
+                            return (
+                                <div class="team-card-wrapper">
+                                    <div
+                                        class="glass-card team-card person-card"
+                                        data-person-name={m.name}
+                                        data-person-role={m.role}
+                                        data-person-img={imgSrc}
+                                        data-person-desc={m.desc || ""}
+                                        style="cursor:pointer;"
+                                    >
+                                        <img
+                                            src={imgSrc}
+                                            alt={m.name}
+                                            class="team-img-bg"
+                                            onerror="this.style.display='none'"
+                                        />
+                                        <div class="team-card-overlay" />
+                                        <div class="team-card-content">
+                                            <h3>{m.name}</h3>
+                                            <p class="team-role">{m.role}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            <!-- Contact -->
+            <div class="committee-overlay-section committee-detail-visible">
+                <p class="section-eyebrow">Contact</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="committee-overlay-actions">
+                    <div class="glass-card">
+                        <div class="card-glow"></div>
+                        <h3 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem;">Reach Out</h3>
+                        <p style="font-size:0.9rem;">Have questions about this department? We'd love to hear from you.</p>
+                        <a href="mailto:contact@ratobangala.edu.np" class="btn btn-glass" style="width:100%; margin-top:1rem;">contact@ratobangala.edu.np</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /committee-overlay-body -->
+    </div><!-- /committee-detail-page -->
+
+    <!-- Person Detail Popup -->
+    <div class="person-popup" id="personPopup">
+        <div class="person-popup-inner">
+            <button class="person-popup-close" id="personPopupClose" aria-label="Close">&times;</button>
+            <div class="person-popup-left">
+                <div class="person-popup-photo-wrap">
+                    <img class="person-popup-photo" id="personPopupPhoto" src="" alt="Person photo" />
+                    <div class="person-popup-photo-placeholder" id="personPopupPhotoPlaceholder"><span>👤</span></div>
+                </div>
+                <div class="person-popup-meta">
+                    <h2 class="person-popup-name" id="personPopupName"></h2>
+                    <p class="person-popup-role" id="personPopupRole"></p>
+                </div>
+            </div>
+            <div class="person-popup-right">
+                <p class="person-popup-desc" id="personPopupDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-logo">RBS<span class="logo-accent">MUN</span></h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/committees">Committees</a>
+                    <a href="/conference">Conference Details</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:contact@ratobangala.edu.np">contact@ratobangala.edu.np</a>
+                    <a href="tel:015447618">01-5447618</a>
+                    <a href="tel:015447620">01-5447620</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RBSMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function bindPersonCards() {
+            document.querySelectorAll<HTMLElement>('.person-card[data-person-name]').forEach(card => {
+                if ((card as any).__popupBound) return;
+                (card as any).__popupBound = true;
+                card.addEventListener('click', () => {
+                    const name = card.dataset.personName || '';
+                    const role = card.dataset.personRole || '';
+                    const img  = card.dataset.personImg  || '';
+                    const desc = card.dataset.personDesc || '';
+                    if ((window as any).__openPersonPopup) {
+                        (window as any).__openPersonPopup(name, role, img, desc);
+                    }
+                });
+            });
+        }
+        document.addEventListener('astro:page-load', bindPersonCards);
+    </script>
+</Layout>

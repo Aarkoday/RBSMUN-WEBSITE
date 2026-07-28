@@ -93,7 +93,8 @@ img {
     inset: 0;
     z-index: 9999;
     pointer-events: none;
-    display: none; /* Disabled for PC scrolling performance */
+    display: none;
+    /* Disabled for PC scrolling performance */
     transform: translateZ(0);
     backface-visibility: hidden;
 }
@@ -149,52 +150,64 @@ img {
 }
 
 @keyframes orbDrift1 {
+
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
+
     25% {
         transform: translate(80px, 40px) scale(1.1);
     }
+
     50% {
         transform: translate(30px, -60px) scale(0.9);
     }
+
     75% {
         transform: translate(-40px, 20px) scale(1.05);
     }
 }
 
 @keyframes orbDrift2 {
+
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
+
     33% {
         transform: translate(-60px, 50px) scale(1.15);
     }
+
     66% {
         transform: translate(40px, -30px) scale(0.85);
     }
 }
 
 @keyframes orbDrift3 {
+
     0%,
     100% {
         transform: translate(0, 0);
     }
+
     50% {
         transform: translate(70px, -40px);
     }
 }
 
 @keyframes orbDrift4 {
+
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
+
     40% {
         transform: translate(50px, 60px) scale(1.1);
     }
+
     80% {
         transform: translate(-30px, -20px) scale(0.95);
     }
@@ -238,11 +251,13 @@ img {
 }
 
 @keyframes pulse {
+
     0%,
     100% {
         opacity: 1;
         box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
     }
+
     50% {
         opacity: 0.7;
         box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
@@ -473,36 +488,44 @@ img {
 }
 
 @keyframes glassFloat1 {
+
     0%,
     100% {
         transform: rotate(-8deg) translate(0, 0);
     }
+
     33% {
         transform: rotate(-5deg) translate(20px, -15px);
     }
+
     66% {
         transform: rotate(-10deg) translate(-10px, 10px);
     }
 }
 
 @keyframes glassFloat2 {
+
     0%,
     100% {
         transform: rotate(5deg) translate(0, 0);
     }
+
     50% {
         transform: rotate(8deg) translate(-15px, -20px);
     }
 }
 
 @keyframes glassFloat3 {
+
     0%,
     100% {
         transform: translate(0, 0) scale(1);
     }
+
     40% {
         transform: translate(15px, 10px) scale(1.05);
     }
+
     70% {
         transform: translate(-10px, -8px) scale(0.95);
     }
@@ -536,7 +559,7 @@ img {
 }
 
 .title-line {
-    display: block; 
+    display: block;
     white-space: nowrap;
     will-change: transform, opacity;
 }
@@ -719,11 +742,13 @@ img {
 }
 
 @keyframes scrollBounce {
+
     0%,
     100% {
         transform: translateY(0);
         opacity: 1;
     }
+
     50% {
         transform: translateY(12px);
         opacity: 0.3;
@@ -1175,9 +1200,17 @@ img {
     transform: translateY(0);
 }
 
-.committee-overlay.active .committee-overlay-section:nth-child(1) { transition-delay: 0.35s; }
-.committee-overlay.active .committee-overlay-section:nth-child(2) { transition-delay: 0.45s; }
-.committee-overlay.active .committee-overlay-section:nth-child(3) { transition-delay: 0.55s; }
+.committee-overlay.active .committee-overlay-section:nth-child(1) {
+    transition-delay: 0.35s;
+}
+
+.committee-overlay.active .committee-overlay-section:nth-child(2) {
+    transition-delay: 0.45s;
+}
+
+.committee-overlay.active .committee-overlay-section:nth-child(3) {
+    transition-delay: 0.55s;
+}
 
 .committee-overlay-section .section-eyebrow {
     margin-bottom: 0.75rem;
@@ -1366,6 +1399,7 @@ img {
         max-height: 85vh;
         width: 95%;
     }
+
     .person-popup-left {
         flex: 0 0 auto;
         border-right: none;
@@ -1375,20 +1409,25 @@ img {
         padding: 1rem;
         gap: 1.25rem;
     }
+
     .person-popup-photo-wrap {
         width: 90px;
         height: 90px;
         border-radius: 12px;
     }
+
     .person-popup-photo-placeholder {
         font-size: 2rem;
     }
+
     .person-popup-meta {
         padding: 0;
     }
+
     .person-popup-name {
         font-size: 1.25rem;
     }
+
     .person-popup-right {
         padding: 1.5rem;
     }
@@ -1413,11 +1452,12 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     bottom: 0;
+    max-width: none !important; /* Override universal max-width: 100% */
     overflow: hidden;
     border-radius: var(--glass-radius);
-    transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1), bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
+    transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1), width 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1429,11 +1469,24 @@ img {
 }
 
 .team-card:hover {
-    top: -75px;
-    bottom: -75px;
+    left: -35px;
+    width: calc(100% + 70px);
     transform: translateY(0);
     z-index: 10;
-    transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1), bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
+    transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1), width 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, z-index 0s 0s;
+}
+
+/* Individual Images Vertical Expansion */
+.person-card {
+    transition: top 0.6s cubic-bezier(0.25, 1, 0.5, 1), bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, z-index 0s 0s !important;
+}
+
+.person-card:hover {
+    left: 0 !important;
+    width: 100% !important;
+    top: -75px !important;
+    bottom: -75px !important;
+    transition: top 0.6s cubic-bezier(0.25, 1, 0.5, 1), bottom 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, z-index 0s 0s !important;
 }
 
 .team-img-bg {
@@ -1447,6 +1500,10 @@ img {
 }
 
 .team-card:hover .team-img-bg {
+    transform: scale(1.01);
+}
+
+.person-card:hover .team-img-bg {
     transform: scale(1.06);
 }
 
@@ -1734,7 +1791,8 @@ img {
         position: relative;
         display: inline-block;
         color: var(--text-primary);
-        opacity: 0; /* JS reveals via GSAP */
+        opacity: 0;
+        /* JS reveals via GSAP */
         padding: 0.2rem 0;
     }
 
@@ -1897,16 +1955,41 @@ html.lenis {
     position: relative;
     overflow: hidden;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.committee-card-fullname {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    opacity: 0.85;
+    z-index: 2;
+    transition: color 0.5s ease, opacity 0.5s ease;
+    max-width: 90%;
+    line-height: 1.35;
+}
+
+.committee-logo-card:hover .committee-card-fullname {
+    color: #fff;
+    opacity: 1;
 }
 
 .committee-logo-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 0;
     border-radius: inherit;
@@ -1940,13 +2023,48 @@ html.lenis {
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 65%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 65%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 65%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 65%);
+}
+
+.committee-logo-card .committee-overlay-bg {
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: none;
+    mask-image: none;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.committee-logo-card .committee-overlay-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    /* 55% dark tint overlay */
+    z-index: 1;
+}
+
+.committee-logo-card:hover .committee-overlay-bg {
+    opacity: 0.85;
+    /* increase background image visibility, but the dark overlay keeps it dark and legible */
+}
+
+.committee-logo-card .committee-massive-acronym {
+    position: relative;
+    z-index: 2;
+    /* keep above the overlay-bg and its dark pseudo-element */
+    font-size: clamp(1.4rem, 2vw, 2.6rem);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 1.1;
 }
 
 .committee-logo-card:hover .committee-massive-acronym {
     color: #fff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 /* ==========================================================================
@@ -1973,6 +2091,7 @@ html.lenis {
     .bento-grid {
         grid-template-columns: 1fr;
     }
+
     .bento-card-main,
     .bento-card-secondary {
         grid-column: span 1;
@@ -2037,7 +2156,7 @@ html.lenis {
     font-size: clamp(5rem, 10vw, 8rem);
     font-weight: 800;
     letter-spacing: -0.05em;
-    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.4) 100%);
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.4) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -2208,15 +2327,21 @@ html.lenis {
    ========================================================================== */
 
 /* Prevent any element from causing horizontal scroll */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     max-width: 100%;
 }
 
-img, video, canvas, svg {
+img,
+video,
+canvas,
+svg {
     max-width: 100%;
 }
 
 @media (max-width: 768px) {
+
     /* Nav pill: shrink gap and padding on mobile */
     .nav-inner {
         gap: 1rem;
@@ -2227,6 +2352,7 @@ img, video, canvas, svg {
     .page-hero {
         height: 50vh;
     }
+
     .content-wrapper {
         margin-top: 50vh;
     }
@@ -2260,6 +2386,7 @@ img, video, canvas, svg {
     .bento-grid {
         grid-template-columns: 1fr;
     }
+
     .bento-card-main,
     .bento-card-secondary {
         grid-column: span 1;
@@ -2285,6 +2412,7 @@ img, video, canvas, svg {
     .team-grid {
         flex-wrap: wrap;
     }
+
     .team-card-wrapper {
         flex: 0 0 100%;
     }
@@ -2293,6 +2421,7 @@ img, video, canvas, svg {
     .committee-overlay {
         padding: 1rem;
     }
+
     .committee-overlay-header {
         padding-top: 4rem;
     }
@@ -2309,10 +2438,12 @@ img, video, canvas, svg {
 }
 
 @media (max-width: 480px) {
+
     /* Page hero on very small phones */
     .page-hero {
         height: 45vh;
     }
+
     .content-wrapper {
         margin-top: 45vh;
     }
@@ -2350,6 +2481,7 @@ img, video, canvas, svg {
         align-items: center;
         width: 100%;
     }
+
     .hero-actions .btn {
         width: 100%;
         max-width: 280px;
@@ -2396,7 +2528,9 @@ img, video, canvas, svg {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ==========================================================================
@@ -2443,9 +2577,140 @@ img, video, canvas, svg {
         align-items: center;
         gap: 2.5rem;
     }
-    
+
     .principal-image-col {
         position: static;
         flex: none;
     }
-}
+}
+
+/* ─── COMMITTEE / TEAM CARD LINKS ──────────────────────────────────────────── */
+.committee-card-link,
+.team-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.committee-card-link .committee-logo-card,
+.team-card-link .team-card {
+    cursor: pointer;
+}
+
+/* ─── BACK NAVIGATION LINK ─────────────────────────────────────────────────── */
+.committee-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.committee-back-link:hover {
+    color: var(--text-primary);
+}
+
+/* ─── INDIVIDUAL COMMITTEE / TEAM PAGE SECTIONS ────────────────────────────── */
+.committee-overlay-section .glass-card p {
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+/* ─── VIEW TRANSITIONS ─────────────────────────────────────────────────────── */
+/* Smooth fade for the default (fallback) transition */
+::view-transition-old(root) {
+    animation: 250ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+    animation: 300ms ease-in both fade-in;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Named transitions for committee cards → page hero title */
+::view-transition-old(committee-title),
+::view-transition-new(committee-title) {
+    height: 100%;
+    overflow: clip;
+}
+
+/* Named transitions for team cards → page hero title */
+::view-transition-old(team-title),
+::view-transition-new(team-title) {
+    height: 100%;
+    overflow: clip;
+}
+
+/* ─── COMMITTEE DETAIL PAGE ─────────────────────────────────────────────────
+   Makes the individual committee page look identical to the old full-screen
+   overlay: dark glass background, same header / body / section classes.
+   The .committee-detail-visible class overrides the opacity:0 / transform
+   initial states on elements that were previously animated in by JS.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.committee-detail-page {
+    min-height: 100vh;
+    position: relative;
+    background: rgba(5, 5, 5, 0.96);
+    /* Pad top so content clears the fixed nav */
+    padding-top: 80px;
+}
+
+/* Overlay bg image sits behind everything, same as .committee-overlay-bg */
+.committee-detail-page .committee-overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* All direct children of the detail page sit above the bg */
+.committee-detail-page .committee-overlay-header,
+.committee-detail-page .committee-overlay-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* Override the hidden animated state — just show everything on page load */
+.committee-detail-visible.committee-overlay-acronym {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.committee-detail-visible.committee-overlay-fullname {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.committee-detail-visible.committee-overlay-section {
+    opacity: 1 !important;
+    transform: none !important;
+}

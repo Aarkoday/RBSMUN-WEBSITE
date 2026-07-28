@@ -1,10 +1,28 @@
-﻿---
+---
 import Layout from "../layouts/Layout.astro";
 import WebGLBackground from "../components/WebGLBackground.jsx";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const committees = [
+    { id: "jcc",     acronym: "JCC",     fullname: "Joint Crisis Committee" },
+    { id: "disec",   acronym: "DISEC",   fullname: "DISEC" },
+    { id: "ecofin",  acronym: "ECOFIN",  fullname: "ECOFIN" },
+    { id: "icj",     acronym: "ICJ",     fullname: "ICJ" },
+    { id: "irc",     acronym: "IRC",     fullname: "The Imperial Romanov Court" },
+    { id: "who",     acronym: "WHO",     fullname: "WHO" },
+    { id: "hor",     acronym: "HoR",     fullname: "House of Representatives" },
+    { id: "gcmr",    acronym: "GCMR",    fullname: "The Grand Convocation of the Mythical Realms" },
+    { id: "unsc",    acronym: "UNSC",    fullname: "UNSC" },
+    { id: "picc",    acronym: "PICC",    fullname: "Paris International Conference on Cambodia" },
+    { id: "unwomen", acronym: "UNWOMEN", fullname: "UNWOMEN" },
+    { id: "hrc",     acronym: "HRC",     fullname: "HRC" },
+    { id: "uscc",    acronym: "USCC",    fullname: "United States Congressional Committee (Senate)" },
+    { id: "sochum",  acronym: "SOCHUM",  fullname: "SOCHUM" },
+    { id: "ipc",     acronym: "IPC",     fullname: "IPC" },
+];
 ---
 
-<Layout title="Committees â€” RBSMUN 2026">
+<Layout title="Committees – RBSMUN 2026">
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
@@ -22,7 +40,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
                 target="_blank"
-                class="nav-cta">Register â†’</a
+                class="nav-cta">Register →</a
             >
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -34,7 +52,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         class="page-hero"
         style={`background-image: url('${base}/images/miscellaneous/committees.webp');`}
     >
-        <!-- <div class="hero-bg-overlay"></div> -->
         <div class="container">
             <h1 class="page-hero-title">Committees</h1>
             <p class="page-hero-subtitle">
@@ -48,319 +65,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <section class="section">
             <div class="container">
                 <div class="committees-grid">
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="jcc"
-                        data-fullname="Joint Crisis Committee"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">JCC</h2>
-                    </div>
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="disec"
-                        data-fullname="DISEC"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">DISEC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="ecofin"
-                        data-fullname="ECOFIN"
-                        data-mandate1="In 1945, ECOFIN was founded as the Second Committee of the United Nations General Assembly.  Its membership is open to all 193 member states. The committee addresses issues related to development economics and international finance. <br><br>Its actions involve encouraging funding for development projects and highlighting areas for sustainable development. Instruments typically used by the committee include debate and resolutions. Creating effective policies that use these instruments requires tying in academic work, so ECOFIN also hosts speakers with expertise in creating relevant policies. Since the resolutions written by the committee do not have the power of legislation,  the committee aims for unanimous support for international implementation. . Nearly forty resolutions are passed each year. Most of them move on for further consideration by G77, a United Nations coalition of developing countries, while others are tabled for smaller groups of states to consider."
-                        data-mandate2="ECOFIN has played a role in passing impactful resolutions related to debt sustainability, international taxation, and other crucial issues. As a steward of economic and financial concerns in the United Nations, ECOFIN is a principal body in helping countries develop and the world achieve sustainable development. It has played a crucial role in the UN's past and will in its future, too."
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">ECOFIN</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="icj"
-                        data-fullname="ICJ"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">ICJ</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="irc"
-                        data-fullname="The Imperial Romanov Court"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">IRC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="who"
-                        data-fullname="WHO"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">WHO</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="hor"
-                        data-fullname="House of Representatives"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">HoR</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="gcmr"
-                        data-fullname="The Grand Convocation of the Mythical Realms"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">GCMR</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="unsc"
-                        data-fullname="UNSC"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">UNSC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="picc"
-                        data-fullname="Paris International Conference on Cambodia"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">PICC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="unwomen"
-                        data-fullname="UNWOMEN"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">UNWOMEN</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="hrc"
-                        data-fullname="HRC"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">HRC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="uscc"
-                        data-fullname="United States Congressional Committee (Senate)"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">USCC</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="sochum"
-                        data-fullname="SOCHUM"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">SOCHUM</h2>
-                    </div>
-
-                    <div
-                        class="glass-card committee-logo-card"
-                        data-anim="scatter"
-                        data-committee="ipc"
-                        data-fullname="IPC"
-                    >
-                        <div class="card-glow"></div>
-                        <h2 class="committee-massive-acronym">IPC</h2>
-                    </div>
+                    {committees.map((c) => (
+                        <a
+                            href={`${base}/committees/${c.id}`}
+                            class="committee-card-link"
+                            aria-label={c.fullname}
+                        >
+                            <div
+                                class="glass-card committee-logo-card"
+                                data-anim="scatter"
+                                transition:name={`committee-title-${c.id}`}
+                            >
+                                <div
+                                    class="committee-overlay-bg"
+                                    style={`background-image: url('${base}/images/committees/${c.id}/card-bg.webp');`}
+                                ></div>
+                                <div class="card-glow"></div>
+                                <h2 class="committee-massive-acronym">{c.acronym}</h2>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
         </section>
-    </div>
-
-    <div class="committee-overlay" id="committeeOverlay" data-lenis-prevent>
-        <div class="committee-overlay-bg" id="committeeOverlayBg"></div>
-        <button
-            class="committee-overlay-close"
-            id="committeeOverlayClose"
-            aria-label="Close">&times;</button
-        >
-        <div class="committee-overlay-header">
-            <h2 class="committee-overlay-acronym" id="overlayAcronym"></h2>
-            <p class="committee-overlay-fullname" id="overlayFullname"></p>
-        </div>
-        <div class="committee-overlay-body">
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Information</p>
-                <h2 class="section-title">
-                    Committee <span class="text-gradient">Mandate</span>
-                </h2>
-                <div class="glass-card">
-                    <div class="card-glow"></div>
-                    <p id="overlayMandate1">
-                        [Insert Committee Mandate and general description here.
-                        Start by establishing the context of the committee's
-                        scope within the United Nations framework...]
-                    </p>
-                    <p id="overlayMandate2">
-                        [Provide details about the specific agenda, conflict
-                        overviews, or key debate topics that delegates will face
-                        inside this committee...]
-                    </p>
-                </div>
-            </div>
-
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Leadership</p>
-                <h2 class="section-title">
-                    Executive <span class="text-gradient">Board</span>
-                </h2>
-
-                <!-- Executive Board Group Photo Card -->
-                <div
-                    class="glass-card eb-group-card"
-                    style="margin-bottom: 2rem; overflow: hidden; border-radius: var(--glass-radius-md); padding: 0;"
-                >
-                    <div class="card-glow"></div>
-                    <div
-                        class="eb-group-img-wrapper"
-                        style="width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 450px; position: relative; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; overflow: hidden;"
-                    >
-                        <img
-                            id="overlayEbGroupImg"
-                            src=""
-                            alt="Executive Board Group Photo"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform 0.5s ease;"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                        />
-                        <div
-                            class="eb-group-placeholder"
-                            style="display: none; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-secondary); text-align: center; padding: 2rem;"
-                        >
-                            <span style="font-size: 2rem;">ðŸ“¸</span>
-                            <span
-                                style="font-weight: 600; color: var(--text-primary);"
-                                >Executive Board Group Photo</span
-                            >
-                            <span style="font-size: 0.8rem; opacity: 0.7;"
-                                >Upload photo to <code
-                                    >/images/committees/[id]/eb-group.webp</code
-                                ></span
-                            >
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-grid" id="committeeOverlayMembersContainer">
-                    <!-- Dynamic Dais/EB cards will be inserted here -->
-                </div>
-            </div>
-
-            <div class="committee-overlay-section">
-                <p class="section-eyebrow">Resources</p>
-                <h2 class="section-title">Preparation</h2>
-                <div class="committee-overlay-actions">
-                    <div class="glass-card">
-                        <div class="card-glow"></div>
-                        <h3
-                            style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;"
-                        >
-                            Background Guide
-                        </h3>
-                        <p style="font-size: 0.9rem;">
-                            Download the official study guide designed by your
-                            rigorous Executive Board. This guide is required
-                            reading prior to the conference.
-                        </p>
-                        <a
-                            id="overlayPdfLink"
-                            href="#"
-                            target="_blank"
-                            class="btn btn-outline"
-                            style="width: 100%; margin-top: 1rem;"
-                            >Download PDF</a
-                        >
-                    </div>
-                    <div class="glass-card">
-                        <div class="card-glow"></div>
-                        <h3
-                            style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;"
-                        >
-                            Contact Us
-                        </h3>
-                        <p style="font-size: 0.9rem;">
-                            If you have any questions regarding the agenda or
-                            position papers, directly email the committee dais.
-                        </p>
-                        <a
-                            href="mailto:committee@ratobangala.edu.np"
-                            class="btn btn-glass"
-                            style="width: 100%; margin-top: 1rem;"
-                            >committee@ratobangala.edu.np</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Person Detail Popup -->
-    <div class="person-popup" id="personPopup">
-        <div class="person-popup-inner">
-            <button
-                class="person-popup-close"
-                id="personPopupClose"
-                aria-label="Close">&times;</button
-            >
-            <div class="person-popup-left">
-                <div class="person-popup-photo-wrap">
-                    <img
-                        class="person-popup-photo"
-                        id="personPopupPhoto"
-                        src=""
-                        alt="Person photo"
-                    />
-                    <div
-                        class="person-popup-photo-placeholder"
-                        id="personPopupPhotoPlaceholder"
-                    >
-                        <span>ðŸ‘¤</span>
-                    </div>
-                </div>
-                <div class="person-popup-meta">
-                    <h2 class="person-popup-name" id="personPopupName"></h2>
-                    <p class="person-popup-role" id="personPopupRole"></p>
-                </div>
-            </div>
-            <div class="person-popup-right">
-                <p class="person-popup-desc" id="personPopupDesc"></p>
-            </div>
-        </div>
     </div>
 
     <footer class="footer">

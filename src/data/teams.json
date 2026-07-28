@@ -1,0 +1,79 @@
+﻿{
+    "logistics": {
+        "id": "logistics",
+        "title": "Logistics",
+        "desc": "The Logistics team handles all on-ground operations — from venue management and delegate registration to transportation coordination and material procurement. They are the backbone that keeps the conference running seamlessly behind the scenes.",
+        "heads": [
+            { "name": "To be announced", "role": "Head of Logistics", "img": "head1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Logistics", "img": "head2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Logistics", "img": "head3.webp", "desc": "" }
+        ],
+        "core": [
+            { "name": "To be announced", "role": "Core Logistics", "img": "core1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Core Logistics", "img": "core2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Core Logistics", "img": "core3.webp", "desc": "" },
+            { "name": "To be announced", "role": "Core Logistics", "img": "core4.webp", "desc": "" },
+            { "name": "To be announced", "role": "Core Logistics", "img": "core5.webp", "desc": "" }
+        ]
+    },
+    "secretariat": {
+        "id": "secretariat",
+        "title": "Secretariat",
+        "desc": "The Secretariat is the executive leadership of RBSMUN. Led by the Secretary-General and Deputy Secretary-General, this team sets the academic vision, oversees all committee operations, and ensures the conference upholds the highest standards of Model UN excellence.",
+        "heads": [
+            { "name": "To be announced", "role": "Secretary-General", "img": "sg.webp", "desc": "" },
+            { "name": "To be announced", "role": "Deputy Secretary-General", "img": "dsg1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Deputy Secretary-General", "img": "dsg2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Crisis Director", "img": "cd.webp", "desc": "" }
+        ],
+        "core": []
+    },
+    "it": {
+        "id": "it",
+        "title": "Information Technology",
+        "desc": "The IT team is responsible for all things digital — the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event.",
+        "heads": [
+            { "name": "To be announced", "role": "Head of IT", "img": "head.webp", "desc": "" }
+        ],
+        "core": [
+            { "name": "To be announced", "role": "Core IT", "img": "core1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Core IT", "img": "core2.webp", "desc": "" }
+        ]
+    },
+    "art": {
+        "id": "art",
+        "title": "Art & Design",
+        "desc": "The Art team crafts the entire visual identity of RBSMUN — from branding, posters, and social media graphics to stage design and conference-day decor. They bring the creative vision that defines the aesthetic of each iteration.",
+        "heads": [
+            { "name": "To be announced", "role": "Head of Art", "img": "head1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Art", "img": "head2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Art", "img": "head3.webp", "desc": "" }
+        ],
+        "core": []
+    },
+    "media": {
+        "id": "media",
+        "title": "Media & Communications",
+        "desc": "The Media team captures and communicates the RBSMUN story — through photography, videography, social media coverage, press releases, and the official conference newsletter. They ensure every moment is documented and shared with the world.",
+        "heads": [
+            { "name": "To be announced", "role": "Head of Media", "img": "head1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Media", "img": "head2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Head of Media", "img": "head3.webp", "desc": "" }
+        ],
+        "core": []
+    },
+    "photography": {
+        "id": "photography",
+        "title": "Photography",
+        "desc": "The Photography team is responsible for capturing the essence of the conference in still frames. From intense committee debates to the vibrant social events, they freeze the best moments of RBSMUN in time.",
+        "heads": [
+            { "name": "To be announced", "role": "Head of Photography", "img": "head.webp", "desc": "" }
+        ],
+        "core": [
+            { "name": "To be announced", "role": "Photography Team", "img": "core1.webp", "desc": "" },
+            { "name": "To be announced", "role": "Photography Team", "img": "core2.webp", "desc": "" },
+            { "name": "To be announced", "role": "Photography Team", "img": "core3.webp", "desc": "" },
+            { "name": "To be announced", "role": "Photography Team", "img": "core4.webp", "desc": "" }
+        ]
+    }
+}

@@ -24,27 +24,27 @@ public/
     │   │   ├── logo.webp                # Official Committee Crest / Logo
     │   │   ├── card-bg.jpg             # Card background photo on committee grid
     │   │   ├── eb-group.webp            # Executive Board Group Photo
-    │   │   ├── editor-in-chief.jpg     # 1 Editor in Chief photo
-    │   │   ├── editor1.jpg             # Editor 1 photo
-    │   │   ├── editor2.jpg             # Editor 2 photo
-    │   │   └── editor3.jpg             # Editor 3 photo
+    │   │   ├── editor-in-chief.webp     # 1 Editor in Chief photo
+    │   │   ├── editor1.webp             # Editor 1 photo
+    │   │   ├── editor2.webp             # Editor 2 photo
+    │   │   └── editor3.webp             # Editor 3 photo
     │   │
     │   ├── [other_committees]/         # e.g., jcc, disec, etc.
     │   │   ├── logo.webp
     │   │   ├── card-bg.jpg
     │   │   ├── eb-group.webp
-    │   │   ├── chair.jpg               # Chairperson photo
-    │   │   ├── vice-chair.jpg          # Vice Chairperson photo
-    │   │   └── moderator.jpg           # Moderator photo
+    │   │   ├── chair.webp               # Chairperson photo
+    │   │   ├── vice-chair.webp          # Vice Chairperson photo
+    │   │   └── moderator.webp           # Moderator photo
     │   │
     │   └── ...
     │
     └── team/                           # Department & Team Member Folders
         ├── secretariat/                # Executive Leadership & Secretariat Team
         │   ├── card-bg.jpg             # Department cover photo
-        │   ├── sg.jpg                  # Secretary General photo
-        │   ├── dsg1.jpg                # Deputy Secretary General 1 photo
-        │   ├── dsg2.jpg                # Deputy Secretary General 2 photo
+        │   ├── sg.webp                  # Secretary General photo
+        │   ├── dsg1.webp                # Deputy Secretary General 1 photo
+        │   ├── dsg2.webp                # Deputy Secretary General 2 photo
         │   ├── cd.jpg                  # Crisis Director photo
         │   └── team-group.webp          # Secretariat Group Photo
         │
@@ -97,11 +97,11 @@ public/
 
 | Committee | Asset Type | File Name | Format | Target Path |
 | :--- | :--- | :--- | :--- | :--- |
-| **IPC** | **Editor in Chief** | `editor-in-chief.jpg` | JPG / WebP | `public/images/committees/ipc/editor-in-chief.jpg` |
-| **IPC** | **Editors** | `editor1.jpg`, `editor2.jpg`, `editor3.jpg` | JPG / WebP | `public/images/committees/ipc/editor[1-3].jpg` |
-| **Others** | **Chairperson** | `chair.jpg` | JPG / WebP | `public/images/committees/[id]/chair.jpg` |
-| **Others** | **Vice Chairperson** | `vice-chair.jpg` | JPG / WebP | `public/images/committees/[id]/vice-chair.jpg` |
-| **Others** | **Moderator** | `moderator.jpg` | JPG / WebP | `public/images/committees/[id]/moderator.jpg` |
+| **IPC** | **Editor in Chief** | `editor-in-chief.webp` | JPG / WebP | `public/images/committees/ipc/editor-in-chief.webp` |
+| **IPC** | **Editors** | `editor1.webp`, `editor2.webp`, `editor3.webp` | JPG / WebP | `public/images/committees/ipc/editor[1-3].jpg` |
+| **Others** | **Chairperson** | `chair.webp` | JPG / WebP | `public/images/committees/[id]/chair.webp` |
+| **Others** | **Vice Chairperson** | `vice-chair.webp` | JPG / WebP | `public/images/committees/[id]/vice-chair.webp` |
+| **Others** | **Moderator** | `moderator.webp` | JPG / WebP | `public/images/committees/[id]/moderator.webp` |
 | **All** | **Committee Logo / Crest** | `logo.webp` | PNG / WebP / SVG | `public/images/committees/[id]/logo.webp` |
 | **All** | **EB Group Photo** | `eb-group.webp` | JPG / WebP | `public/images/committees/[id]/eb-group.webp` |
 | **All** | **Grid Card BG** | `card-bg.jpg` | JPG / WebP | `public/images/committees/[id]/card-bg.jpg` |

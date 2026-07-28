@@ -1,0 +1,332 @@
+{
+    "ipc": [
+        {
+            "name": "To be announced",
+            "role": "Editor in Chief",
+            "img": "editor-in-chief.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Editor",
+            "img": "editor1.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Editor",
+            "img": "editor2.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Editor",
+            "img": "editor3.webp",
+            "desc": ""
+        }
+    ],
+    "ecofin": [
+        {
+            "name": "Shivansh Bhattarai",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": "Shivansh Bhattarai is a dedicated, analytical, and driven individual whose passion for economics, mathematics, and finance is evident not only in his academic pursuits but also in how he approaches challenges and responsibilities. He is known for his disciplined work ethic, thoughtful decision-making, and ability to remain calm and composed even in demanding situations. Whether working independently or as part of a team, Shivansh believes that consistency, preparation, and collaboration are the foundations of meaningful success. Outside the classroom, Shivansh is an enthusiastic football player and an active participant in public speaking. These experiences have shaped him into a well-rounded individual who values both leadership and the perspectives of those around him. As a chair, Shivansh strives to create a welcoming and intellectually stimulating committee where delegates feel encouraged to express their ideas confidently and engage in respectful, thought-provoking debate."
+        },
+        {
+            "name": "Sarhana Sharma",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": "Sarhana Sharma is someone with endless enthusiasm; indeed, she may very well be one of the most energetic people you will ever have the pleasure of meeting. At first glance, she may seem intense, but wait a moment, beneath that bold persona is a warm and kind individual. Sarhana is effortlessly sociable and disarmingly funny. She is the kind of person whose company leaves you smiling and without quite knowing why. Her approachability is not just something she tries to show off; it is simply who she is. For her delegates, this means that the committee room will never feel cold or distant. She ensures that every voice is heard and every presence is welcomed."
+        },
+        {
+            "name": "Prapti Pokharel",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": "Prapti Pokharel rarely stays put for long. She is always looking around for something new to learn or jump into, and her friendly way of talking makes it easy to connect with her right away. Her positive energy comes across naturally when she meets people from different places. She brings real enthusiasm to group work and events, and she stays dedicated the whole time. As moderator, her goal is to keep the committee active and welcoming so delegates can speak up without holding back."
+        }
+    ],
+    "jcc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair1.webp",
+            "desc": "",
+            "cabinet": "Cabinet A"
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair1.webp",
+            "desc": "",
+            "cabinet": "Cabinet A"
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator1.webp",
+            "desc": "",
+            "cabinet": "Cabinet A"
+        },
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair2.webp",
+            "desc": "",
+            "cabinet": "Cabinet B"
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair2.webp",
+            "desc": "",
+            "cabinet": "Cabinet B"
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator2.webp",
+            "desc": "",
+            "cabinet": "Cabinet B"
+        }
+    ],
+    "disec": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "icj": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "irc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "who": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "hor": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "gcmr": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "unsc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "picc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "unwomen": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "hrc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "uscc": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ],
+    "sochum": [
+        {
+            "name": "To be announced",
+            "role": "Chairperson",
+            "img": "chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Vice Chairperson",
+            "img": "vice-chair.webp",
+            "desc": ""
+        },
+        {
+            "name": "To be announced",
+            "role": "Moderator",
+            "img": "moderator.webp",
+            "desc": ""
+        }
+    ]
+}
