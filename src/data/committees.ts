@@ -6,6 +6,9 @@ export const COMMITTEES = committeesData as {
     acronym: string;
     fullname: string;
     mandate: string;
+    agenda?: string;
+    email?: string;
+    study_guide?: string;
 }[];
 
 export const COMMITTEE_DAIS_DATA = committeesDaisData as Record<

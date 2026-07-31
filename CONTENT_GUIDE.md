@@ -78,7 +78,10 @@ This file controls the list of committees shown on the Committees page, includin
         "id": "ecofin",
         "acronym": "ECOFIN",
         "fullname": "Economic and Financial Committee",
-        "mandate": "Full committee mandate text... Use <br><br> for new paragraphs."
+        "mandate": "Full committee mandate text... Use <br><br> for new paragraphs.",
+        "agenda": "The global impact of cryptocurrency",
+        "email": "ecofin@ratobangala.edu.np",
+        "study_guide": "https://link-to-google-drive.com/or-custom-url"
     }
 ]
 ```
@@ -89,6 +92,9 @@ This file controls the list of committees shown on the Committees page, includin
 | `acronym` | The short name shown on the committee card (e.g. `ECOFIN`) |
 | `fullname` | The full committee name shown on the committee detail page |
 | `mandate` | Committee mandate text (use `<br>` or `<br><br>` for paragraph breaks) |
+| `agenda` | (Optional) The agenda of the committee, displayed in the header. |
+| `email` | (Optional) The specific email address for this committee. Defaults to the generic one if empty. |
+| `study_guide` | (Optional) A custom external link (like Google Drive) to the study guide. If left blank, it defaults to the local PDF at `public/pdfs/[committee-id]-background-guide.pdf`. |
 
 ### Adding a new committee
 1. Copy an existing block in `committees.json` and update all fields

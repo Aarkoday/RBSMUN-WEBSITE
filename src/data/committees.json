@@ -3,90 +3,135 @@
         "id": "jcc",
         "acronym": "JCC",
         "fullname": "Joint Crisis Committee",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "disec",
         "acronym": "DISEC",
         "fullname": "Disarmament and International Security Committee",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "ecofin",
         "acronym": "ECOFIN",
         "fullname": "Economic and Financial Committee",
-        "mandate": "In 1945, ECOFIN was founded as the Second Committee of the United Nations General Assembly. Its membership is open to all 193 member states. The committee addresses issues related to development economics and international finance. <br><br>Its actions involve encouraging funding for development projects and highlighting areas for sustainable development. Instruments typically used by the committee include debate and resolutions. Creating effective policies that use these instruments requires tying in academic work, so ECOFIN also hosts speakers with expertise in creating relevant policies. Since the resolutions written by the committee do not have the power of legislation, the committee aims for unanimous support for international implementation. Nearly forty resolutions are passed each year. Most of them move on for further consideration by G77, a United Nations coalition of developing countries, while others are tabled for smaller groups of states to consider.<br><br>ECOFIN has played a role in passing impactful resolutions related to debt sustainability, international taxation, and other crucial issues. As a steward of economic and financial concerns in the United Nations, ECOFIN is a principal body in helping countries develop and the world achieve sustainable development."
+        "mandate": "In 1945, ECOFIN was founded as the Second Committee of the United Nations General Assembly. Its membership is open to all 193 member states. The committee addresses issues related to development economics and international finance. <br><br>Its actions involve encouraging funding for development projects and highlighting areas for sustainable development. Instruments typically used by the committee include debate and resolutions. Creating effective policies that use these instruments requires tying in academic work, so ECOFIN also hosts speakers with expertise in creating relevant policies. Since the resolutions written by the committee do not have the power of legislation, the committee aims for unanimous support for international implementation. Nearly forty resolutions are passed each year. Most of them move on for further consideration by G77, a United Nations coalition of developing countries, while others are tabled for smaller groups of states to consider.<br><br>ECOFIN has played a role in passing impactful resolutions related to debt sustainability, international taxation, and other crucial issues. As a steward of economic and financial concerns in the United Nations, ECOFIN is a principal body in helping countries develop and the world achieve sustainable development.",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "icj",
         "acronym": "ICJ",
         "fullname": "International Court of Justice",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "irc",
         "acronym": "IRC",
         "fullname": "The Imperial Romanov Court",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "who",
         "acronym": "WHO",
         "fullname": "World Health Organization",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "hor",
         "acronym": "HoR",
         "fullname": "House of Representatives",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "gcmr",
         "acronym": "GCMR",
         "fullname": "The Grand Convocation of the Mythical Realms",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "unsc",
         "acronym": "UNSC",
         "fullname": "United Nations Security Council",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "picc",
         "acronym": "PICC",
         "fullname": "Paris International Conference on Cambodia",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "unwomen",
         "acronym": "UNWOMEN",
         "fullname": "United Nations Entity for Gender Equality and the Empowerment of Women",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "hrc",
         "acronym": "HRC",
         "fullname": "Human Rights Council",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "uscc",
         "acronym": "USCC",
         "fullname": "United States Congressional Committee (Senate)",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "sochum",
         "acronym": "SOCHUM",
         "fullname": "Social, Humanitarian, and Cultural Committee",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     },
     {
         "id": "ipc",
         "acronym": "IPC",
         "fullname": "International Press Corps",
-        "mandate": ""
+        "mandate": "",
+        "agenda": "",
+        "email": "",
+        "study_guide": ""
     }
 ]

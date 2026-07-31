@@ -87,6 +87,26 @@ if (hasCabinets) {
             <p class="committee-overlay-fullname committee-detail-visible">
                 {committee.fullname}
             </p>
+
+            <div class="committee-overlay-quick-info committee-detail-visible" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; text-align: center;">
+                {committee.agenda ? (
+                    <p style="font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem;">
+                        <span style="font-weight: bold; opacity: 0.9;">Agenda:</span> {committee.agenda}
+                    </p>
+                ) : (
+                    <p style="font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.5;">
+                        <span style="font-weight: bold;">Agenda:</span> [To be announced]
+                    </p>
+                )}
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href={committee.study_guide || `${base}/pdfs/${committee.id}-background-guide.pdf`} target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+                        Study Guide
+                    </a>
+                    <span class="btn btn-glass" style="padding: 0.75rem 1.5rem; font-size: 0.95rem; cursor: default; pointer-events: none; opacity: 0.85;">
+                        {committee.email || "committee@ratobangala.edu.np"}
+                    </span>
+                </div>
+            </div>
         </div>
 
         <!-- ── BODY ─────────────────────────────────────────────── -->
@@ -214,50 +234,6 @@ if (hasCabinets) {
                 }
             </div>
 
-            <!-- Resources -->
-            <div class="committee-overlay-section committee-detail-visible">
-                <p class="section-eyebrow">Resources</p>
-                <h2 class="section-title">Preparation</h2>
-                <div class="committee-overlay-actions">
-                    <div class="glass-card">
-                        <div class="card-glow"></div>
-                        <h3
-                            style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem;"
-                        >
-                            Background Guide
-                        </h3>
-                        <p style="font-size:0.9rem;">
-                            Download the official study guide designed by your
-                            rigorous Executive Board. This guide is required
-                            reading prior to the conference.
-                        </p>
-                        <a
-                            href={`${base}/pdfs/${committee.id}-background-guide.pdf`}
-                            target="_blank"
-                            class="btn btn-outline"
-                            style="width:100%; margin-top:1rem;">Download PDF</a
-                        >
-                    </div>
-                    <div class="glass-card">
-                        <div class="card-glow"></div>
-                        <h3
-                            style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem;"
-                        >
-                            Contact Us
-                        </h3>
-                        <p style="font-size:0.9rem;">
-                            If you have any questions regarding the agenda or
-                            position papers, directly email the committee dais.
-                        </p>
-                        <a
-                            href="mailto:committee@ratobangala.edu.np"
-                            class="btn btn-glass"
-                            style="width:100%; margin-top:1rem;"
-                            >committee@ratobangala.edu.np</a
-                        >
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
