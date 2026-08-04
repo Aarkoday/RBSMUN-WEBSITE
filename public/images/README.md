@@ -22,7 +22,7 @@ public/
     ├── committees/                     # Committee Specific Folders (15 Committees)
     │   ├── ipc/                        # International Press Corps (IPC)
     │   │   ├── logo.webp                # Official Committee Crest / Logo
-    │   │   ├── card-bg.jpg             # Card background photo on committee grid
+    │   │   ├── card-bg.webp             # Card background photo on committee grid
     │   │   ├── eb-group.webp            # Executive Board Group Photo
     │   │   ├── editor-in-chief.webp     # 1 Editor in Chief photo
     │   │   ├── editor1.webp             # Editor 1 photo
@@ -31,7 +31,7 @@ public/
     │   │
     │   ├── [other_committees]/         # e.g., jcc, disec, etc.
     │   │   ├── logo.webp
-    │   │   ├── card-bg.jpg
+    │   │   ├── card-bg.webp
     │   │   ├── eb-group.webp
     │   │   ├── chair.webp               # Chairperson photo
     │   │   ├── vice-chair.webp          # Vice Chairperson photo
@@ -41,7 +41,7 @@ public/
     │
     └── team/                           # Department & Team Member Folders
         ├── secretariat/                # Executive Leadership & Secretariat Team
-        │   ├── card-bg.jpg             # Department cover photo
+        │   ├── card-bg.webp             # Department cover photo
         │   ├── sg.webp                  # Secretary General photo
         │   ├── dsg1.webp                # Deputy Secretary General 1 photo
         │   ├── dsg2.webp                # Deputy Secretary General 2 photo
@@ -49,7 +49,7 @@ public/
         │   └── team-group.webp          # Secretariat Group Photo
         │
         ├── logistics/                  # Logistics Department (3 Heads, 5 Core members)
-        │   ├── card-bg.jpg
+        │   ├── card-bg.webp
         │   ├── head1.webp               # Head of Logistics 1
         │   ├── head2.webp               # Head of Logistics 2
         │   ├── head3.webp               # Head of Logistics 3
@@ -61,28 +61,28 @@ public/
         │   └── team-group.webp          # Full Logistics Team Group Photo
         │
         ├── it/                         # Information Technology (IT) Department (1 Head, 2 Core members)
-        │   ├── card-bg.jpg
+        │   ├── card-bg.webp
         │   ├── head.webp                # Head of IT
         │   ├── core1.webp               # Core IT member 1
         │   ├── core2.webp               # Core IT member 2
         │   └── team-group.webp          # Full IT Team Group Photo
         │
         ├── art/                        # Art & Design Department (3 Heads)
-        │   ├── card-bg.jpg
+        │   ├── card-bg.webp
         │   ├── head1.webp               # Head of Art 1
         │   ├── head2.webp               # Head of Art 2
         │   ├── head3.webp               # Head of Art 3
         │   └── team-group.webp          # Full Art Team Group Photo
         │
         ├── media/                      # Media & Communications Department (3 Heads)
-        │   ├── card-bg.jpg
+        │   ├── card-bg.webp
         │   ├── head1.webp               # Head of Media 1
         │   ├── head2.webp               # Head of Media 2
         │   ├── head3.webp               # Head of Media 3
         │   └── team-group.webp          # Full Media Team Group Photo
         │
         └── photography/                # Photography Department (1 Head, 4 team members)
-            ├── card-bg.jpg
+            ├── card-bg.webp
             ├── head.webp                # Head of Photography
             ├── core1.webp               # Photography Team member 1
             ├── core2.webp               # Photography Team member 2
@@ -104,7 +104,7 @@ public/
 | **Others** | **Moderator** | `moderator.webp` | JPG / WebP | `public/images/committees/[id]/moderator.webp` |
 | **All** | **Committee Logo / Crest** | `logo.webp` | PNG / WebP / SVG | `public/images/committees/[id]/logo.webp` |
 | **All** | **EB Group Photo** | `eb-group.webp` | JPG / WebP | `public/images/committees/[id]/eb-group.webp` |
-| **All** | **Grid Card BG** | `card-bg.jpg` | JPG / WebP | `public/images/committees/[id]/card-bg.jpg` |
+| **All** | **Grid Card BG** | `card-bg.webp` | JPG / WebP | `public/images/committees/[id]/card-bg.webp` |
 
 ---
 
