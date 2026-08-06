@@ -88,7 +88,13 @@ if (hasCabinets) {
             <!-- Quick Info buttons (hidden initially, visible when scrolled) -->
             <div class="committee-overlay-quick-info committee-detail-visible">
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                    <a href={committee.study_guide || `${base}/pdfs/${committee.id}-background-guide.pdf`} target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+                    <a 
+                        href={committee.study_guide || "#"} 
+                        target={committee.study_guide ? "_blank" : "_self"} 
+                        class="btn btn-primary study-guide-btn" 
+                        data-has-guide={committee.study_guide ? "true" : "false"}
+                        style="padding: 0.75rem 1.5rem; font-size: 0.95rem;"
+                    >
                         Study Guide
                     </a>
                     <span class="btn btn-glass" style="padding: 0.75rem 1.5rem; font-size: 0.95rem; cursor: default; pointer-events: none; opacity: 0.85;">
@@ -232,7 +238,7 @@ if (hasCabinets) {
 
     <!-- Person Detail Popup -->
     <div class="person-popup" id="personPopup">
-        <div class="person-popup-inner">
+        <div class="person-popup-inner" data-lenis-prevent>
             <button
                 class="person-popup-close"
                 id="personPopupClose"
@@ -258,7 +264,7 @@ if (hasCabinets) {
                     <p class="person-popup-role" id="personPopupRole"></p>
                 </div>
             </div>
-            <div class="person-popup-right">
+            <div class="person-popup-right" data-lenis-prevent>
                 <p class="person-popup-desc" id="personPopupDesc"></p>
             </div>
         </div>
@@ -317,6 +323,29 @@ if (hasCabinets) {
         }
         // Runs on first load AND after every View Transition
         document.addEventListener("astro:page-load", bindPersonCards);
+
+        function initStudyGuideBtn() {
+            document.querySelectorAll(".study-guide-btn").forEach(btn => {
+                if (btn.getAttribute("data-has-guide") === "false") {
+                    if ((btn as any).__guideBound) return;
+                    (btn as any).__guideBound = true;
+                    
+                    let timeout: any = null;
+                    btn.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        if (btn.textContent?.trim() === "Coming Soon") return;
+                        
+                        btn.textContent = "Coming Soon";
+                        
+                        if (timeout) clearTimeout(timeout);
+                        timeout = setTimeout(() => {
+                            btn.textContent = "Study Guide";
+                        }, 5000);
+                    });
+                }
+            });
+        }
+        document.addEventListener("astro:page-load", initStudyGuideBtn);
 
         // Scroll listener for hero fade effect
         document.addEventListener("astro:page-load", () => {

@@ -177,7 +177,7 @@ const isSecretariat = team.id === "secretariat";
 
     <!-- Person Detail Popup -->
     <div class="person-popup" id="personPopup">
-        <div class="person-popup-inner">
+        <div class="person-popup-inner" data-lenis-prevent>
             <button class="person-popup-close" id="personPopupClose" aria-label="Close">&times;</button>
             <div class="person-popup-left">
                 <div class="person-popup-photo-wrap">
@@ -189,7 +189,7 @@ const isSecretariat = team.id === "secretariat";
                     <p class="person-popup-role" id="personPopupRole"></p>
                 </div>
             </div>
-            <div class="person-popup-right">
+            <div class="person-popup-right" data-lenis-prevent>
                 <p class="person-popup-desc" id="personPopupDesc"></p>
             </div>
         </div>

@@ -1461,11 +1461,40 @@ const canonicalURL = new URL(
             // astro:page-load fires on BOTH the initial page load AND after every
             // View Transitions navigation, so a single listener handles everything.
             document.addEventListener("astro:page-load", () => {
-                // Remove the global loading spinner
+                // Wait for all key images to load before hiding the loader
                 const globalLoader = document.getElementById("global-loader");
-                if (globalLoader) {
+
+                function hideLoader() {
+                    if (!globalLoader) return;
                     globalLoader.classList.add("hidden");
                     setTimeout(() => globalLoader.remove(), 600);
+                }
+
+                if (globalLoader) {
+                    // Collect all images that are not yet loaded
+                    const imgs = Array.from(
+                        document.querySelectorAll<HTMLImageElement>("img[src]")
+                    ).filter((img) => !img.complete);
+
+                    if (imgs.length === 0) {
+                        // All images already cached/loaded
+                        hideLoader();
+                    } else {
+                        // Max wait: 4 seconds, then hide anyway
+                        const maxWait = setTimeout(hideLoader, 4000);
+                        let loaded = 0;
+                        const onLoad = () => {
+                            loaded++;
+                            if (loaded >= imgs.length) {
+                                clearTimeout(maxWait);
+                                hideLoader();
+                            }
+                        };
+                        imgs.forEach((img) => {
+                            img.addEventListener("load", onLoad, { once: true });
+                            img.addEventListener("error", onLoad, { once: true });
+                        });
+                    }
                 }
 
                 // Ensure smooth-scroll is running after navigation
