@@ -1,332 +1,332 @@
 {
-    "ipc": [
-        {
-            "name": "To be announced",
-            "role": "Editor in Chief",
-            "img": "editor-in-chief.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Editor",
-            "img": "editor1.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Editor",
-            "img": "editor2.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Editor",
-            "img": "editor3.webp",
-            "desc": ""
-        }
-    ],
-    "ecofin": [
-        {
-            "name": "Shivansh Bhattarai",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": "Shivansh Bhattarai is a dedicated, analytical, and driven individual whose passion for economics, mathematics, and finance is evident not only in his academic pursuits but also in how he approaches challenges and responsibilities. He is known for his disciplined work ethic, thoughtful decision-making, and ability to remain calm and composed even in demanding situations. Whether working independently or as part of a team, Shivansh believes that consistency, preparation, and collaboration are the foundations of meaningful success. Outside the classroom, Shivansh is an enthusiastic football player and an active participant in public speaking. These experiences have shaped him into a well-rounded individual who values both leadership and the perspectives of those around him. As a chair, Shivansh strives to create a welcoming and intellectually stimulating committee where delegates feel encouraged to express their ideas confidently and engage in respectful, thought-provoking debate."
-        },
-        {
-            "name": "Sarhana Sharma",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": "Sarhana Sharma is someone with endless enthusiasm; indeed, she may very well be one of the most energetic people you will ever have the pleasure of meeting. At first glance, she may seem intense, but wait a moment, beneath that bold persona is a warm and kind individual. Sarhana is effortlessly sociable and disarmingly funny. She is the kind of person whose company leaves you smiling and without quite knowing why. Her approachability is not just something she tries to show off; it is simply who she is. For her delegates, this means that the committee room will never feel cold or distant. She ensures that every voice is heard and every presence is welcomed."
-        },
-        {
-            "name": "Prapti Pokharel",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": "Prapti Pokharel rarely stays put for long. She is always looking around for something new to learn or jump into, and her friendly way of talking makes it easy to connect with her right away. Her positive energy comes across naturally when she meets people from different places. She brings real enthusiasm to group work and events, and she stays dedicated the whole time. As moderator, her goal is to keep the committee active and welcoming so delegates can speak up without holding back."
-        }
-    ],
-    "jcc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair1.webp",
-            "desc": "",
-            "cabinet": "Cabinet A"
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair1.webp",
-            "desc": "",
-            "cabinet": "Cabinet A"
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator1.webp",
-            "desc": "",
-            "cabinet": "Cabinet A"
-        },
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair2.webp",
-            "desc": "",
-            "cabinet": "Cabinet B"
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair2.webp",
-            "desc": "",
-            "cabinet": "Cabinet B"
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator2.webp",
-            "desc": "",
-            "cabinet": "Cabinet B"
-        }
-    ],
-    "disec": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "icj": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "irc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "who": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "hor": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "gcmr": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "unsc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "picc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "unwomen": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "hrc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "uscc": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ],
-    "sochum": [
-        {
-            "name": "To be announced",
-            "role": "Chairperson",
-            "img": "chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Vice Chairperson",
-            "img": "vice-chair.webp",
-            "desc": ""
-        },
-        {
-            "name": "To be announced",
-            "role": "Moderator",
-            "img": "moderator.webp",
-            "desc": ""
-        }
-    ]
+        "ipc": [
+            {
+                "name": "Aarnav",
+                "role": "Editor in Chief",
+                "img": "editor-in-chief.webp",
+                "desc": "Quick-witted and observant, <strong>Aarnav</strong> is sure to cut through the fluff with eerie precision.[span_0](start_span)[span_0](end_span) Whether he’s tackling three sciences at once or effortlessly reciting poem after poem, he stays sharp and on top of his game.[span_1](start_span)[span_1](end_span) Aarnav aims for excellence and pushes for perfection, and expects nothing less from the IPC.[span_2](start_span)[span_2](end_span) But before he does, he ensures delegates are well-equipped with the skills they need by training them to meet his high standards.[span_3](start_span)[span_3](end_span) At first glance, his reputation as a high achiever might seem intimidating, but don’t let that fool you.[span_4](start_span)[span_4](end_span) Beneath that polished exterior lies a warm, approachable, and chatty individual who is always up for a good conversation.[span_5](start_span)[span_5](end_span) Whether it is breaking down the steps to craft the most captivating of articles or offering a piece of advice to help you ace your classes, Aarnav is always down for a chat.[span_6](start_span)[span_6](end_span) You can always count on him to lend a helping hand.[span_7](start_span)[span_7](end_span)"
+            },
+            {
+                "name": "Adhyatma",
+                "role": "Editor",
+                "img": "editor1.webp",
+                "desc": "<strong>Adhyatma</strong> is an exceptionally composed and driven individual who brings depth, initiative, and reliability to every role she undertakes.[span_8](start_span)[span_8](end_span) When it comes to taking responsibility, you will not find a more suitable candidate than Adhyatma.[span_9](start_span)[span_9](end_span) Her qualities are highly commendable: she brings structure, clarity, and steady encouragement to those around her and often supports others in pursuing their goals and ideas.[span_10](start_span)[span_10](end_span) Her open-minded nature and friendliness leave a lasting impression on all of us.[span_11](start_span)[span_11](end_span) She maintains a balanced approach to life, valuing meaningful time with family and friends while continuing to grow both personally and academically.[span_12](start_span)[span_12](end_span) She takes pride in being approachable and supportive and is always willing to contribute positively to any environment she is part of.[span_13](start_span)[span_13](end_span)"
+            },
+            {
+                "name": "Sarah",
+                "role": "Editor",
+                "img": "editor2.webp",
+                "desc": "<strong>Sarah</strong> is deeply passionate about all things writing and constantly explores how words can shape and reshape meaning.[span_14](start_span)[span_14](end_span) Her vision for the International Press Corporation is to empower delegates to produce outstanding articles that draw readers in with every word and thought-provoking press conference questions that leave even the most seasoned of chairs squirming.[span_15](start_span)[span_15](end_span) Behind the scenes, she is a warm, welcoming presence who supports delegates every step of the way.[span_16](start_span)[span_16](end_span) She aims to create an environment where everyone feels not just prepared and well-equipped, but also comfortable enough to ask questions, share their perspectives, and experiment fearlessly with their writing.[span_17](start_span)[span_17](end_span) Sarah is always willing to provide the encouragement, guidance, and unwavering support delegates need, whether it’s helping them refine and elevate their writing to its fullest potential or simply offering moral support to raise their placards and let their voices be heard.[span_18](start_span)[span_18](end_span)"
+            },
+            {
+                "name": "Aahana",
+                "role": "Editor",
+                "img": "editor3.webp",
+                "desc": "<strong>Aahana</strong> does not enter a room quietly; she arrives like the punchline to a joke nobody knew was being set up.[span_19](start_span)[span_19](end_span) She talks constantly, but it's never the kind of talk that drains a room.[span_20](start_span)[span_20](end_span) People assume the talking means she's not focused; however, the moment something matters, the jokes don't stop; they just sharpen, as if she's been holding the serious version of herself in reserve the whole time.[span_21](start_span)[span_21](end_span) She's the friend who'll roast you affectionately in one breath and hype you up in the next, and you never quite know what is coming.[span_22](start_span)[span_22](end_span) If she's serious with you, it's because she respects you.[span_23](start_span)[span_23](end_span) She doesn't do quiet leadership.[span_24](start_span)[span_24](end_span) She makes loud competence jokes about a deadline she has already met, and you don't realize she carried half the room until later.[span_25](start_span)[span_25](end_span) Her mind runs on wit and precision, and her heart's not quietly tuned to the people around her.[span_26](start_span)[span_26](end_span) On the contrary, it beats loudly, unapologetically for them, out where everyone can see it.[span_27](start_span)[span_27](end_span)"
+            }
+        ],
+        "ecofin": [
+            {
+                "name": "Shivansh Bhattarai",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Shivansh Bhattarai</strong> is a dedicated, analytical, and driven individual whose passion for economics, mathematics, and finance is evident not only in his academic pursuits but also in how he approaches challenges and responsibilities.[span_28](start_span)[span_28](end_span) He is known for his disciplined work ethic, thoughtful decision-making, and ability to remain calm and composed even in demanding situations.[span_29](start_span)[span_29](end_span) Whether working independently or as part of a team, Shivansh believes that consistency, preparation, and collaboration are the foundations of meaningful success.[span_30](start_span)[span_30](end_span) Outside the classroom, Shivansh is an enthusiastic football player and an active participant in public speaking.[span_31](start_span)[span_31](end_span)<br>These experiences have shaped him into a well-rounded individual who values both leadership and the perspectives of those around him.[span_32](start_span)[span_32](end_span) As a chair, Shivansh strives to create a welcoming and intellectually stimulating committee where delegates feel encouraged to express their ideas confidently and engage in respectful, thought-provoking debate.[span_33](start_span)[span_33](end_span) He believes that the best discussions arise when every participant feels heard, challenged, and inspired to contribute meaningfully.[span_34](start_span)[span_34](end_span) His goal is to foster an environment that balances professionalism with inclusivity, thereby ensuring that every delegate has the opportunity to grow, collaborate, and make the most of their MUN experience.[span_35](start_span)[span_35](end_span)"
+            },
+            {
+                "name": "Sarhana Sharma",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "<strong>Sarhana Sharma</strong> is someone with endless enthusiasm; she may very well be one of the most energetic people you will ever have the pleasure of meeting.[span_36](start_span)[span_36](end_span) At first glance, she may seem intense, but wait a moment; beneath that bold persona is a warm and kind individual- one of the warmest, most genuinely kind individuals you will ever meet.[span_37](start_span)[span_37](end_span) Sarhana is effortlessly sociable and disarmingly funny.[span_38](start_span)[span_38](end_span) She is the kind of person whose company leaves you smiling and without quite knowing why.[span_39](start_span)[span_39](end_span) Her approachability is not just something she tries to show off; it is simply who she is.[span_40](start_span)[span_40](end_span) For her delegates, this means that the committee room will never feel cold or distant.[span_41](start_span)[span_41](end_span) She ensures that every voice is heard and every presence is welcomed.[span_42](start_span)[span_42](end_span) She is someone you should never hesitate to reach out to.[span_43](start_span)[span_43](end_span)<br>When it comes to her work, Sarhana is nothing short of steadfastly reliable.[span_44](start_span)[span_44](end_span) Whether it is academic commitments, independent research, or competitive internship pursuits, she brings the same tireless dedication to every journey.[span_45](start_span)[span_45](end_span) Her hardworking nature is matched only by her ability to channel her energy into keeping a committee running with focus and fun.[span_46](start_span)[span_46](end_span)"
+            },
+            {
+                "name": "Prapti Pokharel",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Prapti Pokharel</strong> rarely stays put for long.[span_47](start_span)[span_47](end_span) She is always looking around for something new to learn or jump into, and her friendly way of talking makes it easy to connect with her right away.[span_48](start_span)[span_48](end_span) Her positive energy comes across naturally when she meets people from different places.[span_49](start_span)[span_49](end_span) She brings real enthusiasm to group work and events, and she stays dedicated the whole time.[span_50](start_span)[span_50](end_span) Some people see hard work as the main thing, but she thinks staying kind and open to ideas matters just as much.[span_51](start_span)[span_51](end_span) As moderator, her goal is to keep the committee active and welcoming so delegates can speak up without holding back.[span_52](start_span)[span_52](end_span) She will help create a space conducive to everyone’s doing their best.[span_53](start_span)[span_53](end_span) Although it is not always easy to get it right every single time, you are in good hands with Prapti.[span_54](start_span)[span_54](end_span)"
+            }
+        ],
+        "jcc": [
+            {
+                "name": "To be announced",
+                "role": "Chairperson",
+                "img": "chair1.webp",
+                "desc": "Chair descriptions in secretariat.[span_55](start_span)[span_55](end_span)",
+                "cabinet": "Cabinet A"
+            },
+            {
+                "name": "Adana",
+                "role": "Vice Chairperson",
+                "img": "vice-chair1.webp",
+                "desc": "Is that a personality expert?[span_56](start_span)[span_56](end_span) A professional diplomat?[span_57](start_span)[span_57](end_span) Wait, it’s actually a diva who has a penchant for the spiritual.[span_58](start_span)[span_58](end_span) It’s <strong>Adana</strong>.[span_59](start_span)[span_59](end_span) She’s well versed in all the arts, and they include the arts of brain rot,STEM-hating and being incredibly out-of-pocket.[span_60](start_span)[span_60](end_span) She’s survived the brutal landscapes of MUN and debate, and come out with a personality that reflects her great achievements and grit.[span_61](start_span)[span_61](end_span) As an INFP 3w4, she is THE person to go to for great life-advice, fun, and probably the most meaningful conversations you will ever have.[span_62](start_span)[span_62](end_span) She is a Ravenclaw at heart and has a melancholic-choleric temperament type, which basically means that she is intelligent, competitive and incredibly empathetic.[span_63](start_span)[span_63](end_span) Her demeanour is that of an actual diplomat and lawyer, as evident in her brilliant negotiation skills (except for when she’s shopping).[span_64](start_span)[span_64](end_span) She is also a certified foodie, an individual who has probably tasted the cuisine of the entire globe.[span_65](start_span)[span_65](end_span) In fact, one of her primary motivators for debate and MUN is the accompanying food.[span_66](start_span)[span_66](end_span) She’s a real baddie.[span_67](start_span)[span_67](end_span)",
+                "cabinet": "Cabinet A"
+            },
+            {
+                "name": "Ashlesh Basnet",
+                "role": "Moderator",
+                "img": "moderator1.webp",
+                "desc": "If you’re trying to find <strong>Ashlesh</strong>, just look for the guy who somehow looks completely relaxed while the world around him is ending.[span_68](start_span)[span_68](end_span) While a Joint Crisis Committee is traditionally defined by frantic pacing and high-voltage panic, Ashlesh operates on an entirely different frequency.[span_69](start_span)[span_69](end_span) He doesn’t sweat the chaos; he systemizes it.[span_70](start_span)[span_70](end_span) Possessing a brain that is naturally wired for automation and complex logic, his first instinct with any problem isn't to stress, but to find a more efficient pipeline to handle it.[span_71](start_span)[span_71](end_span) Having secured Best Delegate in last year's JCC and Best Senator at Chelsea MUN, he is already well-versed in how committees run; in fact, he knows the system from the inside out.[span_72](start_span)[span_72](end_span) He understands the strategy, knows how the procedure works, and can easily spot when a delegate is trying to bluff.[span_73](start_span)[span_73](end_span) When he’s not keeping the gears turning with casual precision, he’s usually channeling his creative energy into making music, diving into personal development builds, or socializing.[span_74](start_span)[span_74](end_span) Fusing folk instruments and Western ones, he bridges cultures together with his knowledge of music, a knowledge built since childhood.[span_75](start_span)[span_75](end_span) He brings a rare combination of genuine charisma, tactical logic, and an unshakable composure to the moderator's desk.[span_76](start_span)[span_76](end_span)",
+                "cabinet": "Cabinet A"
+            },
+            {
+                "name": "To be announced",
+                "role": "Chairperson",
+                "img": "chair2.webp",
+                "desc": "Chair descriptions in secretariat.[span_77](start_span)[span_77](end_span)",
+                "cabinet": "Cabinet B"
+            },
+            {
+                "name": "Saharsha",
+                "role": "Vice Chairperson",
+                "img": "vice-chair2.webp",
+                "desc": "Think of a weird historical fact, obscure treaty, or oddly specific geographical detail.[span_78](start_span)[span_78](end_span) Chances are that <strong>Saharsha</strong> knows it.[span_79](start_span)[span_79](end_span) A passionate gamer and remarkably quick thinker with a sharp and strategic mind, he brings a positive and competitive spirit to the committee.[span_80](start_span)[span_80](end_span) Behind the vice-chair persona, he will strike up an enjoyable conversation with anyone.[span_81](start_span)[span_81](end_span) Add in his razor-sharp sarcasm and love for a good debate (he’s on the national debate team), and you’ve got someone who can turn even the most ordinary of conversations into an entertaining exchange of wit.[span_82](start_span)[span_82](end_span) He’s the committee’s resident chaos merchant.[span_83](start_span)[span_83](end_span) Armed with creative crises, questionable brainrot humor, and a special ability to turn the ordinary into the unforgettable, he keeps the energy alive without losing sight of the work that needs to be accomplished.[span_84](start_span)[span_84](end_span) Beneath all the jokes and chaos is a vice-chair who is dependable, dedicated and forever ready to step up when the committee needs him.[span_85](start_span)[span_85](end_span) No one can make committee work quite as entertaining or unforgettable as Saharsha can.[span_86](start_span)[span_86](end_span)",
+                "cabinet": "Cabinet B"
+            },
+            {
+                "name": "Aashray Gorkhali",
+                "role": "Moderator",
+                "img": "moderator2.webp",
+                "desc": "<strong>Aashray</strong> possesses a skill that should honestly be classified as a diplomatic superpower: the ability to read a room with alarming accuracy.[span_87](start_span)[span_87](end_span) He is, rumour has it, the person who predicted an economics test paper simply by studying the teacher's facial expressions.[span_88](start_span)[span_88](end_span) Very little escapes his attention, and if you think nobody noticed that contradictory clause buried in your working paper, think again.[span_89](start_span)[span_89](end_span) Aashray is the kind of person everyone wants on their side.[span_90](start_span)[span_90](end_span) Reliable, supportive, and dependable, he always has your back when things start falling apart.[span_91](start_span)[span_91](end_span) Whether it's rescuing a collapsing alliance, helping rewrite a directive five minutes before the deadline, or backing a friend when it matters most, he is regarded as one of the best wingmen you could ask for.[span_92](start_span)[span_92](end_span) In MUNs, Aashray is not usually the loudest voice in the room.[span_93](start_span)[span_93](end_span) He speaks when he has something worth saying—and when he does, people listen.[span_94](start_span)[span_94](end_span)",
+                "cabinet": "Cabinet B"
+            }
+        ],
+        "disec": [
+            {
+                "name": "Krishbin Sharma",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "Some people spend years trying to make a name for themselves.[span_95](start_span)[span_95](end_span) <strong>Krishbin Sharma</strong> got a head start because his name is quite literally a combination of the two people he values most: his parents.[span_96](start_span)[span_96](end_span) Unique?[span_97](start_span)[span_97](end_span) Definitely.[span_98](start_span)[span_98](end_span) Easy to pronounce on the first try?[span_99](start_span)[span_99](end_span) Well, that depends on you.[span_100](start_span)[span_100](end_span)<br>Because he has attended more MUNs than he can count, Krishbin has witnessed everything, from outstanding diplomacy to delegates declaring war over a missing comma.[span_101](start_span)[span_101](end_span) Along the way, he picked up his fair share of awards, but, more importantly, he learned that the best committees are not the most perfect ones.[span_102](start_span)[span_102](end_span) They are the ones people still laugh and talk about long after the closing ceremony.[span_103](start_span)[span_103](end_span)<br>As your DISEC Chair, he expects thoughtful debate and solid research and delegates who are not afraid to speak their minds.[span_104](start_span)[span_104](end_span) At the same time, he believes the committee should be enjoyable.[span_105](start_span)[span_105](end_span) A well-timed joke, a little friendly chaos, and good debate often make the best of memories.[span_106](start_span)[span_106](end_span)<br>Whether this is your first conference or your fifteenth, Krishbin is always happy to help.[span_107](start_span)[span_107](end_span) Take risks, ask questions, enjoy the experience, and remember that confidence can take you just as far as diplomacy can.[span_108](start_span)[span_108](end_span)"
+            },
+            {
+                "name": "Jayesh",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "<strong>Jayesh</strong> is a curious and driven individual with a strong interest in learning, problem-solving, and exploring new ideas.[span_109](start_span)[span_109](end_span) He enjoys approaching challenges with an analytical mindset and is always eager to broaden his understanding of the world around him.[span_110](start_span)[span_110](end_span) Known for being responsible and adaptable, Jayesh values teamwork, communication, and continuous growth.[span_111](start_span)[span_111](end_span) Although he may not be the loudest individual in the room, his ideas and arguments are always thought-provoking and will surely challenge the delegates of DISEC.[span_112](start_span)[span_112](end_span) As your vice-chair, he hopes to create an engaging and welcoming environment where delegates feel encouraged to participate confidently, think critically, and make the most of their MUN experience.[span_113](start_span)[span_113](end_span)"
+            },
+            {
+                "name": "Chahat",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Chahat</strong> is known for her dedication and strong leadership abilities.[span_114](start_span)[span_114](end_span) With a keen interest in diplomacy, global affairs, and effective communication, she strives to create a Model United Nations environment that is engaging, inclusive, and intellectually stimulating for all participants.[span_115](start_span)[span_115](end_span) She believes that MUN is not only a platform for debate but also an opportunity for students to develop their skills in critical thinking, public speaking, negotiation, and problem-solving.[span_116](start_span)[span_116](end_span)<br>As a moderator, Chahat is committed to ensuring that every delegate is given a fair opportunity to express their views, participate actively, and contribute meaningfully to discussions.[span_117](start_span)[span_117](end_span) She values respect, collaboration, and constructive dialogue, and aims to foster an atmosphere in which diverse perspectives are welcomed and appreciated.[span_118](start_span)[span_118](end_span) Through her organized approach, professionalism, and enthusiasm, she hopes to guide productive committee sessions that encourage both learning and personal growth.[span_119](start_span)[span_119](end_span)<br>With a passion for leadership and a commitment to excellence, Chahat aims to make this MUN conference a rewarding experience for all participants.[span_120](start_span)[span_120](end_span) She will inspire delegates to think globally, engage thoughtfully, and develop the confidence they need to become future leaders and changemakers.[span_121](start_span)[span_121](end_span)"
+            }
+        ],
+        "icj": [
+            {
+                "name": "Swarnika Pokharel",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Swarnika Pokharel</strong> has survived multiple MUN circuits, so running a committee is well within her comfort zone.[span_122](start_span)[span_122](end_span) She is driven, though you would not always realise that immediately because she also laughs at nearly everything and has a habit of getting genuinely, suddenly happy for no apparent reason.[span_123](start_span)[span_123](end_span) Her good humour makes her easy to be around and it tends to catch people off guard once they realise how competitive she actually is.[span_124](start_span)[span_124](end_span)<br>Delegates will find in her someone who takes fairness seriously.[span_125](start_span)[span_125](end_span) To her, fairness is not just a talking point.[span_126](start_span)[span_126](end_span) Her fairness is the kind where the quiet delegate gets the same shot as the loudest one in the room, and where the work a delegate puts in actually reflects how you are evaluated.[span_127](start_span)[span_127](end_span) She has sat on the other side of the dias enough times to know what it feels like when a chair is not really paying attention, and that is not the committee she intends to run.[span_128](start_span)[span_128](end_span)"
+            },
+            {
+                "name": "Siddhartha Acharya",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "<strong>Siddhartha Acharya</strong> is the epitome of the term “go with the flow.[span_129](start_span)”[span_129](end_span) He is always prepared for anything and is always up for a challenge.[span_130](start_span)[span_130](end_span) He likes to push himself to find a solution.[span_131](start_span)[span_131](end_span) A lot of his personal beliefs bleed into his committee sessions as he grooms his delegates to be ready for anything.[span_132](start_span)[span_132](end_span) Siddhartha has plenty of MUN experience to be a qualified vice-chair and is enthusiastic about forming a committee whose purpose is to challenge its delegates with problems they have never faced before.[span_133](start_span)[span_133](end_span) Sid is loud and humorous and wholly unapologetic about both of those things.[span_134](start_span)[span_134](end_span) Given how expressive and vocal the vice-chair is, you can expect a lively committee with lots of laughing and cheering.[span_135](start_span)[span_135](end_span) Sid will step in when necessary to spice up debates and maintain fairness.[span_136](start_span)[span_136](end_span) Indeed, he promises to ensure that it is the best delegates who win.[span_137](start_span)[span_137](end_span) He will provide the environment for his delegates that he wishes he had been provided when he was a delegate himself, one filled with fierce debates and echoing cheers and passion.[span_138](start_span)[span_138](end_span)"
+            },
+            {
+                "name": "Aarav Mangal Joshi",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Aarav Mangal Joshi</strong> is happy to be on the dias and happy to finally be the only one with his first name.[span_139](start_span)[span_139](end_span) He is also glad to be trading the stressful days of the delegate for the fun and authority of the gavel.[span_140](start_span)[span_140](end_span) Stepping into his fifth MUN and his first time in a lead role, he brings a mix of sharp intelligence and structured chaos.[span_141](start_span)[span_141](end_span) With two awards under his belt, Aarav is still delightfully confused about how he is going to lead from the other side of the dias.[span_142](start_span)[span_142](end_span)<br>As someone who understands the confusion and stress of being a delegate, he will avoid being egoistic or commanding and instead humbly provide help at any given chance.[span_143](start_span)[span_143](end_span) This moderator will do his best to sort the speakers’ list neatly, remind the delegates about commas in their papers, and time speeches accurately.[span_144](start_span)[span_144](end_span) Aarav is completely locked in to make this MUN the best yet, and to bang the gavel louder than anyone has ever.[span_145](start_span)[span_145](end_span)"
+            }
+        ],
+        "irc": [
+            {
+                "name": "Yamini Koirala",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Yamini</strong> carries herself with a calm confidence that naturally draws a room's attention, yet she remains approachable and genuinely attentive to those around her.[span_146](start_span)[span_146](end_span) Her ability to move seamlessly between open warmth and firm leadership is what makes her committee rooms both productive and enjoyable.[span_147](start_span)[span_147](end_span)<br>Outside of the committee and beyond what delegates will immediately see, Yamini is an excellent debater with clear articulation, precise arguments, and a strong ability to bring order even to even the most complex and fast-moving of discussions, all qualities that make her especially notable in speech and debate.[span_148](start_span)[span_148](end_span) She brings the same depth of dedication and enthusiasm to her everyday life: she engages easily in conversing and connecting with others, expresses herself through dancing and arts in her free time for everyone to see and exploring her curiosity through various t historical, political, and economics topics in her free time.[span_149](start_span)[span_149](end_span)<br>Overall Yamini is truly a genuine and compassionate individual who always does her best to uplift those around her.[span_150](start_span)[span_150](end_span) Be assured, with Yamini your MUN experience will be an unforgettable one.[span_151](start_span)[span_151](end_span)"
+            },
+            {
+                "name": "Aadhaar Dev Pant",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "A powerhouse of dynamic energy, <strong>Aadhaar</strong> is known for an infectious enthusiasm that can revive even the most exhausting of committee sessions.[span_152](start_span)[span_152](end_span) A balanced individual with an incredibly sharp eye for detail, he is a vibrant and welcome presence on the dais.[span_153](start_span)[span_153](end_span) When he isn’t steering a debate, you’ll likely find him calculating his next move on a chessboard or preparing for his next piano performance.[span_154](start_span)[span_154](end_span)<br>Armed with sharp analytical skills and a natural command over rhetoric, Aadhaar has a formidable reputation in the debate circuit.[span_155](start_span)[span_155](end_span) He deeply understands the arts of complex framing and layered argumentation, abilities that make him an invaluable asset to any delegate wishing to elevate their game.[span_156](start_span)[span_156](end_span)<br>As your vice-chair, Aadhaar will make sure that being on the Imperial Romanov Court committee is genuinely an enjoyable and memorable experience.[span_157](start_span)[span_157](end_span) However, do not mistake a fun committee for a lenient one.[span_158](start_span)[span_158](end_span) With his eagle-eyed attentiveness, nothing will get past him; he won’t miss a single logical fallacy, factual inaccuracy, or strategic mishap.[span_159](start_span)[span_159](end_span) He will be there to keep you on your toes and maintain the absolute highest level of discourse, thereby guaranteeing that you will leave the room a much sharper thinker than before you entered.[span_160](start_span)[span_160](end_span)"
+            },
+            {
+                "name": "Aadya Deepak Dutta",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "Short and sweet is the best possible description of <strong>Aadya</strong>.[span_161](start_span)[span_161](end_span) Aadya is an expert at calming down intense situations and making newcomers feel comfortable.[span_162](start_span)[span_162](end_span) She engages actively in discussions and encourages delegates to become stronger and better everyday.[span_163](start_span)[span_163](end_span) With a welcoming smile and a warm personality she ensures the wellbeing of all delegates.[span_164](start_span)[span_164](end_span)<br>Despite her unthreatening demeanor, she is sharp and alert at all times and puts her points across confidently.[span_165](start_span)[span_165](end_span) She does not shy away from engaging in discussions about controversial issues and is known for her calm yet articulate way of debating and her eloquent delivery of speeches.[span_166](start_span)[span_166](end_span) She handles administrative work with precision and manages each task efficiently.[span_167](start_span)[span_167](end_span)<br>Apart from her academic strengths, Aadya is an excellent dancer, artist and communicator; in short, she is truly a well-rounded person.[span_168](start_span)[span_168](end_span)"
+            }
+        ],
+        "who": [
+            {
+                "name": "Anwesha",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "There's a kind of energy to <strong>Anwesha</strong> that you cannot quite describe; she’s exuberant, vibrant, and impossible not to warm to.[span_169](start_span)[span_169](end_span) She has a presence that naturally draws people in.[span_170](start_span)[span_170](end_span) Her laughter comes easily, her smile brightens even the dullest of moments, and her expressive nature brings authenticity to every interaction.[span_171](start_span)[span_171](end_span) Anwesha thrives in conversations, whether they are high-stakes debates or spontaneous discussions.[span_172](start_span)[span_172](end_span) She speaks with confidence, clarity, and infectious enthusiasm, turning even the most serious of exchanges into engaging ones.[span_173](start_span)[span_173](end_span) With her around, the chance of a tedious moment simply does not exist.[span_174](start_span)[span_174](end_span) What truly sets her apart, though, is her warmth.[span_175](start_span)[span_175](end_span) She has a remarkable ability to make people feel seen, heard, and valued.[span_176](start_span)[span_176](end_span) Her extroversion isn't about commanding attention but about creating space for others to belong and building friendships through shared laughter, unwavering support, and unforgettable memories.[span_177](start_span)[span_177](end_span) Beneath all that brightness lies a strong sense of purpose.[span_178](start_span)[span_178](end_span) She leads with energy and empathy, keeping every room she is in lively yet focused.[span_179](start_span)[span_179](end_span) If you find yourself in a committee chaired by Anwesha, expect spirited discussions, ambitious ideas, and a chair who ensures every voice is understood, appreciated, and encouraged.[span_180](start_span)[span_180](end_span)"
+            },
+            {
+                "name": "Naabim",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "Meet <strong>Naabim</strong>, an individual with a name so rare that Google has never heard of it and treats it, through autocorrect, as a threat.[span_181](start_span)[span_181](end_span) As Vice-Chair, Naabim arrives with one agenda item that is non-negotiable, professionally documented, and deeply personal: her committee will not be boring.[span_182](start_span)[span_182](end_span) She considers monotony a punishable offence and will work alongside the Chair with considerable enthusiasm to ensure every session is sharp, every debate is alive, and every delegate leaves the room having genuinely enjoyed themselves — which in a WHO committee is, frankly, an achievement worth putting on a CV.[span_183](start_span)[span_183](end_span)"
+            },
+            {
+                "name": "Diwash",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "With a passion for global affairs and a keen eye for structured debate, <strong>Diwash</strong> brings a dynamic blend of diplomacy and leadership to the committee room.[span_184](start_span)[span_184](end_span) Well-versed in parliamentary procedure and international relations, Diwash specialises in transforming complex, high-stakes agendas into constructive dialogue.[span_185](start_span)[span_185](end_span) Diwash excels at maintaining a balanced, inclusive environment where every delegate’s voice can be heard.[span_186](start_span)[span_186](end_span) He ensures that debates are both rigorous and respectful.[span_187](start_span)[span_187](end_span) Known for his sharp analytical skills and approachable leadership style, Diwash thrives on guiding rooms through both intense crises and intricate unmoderated caucuses.[span_188](start_span)[span_188](end_span) He views debate not just as a competition of ideas but as a collaborative exercise in problem-solving.[span_189](start_span)[span_189](end_span) Outside the committee walls, Diwash is dedicated to mentoring the next generation of global thinkers and helping peers refine their public speaking and policy-drafting skills.[span_190](start_span)[span_190](end_span) Whether untangling a procedural deadlock or providing strategic feedback on working papers, Diwash is committed to fostering an atmosphere of intellectual curiosity and mutual respect.[span_191](start_span)[span_191](end_span) He looks forward to facilitating an unforgettable experience that challenges perspectives and inspires innovative, real-world solutions.[span_192](start_span)[span_192](end_span)"
+            }
+        ],
+        "hor": [
+            {
+                "name": "Kriyash Sapkota",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Kriyash</strong> is a confident leader, fierce speaker, and critical thinker who believes that the essence of Model United Nations lies in meaningful debate, diplomacy, and collaboration.[span_193](start_span)[span_193](end_span) With a commanding presence and a sharp analytical mindset, he is known for leading committees that are both intellectually challenging and highly engaging.[span_194](start_span)[span_194](end_span)<br>As Chair of the House of Representatives, Kriyash is committed to creating an environment where delegates are encouraged to think critically, defend their policies with conviction, and embrace diverse perspectives.[span_195](start_span)[span_195](end_span) He values professionalism, fairness, and respectful discourse and will ensure that every delegate has the opportunity to grow while contributing to dynamic parliamentary debate.[span_196](start_span)[span_196](end_span)<br>In addition to chairing this committee, Kriyash is interested in sports, entrepreneurship, and music.[span_197](start_span)[span_197](end_span) He brings the same discipline, teamwork, and enthusiasm he exhibits on the field and stage to every aspect of his leadership.[span_198](start_span)[span_198](end_span) While he will maintain high standards in the committee, his approachable personality and sense of humor will ensure that the experience of the HoR’s delegates, whether seasoned or attending their first MUN, is is enjoyable and memorable.[span_199](start_span)[span_199](end_span) Expect a committee that is fast-paced, thought-provoking, and rewarding.[span_200](start_span)[span_200](end_span) Under Kriyash’s leadership, delegates will be challenged not only to debate effectively but also to lead with confidence, integrity, and purpose.[span_201](start_span)[span_201](end_span)"
+            },
+            {
+                "name": "Laxmi Devkota",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "If altruism and vehemence took human form, they’d look exactly like <strong>Laxmi</strong>.[span_202](start_span)[span_202](end_span) Her proactive eagerness to help is among her most eminent attributes.[span_203](start_span)[span_203](end_span) She will rescue a sick bird, fully aware of potential heartbreak, and cheer you up regardless of the burdens weighing her down.[span_204](start_span)[span_204](end_span) Laxmi’s compassion is instinctive; she is always the first to notice small details and effortlessly do the thoughtful thing.[span_205](start_span)[span_205](end_span) If you see her in a quiet corner of the library and think she seems reserved, you haven't seen her vibrant, brilliantly chaotic side.[span_206](start_span)[span_206](end_span) Beneath that calm exterior lies an unwavering dedication to people and a quick-witted sense of humor.[span_207](start_span)[span_207](end_span) Her presence epitomises balance: she manages to be a sweet, comforting anchor while being stern and strict, when needed and commanding respect always.[span_208](start_span)[span_208](end_span) As the vice-chair, she channels her natural leadership qualities to guide committees, effortlessly steering the room back on track whenever debates stray.[span_209](start_span)[span_209](end_span) People know her for her spotless room, a tidiness that reflects the immaculate structure she brings to proceedings.[span_210](start_span)[span_210](end_span) She may be five-foot-two, but her benevolent spirit and capability tower over the highest of peaks.[span_211](start_span)[span_211](end_span)"
+            },
+            {
+                "name": "Aayas Shrestha",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "Life keeps giving him lemons.[span_212](start_span)[span_212](end_span) He keeps trying to figure out their pH.[span_213](start_span)[span_213](end_span)<br>Learning is a lifelong journey of acquiring knowledge, adapting to change, and growing as an individual.[span_214](start_span)[span_214](end_span) A strong self-proclaimed believer in this philosophy, though whether that belief is evident in his actions may be up for debate, <strong>Aayas Shrestha</strong> always tries to approach everything and anything with a mindset of learning, exploring and trying new things.[span_215](start_span)[span_215](end_span) Rumor has it that he firmly believes in lifelong learning only because he keeps forgetting things.[span_216](start_span)[span_216](end_span) All that being said, Aayas considers himself a strong advocate of balancing fun and professionalism, and Model United Nations is no exception.[span_217](start_span)[span_217](end_span) To him, Model United Nations is more than just debating intensely on global issues; it is an experience that also encourages important life skills like critical thinking, problem-solving and social networking.[span_218](start_span)[span_218](end_span) In addition, his committee is bound to generate great fun and enjoyment in just three days.[span_219](start_span)[span_219](end_span) As a moderator, Aayas hopes to make this MUN one in which every voice is not only heard but also respected and all delegates are not only able to enjoy themselves but also to leave their own marks by the end.[span_220](start_span)[span_220](end_span)"
+            }
+        ],
+        "gcmr": [
+            {
+                "name": "Akschhit Raj Jha",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Akschhit Raj Jha</strong> is a figure defined by consistent excellence and disciplined leadership that encourages those around him to strive for improvement.[span_221](start_span)[span_221](end_span) He is a chair with a wall full of accomplishments: he is both an outstanding student and a committed athlete.[span_222](start_span)[span_222](end_span) Beneath that image lies a foundation built on relentless effort, integrity, grit, and intense hard work.[span_223](start_span)[span_223](end_span) His standard is the same standard he will push others toward in order to help them succeed.[span_224](start_span)[span_224](end_span) He is the kind of chair who will acknowledge your failure but not judge you for it, push you to improve, and still hand you an award when you earn it.[span_225](start_span)[span_225](end_span) No matter how serious, Akschhit carries a war chest of sharp one-liners to lighten the mood.[span_226](start_span)[span_226](end_span) That said, he can switch instantly from making humorous remarks to commanding respect and attention when needed.[span_227](start_span)[span_227](end_span)<br>Above all, Akschhit is a person with strong values and principles and someone who demonstrates great perseverance.[span_228](start_span)[span_228](end_span) He supports underdogs while still evaluating talent with fairness and precision.[span_229](start_span)[span_229](end_span) In his committee, he ensures that every delegate finds his or her voice and has an equal chance to succeed.[span_230](start_span)[span_230](end_span) Thus, if you find the issue very complex or are simply running out of ideas, do not hesitate to approach him.[span_231](start_span)[span_231](end_span) Always ready to help and embrace a challenge, Akschhit ensures that every situation will result in an engaging and rewarding experience.[span_232](start_span)[span_232](end_span)"
+            },
+            {
+                "name": "Ronid Vaidya",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "It takes a unique kind of person to seamlessly pivot from computing a physics equation to debating where to eat next, all while keeping the room laughing and ensuring everyone feels supported, and <strong>Ronid</strong> is just that person.[span_233](start_span)[span_233](end_span) He thrives on curiosity and analytical thinking, somehow turning almost every situation into a debate, a life optimisation experiment, or a joke.[span_234](start_span)[span_234](end_span) He is known for his calm yet calculated approach towards any crisis and for his ability to turn any full-court press into at least an attempt at a shot at the hoop.[span_235](start_span)[span_235](end_span) Everybody who knows him also understands that he finds a way to introduce a humorous side to practically anything he does, be it discussing international laws or ordering takeout.[span_236](start_span)[span_236](end_span) Having been actively involved in many MUNs, he thoroughly appreciates the balance of diplomacy, strategy, and intellectual debate they encourage.[span_237](start_span)[span_237](end_span) Ronid brings fluidity, flexibility, and fun—the very attributes he displays when dribbling across the court—to command a committee.[span_238](start_span)[span_238](end_span) As Vice-Chair, he is well-equipped to maintain a seamless process, fostering debate and ensuring that all proceedings are well-organized and productive despite their spontaneity and chaos.[span_239](start_span)[span_239](end_span) At the same time, he empowers every delegate to speak with confidence.[span_240](start_span)[span_240](end_span)"
+            },
+            {
+                "name": "Saisha Joshi",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Saisha</strong> is hardworking and determined; indeed, she always gives her best to everything she does and approaches every task with dedication and enthusiasm.[span_241](start_span)[span_241](end_span) She is incredibly humorous and has a natural talent for making people laugh.[span_242](start_span)[span_242](end_span) She brightens even the most stressful of situations with her cheerful personality and creates a positive atmosphere wherever she goes.[span_243](start_span)[span_243](end_span) She is someone who expresses herself freely and needs good music to carry her through activities.[span_244](start_span)[span_244](end_span) As a moderator, she combines professionalism and creativity and has a positive attitude about creating engaging and productive committee sessions.[span_245](start_span)[span_245](end_span) Her hardworking nature ensures that debates run smoothly and that h every delegate is given a fair opportunity to contribute.[span_246](start_span)[span_246](end_span) She loves drama in her committee sessions and thrives in chaos, making her a great asset in any MUN conference.[span_247](start_span)[span_247](end_span) She creates a welcoming environment that keeps participants comfortable but at the same time maintains the seriousness expected of committee proceedings.[span_248](start_span)[span_248](end_span) Her unique personality makes her a valued friend and an inspiring person to be around.[span_249](start_span)[span_249](end_span) If things are too quiet, you can count on her to spice things up.[span_250](start_span)[span_250](end_span)"
+            }
+        ],
+        "unsc": [
+            {
+                "name": "Ishanvi",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "If committees had opening scenes, you would first spot a head of unruly curls staging its own acrobatics, thick mint glasses stealing a little attention and a chair who is impossible to miss.[span_251](start_span)[span_251](end_span) Somewhere between the Volga and the Ganga, is <strong>Ishanvi</strong>, an assertive and outspoken individual, evolving feminist, and someone who refuses to shrink herself to fit into rooms.[span_252](start_span)[span_252](end_span)<br>Having served as a Member of Parliament at the World Teen Parliament in 2023, she understands that effective policies emerge from committees where decorum steadies the room and intellect does the rest.[span_253](start_span)[span_253](end_span) And because she has very little patience for arguments rooted in prejudice and resting on sweeping generalizations, she expects the reading to go beyond the first search result.[span_254](start_span)[span_254](end_span) Make sure you craft resolutions that your delegation will proudly pound the table for.[span_255](start_span)[span_255](end_span)<br>“Happy researching until you close all your browsing tabs, and do surprise me with your wit and perhaps a bit of audacity.[span_256](start_span)”[span_256](end_span)"
+            },
+            {
+                "name": "Aryash",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "What's that intense, looming presence behind you, delegate?[span_257](start_span)[span_257](end_span) Fear not[span_258](start_span)[span_258](end_span)! It's your vice-chair, <strong>Aryash</strong>.[span_259](start_span)[span_259](end_span) Don't expect your feedback to be sugarcoated: Aryash is exactly the person to go to when you really need some honesty.[span_260](start_span)[span_260](end_span) His ‘linear flow’ combined with devastatingly witty hooks earned him a spot on Nepal's national debate team two times (and counting!).[span_261](start_span)[span_261](end_span) We sure hope you're ready to work with Nepal’s #1 nationally ranked high school debater (that's not a hyperbole; check the tabs) and Asia's 13th-ranked speaker in the Asian Parliamentary debates.[span_262](start_span)[span_262](end_span) Expect your committee to be peppered with sarcasm and an unrivaled level of scrutiny.[span_263](start_span)[span_263](end_span) You'd better hope ChatGPT doesn't make a mistake if you’re using it for your speeches.[span_264](start_span)[span_264](end_span) Aryash'll know.[span_265](start_span)[span_265](end_span) Trust me; you can't get away with plagiarism.[span_266](start_span)[span_266](end_span) Aryash will dissect your performance and make sure you leave this committee with at least one mental A4-sized paper of feedback, a disdain for unverified sources, and a folder full of valuable lessons, laughs, and memories.[span_267](start_span)[span_267](end_span)"
+            },
+            {
+                "name": "Adamya Raj Aryal",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "If there is one thing you should know about your moderator it is that he firmly believes Model United Nations meetings should not feel like a courtroom.[span_268](start_span)[span_268](end_span) Meet “<strong>Adamya Raj Aryal</strong>”.[span_269](start_span)[span_269](end_span) Someone who will probably be laughing with you during sessions listening to your ideas for lobbying and then making sure you defend every single claim once the formal debate begins.[span_270](start_span)[span_270](end_span) Adamya has done five Model United Nations meetings himself.[span_271](start_span)[span_271](end_span) So Adamya knows how it feels to go blank during an opening speech scramble for evidence at the last minute and somehow survive one crisis after another.[span_272](start_span)[span_272](end_span) That is why Adamya Raj Aryal is all for creating a committee where delegates can speak confidently, learn from their mistakes and actually enjoy the experience of Model United Nations meetings.[span_273](start_span)[span_273](end_span) Do not mistake the attitude of Adamya Raj Aryal for low standards though.[span_274](start_span)[span_274](end_span) Good arguments, research and original ideas will always stand out in Model United Nations meetings.[span_275](start_span)[span_275](end_span) Whether you are a timer or someone who has collected more placards than trophies you can expect honest feedback, plenty of laughs and a committee where everyone gets the chance to grow in Model United Nations meetings.[span_276](start_span)[span_276](end_span) At the end of the conference if you have become a delegate, made a few friends picked up a couple of embarrassing stories from the committee and left with something more than just a participation certificate, from Model United Nations meetings Adamya Raj Aryal will consider his job done as the moderator of Model United Nations meetings.[span_277](start_span)[span_277](end_span)"
+            }
+        ],
+        "picc": [
+            {
+                "name": "Shamman Pun",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "\"Diplomacy is just conflict resolution with better vocabulary — and I have both.\"[span_278](start_span)"[span_278](end_span)<br><strong>Shamman Pun</strong> took one look at the gavel and decided the Committee was his to run, and he's determined to make it the best one at PICC.[span_279](start_span)[span_279](end_span)<br>Catch Shamman on a random weekend and he'll be on the couch, three episodes deep into a show he swore he'd only watch for \"just one episode before I start my assignment.\[span_280](start_span)"[span_280](end_span) The show always wins.[span_281](start_span)[span_281](end_span) He's started more series than he's finished and feels zero remorse about it.[span_282](start_span)[span_282](end_span) Want to bond with him before committee starts?[span_283](start_span)[span_283](end_span) Ask what he's watching.[span_284](start_span)[span_284](end_span) That's the cheat code.[span_285](start_span)[span_285](end_span) Beyond the screen, he's the definition of low-key and high-impact.[span_286](start_span)[span_286](end_span) He's the guy who shows up, gets it done, and makes it look effortless without ever making it a whole thing.[span_287](start_span)[span_287](end_span) He might not be the loudest voice in the room, but by the end of the debate, he's the one everyone's listening to.[span_288](start_span)[span_288](end_span)<br>As your Chair, he's bringing that same energy to the dais.[span_289](start_span)[span_289](end_span) The committee is real, the agenda hits different, and he is not here for half-baked position papers or delegates who ghost their own arguments mid-speech.[span_290](start_span)[span_290](end_span) Come with substance.[span_291](start_span)[span_291](end_span) Come with confidence.[span_292](start_span)[span_292](end_span) Come prepared to go toe to toe on some of the most pressing geopolitical crises in history.[span_293](start_span)[span_293](end_span)<br>PICC this year is not for the unprepared.[span_294](start_span)[span_294](end_span) But if you put in the work, this will be one of the best committees you've sat in.[span_295](start_span)[span_295](end_span)<br>The gavel doesn't miss.[span_296](start_span)[span_296](end_span) Neither should you.[span_297](start_span)[span_297](end_span)"
+            },
+            {
+                "name": "Rajvi",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "“You are the universe experiencing itself from one specific perspective.[span_298](start_span)”[span_298](end_span)<br>We’re talking about looks that kill.[span_299](start_span)[span_299](end_span) We’re talking about that look of brilliance, in which brains prevail over beauty.[span_300](start_span)[span_300](end_span) But <strong>Rajvi</strong>’s still the type of person who's getting taken out during the first ten minutes of a horror movie.[span_301](start_span)[span_301](end_span)<br>She may seem a bit serious, but once you get to know her, you'll never not see her white pearls.[span_302](start_span)[span_302](end_span) The only time she's not smiling is when someone makes fun of her for naming her cats “Dog” and “Meow Meow.[span_303](start_span)”[span_303](end_span) She’s everything, or at least tries to be—a nerd, a procrastinator, an athlete, maybe even a musician; who she is , it just depends on what time of her life you meet her.[span_304](start_span)[span_304](end_span) Right now, she's a vice-chair, and Rajvi’s taking a break from her usual identity crisis to prevent [committee name] from descending into complete anarchy.[span_305](start_span)[span_305](end_span)"
+            },
+            {
+                "name": "Yarra",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "If there is one thing you'll learn about <strong>Yarra</strong>, it's that first impressions don't do her justice.[span_306](start_span)[span_306](end_span) She may seem quiet and reserved at first, but once you get to know her, you'll find someone who is calm, friendly, approachable, and genuinely kind.[span_307](start_span)[span_307](end_span) Most of the time, you'll either find her laughing at just about everything or stressing over her next test.[span_308](start_span)[span_308](end_span) She loves meeting new people, enjoys a good conversation, and always tries to make those around her feel welcome.[span_309](start_span)[span_309](end_span)<br>She hopes to bring that same sense of calm and approachability to the committee, creating a space where every delegate feels welcome, heard, and encouraged to participate.[span_310](start_span)[span_310](end_span) To her, MUN is much more than resolutions and awards; it's about learning from one another, growing through every debate, and creating memories that you'll look back on with a smile.[span_311](start_span)[span_311](end_span)"
+            }
+        ],
+        "unwomen": [
+            {
+                "name": "Angel",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "An angel is a messenger, someone who carries meaning, bridges perspectives, and brings clarity where there is complexity.[span_312](start_span)[span_312](end_span) That sense of purpose is reflected in how <strong>Angel</strong> approaches every space she enters: she is calm, intentional, and attentive to the weight of dialogue and decision-making.[span_313](start_span)[span_313](end_span)<br>With a strong foundation in Model United Nations, public speaking, and debate, she brings both experience and a deep commitment to meaningful discourse.[span_314](start_span)[span_314](end_span) Beyond participation in MUNs and academic achievements, what defines her is dedication; she engages fully with every responsibility she takes on, valuing depth, consistency, and thoughtful impact over surface-level engagement.[span_315](start_span)[span_315](end_span)<br>In addition to her academic achievements and MUN journey, she is deeply drawn to art and creative expression.[span_316](start_span)[span_316](end_span) She loves to paint and express herself through her art, and she fosters a similar level of passion for everything else she does.[span_317](start_span)[span_317](end_span) She is a person who is generous, kind and passionate and pursues her personal goals with rigour.[span_318](start_span)[span_318](end_span) As Chair, she aims to foster a committee environment in which delegates feel both supported and challenged, encouraged to think independently, speak confidently, and engage in diplomacy that is constructive, innovative, and impactful.[span_319](start_span)[span_319](end_span) She looks forward to guiding discussions that leave a lasting impression on every delegate at RBS MUN 2026.[span_320](start_span)[span_320](end_span)"
+            },
+            {
+                "name": "Susmeen",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "One thing that makes <strong>Susmeen</strong> unique is her name.[span_321](start_span)[span_321](end_span) As far as she knows, she’s the only Susmeen in the world.[span_322](start_span)[span_322](end_span) She’s always loved having a name that’s completely her own; it reminds her that being different is something to embrace.[span_323](start_span)[span_323](end_span) Although she can seem a little serious or intimidating when people first meet her, that impression usually changes pretty quickly.[span_324](start_span)[span_324](end_span) She’s naturally empathetic, enjoys getting to know people, and genuinely wants those around her to feel included, supported, and comfortable.[span_325](start_span)[span_325](end_span) Susmeen is ambitious and determined, and always looking for opportunities to grow, whether that’s through academics, basketball or leadership.[span_326](start_span)[span_326](end_span) She enjoys taking on challenges and believes that learning comes from stepping outside her comfort zone.[span_327](start_span)[span_327](end_span) At the same time, she’s probably one of the clumsiest people you’ll meet.[span_328](start_span)[span_328](end_span) She’s almost always sporting a mysterious bruise, somehow manages to trip over absolutely nothing, and has an impressive talent for falling from places she probably shouldn’t have been climbing up to in the first place.[span_329](start_span)[span_329](end_span) Despite the chaos she occasionally creates, she tries not to take herself too seriously.[span_330](start_span)[span_330](end_span) She values kindness, laughs at her own mistakes, and hopes people remember her not just for what she accomplishes; but for how she makes them feel.[span_331](start_span)[span_331](end_span)"
+            },
+            {
+                "name": "Mahim Raj Panta",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Mahim Raj Panta</strong> approaches every task with remarkable enthusiasm and dedication.[span_332](start_span)[span_332](end_span) Whether in academics, sports, or extracurricular activities, he consistently strives not only to meet expectations but to exceed them through his commitment to excellence.[span_333](start_span)[span_333](end_span) One of Mahim’s greatest strengths is his ability to tackle challenges with a calm and composed mindset, even under demanding circumstances.[span_334](start_span)[span_334](end_span) He approaches responsibilities with organised determination and maintains a strong focus on achieving the best possible outcome.[span_335](start_span)[span_335](end_span) In addition to these accomplishments, Mahim brings a unique energy to every environment.[span_336](start_span)[span_336](end_span) He possesses a strong sense of humor and a natural ability to make those around him laugh; indeed, he often serves as a source of camaraderie and positivity within a group.[span_337](start_span)[span_337](end_span) While he is lighthearted and cheerful, he understands when to focus and consistently approaches important responsibilities with maturity and dedication.[span_338](start_span)[span_338](end_span)"
+            }
+        ],
+        "hrc": [
+            {
+                "name": "Tejus Banskota",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Tejus</strong> is the voice you hear first in a room of noise; he is a source, a solution, and rarely silent.[span_339](start_span)[span_339](end_span) He’s the sort of individual you can count on to celebrate your successes, call out your mistakes, and laugh himself mad alongside you if you need a bit of cheering up.[span_340](start_span)[span_340](end_span) A competitive debater who will switch seamlessly from tearing apart your argument to helping you write a speech at the same time, all the while bringing up the finest of his digital feed to keep you entertained.[span_341](start_span)[span_341](end_span) Whether he uses language you would never expect to hear outside of a courtroom or quotes lines straight out of an Instagram comment section, you can't ever predict what he’s going to say next.[span_342](start_span)[span_342](end_span) With a love for the underdogs and a resume reflecting his experience as one, you can always count on Tejus to help you win.[span_343](start_span)[span_343](end_span)<br>Tejus will work tirelessly to ensure equality in his committee, with every delegate getting the chance to show his or her talent.[span_344](start_span)[span_344](end_span) He's not here just to be a chair, he’s here to run a show and to hand out awards to the best of his actors.[span_345](start_span)[span_345](end_span) After all, what matters most is effort.[span_346](start_span)[span_346](end_span) Possessed by his passion and projects, Tejus commits himself to helping all he can.[span_347](start_span)[span_347](end_span) A natural-born leader and a friend to the end, Tejus will put his life on the line for the members of his committee, and all he asks for in return is for your drive and dedication.[span_348](start_span)[span_348](end_span) And maybe a bite of your food.[span_349](start_span)[span_349](end_span)"
+            },
+            {
+                "name": "Ashma",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "<strong>Ashma</strong> can spend hours discussing a novel, crafting a story, or arguing a point just for the thrill of seeing where the conversation leads.[span_350](start_span)[span_350](end_span) Whether dissecting the motives of a fictional character or searching for the perfect phrase, she has always felt at home with words.[span_351](start_span)[span_351](end_span) Having enjoyed debating from a young age, she quickly discovered a love for exchanging ideas and exploring issues from every possible angle.[span_352](start_span)[span_352](end_span) Yet behind the speeches is a warm and approachable presence, someone just as likely to help refine a speech as she is to challenge it.[span_353](start_span)[span_353](end_span) Friends know her as a supportive listener and an enthusiastic conversationalist, someone who can turn almost any discussion into an engaging one.[span_354](start_span)[span_354](end_span) She is always willing to go the extra mile for delegates; no question is ever “too much,” no doubt too small, and no speech too messy to be improved.[span_355](start_span)[span_355](end_span) She also has a tendency to find humour in places others might overlook, which means she is often caught smiling or quietly laughing mid-sentence, especially when attempting to maintain a serious demeanour for longer than a few seconds.[span_356](start_span)[span_356](end_span) Far from being distracting, her amusement reflects her belief that debate does not need to be devoid of lightness to be meaningful; in her view, humour and intellectual discussions often coexist in the same space.[span_357](start_span)[span_357](end_span)"
+            },
+            {
+                "name": "Anshuman",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "At first glance, <strong>Anshuman</strong> might seem focused on his own work, but a short conversation quickly reveals that he's one of the easiest people to be around.[span_358](start_span)[span_358](end_span) Whether it's football, academics, or extracurriculars, he enjoys staying busy and always has a new goal to pursue.[span_359](start_span)[span_359](end_span) Rather than talking about his achievements, he lets his dedication and consistency speak for themselves.[span_360](start_span)[span_360](end_span)<br>He's also rarely serious for long.[span_361](start_span)[span_361](end_span) Between committee sessions, you'll probably hear him make a random joke or tell a witty story that gets everyone laughing, helping make stressful moments feel lighter.[span_362](start_span)[span_362](end_span)<br>Above all, he wants others to succeed.[span_363](start_span)[span_363](end_span) He encourages hesitant delegates to speak up, believing MUN is strongest when everyone contributes.[span_364](start_span)[span_364](end_span) His balance of ambition, humility, and kindness is what makes him memorable.[span_365](start_span)[span_365](end_span)"
+            }
+        ],
+        "uscc": [
+            {
+                "name": "Ashvy",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "<strong>Ashvy</strong> is an outgoing individual with a strong passion for politics, policymaking, international relations, and diplomacy.[span_366](start_span)[span_366](end_span) Her interest in Model United Nations stems from a genuine desire to better understand global affairs and the processes through which decisions shape societies and international cooperation.[span_367](start_span)[span_367](end_span) Through her MUN journey, she has found a space to engage with complex issues, challenge others’ perspectives, and develop her skills in debate, negotiation, and leadership.[span_368](start_span)[span_368](end_span)<br>Known for her convivial nature, quick wit, and occasional sarcasm, Ashvy enjoys creating an environment that is both engaging and intellectually stimulating.[span_369](start_span)[span_369](end_span) She values diverse viewpoints and heated debates in any committee she is in.[span_370](start_span)[span_370](end_span) As chair, Ashvy will strive to foster a committee atmosphere that is professional but also has a hint of chaos, dynamism, and enjoyment.[span_371](start_span)[span_371](end_span) She will encourage delegates to think critically and push the committee in different directions, debate till their voices get hoarse, and make the most of their MUN experience.[span_372](start_span)[span_372](end_span)"
+            },
+            {
+                "name": "Prasiddha Timilsina",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "In Sanskrit, the word “Prasiddha” translates to well-known, and, as the vice-chair, <strong>Prasiddha Timilsina</strong> will certainly stand out as somebody well-known.[span_373](start_span)[span_373](end_span) When life gives him serious tasks, he tries to find the funny part in them.[span_374](start_span)[span_374](end_span) Prasiddha is a committed, passionate, and interested individual when it comes to studying geopolitics.[span_375](start_span)[span_375](end_span) He prefers spending hours watching geopolitical content to touching his textbooks.[span_376](start_span)[span_376](end_span) His strong passion and interest in Model United Nations stem from his intellectual curiosity to better understand how politics and global governments function.[span_377](start_span)[span_377](end_span)<br>As Vice-Chair, Prasiddha hopes to foster a committee atmosphere in which delegates are well-informed about the committee’s agenda.[span_378](start_span)[span_378](end_span) Do not be fooled by his preference for detailed information and healthy debates, as this guy has a witty nature and a love for jokes and memes alongside being serious.[span_379](start_span)[span_379](end_span) Prasiddha values professionalism during committee sessions and expects delegates to present their respective views and engage in healthy debate.[span_380](start_span)[span_380](end_span) If you are a delegate in this committee, prepare yourself to do quite a bit of research but also to enjoy yourself, laughing and joking a little.[span_381](start_span)[span_381](end_span) Most importantly, thrive in the RBSMUN experience.[span_382](start_span)[span_382](end_span)"
+            },
+            {
+                "name": "Omee",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Omee</strong> is a curious, ambitious, and thoughtful person who is deeply invested in learning and personal growth.[span_383](start_span)[span_383](end_span) Omee enjoys analysing different perspectives, refining arguments, and asking questions that go beyond surface-level understanding.[span_384](start_span)[span_384](end_span)<br>She engages with diverse perspectives and fosters meaningful discussions.[span_385](start_span)[span_385](end_span) She also values collaboration, respect, and open-minded dialogue.[span_386](start_span)[span_386](end_span) Omee possesses a calm and composed demeanor, coupled with a genuine interest in understanding people and ideas from different backgrounds.[span_387](start_span)[span_387](end_span) Her dedication to creating an inclusive and productive environment allows participants to express themselves confidently while contributing constructively to debate.[span_388](start_span)[span_388](end_span) As a moderator, Omee strives to encourage critical thinking, mutual respect, and engaging discourse, ensuring that every voice has the opportunity to be heard.[span_389](start_span)[span_389](end_span)"
+            }
+        ],
+        "sochum": [
+            {
+                "name": "Naman Man Singh Pradhan",
+                "role": "Chairperson",
+                "img": "chair.webp",
+                "desc": "Is it a bird?[span_390](start_span)[span_390](end_span) Is it a plane?[span_391](start_span)[span_391](end_span) No, it’s a man flying towards the hoop, and maybe chasing you down for your resolution.[span_392](start_span)[span_392](end_span) It’s <strong>Naman</strong>.[span_393](start_span)[span_393](end_span) In a committee room full of whispers and last-minute amendments, he is the one who doesn’t flinch.[span_394](start_span)[span_394](end_span) He runs on grit, not ego, showing up early, staying late, and expecting nothing from you that he hasn’t already demanded of himself ten times over.[span_395](start_span)[span_395](end_span) But don’t mistake his calm for coldness.[span_396](start_span)[span_396](end_span) Naman is friendly in the way a favourite teammate is; he is approachable, easy to laugh with, and always up for talking over a shared snack.[span_397](start_span)[span_397](end_span)<br>Above all, Naman Man Singh Pradhan leads by example.[span_398](start_span)[span_398](end_span) He won’t just tell you to be better, he’ll show you how, then stand beside you while you try.[span_399](start_span)[span_399](end_span) He’s not here to dominate the room.[span_400](start_span)[span_400](end_span) So bring your best.[span_401](start_span)[span_401](end_span) Bring your doubts.[span_402](start_span)[span_402](end_span) Bring your wild draft resolutions.[span_403](start_span)[span_403](end_span) Naman will meet you where you are, and stubbornly help you climb higher than you thought you could.[span_404](start_span)[span_404](end_span) And, yes, he will notice if you’re late.[span_405](start_span)[span_405](end_span) But he’ll also save you a seat.[span_406](start_span)[span_406](end_span)"
+            },
+            {
+                "name": "Sarahana Goutam",
+                "role": "Vice Chairperson",
+                "img": "vice-chair.webp",
+                "desc": "<strong>Sarahana</strong>’s the embodiment of your entire social circle.[span_407](start_span)[span_407](end_span) She’s the witty one, the funny one, the hard worker, and the academic.[span_408](start_span)[span_408](end_span) At first glance, you may be intimidated by her star power or sheer presence, but Sarahana is incredibly approachable and always ready to help.[span_409](start_span)[span_409](end_span) As Vice-Chair, she's the bridge between the ideals and expectations of the dais and the energy of the committee floor.[span_410](start_span)[span_410](end_span) She laughs easily at your jokes, remembers your name from the first roll call, and knows exactly when you need a nudge of encouragement or a quiet piece of advice.[span_411](start_span)[span_411](end_span) Quick-witted, perceptive, and refreshingly down-to-earth, she welcomes every question and believes the best committees are built on confidence, curiosity, and collaboration.[span_412](start_span)[span_412](end_span) Sarahana values respect for the committee, the dais, and above all, the delegates.[span_413](start_span)[span_413](end_span) While she's known for her patience and good humor, these traits should never be mistaken for leniency.[span_414](start_span)[span_414](end_span) Above all, she wants every delegate to leave the committee stronger than they entered it and she aims to make every committee experience one worth remembering.[span_415](start_span)[span_415](end_span)"
+            },
+            {
+                "name": "Kapil Saud",
+                "role": "Moderator",
+                "img": "moderator.webp",
+                "desc": "<strong>Kapil Saud</strong> doesn't just walk into a room.[span_416](start_span)[span_416](end_span) He arrives quietly, deliberately, like someone who's already mapped everything.[span_417](start_span)[span_417](end_span) He’s calm on the surface, but mentally he’s doing wheelies at high speeds.[span_418](start_span)[span_418](end_span) He lives for the thrill.[span_419](start_span)[span_419](end_span) Do you enjoy jumping off a high ledge on a dare?[span_420](start_span)[span_420](end_span) Kapil doesn't even need the dare.[span_421](start_span)[span_421](end_span) He believes life is too short to spend it standing on the edge wondering, so he jumps.[span_422](start_span)[span_422](end_span) Whether it's a ledge, or an idea everyone calls crazy, he's already flying before you've finished the sentence.[span_423](start_span)[span_423](end_span) Fear isn't something he carries; he left it behind a long time ago, probably mid-jump.[span_424](start_span)[span_424](end_span) Kapil gives a hundred percent tp everything he tries, whether sports, skills or stunts.[span_425](start_span)[span_425](end_span) , the answer's always yes.[span_426](start_span)[span_426](end_span) Give him a day with your game and he'll beat you, not by luck but by instantly adapting to how you play.[span_427](start_span)[span_427](end_span) That same instinct makes him a great moderator: he’s quick to read every delegate, adapt on the fly, and keep debate sharp and engaging throughout.[span_428](start_span)[span_428](end_span)"
+            }
+        ]
 }
