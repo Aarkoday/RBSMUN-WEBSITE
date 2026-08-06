@@ -4,40 +4,119 @@
         "title": "Logistics",
         "desc": "The Logistics team handles all on-ground operations — from venue management and delegate registration to transportation coordination and material procurement. They are the backbone that keeps the conference running seamlessly behind the scenes.",
         "heads": [
-            { "name": "To be announced", "role": "Head of Logistics", "img": "head1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Logistics", "img": "head2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Logistics", "img": "head3.webp", "desc": "" }
+            {
+                "name": "Pradhyot Hada",
+                "role": "Head of Logistics",
+                "img": "head1.webp",
+                "desc": "Meet Pradhyot, one of the masterminds behind the scenes making sure Rato Bangala School Model United Nations runs without a hitch. As Head of Logistics, he believes every detail counts, whether it's coordinating teams, solving unexpected problems, or making sure everything is ready right on time.<br>A true people person, Pradhyot loves working with different kinds of people and thrives in a team environment. Organized, dependable, and always ready to jump into action, he enjoys turning chaotic moments into smooth solutions.<br>When he’s not keeping the conference on track, you’ll probably find him exploring technology, playing sports, or—if you're lucky—holding a microphone and bringing the energy to the post-conference band performances. If everything seems to fall perfectly into place, chances are Pradhyot and the logistics team have been working their magic behind the scenes."
+            },
+            {
+                "name": "Sanah Ahmed",
+                "role": "Head of Logistics",
+                "img": "head2.webp",
+                "desc": "Sanah Ahmed serves as the Head of Logistics with a quiet yet purposeful approach to leadership, rooted in empathy, humility, and genuine connection. For her, leadership is never about authority but about listening with intention, understanding with sincerity, and working alongside others toward a shared purpose. She is committed to creating spaces where everyone feels seen, valued, and empowered to contribute.<br>Known for her exceptional organizational skills, dependable nature, and solutions-oriented mindset, Sanah views logistics as more than coordinating tasks—it is the art of creating seamless experiences through careful preparation, strong systems, and collective effort. She believes every successful event is built on thoughtful planning and collaboration.<br>Beyond logistics, Sanah is deeply committed to supporting those around her, leading with empathy, intention, and quiet confidence. She strives to build efficient systems while fostering a warm, supportive environment, ensuring that when an event feels effortless and beautifully organized, it is because every detail has been thoughtfully engineered behind the scenes."
+            },
+            {
+                "name": "Nirvani Dahal",
+                "role": "Head of Logistics",
+                "img": "head3.webp",
+                "desc": "Nirvani may be one of the shortest people you'll ever meet, but don't underestimate her; her loud, unmistakable laugh will find you long before she does. Behind the endless jokes, dramatic reactions, and wonderfully chaotic energy is someone who is incredibly dependable, resilient, and always ready to get the job done. Giving up has never been an option for her. If you're ever stuck with a problem, she's the person to call; she'll either have the perfect solution or confidently invent one that somehow works. If you've forgotten your medicine, don't worry, Nirvani has probably packed enough to open a small pharmacy. As one of this year's Heads of Logistics, she's determined to make sure every delegate has a smooth, organized, and memorable conference experience. She'll be working tirelessly behind the scenes to keep everything running on time, solve problems before you notice them, and somehow do it all with a smile. Just don't be surprised if she trips over absolutely nothing while rushing to save the day, it's simply part of the Nirvani experience, and somehow she still always gets there first."
+            }
         ],
         "core": [
-            { "name": "To be announced", "role": "Core Logistics", "img": "core1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Core Logistics", "img": "core2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Core Logistics", "img": "core3.webp", "desc": "" },
-            { "name": "To be announced", "role": "Core Logistics", "img": "core4.webp", "desc": "" },
-            { "name": "To be announced", "role": "Core Logistics", "img": "core5.webp", "desc": "" }
+            {
+                "name": "Adhyayan Khetan",
+                "role": "Core Logistics",
+                "img": "core3.webp",
+                "desc": "Adhyayan Khetan is the guy that makes sure that the entire MUN does not fall apart behind the scenes. To the untrained eye, he might appear to be just a cool-headed individual but there lies somebody whose reliability and sharpness cannot be underestimated. He turns chaos into order and makes sure that all aspects of the MUN come together seamlessly to create well-organized events for everybody involved. Whether dealing with a critical situation or organizing materials, whether managing the logistics operations or anything else, his dedication is never too hard to see through his laid-back demeanor. He is approachable and friendly at any time of day, just the kind of people you would expect from the logistics team. Making him the exact person you want in your corner throughout the MUN."
+            },
+            {
+                "name": "Aayan Bastola",
+                "role": "Core Logistics",
+                "img": "core5.webp",
+                "desc": "Aayan is a dependable, approachable, and detail-oriented individual who enjoys working with people and thrives in fast-paced environments. While he takes his responsibilities seriously, he believes that a positive attitude and a calm mindset are just as important as efficiency. Known for going beyond what is expected, Aayan takes pride in ensuring that every detail is carefully managed and that things run as smoothly as possible. He believes that the best results come from preparation, adaptability, and strong teamwork.<br>As a member of the Core Logistics team, Aayan is committed to creating a seamless conference experience for delegates and organizers alike. Whether coordinating operations or handling unexpected challenges, he strives to ensure everything runs efficiently behind the scenes. He hopes to help create a welcoming and well-organized conference where delegates can focus on meaningful debate, build lasting connections, and enjoy an unforgettable MUN experience."
+            },
+            {
+                "name": "Prinsha Karki",
+                "role": "Core Logistics",
+                "img": "core1.webp",
+                "desc": "If there’s one person you can always count on, it’s Prinsha. She believes it’s the little things that often make the biggest impact whether it’s stepping in to help, bringing calm to a busy moment or simply offering a warm smile. Curiosity and an unwavering eagerness for learning drive her. She approaches every opportunity with enthusiasm, and a real desire to grow, believing in meaningful connections, teamwork and experiences that bring people together. Positive, dependable, and usually running on equal parts determination and coffee, she hopes to make every interaction memorable, leaving behind not just a job well done, but friendships and moments that last long after the conference is over.<br>This year, Prinsha hopes to help create a conference where thoughtful planning inspires meaningful experiences, every delegate feels genuinely welcomed, and every moment reflects the dedication of a team committed to excellence."
+            },
+            {
+                "name": "Aasna Aryal",
+                "role": "Core Logistics",
+                "img": "core2.webp",
+                "desc": "Aasna is the kind of person every team hopes to have, and every leader strives to become. Patient, considerate, and remarkably resilient, she approaches every challenge with determination. She adapts effortlessly, making everyone feel seen, valued, and heard.<br>Known for her reliability and sense of balance, Aasna brings structure and empathy. She leads with confidence while remaining open to learning, approaching every opportunity with humility, curiosity, and a genuine desire to grow. Whether managing responsibilities, navigating challenges, or supporting those around her, she consistently demonstrates maturity and dedication.<br>Beyond her leadership and organizational skills, Aasna is deeply kind and endlessly tenacious. Ultimately, though, what makes her truly exceptional is that while she never intentionally tries to be the funniest person in the room, those who know her best would agree that her effortless humor often makes her exactly that."
+            },
+            {
+                "name": "Suyash Paudel",
+                "role": "Core Logistics",
+                "img": "core4.webp",
+                "desc": "Suyash Paudel brings a blend of composure, initiative, and accountability to every conference he is a part of. Rather than waiting for instructions, he identifies what needs to be done and quietly takes ownership of it. His ability to remain focused in fast-paced environments allows him to make thoughtful decisions while ensuring that every responsibility entrusted to him is carried out with care.<br>What truly distinguishes Suyash is his willingness to support others without seeking recognition. He believes that the success of a conference is built on teamwork, consistency, and attention to detail. Whether assisting delegates, coordinating with the executive team, or responding to unforeseen challenges, he approaches every task with professionalism and a positive attitude. Dependable, resourceful, and easy to work with, Suyash is committed to creating an environment where every participant can enjoy a well-organized and memorable MUN experience."
+            }
         ]
     },
     "secretariat": {
         "id": "secretariat",
         "title": "Secretariat",
+        "group_position": "center bottom",
+        "group_zoom": 1.2,
         "desc": "The Secretariat is the executive leadership of RBSMUN. Led by the Secretary-General and Deputy Secretary-General, this team sets the academic vision, oversees all committee operations, and ensures the conference upholds the highest standards of Model UN excellence.",
         "heads": [
-            { "name": "To be announced", "role": "Secretary-General", "img": "sg.webp", "desc": "" },
-            { "name": "To be announced", "role": "Deputy Secretary-General", "img": "dsg1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Deputy Secretary-General", "img": "dsg2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Crisis Director", "img": "cd.webp", "desc": "" }
+            {
+                "name": "Pragyan Gautam",
+                "role": "Secretary-General",
+                "img": "sg.webp",
+                "desc": "Pragyan is an anomaly of a student: unlike the rest of us, he makes excellence look effortless. He earns A*s in all of the staggering six subjects he takes, is a decorated member of Nepal’s national debate team for WSDC in a so-sparkly-it-hurts-your-eyes kinda way, played consistently on the football team (pre-ACL surgery 🙁), is an avid golfer, and is a passionate MUN delegate who has competed in the highest of stages. Whether it is building complex projects that sound like straight-up rocket science or dismantling someone else’s arguments in caucus, Pragyan brings precision, grace and confidence to everything he does, and although it all looks effortless, no one can deny the work, discipline and consistency it takes to get, and stay, there.<br>He may be approachable and friendly, but don’t let his calm, cherubic demeanor fool you. Beneath it is a commanding presence and a stentorian voice that dominates debate. In MUNs, his rhetoric is sharp and his reasoning sharper, and his rulings are delivered with absolute clarity and authority, creating a magnetic quality that makes everyone wish to listen.<br>His scintillating CV may lead you to hunt for what he’s lacking (you won’t find anything). He cares quietly yet evidently, noticing small things others miss through glasses that do far more than just block blue rays. If you’re still hunting for what he lacks, you’ll find your treasure in his brand of humour, which is unamusingly flat (though he will tell you otherwise; in his words, “I make everyone laugh”). For all his intimidating accolades, he is remarkably silly and unpredictable and guaranteed to catch you off guard the second his serious facade drops.<br>As Secretary-General, Pragyan brings rigorous standards and lively energy to every session. He expects delegates to exhibit genuine passion rather than merely compete for awards, believing a true hunger to solve problems should drive an MUN. With Pragyan at the helm, prepare for an engaging, intensive, and thoroughly rewarding MUN experience."
+            },
+            {
+                "name": "Ruhaan Bhatta",
+                "role": "Deputy Secretary-General",
+                "img": "dsg1.webp",
+                "desc": "There are people who simply sit in a room, and then there are people who fill it. Ruhaan is unmistakably the latter type.<br>If you’re in search of a person who can turn a five-minute incident into a two-hour debrief, Ruhaan’s your guy. Before he even gets to the punchline of a story, he’ll vividly recall the exact pattern of the marble on the floor and his precise initial hypothesis. Armed with a god-given gift for words, he’s a natural debater and an excellent leader.<br>You’ll probably spot him carrying around three bags in school: one for his books, one for his football gear, and the third quietly bearing the weight of balancing debate, goalkeeping, and academics. He knows, better than most, how to stretch the rigid 24-hour day as per his will. If he’s not running on the football field, his mind is running (in every possible direction) and if he’s not saving goals, he’s definitely saving delegates from a boring committee.<br>At first glance, his fierce game face and trademark police moustache may intimidate you—he sure does look the part of a deputy secretary-general—but his warm personality stands in deliberate contrast to his tough exterior. He tackles every challenge head-on, yes, but he backs up his fierce purpose with immense kindness and a genuine investment in the success of the people around him. The image of an aggressive goalkeeper and intense debater is balanced by an image of an empathetic team player with a thoroughly gentle soul who leads not through dominance, but through trust. With Ruhaan in charge, a committee isn't just in highly capable, analytical hands; it’s in safe ones."
+            },
+            {
+                "name": "Raavya Shrestha",
+                "role": "Deputy Secretary-General",
+                "img": "dsg2.webp",
+                "desc": "In the face of a problem, there are two kinds of people: those who panic… and Raavya, who immediately opens 17 tabs to analyze every angle of that problem. Whether it’s a crisis in a committee, a medical case she observed at an internship, or a neglected deadline, her first instinct is always to sit down and figure a problem out. Unless, of course, it’s the shambolic ecosystem of open notebooks and stray worksheets on her desk.<br>When she’s locked in, she’s composed and intimidating: she carries heavily annotated notes, maintains steady eye contact, and never backs down. Once that initial fierceness wears off, though, she’s back to laughing at the most inopportune possible moments and losing objects that, she will promise you, were just in her hands.<br>A seemingly stern visage and curls that rival Medusa’s conceal a dynamic, effervescent persona that is bound to cheer up even the most serious of people. Underneath it all is a force of nature fueled by an unyielding work ethic. Raavya commits to her work with such unmatched passion that mentees genuinely question if she is a paid hire rather than a student mentor. She operates with a resilience that defies logic, even if it means holding a flawless five-minute plank while mentally navigating a crisis of her own.<br>At her well-trained core, she’s just a girl trying her best to do the right thing and make the most out of every opportunity she’s given. As Deputy Secretary-General, Raavya will bring curiosity, dedication, and just the right amount of chaos to the committee. She is ready to face every challenge thrown at her as long as nobody asks her to clean her desk."
+            },
+            {
+                "name": "Prasiddha Mainali",
+                "role": "Crisis Director",
+                "img": "cd.webp",
+                "desc": "Some people carefully think through every possibility before making a decision, but Prasiddha prefers to throw himself into a situation first and figure out the possibilities along the way. Whether it’s a new project, a competition, or an idea that sounded significantly better five minutes earlier, he has a habit of saying yes to experiences and somehow making them work out. This tendency has earned him a reputation for being involved in far too many things at once, though he would argue that life is simply more interesting when one keeps busy. It also explains why his friends are never entirely sure whether he’s about to offer profound advice or suggest something completely ridiculous. If there is one thing that defines him, it is an unwillingness to be defined by a label.<br>Despite a naturally competitive streak, Prasiddha is the kind of person people gravitate towards. He remembers small details, checks in on people just when they need to connect, and somehow finds time for long conversations even when he absolutely should be doing something else. His confidence is balanced by a genuine willingness to listen, a trait making him equally capable of leading a room and of sitting down with someone who just needs to talk. Behind the ambition is someone who cares deeply about the people around him and believes that the best experiences are the ones shared with others."
+            }
         ],
         "core": []
     },
     "it": {
         "id": "it",
         "title": "Information Technology",
+        "group_position": "top 10% center",
+        "group_zoom": 1.1,
         "desc": "The IT team is responsible for all things digital — the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event.",
         "heads": [
-            { "name": "To be announced", "role": "Head of IT", "img": "head.webp", "desc": "" }
+            {
+                "name": "Aarav Panday",
+                "role": "Head of IT",
+                "img": "head.webp",
+                "desc": "Aarav is the kind of person who sees technology as more than just code, it is a way to bring ideas to life. Whether he is building websites, automating tasks, managing digital platforms, or troubleshooting problems that seem impossible at first, he enjoys creating solutions that are both practical and impactful. Curious by nature, he is always exploring new technologies, from AI and robotics to web development, and believes the best way to learn is by building. His workflow is a mix of organized chaos, with late-night coding sessions, oddly named files, and countless experiments somehow coming together into polished results. He would rather let his work speak for itself than seek the spotlight, but when something needs fixing or improving, he’s usually the first person people turn to. As Head of IT, he brings creativity, reliability, and a builder’s mindset, making sure the MUN’s digital presence is not only functional but constantly evolving."
+            }
         ],
         "core": [
-            { "name": "To be announced", "role": "Core IT", "img": "core1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Core IT", "img": "core2.webp", "desc": "" }
+            {
+                "name": "Samik Giri",
+                "role": "Core IT",
+                "img": "core2.webp",
+                "desc": "Samik is a Core IT Member of the MUN who thrives on turning ideas into reliable digital solutions. From building websites to troubleshooting technical issues and exploring AI and programming, he's focused on making sure the technology behind the conference runs smoothly—while delegates focus on debate. He believes the best way to learn is by building. Whether it's web development, automation, data science, or robotics, Samik is always experimenting with new technologies and applying them to real projects, driven by curiosity and a constant desire to improve. His workflow is best described as organized chaos—late-night coding sessions, countless experiments, and folders with names only he understands. Somehow, it all comes together when it matters most.<br>Reliable, adaptable, and always ready for the next technical challenge, Samik brings creativity and a builder's mindset to the MUN IT team, helping ensure the conference runs seamlessly from start to finish."
+            },
+            {
+                "name": "Pranta Thulung Rai",
+                "role": "Core IT",
+                "img": "core1.webp",
+                "desc": "Pranta brings an incredible wave of energy and passion to the MUN IT team, viewing coding as an exhilarating playground of endless possibilities. As the digital engine behind the scenes, he ensures the conference stays connected and runs flawlessly, whether he is building dynamic websites from scratch or diving into the latest AI tools. Driven by pure curiosity and a love for creating, Pranta leaps at every chance to explore robotics, data science, and automation, always striving to build the most creative and efficient solutions. His workflow is a joyful whirlwind of bright ideas and high-energy coding sessions where the magic happens. With his cheerful optimism and unstoppable drive, Pranta turns every technical challenge into a fun puzzle, bringing a vibrant spark and pure dedication to ensuring a spectacular digital experience for all delegates."
+            }
         ]
     },
     "art": {
@@ -45,9 +124,24 @@
         "title": "Art & Design",
         "desc": "The Art team crafts the entire visual identity of RBSMUN — from branding, posters, and social media graphics to stage design and conference-day decor. They bring the creative vision that defines the aesthetic of each iteration.",
         "heads": [
-            { "name": "To be announced", "role": "Head of Art", "img": "head1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Art", "img": "head2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Art", "img": "head3.webp", "desc": "" }
+            {
+                "name": "Kinjal Chitrakar",
+                "role": "Head of Art",
+                "img": "head3.webp",
+                "desc": "Every successful MUN deserves visuals that are just as compelling as the debates. As Head of Art, Kinjal is here to make sure ours are nothing short of stunning! However unapproachable or aloof she may seem, her passion stems from years of traditional and digital art, pixel work, comics featuring DC's women characters or 'School Bus Graveyard', and active engagement within the online art community.<br>She doesn't compromise, and she doesn't do \"good enough.\" Whether it's gritty 'Arcane'-style lighting or 'Little Witch Academia'-inspired color pops, she knows exactly what she wants—and she'll make sure the committees look just as animated as the debates."
+            },
+            {
+                "name": "Shavar Lal Shrestha",
+                "role": "Head of Art",
+                "img": "head2.webp",
+                "desc": "As Head of Art, Shavar brings a rich and creative background spanning diverse musical genres and illustrative mediums, ready to push creative boundaries and elevate this MUN into an exquisite, deeply engaging experience. His artistic vision is uniquely shaped by his guitar’s six strings, a foundation that taught him how to seamlessly translate abstract ideas into vivid visual experiences.<br>For Shavar, art is never mere decoration, it is a vital form of communication that injects energy, profound emotion, and a distinct identity into the event. Through deliberate designs and inventive concepts, he ensures every detail helps forge a vibrant, memorable atmosphere for all participants.<br>While his creative process might initially seem unconventional, with early concepts appearing scattered or maybe out of context sometimes, there is always a deliberate vision at play. Driven by deep imagination, patience, and meticulous refinement, these separate elements gradually unite into a cohesive, impeccable masterpiece."
+            },
+            {
+                "name": "Sara Pradhanang",
+                "role": "Head of Art",
+                "img": "head1.webp",
+                "desc": "Creativity has shaped Sara’s life for over eleven years, influencing both her artistic journey and her perspective of the world. Through art, she has found a meaningful way to express ideas, emotions, and stories, believing that every piece should carry purpose. She approaches each creation with intention, imagination, and careful attention to detail, while her calm, patient, and innovative nature is reflected in both her work and collaboration with others. As the Head of Arts for this year’s RBS MUN, Sara is committed to creating designs and decorations that reflect the conference’s vision. With over a decade of artistic experience, she aims to ensure that every visual element is both creative and professional. Through thoughtful design and attention to detail, she hopes to create an engaging atmosphere where every delegate enjoys a memorable conference experience."
+            }
         ],
         "core": []
     },
@@ -56,24 +150,66 @@
         "title": "Media & Communications",
         "desc": "The Media team captures and communicates the RBSMUN story — through photography, videography, social media coverage, press releases, and the official conference newsletter. They ensure every moment is documented and shared with the world.",
         "heads": [
-            { "name": "To be announced", "role": "Head of Media", "img": "head1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Media", "img": "head2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Head of Media", "img": "head3.webp", "desc": "" }
+            {
+                "name": "James Puri",
+                "role": "Head of Media",
+                "img": "head1.webp",
+                "desc": "Behind every conference that looks effortless online is a media team scrambling to make it look that way, and James keeps that scramble organized. As Head of Media, he oversees the coverage that captures the conference as it actually happened, from opening ceremony to the last gavel bang. If the conference runs on deadlines nobody quite hits, James runs on chasing them down. Photos \"definitely sent in the viber gc\" that never actually were, a delegate who promised a quote and vanished, whoever borrowed the camera and returned it full of pictures of their committee crush. He's learned to hunt with patience and zero hard feelings. He doesn't mind being in front of the camera either, making him either a great example for the team or just the easiest person to rope into a photo last minute. When something goes sideways, a dead battery before opening ceremony, a caption needed five minutes ago, he'd rather pull the team in and figure it out together than fix it alone. So if the RBSMUN promo videos somehow look better than the conference felt, that's James."
+            },
+            {
+                "name": "Ashriya Pariyar",
+                "role": "Head of Media",
+                "img": "head3.webp",
+                "desc": "As the Head of Media, Ashriya is responsible for making everything look put together, even when it absolutely isn’t. She’s the kind of person who will say “it’s under control” while trying to handle three different problems at once, usually with minimal sleep and maximum determination. Despite the chaos that comes with events, she somehow manages to stay calm (or at least appear calm).<br>Outside of the role, Ashriya is someone who genuinely enjoys being creative and working with people. She notices the little things others overlook and cares a lot about getting details right, even if it means redoing something five times. She also strongly believes that good teamwork, clear communication, and a few well-timed jokes can fix almost anything.<br>With her strong work ethic and slightly perfectionist tendencies, Ashriya puts her all into making sure the media coverage is engaging, memorable, and worth looking back on."
+            },
+            {
+                "name": "Saanvi Pandey",
+                "role": "Head of Media",
+                "img": "head2.webp",
+                "desc": "One can't begin to describe Saanvi as a person in a short passage. She just isn’t someone you can tell stories about; you just have to be there to experience her in the moment.<br>Saanvi’s bubbly personality and outgoing nature make her endearing and draw you towards her. Her superhuman ability is to make anyone feel seen or heard. Despite being the social butterfly she is, most people overlook her best trait— resilience. Even the GOAT gets a little melodramatic here and there. Still, it's admirable how steady she can be whilst naturally adapting to all that's changing around her. Saanvi is tender-hearted and delicate, yet that softness may be dangerously deceptive when her “light banter” ends up making you reconsider your life decisions. With her as the Head of Media, Saanvi will make media feel less like work and more like a passion project while ensuring that the best moments of the conference don’t go unnoticed."
+            }
         ],
         "core": []
     },
     "photography": {
         "id": "photography",
         "title": "Photography",
+        "group_position": "center top 15%",
+        "group_zoom": 1.2,
         "desc": "The Photography team is responsible for capturing the essence of the conference in still frames. From intense committee debates to the vibrant social events, they freeze the best moments of RBSMUN in time.",
         "heads": [
-            { "name": "To be announced", "role": "Head of Photography", "img": "head.webp", "desc": "" }
+            {
+                "name": "Reznoor Kunwar",
+                "role": "Head of Photography",
+                "img": "head.webp",
+                "desc": "While everyone else at RBSMUN focuses on the debate, Reznoor is focused on capturing every moment. Long before picking up her camera, she has already planned the angles, lighting, and positioning. Her incredible attention to detail always places her exactly where the action is. As Head of Photography, Reznoor effortlessly balances a team, tight schedules, and the responsibility of ensuring nothing is missed. Always thinking steps ahead, she keeps her team running smoothly. Though her serious focus and high standards can seem intimidating at first, she leads by example. Reznoor genuinely values everyone's ideas and helps her photographers excel, ensuring every single moment of the conference is captured with purpose and care."
+            }
         ],
         "core": [
-            { "name": "To be announced", "role": "Photography Team", "img": "core1.webp", "desc": "" },
-            { "name": "To be announced", "role": "Photography Team", "img": "core2.webp", "desc": "" },
-            { "name": "To be announced", "role": "Photography Team", "img": "core3.webp", "desc": "" },
-            { "name": "To be announced", "role": "Photography Team", "img": "core4.webp", "desc": "" }
+            {
+                "name": "Ashirwad Dahal",
+                "role": "Photography Team",
+                "img": "core3.webp",
+                "desc": "Ashirwad captures raw emotion, favoring candid storytelling over stiff poses. He anticipates reactions, navigating crowded rooms to document authentic interactions. Inspired by the meticulous planning seen he brings high energy to event coverage. He treats schedules with precision, balancing tight deadlines with an uncompromising demand for quality. He remains calm under pressure, whether managing equipment failures or scouting the floor for the perfect angle. Just as team leaders prioritize seamless execution, Ashirwad approaches his work with dedication, ensuring every responsibility is met with effort. He documents the true story of your weekend, leading by example to ensure every moment is captured with purpose and care."
+            },
+            {
+                "name": "Prakriti Gurung",
+                "role": "Photography Team",
+                "img": "core4.webp",
+                "desc": "Prakriti is a bright, cheerful, and friendly individual who brings positive energy wherever she goes. With a fun-loving personality and a kind heart, she enjoys connecting with people and creating a welcoming atmosphere for everyone around her. Her favorite color, yellow, perfectly reflects her optimistic outlook, creativity, and vibrant spirit. As a photographer, Prakriti believes that every photograph should tell a story. She enjoys capturing genuine emotions, meaningful interactions, and unforgettable moments through her lens. Rather than simply taking pictures, she focuses on preserving the atmosphere and authenticity of every occasion. Calm, observant, and dedicated, she pays close attention to detail while working efficiently in fast-paced environments. She enjoys experimenting with angles, lighting, and composition to create photographs that feel both natural and memorable. Whether documenting special events or candid everyday moments, she strives to ensure every image reflects the emotion and personality of its subject. Through her photography, Prakriti hopes to create lasting memories that people can look back on with joy and appreciation."
+            },
+            {
+                "name": "Saanvi Bajracharya",
+                "role": "Photography Team",
+                "img": "core1.webp",
+                "desc": "Saanvi is someone who thrives on curiosity, creativity, and meaningful connections. Calm under pressure yet naturally cheerful, she enjoys bringing positive energy wherever she goes. She values collaboration, embraces new challenges with an open mind, and believes that adaptability and an optimistic attitude can make even the busiest moments enjoyable. Thoughtful and observant by nature, she is always eager to learn, grow, and see the world from different perspectives. Photography allows Saanvi to turn those qualities into something tangible. She enjoys finding the moments that others might overlook and documenting the atmosphere that makes every event unique. In fast paced environments, she stays composed, thinks on her feet, and works closely with her team to ensure every important moment is captured with purpose. She hopes her photographs not only document an event but also reflect the people, passion, and dedication that bring it to life."
+            },
+            {
+                "name": "Parth Bikram Rana",
+                "role": "Photography Team",
+                "img": "core2.webp",
+                "desc": "Parth is one of the most extroverted and outgoing people that you will find in RBS. He is fun to be around and full of surprises, which makes him really enjoyable to be around. While clicking photos, Parth is calm, creative, and a detail-oriented individual who enjoys observing and finding beauty in the little things that others often disregard. Rather than capturing an entire scene, he prefers focusing on a single subject, allowing the person's emotions and character to become the center of attention. Whether it is a person's expression or a fleeting moment, Parth believes every photo has a story waiting to be told. He aims to highlight these small yet meaningful details, creating images that are both personal and impactful. Parth carefully composes every photograph to reflect an idea that he has in his mind. His goal is to create photographs that leave a lasting impression by emphasizing simplicity and highlighting the beauty of a single subject."
+            }
         ]
     }
 }

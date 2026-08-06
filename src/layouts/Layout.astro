@@ -1482,6 +1482,8 @@ const canonicalURL = new URL(
                     role: string,
                     img: string,
                     desc: string,
+                    imgPos?: string,
+                    imgZoom?: string,
                 ) => {
                     const popup = document.getElementById("personPopup");
                     if (!popup) return;
@@ -1506,6 +1508,16 @@ const canonicalURL = new URL(
                             "This member represents the pinnacle of leadership and dedication. Tasked with executing a flawless conference experience, their role involves coordinating with executive board members, overseeing committee dynamics, and ensuring academic rigor. With a strong background in public speaking and international relations, they are committed to fostering a supportive, challenging, and intellectually stimulating environment for all delegates at RBSMUN 2026.";
                     if (popupPhoto && popupPhotoPlaceholder) {
                         popupPhoto.src = img;
+                        if (imgPos) {
+                            popupPhoto.style.setProperty("--img-position", imgPos);
+                        } else {
+                            popupPhoto.style.removeProperty("--img-position");
+                        }
+                        if (imgZoom) {
+                            popupPhoto.style.setProperty("--img-zoom", imgZoom);
+                        } else {
+                            popupPhoto.style.removeProperty("--img-zoom");
+                        }
                         popupPhoto.style.display = "block";
                         (popupPhotoPlaceholder as HTMLElement).style.display =
                             "none";

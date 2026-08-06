@@ -97,7 +97,9 @@ const isSecretariat = team.id === "secretariat";
                                     data-person-role={m.role}
                                     data-person-img={imgSrc}
                                     data-person-desc={m.desc || ""}
-                                    style="cursor:pointer;"
+                                    data-person-img-pos={(m as any).img_position || ""}
+                                    data-person-img-zoom={(m as any).img_zoom ? String((m as any).img_zoom) : ""}
+                                    style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ''}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ''}`}
                                 >
                                     <img
                                         src={imgSrc}
@@ -133,7 +135,9 @@ const isSecretariat = team.id === "secretariat";
                                         data-person-role={m.role}
                                         data-person-img={imgSrc}
                                         data-person-desc={m.desc || ""}
-                                        style="cursor:pointer;"
+                                        data-person-img-pos={(m as any).img_position || ""}
+                                        data-person-img-zoom={(m as any).img_zoom ? String((m as any).img_zoom) : ""}
+                                        style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ''}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ''}`}
                                     >
                                         <img
                                             src={imgSrc}
@@ -227,8 +231,10 @@ const isSecretariat = team.id === "secretariat";
                     const role = card.dataset.personRole || '';
                     const img  = card.dataset.personImg  || '';
                     const desc = card.dataset.personDesc || '';
+                    const imgPos = card.dataset.personImgPos || '';
+                    const imgZoom = card.dataset.personImgZoom || '';
                     if ((window as any).__openPersonPopup) {
-                        (window as any).__openPersonPopup(name, role, img, desc);
+                        (window as any).__openPersonPopup(name, role, img, desc, imgPos, imgZoom);
                     }
                 });
             });
