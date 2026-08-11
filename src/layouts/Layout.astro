@@ -1339,9 +1339,16 @@ const canonicalURL = new URL(
                 const navLinksContainer = document.getElementById("navLinks");
                 if (!navToggle || !navLinksContainer) return;
 
+                // Clean up any stray navLinks direct children of body from previous pages
+                document.body.querySelectorAll("body > #navLinks").forEach(el => {
+                    if (el !== navLinksContainer) el.remove();
+                });
+
                 function updateNavDomPosition() {
                     if (window.innerWidth <= 768) {
-                        document.body.appendChild(navLinksContainer!);
+                        if (document.body.lastElementChild !== navLinksContainer) {
+                            document.body.appendChild(navLinksContainer!);
+                        }
                     } else {
                         const navInner = document.querySelector(".nav-inner");
                         if (navInner && !navInner.contains(navLinksContainer)) {
@@ -1368,19 +1375,27 @@ const canonicalURL = new URL(
                 }
 
                 updateNavDomPosition();
+
+                // Clean up previous resize handler if it exists
+                if ((window as any).__navResizeHandler) {
+                    window.removeEventListener("resize", (window as any).__navResizeHandler);
+                }
+                (window as any).__navResizeHandler = updateNavDomPosition;
                 window.addEventListener("resize", updateNavDomPosition);
 
-                const links = navLinksContainer.querySelectorAll("a");
                 navLinksContainer
                     .querySelectorAll<HTMLElement>("a:not(.mobile-nav-cta)")
                     .forEach((link) => {
-                        const block = document.createElement("div");
-                        block.className = "reveal-block";
-                        link.appendChild(block);
+                        if (!link.querySelector(".reveal-block")) {
+                            const block = document.createElement("div");
+                            block.className = "reveal-block";
+                            link.appendChild(block);
+                        }
                     });
 
                 let isMenuOpen = false;
                 let menuTl = gsap.timeline({ paused: true });
+                const links = navLinksContainer.querySelectorAll("a");
                 menuTl
                     .to(links, { opacity: 1, duration: 0.2, stagger: 0.05 })
                     .to(
@@ -1395,7 +1410,7 @@ const canonicalURL = new URL(
                         0,
                     );
 
-                navToggle.addEventListener("click", () => {
+                const onToggleClick = () => {
                     isMenuOpen = !isMenuOpen;
                     navToggle.classList.toggle("active");
                     navLinksContainer.classList.toggle("open");
@@ -1404,7 +1419,9 @@ const canonicalURL = new URL(
                     } else {
                         menuTl.reverse();
                     }
-                });
+                };
+
+                navToggle.addEventListener("click", onToggleClick);
 
                 // Close mobile menu when any link is tapped
                 navLinksContainer.querySelectorAll("a").forEach((link) => {
@@ -1417,6 +1434,15 @@ const canonicalURL = new URL(
                         }
                     });
                 });
+
+                // Cleanup on page leave (important for View Transitions)
+                document.addEventListener("astro:before-swap", () => {
+                    window.removeEventListener("resize", updateNavDomPosition);
+                    navToggle.removeEventListener("click", onToggleClick);
+                    if (navLinksContainer && navLinksContainer.parentNode === document.body) {
+                        navLinksContainer.remove();
+                    }
+                }, { once: true });
             }
 
             // ─── INIT ALL ──────────────────────────────────────────────────────────

@@ -1,16 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import WebGLBackground from '../components/WebGLBackground.jsx';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import Layout from "../layouts/Layout.astro";
+import WebGLBackground from "../components/WebGLBackground.jsx";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="RBSMUN 2026 — Rato Bangala School Model United Nations">
-
     <WebGLBackground client:only="react" />
 
-    <nav class="glass-nav" id="mainNav" style="opacity: 0; clip-path: circle(0% at 50% 0%); -webkit-clip-path: circle(0% at 50% 0%);">
+    <nav
+        class="glass-nav"
+        id="mainNav"
+        style="opacity: 0; clip-path: circle(0% at 50% 0%); -webkit-clip-path: circle(0% at 50% 0%);"
+    >
         <div class="nav-inner">
-            <a href={`${base}/`} class="nav-logo"><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo"></a>
+            <a href={`${base}/`} class="nav-logo"
+                ><img src={`${base}/images/logo.webp`} alt="RBSMUN Logo" /></a
+            >
             <div class="nav-links" id="navLinks">
                 <a href={`${base}/`} class="active">Home</a>
                 <a href={`${base}/about`}>About Us</a>
@@ -18,15 +23,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                target="_blank" class="nav-cta">Register →</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                target="_blank"
+                class="nav-cta">Register →</a
+            >
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <section class="hero" id="hero" style={`background-image: url('${base}/images/miscellaneous/PMS01512.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;`}>
+    <section
+        class="hero"
+        id="hero"
+        style={`background-image: url('${base}/images/miscellaneous/PMS01512.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;`}
+    >
         <div class="hero-bg-overlay"></div>
         <div class="hero-mesh"></div>
         <div class="hero-glass-panel hero-glass-1"></div>
@@ -84,19 +96,39 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
                 <div class="about-editorial-right">
                     <p class="section-eyebrow">About RBSMUN</p>
-                    <h2 class="section-title" style="text-align:left; margin-bottom: 1.5rem;">Nepal's <span
-                            class="text-gradient">Most Prestigious</span><br>Student-Run Conference</h2>
+                    <h2
+                        class="section-title"
+                        style="text-align:left; margin-bottom: 1.5rem;"
+                    >
+                        Nepal's <span class="text-gradient"
+                            >Most Prestigious</span
+                        ><br />Student-Run Conference
+                    </h2>
                     <div class="about-editorial-body">
-                        <p>As one of the first Model United Nations conferences in the country, RBSMUN has spent two
-                            decades building a space where students transform into diplomats.</p>
-                        <p>Hosted entirely by students of RBS, the conference draws delegates from across Nepal to
-                            debate, negotiate, and draft solutions to the world's most pressing challenges.</p>
-                        <p>This year's theme — <em>Conflict Prevention &amp; Peace</em> — confronts an increasingly
-                            polarised world head-on, exploring the structures that hold societies together and the
-                            fractures that tear them apart.</p>
+                        <p>
+                            As one of the first Model United Nations conferences
+                            in the country, RBSMUN has spent two decades
+                            building a space where students transform into
+                            diplomats.
+                        </p>
+                        <p>
+                            Hosted entirely by students of RBS, the conference
+                            draws delegates from across Nepal to debate,
+                            negotiate, and draft solutions to the world's most
+                            pressing challenges.
+                        </p>
+                        <p>
+                            This year's theme — <em
+                                >Conflict Prevention &amp; Peace</em
+                            > — confronts an increasingly polarised world head-on,
+                            exploring the structures that hold societies together
+                            and the fractures that tear them apart.
+                        </p>
                     </div>
                     <div style="margin-top: 2.5rem;">
-                        <a href="/about" class="btn btn-glass">Read our full history →</a>
+                        <a href="/about" class="btn btn-glass"
+                            >Read our full history →</a
+                        >
                     </div>
                 </div>
             </div>
@@ -107,25 +139,133 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="container">
             <div class="section-header" data-anim="reveal">
                 <p class="section-eyebrow">A Message</p>
-                <h2 class="section-title">From the <span class="text-gradient">Secretary General</span></h2>
+                <h2 class="section-title">
+                    From the <span class="text-gradient">Secretary General</span
+                    >
+                </h2>
             </div>
             <div class="letter-layout" data-anim="morph-in">
                 <div class="glass-card letter-card">
                     <div class="letter-accent-line"></div>
-                    <p class="letter-greeting">Dearest Delegates and Faculty Advisors,</p>
-                    <p class="letter-text">It is with great pride and honour that I welcome you all to the Rato Bangala
-                        School Model United Nations conference. Since its inception in 2005, RBSMUN has strived to
-                        create an environment that facilitates stimulating exchanges coupled with the drive to bring
-                        forth change.</p>
-                    <p class="letter-text">A pioneer of MUN culture in Nepal, this student-run conference fosters vital
-                        skills that reach far beyond the boundaries of international relations, preparing delegates for
-                        the highs and lows in various facets of life.</p>
-                    <p class="letter-text">By bringing together some of the most promising students from across the
-                        region to emerge as better leaders, we hope to make this RBSMUN a transformative experience —
-                        one that delegates will carry with them for the rest of their lives.</p>
+                    <p class="letter-greeting">
+                        Dearest Delegates and Faculty Advisors,
+                    </p>
+                    <p class="letter-text">
+                        It is with immense pride and excitement that I welcome
+                        you all to the twenty-first iteration of the Rato
+                        Bangala School Model United Nations Conference.
+                    </p>
+                    <p class="letter-text">
+                        My name is Pragyan Gautam, a senior at Rato Bangala
+                        School, and it is my privilege to serve as the
+                        Secretary-General of RBSMUN XXI.
+                    </p>
+                    <p class="letter-text">
+                        I did not begin debating because I dreamt of changing
+                        the world. I started because I liked winning. But as I
+                        attended international MUNS and WSDC, I quickly realised
+                        there were rooms where I was no longer the best speaker
+                        or the best thinker. Surprisingly, that did not make me
+                        enjoy MUNs any less – it made me love them even more.
+                    </p>
+                    <p class="letter-text">
+                        Over time, I realised that debate and Model United
+                        Nations were never really about winning. They were about
+                        growth. Every difficult committee, every challenging
+                        POI, and every disagreement pushed me a little further
+                        than I thought I could go. And they will push you too.
+                    </p>
+                    <p class="letter-text">
+                        I realise now that MUNs are also about experiencing new
+                        perspectives and ideas from the brightest of minds.
+                        Perhaps that is what makes MUN so special. It gives
+                        young people like us something we are not trusted with:
+                        a seat at the table. For these three days, we get to
+                        become diplomats, judges, legislators, journalists
+                        discussing conflicts, global economy, technologies, and
+                        human rights to name a few. We are trusted to discuss
+                        these matters, not because we have all the answers, but
+                        because we are willing to search for them. In a world
+                        where young people are often told to wait their turn,
+                        MUN reminds us that our voices already matter.
+                    </p>
+                    <p class="letter-text">
+                        So, if this is your first conference and you are worried
+                        about forgetting your speech or accidentally referring
+                        to yourself as "the distinguished delegate" outside
+                        committee, remember that everyone started somewhere.
+                        Growth always disguises itself as discomfort. Whether
+                        you leave RBSMUN with a medal or simply a copy full of
+                        notes, I promise you will leave more confident and much
+                        more capable than when you arrived. But most
+                        importantly, remember to zoom out a little and think
+                        about why we are doing what we are doing. As future
+                        leaders of the world, MUNs make us care about the world
+                        beyond our borders and give us a sense of the impact we
+                        are capable of making.
+                    </p>
+                    <p class="letter-text">
+                        Since its inception in 2005, RBSMUN has remained
+                        committed to fostering thoughtful dialogue, principled
+                        diplomacy, and meaningful collaboration. As one of
+                        Nepal's pioneering student-run MUN conferences, it has
+                        become a platform where delegates cultivate skills that
+                        extend far beyond committee rooms – from critical
+                        thinking and negotiation to empathy, leadership, and
+                        cooperation.
+                    </p>
+                    <p class="letter-text">
+                        Today, we live in a world that feels increasingly
+                        fragmented. Wars continue to rage, misinformation
+                        spreads faster than truth and differences in identity,
+                        and ideology too often become reasons for division
+                        rather than dialogue. Yet history has repeatedly shown
+                        that humanity has made its greatest progress not when we
+                        have spoken the loudest, but when we have listened the
+                        most.
+                    </p>
+                    <p class="letter-text">
+                        I believe this year's theme, "Unity and Inclusion in a
+                        Fragmented World," reflects that belief. Unity does not
+                        mean thinking alike, nor does inclusion require us to
+                        abandon our differences. Instead, they remind us that
+                        disagreement need not become hostility, and that
+                        meaningful progress is only possible when every voice
+                        has the opportunity to be heard.
+                    </p>
+                    <p class="letter-text">
+                        This year's committee selection reflects that spirit.
+                        Delegates will debate cyber warfare in DISEC, sovereign
+                        debt reform in ECOFIN, and questions of international
+                        law before the ICJ. Others will navigate historical
+                        crises in the Imperial Romanov Court and the Cambodian
+                        Crisis Cabinet, address technology-facilitated violence
+                        in UN Women, examine human rights in green energy supply
+                        chains, and even deliberate over divine authority in the
+                        Grand Convocation of the Mythical Realms. Though every
+                        committee explores a different challenge, they all ask
+                        the same fundamental question: how do people with
+                        competing interests build a shared future?
+                    </p>
+                    <p class="letter-text">
+                        As delegates from across Nepal and beyond come together,
+                        my hope is that RBSMUN XXI becomes more than just
+                        another conference. I hope it becomes a place where
+                        ideas are challenged respectfully, friendships are built
+                        unexpectedly, and perspectives are broadened constantly.
+                        Long after the awards have been handed out and the
+                        gavels packed away, I hope you remember not just the
+                        resolutions you drafted, but the conversations that
+                        changed how you saw the world—and the confidence you
+                        discovered in your own voice.
+                    </p>
+                    <p class="letter-text">
+                        I look forward to welcoming you all this December.
+                    </p>
                     <div class="letter-signature">
                         <div class="signature-line"></div>
-                        <p class="signature-name">The Secretary-General</p>
+                        <p class="signature-name">Pragyan Gautam</p>
+                        <p class="signature-title">The Secretary-General</p>
                         <p class="signature-title">RBSMUN 2026</p>
                     </div>
                 </div>
@@ -138,15 +278,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="container">
             <div class="cta-content" data-anim="morph-in">
                 <div class="cta-glass-card glass-card">
-                    <h2 class="cta-title">Ready to Shape<br>the <span class="text-gradient">Future</span>?</h2>
-                    <p class="cta-subtitle">Join over 500 delegates in one of Nepal's most prestigious MUN conferences.
+                    <h2 class="cta-title">
+                        Ready to Shape<br />the <span class="text-gradient"
+                            >Future</span
+                        >?
+                    </h2>
+                    <p class="cta-subtitle">
+                        Join over 500 delegates in one of Nepal's most
+                        prestigious MUN conferences.
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                        target="_blank" class="btn btn-primary btn-lg">
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                        target="_blank"
+                        class="btn btn-primary btn-lg"
+                    >
                         <span>Register for RBSMUN 2026</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                        >
+                            <path
+                                d="M3 8h10M9 4l4 4-4 4"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
                         </svg>
                     </a>
                 </div>
@@ -158,8 +316,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4 class="footer-logo">RBS<span class="logo-accent">MUN</span></h4>
-                    
+                    <h4 class="footer-logo">
+                        RBS<span class="logo-accent">MUN</span>
+                    </h4>
                 </div>
                 <div class="footer-col">
                     <h4>Navigate</h4>
@@ -170,7 +329,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <a href="mailto:contact@ratobangala.edu.np">contact@ratobangala.edu.np</a>
+                    <a href="mailto:contact@ratobangala.edu.np"
+                        >contact@ratobangala.edu.np</a
+                    >
                     <a href="tel:015447618">01-5447618</a>
                     <a href="tel:015447620">01-5447620</a>
                 </div>
@@ -180,5 +341,4 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
             </div>
         </div>
     </footer>
-
 </Layout>
