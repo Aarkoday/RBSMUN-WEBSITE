@@ -31,8 +31,8 @@ const showComingSoon = true;
     </nav>
 
     {showComingSoon ? (
-        <div class="content-wrapper" style="min-height: calc(100vh - 80px - 300px); display: flex; align-items: center; justify-content: center; padding: 4rem 1rem;">
-            <div class="container" style="display: flex; justify-content: center; width: 100%;">
+        <div style="display: flex; flex-direction: column; min-height: calc(100vh - 80px);">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1rem;">
                 <div class="glass-card" style="max-width: 600px; width: 100%; text-align: center; padding: clamp(2rem, 8vw, 4rem);" data-anim="morph-in">
                     <div class="card-glow"></div>
                     <p class="section-eyebrow" style="margin-bottom: 1rem;">Itinerary & Logistics</p>
