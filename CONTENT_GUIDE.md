@@ -227,7 +227,29 @@ Edit the history paragraph and timeline items directly in the HTML. Each timelin
 
 **File:** `src/pages/conference.astro`
 
-Edit the schedule table (dates, times, events) and venue/location information directly in the HTML.
+### Coming Soon Toggle
+
+At the very top of the file (line 7) there is a single variable that controls whether the page shows the **"Coming Soon"** screen or the **full conference details**:
+
+```js
+// Set to true  → visitors see the "Coming Soon" card
+// Set to false → visitors see the hero, bento info cards, and schedule tables
+const showComingSoon = true;
+```
+
+To **publish the full schedule**, change `true` to `false`, save the file, and deploy:
+
+```js
+const showComingSoon = false;
+```
+
+To **bring the Coming Soon screen back**, change it back to `true`.
+
+> **No other changes are needed.** Both layouts live in the same file — the toggle simply switches between them at build time.
+
+### Editing the Schedule
+
+When `showComingSoon` is `false`, edit the schedule table rows (times and events) and the bento info cards (Venue, Dress Code, Registration) directly in the HTML below the toggle.
 Update the Google Forms registration link when ready.
 
 ---
@@ -251,7 +273,7 @@ It appears in the top-left of the navigation bar on every page.
 | Home page text & SG letter | `src/pages/index.astro` |
 | Stats numbers | `src/pages/index.astro` |
 | About page text & timeline | `src/pages/about.astro` |
-| Conference schedule | `src/pages/conference.astro` |
+| Conference schedule & Coming Soon toggle | `src/pages/conference.astro` (change `showComingSoon`) |
 | Logo | `public/images/logo.webp` |
 | Committee member photos | `public/images/committees/COMMITTEE_ID/` |
 | Team member photos | `public/images/team/TEAM_ID/` |
