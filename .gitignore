@@ -1,5 +1,7 @@
 graphify-out/
 .agents/
+scripts/
+src/pages/tools/
 v2/
 .vscode/
 Old/

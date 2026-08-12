@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import WebGLBackground from '../components/WebGLBackground.jsx';
+import { REGISTRATION_URL } from '../data/site-config';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // TOGGLE: Set to true to display the "Coming Soon" screen.
@@ -22,8 +23,11 @@ const showComingSoon = true;
                 <a href={`${base}/conference`} class="active">Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                target="_blank" class="nav-cta">Register →</a>
+            {REGISTRATION_URL ? (
+                <a href={REGISTRATION_URL} target="_blank" class="nav-cta">Register →</a>
+            ) : (
+                <button class="nav-cta" style="pointer-events: none; opacity: 0.75;" tabindex="-1">Coming Soon</button>
+            )}
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -88,9 +92,15 @@ const showComingSoon = true;
                                 <li><strong>Early Bird Deadline:</strong> To be announced</li>
                                 <li><strong>Regular Deadline:</strong> To be announced</li>
                             </ul>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
-                                target="_blank" class="btn btn-glass"
-                                style="font-size: 0.75rem; padding: 0.5rem 1rem;">Register Here →</a>
+                            {REGISTRATION_URL ? (
+                                <a href={REGISTRATION_URL}
+                                    target="_blank" class="btn btn-glass"
+                                    style="font-size: 0.75rem; padding: 0.5rem 1rem;">Register Here →</a>
+                            ) : (
+                                <button class="btn btn-glass"
+                                    style="font-size: 0.75rem; padding: 0.5rem 1rem; pointer-events: none; opacity: 0.75;"
+                                    tabindex="-1">Coming Soon</button>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -93,17 +93,13 @@
     "it": {
         "id": "it",
         "title": "IT",
-        "group_position": "top 10% center",
-        "group_zoom": 1.1,
         "desc": "The IT team is responsible for all things digital — the conference website, registration systems, live updates, audio-visual support during sessions, and ensuring seamless technical infrastructure throughout the event.",
         "heads": [
             {
                 "name": "Aarav Panday",
                 "role": "Head of IT",
                 "img": "head.webp",
-                "desc": "Aarav is the kind of person who sees technology as more than just code, it is a way to bring ideas to life. Whether he is building websites, automating tasks, managing digital platforms, or troubleshooting problems that seem impossible at first, he enjoys creating solutions that are both practical and impactful. Curious by nature, he is always exploring new technologies, from AI and robotics to web development, and believes the best way to learn is by building. His workflow is a mix of organized chaos, with late-night coding sessions, oddly named files, and countless experiments somehow coming together into polished results. He would rather let his work speak for itself than seek the spotlight, but when something needs fixing or improving, he’s usually the first person people turn to. As Head of IT, he brings creativity, reliability, and a builder’s mindset, making sure the MUN’s digital presence is not only functional but constantly evolving.",
-                "card_position": "20% 50%",
-                "card_zoom": 1.1
+                "desc": "Aarav is the kind of person who sees technology as more than just code, it is a way to bring ideas to life. Whether he is building websites, automating tasks, managing digital platforms, or troubleshooting problems that seem impossible at first, he enjoys creating solutions that are both practical and impactful. Curious by nature, he is always exploring new technologies, from AI and robotics to web development, and believes the best way to learn is by building. His workflow is a mix of organized chaos, with late-night coding sessions, oddly named files, and countless experiments somehow coming together into polished results. He would rather let his work speak for itself than seek the spotlight, but when something needs fixing or improving, he’s usually the first person people turn to. As Head of IT, he brings creativity, reliability, and a builder’s mindset, making sure the MUN’s digital presence is not only functional but constantly evolving."
             }
         ],
         "core": [
@@ -176,8 +172,6 @@
     "photography": {
         "id": "photography",
         "title": "Photography",
-        "group_position": "center top 15%",
-        "group_zoom": 1.2,
         "desc": "The Photography team is responsible for capturing the essence of the conference in still frames. From intense committee debates to the vibrant social events, they freeze the best moments of RBSMUN in time.",
         "heads": [
             {

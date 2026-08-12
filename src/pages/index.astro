@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import WebGLBackground from "../components/WebGLBackground.jsx";
+import { REGISTRATION_URL } from "../data/site-config";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
@@ -23,11 +24,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
+            {REGISTRATION_URL ? (
             <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                href={REGISTRATION_URL}
                 target="_blank"
                 class="nav-cta">Register →</a
             >
+            ) : (
+            <button
+                class="nav-cta"
+                style="pointer-events: none; opacity: 0.75;"
+                tabindex="-1">Coming Soon</button>
+            )}
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -277,26 +285,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                         Join over 500 delegates in one of Nepal's most
                         prestigious MUN conferences.
                     </p>
+                    {REGISTRATION_URL ? (
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScHRl-Q3-XBSMNHwiufUyGBYGU-MBBVO2-GGSOJL0atyxPcKg/viewform"
+                        href={REGISTRATION_URL}
                         target="_blank"
                         class="btn btn-primary btn-lg"
                     >
                         <span>Register for RBSMUN 2026</span>
-                        <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                        >
-                            <path
-                                d="M3 8h10M9 4l4 4-4 4"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </a>
+                    ) : (
+                    <button
+                        class="btn btn-primary btn-lg"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        <span>Coming Soon</span>
+                    </button>
+                    )}
                 </div>
             </div>
         </div>
