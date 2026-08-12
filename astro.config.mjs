@@ -13,7 +13,7 @@ import sitemap from '@astrojs/sitemap';
 // You can also set this via command line:
 //   $ DEPLOY_TARGET=github npm run build
 // ==============================================================================
-const TARGET_ENV = process.env.DEPLOY_TARGET || 'github'; // Set 'custom' or 'github'
+const TARGET_ENV = process.env.DEPLOY_TARGET || 'custom'; // Set 'custom' or 'github'
 
 // Auto-detect GitHub repository name if building in GitHub Actions
 const GITHUB_REPO_FULL = process.env.GITHUB_REPOSITORY || 'Aarkoday/RBSMUN-WEBSITE';
