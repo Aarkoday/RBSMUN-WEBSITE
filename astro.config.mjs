@@ -21,7 +21,7 @@ const [githubOwner, githubRepo] = GITHUB_REPO_FULL.split('/');
 
 const configs = {
   custom: {
-    site: 'rbsmun.com',
+    site: 'https://rbsmun.com',
     base: '/',
   },
   github: {
