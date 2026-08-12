@@ -43,7 +43,7 @@ jobs:
 
       - name: Build with Astro
         env:
-          DEPLOY_TARGET: "github"
+          DEPLOY_TARGET: "custom"
         run: npm run build
 
       - name: Upload artifact
