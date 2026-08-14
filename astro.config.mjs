@@ -40,7 +40,15 @@ console.log(`🚀 Build Target: [${TARGET_ENV.toUpperCase()}] -> Site: ${activeC
 export default defineConfig({
   site: activeConfig.site,
   base: activeConfig.base,
-  integrations: [react(), tailwind(), sitemap()],
+  integrations: [
+    react(), 
+    tailwind(), 
+    sitemap({
+      filter: (page) => 
+        !page.includes('/tools/') && 
+        !page.includes('/conference_backup')
+    })
+  ],
   vite: {
     plugins: [
       {

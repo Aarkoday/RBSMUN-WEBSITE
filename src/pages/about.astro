@@ -20,18 +20,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            {REGISTRATION_URL ? (
-            <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                class="nav-cta">Register →</a
-            >
-            ) : (
-            <button
-                class="nav-cta"
-                style="pointer-events: none; opacity: 0.75;"
-                tabindex="-1">Coming Soon</button>
-            )}
+            {
+                REGISTRATION_URL ? (
+                    <a href={REGISTRATION_URL} target="_blank" class="nav-cta">
+                        Register →
+                    </a>
+                ) : (
+                    <button
+                        class="nav-cta"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        Coming Soon
+                    </button>
+                )
+            }
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -68,21 +71,66 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                     <div class="card-glow"></div>
                     <p
                         style="color: var(--text-secondary); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem;"
-                    >Since its genesis in 2005, Rato Bangala School Model United Nations (RBSMUN)has been a consistent platform for enthusiastic students from Nepal and beyond to strategize, discover, and grow. Our principal, Miss Milan Dixit, organized the first-ever RBSMUN with the belief that bringing Model UN to Rato Bangala School and Nepal would enable students to grow,  intellectually, socially, and cognitively. Since then, RBS has held its MUN  annually and become one of the most prestigious MUN conferences in the country. It has evolved from an in-school activity to an interschool conference, and, more recently, with its promise of high calibre deliberation and negotiation to an international conference.
+                    >
+                        Since its genesis in 2005, Rato Bangala School Model
+                        United Nations (RBSMUN)has been a consistent platform
+                        for enthusiastic students from Nepal and beyond to
+                        strategize, discover, and grow. Our principal, Miss
+                        Milan Dixit, organized the first-ever RBSMUN with the
+                        belief that bringing Model UN to Rato Bangala School and
+                        Nepal would enable students to grow, intellectually,
+                        socially, and cognitively. Since then, RBS has held its
+                        MUN annually and become one of the most prestigious MUN
+                        conferences in the country. It has evolved from an
+                        in-school activity to an interschool conference, and,
+                        more recently, with its promise of high calibre
+                        deliberation and negotiation to an international
+                        conference.
                     </p>
                     <p
                         style="color: var(--text-secondary); line-height: 1.9; font-size: 1.05rem; margin-bottom: 1.5rem;"
-                    >During Model UN conferences, students transcend the four walls of classrooms and the finite pages of books. Serving as the diplomats of  countries from all over the world, students tackle complex real-world issues ranging from regional conflicts to environmental problems, and, in the process, develop an invaluable understanding of events that shape our world.
+                    >
+                        During Model UN conferences, students transcend the four
+                        walls of classrooms and the finite pages of books.
+                        Serving as the diplomats of countries from all over the
+                        world, students tackle complex real-world issues ranging
+                        from regional conflicts to environmental problems, and,
+                        in the process, develop an invaluable understanding of
+                        events that shape our world.
                     </p>
 
                     <p
                         style="color: var(--text-secondary); line-height: 1.9; font-size: 1.05rem; margin-bottom: 1.5rem;"
-                    >Over the years, RBSMUN has created generations of thoughtful citizens who care about people’s sufferings and care enough to take steps towards a shared future of peace. This year, we hope to continue fostering our precedent: inspiring change. Providing a place for ardent delegates to develop their passions and to share their ideas, we strive to change the status quo. Believing that having a good future requires grooming knowledgeable and dutiful global citizens, RBSMUN provides an opportunity to learn about historic, current, and futuristic world events; to understand their causes, dimensions, and implications; to build a well-informed opinion about the current state of  political, economic, natural, and social affairs; to articulate those stances; to persuade; and to galvanise change for all.  
+                    >
+                        Over the years, RBSMUN has created generations of
+                        thoughtful citizens who care about people’s sufferings
+                        and care enough to take steps towards a shared future of
+                        peace. This year, we hope to continue fostering our
+                        precedent: inspiring change. Providing a place for
+                        ardent delegates to develop their passions and to share
+                        their ideas, we strive to change the status quo.
+                        Believing that having a good future requires grooming
+                        knowledgeable and dutiful global citizens, RBSMUN
+                        provides an opportunity to learn about historic,
+                        current, and futuristic world events; to understand
+                        their causes, dimensions, and implications; to build a
+                        well-informed opinion about the current state of
+                        political, economic, natural, and social affairs; to
+                        articulate those stances; to persuade; and to galvanise
+                        change for all.
                     </p>
 
                     <p
                         style="color: var(--text-secondary); line-height: 1.9; font-size: 1.05rem;"
-                    >Each year, we host a new group of debaters who, at the end of the conference, emerge intrigued, impassioned, and ready to take the reins of  the world in their hands. In this iteration of RBSMUN, we will continue our tradition of excellence, inspiration to growth, and enlightenment of perspective. Join us this December to witness the world of RBS Model UN come to life, and to change your life with its stimulus.  
+                    >
+                        Each year, we host a new group of debaters who, at the
+                        end of the conference, emerge intrigued, impassioned,
+                        and ready to take the reins of the world in their hands.
+                        In this iteration of RBSMUN, we will continue our
+                        tradition of excellence, inspiration to growth, and
+                        enlightenment of perspective. Join us this December to
+                        witness the world of RBS Model UN come to life, and to
+                        change your life with its stimulus.
                     </p>
                 </div>
             </div>
@@ -190,7 +238,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                                 am confident that this year's organising team
                                 will continue that proud tradition led by
                                 <strong
-                                    >Pragyam Gautam as Secretary General, Ruhaan
+                                    >Pragyan Gautam as Secretary General, Ruhaan
                                     Bhatta and Raavya Shrestha as
                                     Deputy-Secretary Generals, and Prasiddha
                                     Mainali as Crisis Director.</strong
