@@ -143,12 +143,27 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 </h2>
             </div>
             <div class="letter-layout" data-anim="morph-in">
-                <div class="glass-card letter-card">
-                    <div class="letter-accent-line"></div>
-                    <!-- Inner two-column: text left, photo right -->
-                    <div class="letter-inner" style="display: flex; gap: 2.5rem; align-items: flex-start;">
+                <!-- Flat card wrapper: no background panel or borders -->
+                <div class="letter-card-flat" style="padding: 3rem 0; border: none; background: none; box-shadow: none;">
+                    <!-- Inner layout: Image floats to the right, letting text wrap below it -->
+                    <div class="letter-inner">
+                        <!-- SG photo floating on desktop -->
+                        <div class="letter-sg-photo" style="float: right; width: clamp(280px, 35%, 400px); margin: 0 0 2rem 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                            <div style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
+                                <img
+                                    src={`${base}/images/team/secretariat/sg.webp`}
+                                    alt="Pragyan Gautam — Secretary General, RBSMUN 2026"
+                                    style="width: 100%; display: block; object-fit: cover; aspect-ratio: 3/4;"
+                                />
+                            </div>
+                            <div style="text-align: center;">
+                                <p style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; margin: 0;">Pragyan Gautam</p>
+                                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0.2rem 0 0;">Secretary-General</p>
+                                <p style="color: var(--accent-primary); font-size: 0.8rem; margin: 0.1rem 0 0;">RBSMUN 2026</p>
+                            </div>
+                        </div>
                         <!-- Letter text -->
-                        <div class="letter-text-col" style="flex: 1; min-width: 0;">
+                        <div class="letter-text-col">
                     <p class="letter-greeting">
                         Dearest Delegates and Faculty Advisors,
                     </p>
@@ -270,24 +285,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                         <p class="signature-title">The Secretary-General</p>
                         <p class="signature-title">RBSMUN 2026</p>
                     </div>
-                    </div>
-                        <!-- SG photo column, right side, sticky -->
-                        <div class="letter-sg-photo" style="flex-shrink: 0; width: clamp(300px, 38%, 440px); position: sticky; top: 100px; display: flex; flex-direction: column; align-items: center; gap: 1rem; align-self: flex-start;">
-                            <div style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
-                                <img
-                                    src={`${base}/images/team/secretariat/sg.webp`}
-                                    alt="Pragyan Gautam — Secretary General, RBSMUN 2026"
-                                    style="width: 100%; display: block; object-fit: cover; aspect-ratio: 3/4;"
-                                />
-                            </div>
-                            <div style="text-align: center;">
-                                <p style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; margin: 0;">Pragyan Gautam</p>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0.2rem 0 0;">Secretary-General</p>
-                                <p style="color: var(--accent-primary); font-size: 0.8rem; margin: 0.1rem 0 0;">RBSMUN 2026</p>
-                            </div>
-                        </div>
-                    </div><!-- end inner flex -->
-                </div><!-- end glass-card -->
+                    </div><!-- end letter-text-col -->
+                    <div style="clear: both;"></div>
+                </div><!-- end flat wrapper -->
             </div><!-- end letter-layout -->
         </div>
     </section>
@@ -364,19 +364,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 <style>
     @media (max-width: 768px) {
-        .letter-inner {
-            flex-direction: column !important;
-        }
         .letter-sg-photo {
+            float: none !important;
             width: 70% !important;
             max-width: 360px;
-            position: static !important;
-            align-self: center;
-            margin: 0 auto;
-            order: -1; /* show above the letter text */
-        }
-        .letter-text-col {
-            min-width: 0;
+            margin: 0 auto 2rem !important;
         }
     }
 </style>
