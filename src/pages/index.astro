@@ -24,18 +24,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            {REGISTRATION_URL ? (
-            <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                class="nav-cta">Register →</a
-            >
-            ) : (
-            <button
-                class="nav-cta"
-                style="pointer-events: none; opacity: 0.75;"
-                tabindex="-1">Coming Soon</button>
-            )}
+            {
+                REGISTRATION_URL ? (
+                    <a href={REGISTRATION_URL} target="_blank" class="nav-cta">
+                        Register →
+                    </a>
+                ) : (
+                    <button
+                        class="nav-cta"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        Coming Soon
+                    </button>
+                )
+            }
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -108,19 +111,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                         class="section-title"
                         style="text-align:left; margin-bottom: 1.5rem;"
                     >
-                        Nepal's <span class="text-gradient"
-                            >Pioneering</span
-                        ><br />Student-Run Conference
+                        Nepal's <span class="text-gradient">Pioneering</span><br
+                        />Student-Run Conference
                     </h2>
                     <div class="about-editorial-body">
-                        <p>As one of the earliest Model United Nations conferences in the country, RBSMUN has spent two decades building and refining a space where students become diplomats.
+                        <p>
+                            As one of the earliest Model United Nations
+                            conferences in the country, RBSMUN has spent two
+                            decades building and refining a space where students
+                            become diplomats.
                         </p>
-                        <p>Hosted entirely by students of RBS, the conference draws delegates from across Nepal to debate, negotiate, and draft solutions to the world’s most pressing challenges.
+                        <p>
+                            Hosted entirely by students of RBS, the conference
+                            draws delegates from across Nepal to debate,
+                            negotiate, and draft solutions to the world’s most
+                            pressing challenges.
                         </p>
                         <p>
                             This year's theme — <em
                                 >Unity &amp; Inclusion in a Fragmented World</em
-                            > — asks students to confront an increasingly polarised world head-on by exploring the structures that hold societies together and those that tear them apart.
+                            > — asks students to confront an increasingly polarised
+                            world head-on by exploring the structures that hold societies
+                            together and those that tear them apart.
                         </p>
                     </div>
                     <div style="margin-top: 2.5rem;">
@@ -144,231 +156,283 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             </div>
             <div class="letter-layout" data-anim="morph-in">
                 <!-- Flat card wrapper: no background panel or borders -->
-                <div class="letter-card-flat" style="padding: 3rem 0; border: none; background: none; box-shadow: none;">
+                <div
+                    class="letter-card-flat"
+                    style="padding: 3rem 0; border: none; background: none; box-shadow: none;"
+                >
                     <!-- Inner layout: Image floats to the right, letting text wrap below it -->
                     <div class="letter-inner">
                         <!-- SG photo floating on desktop -->
-                        <div class="letter-sg-photo" style="float: right; width: clamp(280px, 35%, 400px); margin: 0 0 2rem 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                            <div style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
+                        <div
+                            class="letter-sg-photo"
+                            style="float: right; width: clamp(280px, 35%, 400px); margin: 0 0 2rem 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;"
+                        >
+                            <div
+                                style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 40px rgba(0,0,0,0.5);"
+                            >
                                 <img
-                                    src={`${base}/images/team/secretariat/sg.webp`}
+                                    src={`${base}/images/team/secretariat/sg2.webp`}
                                     alt="Pragyan Gautam — Secretary General, RBSMUN 2026"
                                     style="width: 100%; display: block; object-fit: cover; aspect-ratio: 3/4;"
                                 />
                             </div>
                             <div style="text-align: center;">
-                                <p style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; margin: 0;">Pragyan Gautam</p>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0.2rem 0 0;">Secretary-General</p>
-                                <p style="color: var(--accent-primary); font-size: 0.8rem; margin: 0.1rem 0 0;">RBSMUN 2026</p>
+                                <p
+                                    style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; margin: 0;"
+                                >
+                                    Pragyan Gautam
+                                </p>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.82rem; margin: 0.2rem 0 0;"
+                                >
+                                    Secretary-General
+                                </p>
+                                <p
+                                    style="color: var(--accent-primary); font-size: 0.8rem; margin: 0.1rem 0 0;"
+                                >
+                                    RBSMUN 2026
+                                </p>
                             </div>
                         </div>
                         <!-- Letter text -->
                         <div class="letter-text-col">
-                    <p class="letter-greeting">
-                        Dearest Delegates and Faculty Advisors,
-                    </p>
-                    <p class="letter-text">
-                        It is with immense pride and excitement that I welcome
-                        you all to the twenty-first iteration of the Rato
-                        Bangala School Model United Nations Conference.
-                    </p>
-                    <p class="letter-text">
-                        My name is Pragyan Gautam, a senior at Rato Bangala
-                        School, and it is my privilege to serve as the
-                        Secretary-General of RBSMUN XXI.
-                    </p>
-                    <p class="letter-text">
-                        I did not begin debating because I dreamt of changing
-                        the world. I started because I liked winning. But as I
-                        attended international MUNS and WSDC, I quickly realised
-                        there were rooms where I was no longer the best speaker
-                        or the best thinker. Surprisingly, that did not make me
-                        enjoy MUNs any less – it made me love them even more.
-                    </p>
-                    <p class="letter-text">
-                        Over time, I realised that debate and Model United
-                        Nations were never really about winning. They were about
-                        growth. Every difficult committee, every challenging
-                        POI, and every disagreement pushed me a little further
-                        than I thought I could go. And they will push you too.
-                    </p>
-                    <p class="letter-text">
-                        I realise now that MUNs are also about experiencing new
-                        perspectives and ideas from the brightest of minds.
-                        Perhaps that is what makes MUN so special. It gives
-                        young people like us something we are not trusted with:
-                        a seat at the table. For these three days, we get to
-                        become diplomats, judges, legislators, journalists
-                        discussing conflicts, global economy, technologies, and
-                        human rights to name a few. We are trusted to discuss
-                        these matters, not because we have all the answers, but
-                        because we are willing to search for them. In a world
-                        where young people are often told to wait their turn,
-                        MUN reminds us that our voices already matter.
-                    </p>
-                    <p class="letter-text">
-                        So, if this is your first conference and you are worried
-                        about forgetting your speech or accidentally referring
-                        to yourself as "the distinguished delegate" outside
-                        committee, remember that everyone started somewhere.
-                        Growth always disguises itself as discomfort. Whether
-                        you leave RBSMUN with a medal or simply a copy full of
-                        notes, I promise you will leave more confident and much
-                        more capable than when you arrived. But most
-                        importantly, remember to zoom out a little and think
-                        about why we are doing what we are doing. As future
-                        leaders of the world, MUNs make us care about the world
-                        beyond our borders and give us a sense of the impact we
-                        are capable of making.
-                    </p>
-                    <p class="letter-text">
-                        Since its inception in 2005, RBSMUN has remained
-                        committed to fostering thoughtful dialogue, principled
-                        diplomacy, and meaningful collaboration. As one of
-                        Nepal's pioneering student-run MUN conferences, it has
-                        become a platform where delegates cultivate skills that
-                        extend far beyond committee rooms – from critical
-                        thinking and negotiation to empathy, leadership, and
-                        cooperation.
-                    </p>
-                    <p class="letter-text">
-                        Today, we live in a world that feels increasingly
-                        fragmented. Wars continue to rage, misinformation
-                        spreads faster than truth and differences in identity,
-                        and ideology too often become reasons for division
-                        rather than dialogue. Yet history has repeatedly shown
-                        that humanity has made its greatest progress not when we
-                        have spoken the loudest, but when we have listened the
-                        most.
-                    </p>
-                    <p class="letter-text">
-                        I believe this year's theme, "Unity and Inclusion in a
-                        Fragmented World," reflects that belief. Unity does not
-                        mean thinking alike, nor does inclusion require us to
-                        abandon our differences. Instead, they remind us that
-                        disagreement need not become hostility, and that
-                        meaningful progress is only possible when every voice
-                        has the opportunity to be heard.
-                    </p>
-                    <p class="letter-text">
-                        This year's committee selection reflects that spirit.
-                        Delegates will debate cyber warfare in DISEC, sovereign
-                        debt reform in ECOFIN, and questions of international
-                        law before the ICJ. Others will navigate historical
-                        crises in the Imperial Romanov Court and the Cambodian
-                        Crisis Cabinet, address technology-facilitated violence
-                        in UN Women, examine human rights in green energy supply
-                        chains, and even deliberate over divine authority in the
-                        Grand Convocation of the Mythical Realms. Though every
-                        committee explores a different challenge, they all ask
-                        the same fundamental question: how do people with
-                        competing interests build a shared future?
-                    </p>
-                    <p class="letter-text">
-                        As delegates from across Nepal and beyond come together,
-                        my hope is that RBSMUN XXI becomes more than just
-                        another conference. I hope it becomes a place where
-                        ideas are challenged respectfully, friendships are built
-                        unexpectedly, and perspectives are broadened constantly.
-                        Long after the awards have been handed out and the
-                        gavels packed away, I hope you remember not just the
-                        resolutions you drafted, but the conversations that
-                        changed how you saw the world—and the confidence you
-                        discovered in your own voice.
-                    </p>
-                    <p class="letter-text">
-                        I look forward to welcoming you all this December.
-                    </p>
-                    <div class="letter-signature">
-                        <div class="signature-line"></div>
-                        <p class="signature-name">Pragyan Gautam</p>
-                        <p class="signature-title">The Secretary-General</p>
-                        <p class="signature-title">RBSMUN 2026</p>
+                            <p class="letter-greeting">
+                                Dearest Delegates and Faculty Advisors,
+                            </p>
+                            <p class="letter-text">
+                                It is with immense pride and excitement that I
+                                welcome you all to the twenty-first iteration of
+                                the Rato Bangala School Model United Nations
+                                Conference.
+                            </p>
+                            <p class="letter-text">
+                                My name is Pragyan Gautam, a senior at Rato
+                                Bangala School, and it is my privilege to serve
+                                as the Secretary-General of RBSMUN XXI.
+                            </p>
+                            <p class="letter-text">
+                                I did not begin debating because I dreamt of
+                                changing the world. I started because I liked
+                                winning. But as I attended international MUNS
+                                and WSDC, I quickly realised there were rooms
+                                where I was no longer the best speaker or the
+                                best thinker. Surprisingly, that did not make me
+                                enjoy MUNs any less – it made me love them even
+                                more.
+                            </p>
+                            <p class="letter-text">
+                                Over time, I realised that debate and Model
+                                United Nations were never really about winning.
+                                They were about growth. Every difficult
+                                committee, every challenging POI, and every
+                                disagreement pushed me a little further than I
+                                thought I could go. And they will push you too.
+                            </p>
+                            <p class="letter-text">
+                                I realise now that MUNs are also about
+                                experiencing new perspectives and ideas from the
+                                brightest of minds. Perhaps that is what makes
+                                MUN so special. It gives young people like us
+                                something we are not trusted with: a seat at the
+                                table. For these three days, we get to become
+                                diplomats, judges, legislators, journalists
+                                discussing conflicts, global economy,
+                                technologies, and human rights to name a few. We
+                                are trusted to discuss these matters, not
+                                because we have all the answers, but because we
+                                are willing to search for them. In a world where
+                                young people are often told to wait their turn,
+                                MUN reminds us that our voices already matter.
+                            </p>
+                            <p class="letter-text">
+                                So, if this is your first conference and you are
+                                worried about forgetting your speech or
+                                accidentally referring to yourself as "the
+                                distinguished delegate" outside committee,
+                                remember that everyone started somewhere. Growth
+                                always disguises itself as discomfort. Whether
+                                you leave RBSMUN with a medal or simply a copy
+                                full of notes, I promise you will leave more
+                                confident and much more capable than when you
+                                arrived. But most importantly, remember to zoom
+                                out a little and think about why we are doing
+                                what we are doing. As future leaders of the
+                                world, MUNs make us care about the world beyond
+                                our borders and give us a sense of the impact we
+                                are capable of making.
+                            </p>
+                            <p class="letter-text">
+                                Since its inception in 2005, RBSMUN has remained
+                                committed to fostering thoughtful dialogue,
+                                principled diplomacy, and meaningful
+                                collaboration. As one of Nepal's pioneering
+                                student-run MUN conferences, it has become a
+                                platform where delegates cultivate skills that
+                                extend far beyond committee rooms – from
+                                critical thinking and negotiation to empathy,
+                                leadership, and cooperation.
+                            </p>
+                            <p class="letter-text">
+                                Today, we live in a world that feels
+                                increasingly fragmented. Wars continue to rage,
+                                misinformation spreads faster than truth and
+                                differences in identity, and ideology too often
+                                become reasons for division rather than
+                                dialogue. Yet history has repeatedly shown that
+                                humanity has made its greatest progress not when
+                                we have spoken the loudest, but when we have
+                                listened the most.
+                            </p>
+                            <p class="letter-text">
+                                I believe this year's theme, "Unity and
+                                Inclusion in a Fragmented World," reflects that
+                                belief. Unity does not mean thinking alike, nor
+                                does inclusion require us to abandon our
+                                differences. Instead, they remind us that
+                                disagreement need not become hostility, and that
+                                meaningful progress is only possible when every
+                                voice has the opportunity to be heard.
+                            </p>
+                            <p class="letter-text">
+                                This year's committee selection reflects that
+                                spirit. Delegates will debate cyber warfare in
+                                DISEC, sovereign debt reform in ECOFIN, and
+                                questions of international law before the ICJ.
+                                Others will navigate historical crises in the
+                                Imperial Romanov Court and the Cambodian Crisis
+                                Cabinet, address technology-facilitated violence
+                                in UN Women, examine human rights in green
+                                energy supply chains, and even deliberate over
+                                divine authority in the Grand Convocation of the
+                                Mythical Realms. Though every committee explores
+                                a different challenge, they all ask the same
+                                fundamental question: how do people with
+                                competing interests build a shared future?
+                            </p>
+                            <p class="letter-text">
+                                As delegates from across Nepal and beyond come
+                                together, my hope is that RBSMUN XXI becomes
+                                more than just another conference. I hope it
+                                becomes a place where ideas are challenged
+                                respectfully, friendships are built
+                                unexpectedly, and perspectives are broadened
+                                constantly. Long after the awards have been
+                                handed out and the gavels packed away, I hope
+                                you remember not just the resolutions you
+                                drafted, but the conversations that changed how
+                                you saw the world—and the confidence you
+                                discovered in your own voice.
+                            </p>
+                            <p class="letter-text">
+                                I look forward to welcoming you all this
+                                December.
+                            </p>
+                            <div class="letter-signature">
+                                <div class="signature-line"></div>
+                                <p class="signature-name">Pragyan Gautam</p>
+                                <p class="signature-title">
+                                    The Secretary-General
+                                </p>
+                                <p class="signature-title">RBSMUN 2026</p>
+                            </div>
+                        </div><!-- end letter-text-col -->
+                        <div style="clear: both;"></div>
+                    </div><!-- end flat wrapper -->
+                </div><!-- end letter-layout -->
+            </div>
+        </div>
+
+        <section class="section cta-section" id="register">
+            <div class="cta-glass-backdrop"></div>
+            <div class="container">
+                <div class="cta-content" data-anim="morph-in">
+                    <div class="cta-glass-card glass-card">
+                        <h2 class="cta-title">
+                            Ready to Shape<br />the <span class="text-gradient"
+                                >Future</span
+                            >?
+                        </h2>
+                        <p class="cta-subtitle">
+                            Join over 500 delegates in one of Nepal's most
+                            prestigious MUN conferences.
+                        </p>
+                        {
+                            REGISTRATION_URL ? (
+                                <a
+                                    href={REGISTRATION_URL}
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    <span>Register for RBSMUN 2026</span>
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M3 8h10M9 4l4 4-4 4"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </a>
+                            ) : (
+                                <button
+                                    class="btn btn-primary btn-lg"
+                                    style="pointer-events: none; opacity: 0.75;"
+                                    tabindex="-1"
+                                >
+                                    <span>Coming Soon</span>
+                                </button>
+                            )
+                        }
                     </div>
-                    </div><!-- end letter-text-col -->
-                    <div style="clear: both;"></div>
-                </div><!-- end flat wrapper -->
-            </div><!-- end letter-layout -->
-        </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-logo">
+                            RBS<span class="logo-accent">MUN</span>
+                        </h4>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Navigate</h4>
+                        <a href="/">Home</a>
+                        <a href="/about">About Us</a>
+                        <a href="/committees">Committees</a>
+                        <a href="/conference">Conference Details</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <a href="mailto:contact@ratobangala.edu.np"
+                            >contact@ratobangala.edu.np</a
+                        >
+                        <a href="tel:015447618">01-5447618</a>
+                        <a href="tel:015447620">01-5447620</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 RBSMUN. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
     </section>
 
-    <section class="section cta-section" id="register">
-        <div class="cta-glass-backdrop"></div>
-        <div class="container">
-            <div class="cta-content" data-anim="morph-in">
-                <div class="cta-glass-card glass-card">
-                    <h2 class="cta-title">
-                        Ready to Shape<br />the <span class="text-gradient"
-                            >Future</span
-                        >?
-                    </h2>
-                    <p class="cta-subtitle">
-                        Join over 500 delegates in one of Nepal's most
-                        prestigious MUN conferences.
-                    </p>
-                    {REGISTRATION_URL ? (
-                    <a
-                        href={REGISTRATION_URL}
-                        target="_blank"
-                        class="btn btn-primary btn-lg"
-                    >
-                        <span>Register for RBSMUN 2026</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </a>
-                    ) : (
-                    <button
-                        class="btn btn-primary btn-lg"
-                        style="pointer-events: none; opacity: 0.75;"
-                        tabindex="-1"
-                    >
-                        <span>Coming Soon</span>
-                    </button>
-                    )}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4 class="footer-logo">
-                        RBS<span class="logo-accent">MUN</span>
-                    </h4>
-                </div>
-                <div class="footer-col">
-                    <h4>Navigate</h4>
-                    <a href="/">Home</a>
-                    <a href="/about">About Us</a>
-                    <a href="/committees">Committees</a>
-                    <a href="/conference">Conference Details</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="mailto:contact@ratobangala.edu.np"
-                        >contact@ratobangala.edu.np</a
-                    >
-                    <a href="tel:015447618">01-5447618</a>
-                    <a href="tel:015447620">01-5447620</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 RBSMUN. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</Layout>
-
-<style>
-    @media (max-width: 768px) {
-        .letter-sg-photo {
-            float: none !important;
-            width: 70% !important;
-            max-width: 360px;
-            margin: 0 auto 2rem !important;
+    <style>
+        @media (max-width: 768px) {
+            .letter-sg-photo {
+                float: none !important;
+                width: 70% !important;
+                max-width: 360px;
+                margin: 0 auto 2rem !important;
+            }
         }
-    }
-</style>
+    </style>
+</Layout>

@@ -328,13 +328,9 @@ const canonicalURL = new URL(
                         entries.forEach((entry) => {
                             const el = entry.target as HTMLElement;
                             if (entry.isIntersecting) {
-                                if (!el.classList.contains("animated"))
+                                if (!el.classList.contains("animated")) {
                                     triggerAnimation(el);
-                            } else {
-                                if (el.classList.contains("animated")) {
-                                    el.classList.remove("animated");
-                                    el.style.transition = "none";
-                                    applyInitialState(el);
+                                    observer.unobserve(el);
                                 }
                             }
                         });
