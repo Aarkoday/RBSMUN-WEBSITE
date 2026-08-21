@@ -1013,7 +1013,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 250px;
+    height: 220px;
     text-align: center;
     padding: 2rem;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s, border-color 0.4s;
@@ -1972,11 +1972,11 @@ html.lenis {
 .committees-grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.5rem;
+    align-items: stretch;
 }
 
 .committee-logo-card {
-    aspect-ratio: 4 / 3;
-    height: auto;
+    height: 220px;
     min-height: 0 !important;
     width: 100%;
     background-image: none !important;
