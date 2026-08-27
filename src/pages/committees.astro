@@ -11,7 +11,7 @@ const committees = [
     { id: "icj",     acronym: "ICJ",     fullname: "ICJ" },
     { id: "irc",     acronym: "IRC",     fullname: "The Imperial Romanov Court" },
     { id: "who",     acronym: "WHO",     fullname: "WHO" },
-    { id: "hor",     acronym: "HoR",     fullname: "House of Representatives" },
+    { id: "hor",     acronym: "HoR",     fullname: "प्रतिनिधि सभा" },
     { id: "gcmr",    acronym: "GCMR",    fullname: "The Grand Convocation of the Mythical Realms" },
     { id: "unsc",    acronym: "UNSC",    fullname: "UNSC" },
     { id: "picc",    acronym: "PICC",    fullname: "Paris International Conference on Cambodia" },
@@ -89,7 +89,12 @@ const committees = [
                                     style={`background-image: url('${base}/images/committees/${c.id}/card-bg.webp');`}
                                 ></div>
                                 <div class="card-glow"></div>
-                                <h2 class="committee-massive-acronym">{c.acronym}</h2>
+                                <h2 
+                                    class="committee-massive-acronym"
+                                    style={c.id === "hor" ? "font-family: 'Mukta', sans-serif; font-size: clamp(1.8rem, 3.8vw, 2.8rem); letter-spacing: normal; font-weight: 700;" : ""}
+                                >
+                                    {c.id === "hor" ? c.fullname : c.acronym}
+                                </h2>
                             </div>
                         </a>
                     ))}

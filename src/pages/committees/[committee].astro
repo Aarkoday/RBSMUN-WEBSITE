@@ -35,7 +35,7 @@ if (hasCabinets) {
 }
 ---
 
-<Layout title={`${committee.acronym} – RBSMUN 2026`}>
+<Layout title={`${committee.id === 'hor' ? 'प्रतिनिधि सभा' : committee.acronym} – RBSMUN 2026`}>
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
@@ -80,12 +80,13 @@ if (hasCabinets) {
         <div class="committee-overlay-header committee-hero-layout">
             <h1
                 class="committee-overlay-acronym committee-detail-visible"
+                style={committee.id === 'hor' ? "font-family: 'Mukta', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: normal; font-weight: 800;" : ""}
                 transition:name={`committee-title-${committee.id}`}
             >
-                {committee.acronym}
+                {committee.id === 'hor' ? committee.fullname : committee.acronym}
             </h1>
             <p class="committee-overlay-fullname committee-detail-visible">
-                {committee.fullname}
+                {committee.id === 'hor' ? 'House of Representatives' : committee.fullname}
             </p>
 
             <!-- Dynamic single Agenda element -->
