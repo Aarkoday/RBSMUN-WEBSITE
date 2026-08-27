@@ -1,25 +1,41 @@
----
+﻿---
 import Layout from "../layouts/Layout.astro";
 import WebGLBackground from "../components/WebGLBackground.jsx";
 import { REGISTRATION_URL } from "../data/site-config";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const committees = [
-    { id: "jcc",     acronym: "JCC",     fullname: "Joint Crisis Committee" },
-    { id: "disec",   acronym: "DISEC",   fullname: "DISEC" },
-    { id: "ecofin",  acronym: "ECOFIN",  fullname: "ECOFIN" },
-    { id: "icj",     acronym: "ICJ",     fullname: "ICJ" },
-    { id: "irc",     acronym: "IRC",     fullname: "The Imperial Romanov Court" },
-    { id: "who",     acronym: "WHO",     fullname: "WHO" },
-    { id: "hor",     acronym: "HoR",     fullname: "प्रतिनिधि सभा" },
-    { id: "gcmr",    acronym: "GCMR",    fullname: "The Grand Convocation of the Mythical Realms" },
-    { id: "unsc",    acronym: "UNSC",    fullname: "UNSC" },
-    { id: "picc",    acronym: "PICC",    fullname: "Paris International Conference on Cambodia" },
+    {
+        id: "jcc",
+        acronym: "FJCC",
+        fullname: "Futuristic Joint Crisis Committee",
+    },
+    { id: "disec", acronym: "DISEC", fullname: "DISEC" },
+    { id: "ecofin", acronym: "ECOFIN", fullname: "ECOFIN" },
+    { id: "icj", acronym: "ICJ", fullname: "ICJ" },
+    { id: "irc", acronym: "IRC", fullname: "The Imperial Romanov Court" },
+    { id: "who", acronym: "WHO", fullname: "WHO" },
+    { id: "hor", acronym: "HoR", fullname: "प्रतिनिधि सभा" },
+    {
+        id: "gcmr",
+        acronym: "GCMR",
+        fullname: "The Grand Convocation of the Mythical Realms",
+    },
+    { id: "unsc", acronym: "UNSC", fullname: "UNSC" },
+    {
+        id: "picc",
+        acronym: "PICC",
+        fullname: "Paris International Conference on Cambodia",
+    },
     { id: "unwomen", acronym: "UNWOMEN", fullname: "UNWOMEN" },
-    { id: "hrc",     acronym: "HRC",     fullname: "HRC" },
-    { id: "uscc",    acronym: "USCC",    fullname: "United States Congressional Committee (Senate)" },
-    { id: "sochum",  acronym: "SOCHUM",  fullname: "SOCHUM" },
-    { id: "ipc",     acronym: "IPC",     fullname: "IPC" },
+    { id: "hrc", acronym: "HRC", fullname: "HRC" },
+    {
+        id: "uscc",
+        acronym: "USCC",
+        fullname: "United States Congressional Committee (Senate)",
+    },
+    { id: "sochum", acronym: "SOCHUM", fullname: "SOCHUM" },
+    { id: "ipc", acronym: "IPC", fullname: "IPC" },
 ];
 ---
 
@@ -38,18 +54,21 @@ const committees = [
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            {REGISTRATION_URL ? (
-            <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                class="nav-cta">Register →</a
-            >
-            ) : (
-            <button
-                class="nav-cta"
-                style="pointer-events: none; opacity: 0.75;"
-                tabindex="-1">Coming Soon</button>
-            )}
+            {
+                REGISTRATION_URL ? (
+                    <a href={REGISTRATION_URL} target="_blank" class="nav-cta">
+                        Register →
+                    </a>
+                ) : (
+                    <button
+                        class="nav-cta"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        Coming Soon
+                    </button>
+                )
+            }
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -73,31 +92,39 @@ const committees = [
         <section class="section">
             <div class="container">
                 <div class="committees-grid">
-                    {committees.map((c) => (
-                        <a
-                            href={`${base}/committees/${c.id}`}
-                            class="committee-card-link"
-                            aria-label={c.fullname}
-                        >
-                            <div
-                                class="glass-card committee-logo-card"
-                                data-anim="scatter"
-                                transition:name={`committee-title-${c.id}`}
+                    {
+                        committees.map((c) => (
+                            <a
+                                href={`${base}/committees/${c.id}`}
+                                class="committee-card-link"
+                                aria-label={c.fullname}
                             >
                                 <div
-                                    class="committee-overlay-bg"
-                                    style={`background-image: url('${base}/images/committees/${c.id}/card-bg.webp');`}
-                                ></div>
-                                <div class="card-glow"></div>
-                                <h2 
-                                    class="committee-massive-acronym"
-                                    style={c.id === "hor" ? "font-family: 'Mukta', sans-serif; font-size: clamp(1.8rem, 3.8vw, 2.8rem); letter-spacing: normal; font-weight: 700;" : ""}
+                                    class="glass-card committee-logo-card"
+                                    data-anim="scatter"
+                                    transition:name={`committee-title-${c.id}`}
                                 >
-                                    {c.id === "hor" ? c.fullname : c.acronym}
-                                </h2>
-                            </div>
-                        </a>
-                    ))}
+                                    <div
+                                        class="committee-overlay-bg"
+                                        style={`background-image: url('${base}/images/committees/${c.id}/card-bg.webp');`}
+                                    />
+                                    <div class="card-glow" />
+                                    <h2
+                                        class="committee-massive-acronym"
+                                        style={
+                                            c.id === "hor"
+                                                ? "font-family: 'Mukta', sans-serif; font-size: clamp(1.8rem, 3.8vw, 2.8rem); letter-spacing: normal; font-weight: 700;"
+                                                : ""
+                                        }
+                                    >
+                                        {c.id === "hor"
+                                            ? c.fullname
+                                            : c.acronym}
+                                    </h2>
+                                </div>
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
         </section>

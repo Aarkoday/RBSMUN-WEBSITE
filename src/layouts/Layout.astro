@@ -622,24 +622,9 @@ const canonicalURL = new URL(
                         title.style.transform = `translateY(${newTranslateY}px)`;
                         lastTranslateY = newTranslateY;
 
-                        if (progress >= 1) {
-                            const sectionTitles =
-                                document.querySelectorAll<HTMLElement>(
-                                    "section .section-title",
-                                );
-                            let activeTitle: string | null = null;
-                            sectionTitles.forEach((st) => {
-                                const rect = st.getBoundingClientRect();
-                                if (rect.top < minHeight + 50)
-                                    activeTitle = st.textContent!.trim();
-                            });
-                            crossfadeTo(activeTitle || originalTitle);
-                        } else {
-                            if (
-                                currentDisplayedTitle !== originalTitle &&
-                                !isFading
-                            )
-                                crossfadeTo(originalTitle);
+                        // Always keep the original page title active and positioned
+                        if (currentDisplayedTitle !== originalTitle && !isFading) {
+                            crossfadeTo(originalTitle);
                         }
                     } else {
                         const navBottom = getNavBottom();
