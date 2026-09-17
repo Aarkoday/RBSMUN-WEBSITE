@@ -19,7 +19,7 @@ import { createRequire } from 'module';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const IMAGE_DIR = join(ROOT, 'public', 'images');
-const SIZE_THRESHOLD_KB = 500; // Only target files larger than 500KB
+const SIZE_THRESHOLD_KB = 1000; // Only target files larger than 500KB
 const MAX_DIMENSION = 1600; // Limit dimension to 1600px max (perfect for screens)
 const WEBP_QUALITY = 80;
 
@@ -59,16 +59,16 @@ async function findFiles(dir, predicate, results = []) {
 
       if (sizeKB > SIZE_THRESHOLD_KB) {
         console.log(`⚡  Optimizing large image: ${rel} (${sizeKB.toFixed(0)} KB)`);
-        
+
         // Read file into memory buffer first to completely avoid file locks
         const fileBuffer = await readFile(file);
-        
+
         // Read metadata from memory buffer
         const image = sharp(fileBuffer);
         const metadata = await image.metadata();
 
         let pipeline = sharp(fileBuffer).rotate();
-        
+
         // Resize down to 1600px max keeping aspect ratio if larger
         if ((metadata.width && metadata.width > MAX_DIMENSION) || (metadata.height && metadata.height > MAX_DIMENSION)) {
           pipeline = pipeline.resize({
@@ -81,19 +81,19 @@ async function findFiles(dir, predicate, results = []) {
 
         // Compress
         const buffer = await pipeline.webp({ quality: WEBP_QUALITY }).toBuffer();
-        
+
         // Explicitly close/destroy sharp handles to release the file lock
         image.destroy?.();
         pipeline.destroy?.();
-        
+
         if (buffer.length < stats.size) {
           const saving = (((stats.size - buffer.length) / stats.size) * 100).toFixed(1);
           const savedKB = (stats.size - buffer.length) / 1024;
-          
+
           // Write back in-place safely using fs/promises writeFile
           await writeFile(file, buffer);
-          
-          console.log(`    → Optimized: ${(buffer.length/1024).toFixed(0)} KB (Saved: ${savedKB.toFixed(0)} KB, −${saving}%)\n`);
+
+          console.log(`    → Optimized: ${(buffer.length / 1024).toFixed(0)} KB (Saved: ${savedKB.toFixed(0)} KB, −${saving}%)\n`);
           totalOptimized++;
           totalSavedBytes += (stats.size - buffer.length);
         } else {

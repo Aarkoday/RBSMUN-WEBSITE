@@ -6,12 +6,12 @@ import { REGISTRATION_URL } from "../data/site-config";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const teams = [
-    { id: "logistics",   title: "Logistics",              img: "team-group.webp" },
-    { id: "secretariat", title: "Secretariat",            img: "team-group.webp" },
-    { id: "it",          title: "Information Technology", img: "team-group.webp" },
-    { id: "art",         title: "Art & Design",           img: "team-group.webp" },
-    { id: "media",       title: "Media & Communications", img: "team-group.webp" },
-    { id: "photography", title: "Photography",            img: "team-group.webp" },
+    { id: "logistics", title: "Logistics", img: "team-group.webp" },
+    { id: "secretariat", title: "Secretariat", img: "team-group.webp" },
+    { id: "it", title: "Information Technology", img: "team-group.webp" },
+    { id: "art", title: "Art & Design", img: "team-group.webp" },
+    { id: "media", title: "Media & Communications", img: "team-group.webp" },
+    { id: "photography", title: "Photography", img: "team-group.webp" },
 ];
 ---
 
@@ -30,18 +30,21 @@ const teams = [
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`} class="active">Our Team</a>
             </div>
-            {REGISTRATION_URL ? (
-            <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                class="nav-cta">Register →</a
-            >
-            ) : (
-            <button
-                class="nav-cta"
-                style="pointer-events: none; opacity: 0.75;"
-                tabindex="-1">Coming Soon</button>
-            )}
+            {
+                REGISTRATION_URL ? (
+                    <a href={REGISTRATION_URL} target="_blank" class="nav-cta">
+                        Register →
+                    </a>
+                ) : (
+                    <button
+                        class="nav-cta"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        Coming Soon
+                    </button>
+                )
+            }
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -55,10 +58,12 @@ const teams = [
         <div class="hero-bg-overlay"></div>
         <div class="container">
             <h1 class="page-hero-title">Our Team</h1>
-            <p class="page-hero-subtitle">
+            {
+                /* <p class="page-hero-subtitle">
                 The dedicated minds working tirelessly to bring you the 21st
                 iteration of RBSMUN.
-            </p>
+            </p> */
+            }
         </div>
     </section>
 
@@ -66,39 +71,42 @@ const teams = [
         <section class="section">
             <div class="container">
                 <div class="team-grid">
-                    {teams.map((t, i) => {
-                        const teamData = (teamsData as any)[t.id] || {};
-                        const groupPos = teamData.group_position || 'center';
-                        const groupZoom = teamData.group_zoom || 1;
-                        return (
-                            <div class="team-card-wrapper">
-                                <a
-                                    href={`${base}/team/${t.id}`}
-                                    class="team-card-link"
-                                    aria-label={t.title}
-                                >
-                                    <div
-                                        class="glass-card team-card"
-                                        data-anim="tilt-in"
-                                        data-delay={String(i * 100)}
-                                        transition:name={`team-title-${t.id}`}
+                    {
+                        teams.map((t, i) => {
+                            const teamData = (teamsData as any)[t.id] || {};
+                            const groupPos =
+                                teamData.group_position || "center";
+                            const groupZoom = teamData.group_zoom || 1;
+                            return (
+                                <div class="team-card-wrapper">
+                                    <a
+                                        href={`${base}/team/${t.id}`}
+                                        class="team-card-link"
+                                        aria-label={t.title}
                                     >
-                                        <img
-                                            src={`${base}/images/team/${t.id}/${t.img}`}
-                                            alt={t.title}
-                                            class="team-img-bg"
-                                            style={`object-position: ${groupPos}; transform: scale(${groupZoom}); transform-origin: ${groupPos};`}
-                                            onerror="this.style.display='none'"
-                                        />
-                                        <div class="team-card-overlay"></div>
-                                        <div class="team-card-content">
-                                            <h3>{t.title}</h3>
+                                        <div
+                                            class="glass-card team-card"
+                                            data-anim="tilt-in"
+                                            data-delay={String(i * 100)}
+                                            transition:name={`team-title-${t.id}`}
+                                        >
+                                            <img
+                                                src={`${base}/images/team/${t.id}/${t.img}`}
+                                                alt={t.title}
+                                                class="team-img-bg"
+                                                style={`object-position: ${groupPos}; transform: scale(${groupZoom}); transform-origin: ${groupPos};`}
+                                                onerror="this.style.display='none'"
+                                            />
+                                            <div class="team-card-overlay" />
+                                            <div class="team-card-content">
+                                                <h3>{t.title}</h3>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        );
-                    })}
+                                    </a>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
         </section>

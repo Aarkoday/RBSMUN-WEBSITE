@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
+import { DEV_LIGHT_MODE } from "../data/site-config";
 
 interface Props {
     title: string;
@@ -22,7 +23,7 @@ const canonicalURL = new URL(
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class={DEV_LIGHT_MODE ? 'light-mode' : ''}>
     <head>
         <ViewTransitions />
         <meta charset="UTF-8" />

@@ -20,11 +20,11 @@ export function getStaticPaths() {
 const { committee } = Astro.props;
 const daisMembers = COMMITTEE_DAIS_DATA[committee.id] || DEFAULT_DAIS;
 
-const hasCabinets = daisMembers.some(m => m.cabinet);
+const hasCabinets = daisMembers.some((m) => m.cabinet);
 let cabinets = [];
 if (hasCabinets) {
     const cabMap = {};
-    daisMembers.forEach(m => {
+    daisMembers.forEach((m) => {
         const cabName = m.cabinet || "Executive Board";
         if (!cabMap[cabName]) {
             cabMap[cabName] = [];
@@ -35,7 +35,9 @@ if (hasCabinets) {
 }
 ---
 
-<Layout title={`${committee.id === 'hor' ? 'प्रतिनिधि सभा' : committee.acronym} – RBSMUN 2026`}>
+<Layout
+    title={`${committee.id === "hor" ? "प्रतिनिधि सभा" : committee.acronym} – RBSMUN 2026`}
+>
     <WebGLBackground client:only="react" />
 
     <nav class="glass-nav" id="mainNav">
@@ -50,18 +52,21 @@ if (hasCabinets) {
                 <a href={`${base}/conference`}>Conference Details</a>
                 <a href={`${base}/team`}>Our Team</a>
             </div>
-            {REGISTRATION_URL ? (
-            <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                class="nav-cta">Register →</a
-            >
-            ) : (
-            <button
-                class="nav-cta"
-                style="pointer-events: none; opacity: 0.75;"
-                tabindex="-1">Coming Soon</button>
-            )}
+            {
+                REGISTRATION_URL ? (
+                    <a href={REGISTRATION_URL} target="_blank" class="nav-cta">
+                        Register →
+                    </a>
+                ) : (
+                    <button
+                        class="nav-cta"
+                        style="pointer-events: none; opacity: 0.75;"
+                        tabindex="-1"
+                    >
+                        Coming Soon
+                    </button>
+                )
+            }
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -69,24 +74,33 @@ if (hasCabinets) {
     </nav>
 
     <div class="committee-detail-page" id="committeePageWrapper">
-        <!-- Background logo with fade -->
-        <div
-            class="committee-overlay-bg"
-            id="detailBg"
-            style={`background-image: url('${base}/images/committees/${committee.id}/logo.webp');`}
-        ></div>
-
         <!-- ── HEADER ────────────────────────────────────────────── -->
         <div class="committee-overlay-header committee-hero-layout">
+            <!-- Small logo above acronym -->
+            <img
+                class="committee-hero-logo"
+                src={`${base}/images/committees/${committee.id}/logo.webp`}
+                alt={`${committee.acronym} logo`}
+            />
             <h1
                 class="committee-overlay-acronym committee-detail-visible"
-                style={committee.id === 'hor' ? "font-family: 'Mukta', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: normal; font-weight: 800;" : ""}
+                style={committee.id === "hor"
+                    ? "font-family: 'Mukta', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: normal; font-weight: 800;"
+                    : ""}
                 transition:name={`committee-title-${committee.id}`}
             >
-                {committee.id === 'hor' ? committee.fullname : committee.acronym}
+                {
+                    committee.id === "hor"
+                        ? committee.fullname
+                        : committee.acronym
+                }
             </h1>
             <p class="committee-overlay-fullname committee-detail-visible">
-                {committee.id === 'hor' ? 'House of Representatives' : committee.fullname}
+                {
+                    committee.id === "hor"
+                        ? "House of Representatives"
+                        : committee.fullname
+                }
             </p>
 
             <!-- Dynamic single Agenda element -->
@@ -96,17 +110,24 @@ if (hasCabinets) {
 
             <!-- Quick Info buttons (hidden initially, visible when scrolled) -->
             <div class="committee-overlay-quick-info committee-detail-visible">
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                    <a 
-                        href={committee.study_guide || "#"} 
-                        target={committee.study_guide ? "_blank" : "_self"} 
-                        class="btn btn-primary study-guide-btn" 
-                        data-has-guide={committee.study_guide ? "true" : "false"}
+                <div
+                    style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;"
+                >
+                    <a
+                        href={committee.study_guide || "#"}
+                        target={committee.study_guide ? "_blank" : "_self"}
+                        class="btn btn-primary study-guide-btn"
+                        data-has-guide={committee.study_guide
+                            ? "true"
+                            : "false"}
                         style="padding: 0.75rem 1.5rem; font-size: 0.95rem;"
                     >
                         Study Guide
                     </a>
-                    <span class="btn btn-glass" style="padding: 0.75rem 1.5rem; font-size: 0.95rem; cursor: default; pointer-events: none; opacity: 0.85;">
+                    <span
+                        class="btn btn-glass"
+                        style="padding: 0.75rem 1.5rem; font-size: 0.95rem; cursor: default; pointer-events: none; opacity: 0.85;"
+                    >
                         {committee.email || "committee@ratobangala.edu.np"}
                     </span>
                 </div>
@@ -156,7 +177,7 @@ if (hasCabinets) {
                         <img
                             src={`${base}/images/committees/${committee.id}/eb-group.webp`}
                             alt="Executive Board Group Photo"
-                            style={`width:100%; height:100%; object-fit:cover; object-position: ${committee.group_position || 'center'}; transform: scale(${committee.group_zoom || 1}); transform-origin: ${committee.group_position || 'center'};`}
+                            style={`width:100%; height:100%; object-fit:cover; object-position: ${committee.group_position || "center"}; transform: scale(${committee.group_zoom || 1}); transform-origin: ${committee.group_position || "center"};`}
                             onerror="this.closest('.glass-card').style.display='none';"
                         />
                     </div>
@@ -167,9 +188,17 @@ if (hasCabinets) {
                     hasCabinets ? (
                         cabinets.map(([cabName, members]) => {
                             return (
-                                <div class="cabinet-section" style="margin-top: 3rem;">
-                                    <h3 class="cabinet-title" style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--text-primary);">{cabName}</h3>
-                                    
+                                <div
+                                    class="cabinet-section"
+                                    style="margin-top: 3rem;"
+                                >
+                                    <h3
+                                        class="cabinet-title"
+                                        style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--text-primary);"
+                                    >
+                                        {cabName}
+                                    </h3>
+
                                     <div class="team-grid">
                                         {members.map((m) => {
                                             const imgSrc = `${base}/images/committees/${committee.id}/${m.img}`;
@@ -177,13 +206,27 @@ if (hasCabinets) {
                                                 <div class="team-card-wrapper">
                                                     <div
                                                         class="glass-card team-card person-card"
-                                                        data-person-name={m.name}
-                                                        data-person-role={m.role}
+                                                        data-person-name={
+                                                            m.name
+                                                        }
+                                                        data-person-role={
+                                                            m.role
+                                                        }
                                                         data-person-img={imgSrc}
-                                                        data-person-desc={m.desc || ""}
-                                                        data-person-img-pos={m.img_position || ""}
-                                                        data-person-img-zoom={m.img_zoom ? String(m.img_zoom) : ""}
-                                                        style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ''}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ''}`}
+                                                        data-person-desc={
+                                                            m.desc || ""
+                                                        }
+                                                        data-person-img-pos={
+                                                            m.img_position || ""
+                                                        }
+                                                        data-person-img-zoom={
+                                                            m.img_zoom
+                                                                ? String(
+                                                                      m.img_zoom,
+                                                                  )
+                                                                : ""
+                                                        }
+                                                        style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ""}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ""}`}
                                                     >
                                                         <img
                                                             src={imgSrc}
@@ -194,7 +237,9 @@ if (hasCabinets) {
                                                         <div class="team-card-overlay" />
                                                         <div class="team-card-content">
                                                             <h3>{m.name}</h3>
-                                                            <p class="team-role">{m.role}</p>
+                                                            <p class="team-role">
+                                                                {m.role}
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -206,42 +251,47 @@ if (hasCabinets) {
                         })
                     ) : (
                         <div class="team-grid" id="ebMembersGrid">
-                            {
-                                daisMembers.map((m) => {
-                                    const imgSrc = `${base}/images/committees/${committee.id}/${m.img}`;
-                                    return (
-                                        <div class="team-card-wrapper">
-                                            <div
-                                                class="glass-card team-card person-card"
-                                                data-person-name={m.name}
-                                                data-person-role={m.role}
-                                                data-person-img={imgSrc}
-                                                data-person-desc={m.desc || ""}
-                                                data-person-img-pos={m.img_position || ""}
-                                                data-person-img-zoom={m.img_zoom ? String(m.img_zoom) : ""}
-                                                style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ''}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ''}`}
-                                            >
-                                                <img
-                                                    src={imgSrc}
-                                                    alt={m.name}
-                                                    class="team-img-bg"
-                                                    onerror="this.style.display='none'"
-                                                />
-                                                <div class="team-card-overlay" />
-                                                <div class="team-card-content">
-                                                    <h3>{m.name}</h3>
-                                                    <p class="team-role">{m.role}</p>
-                                                </div>
+                            {daisMembers.map((m) => {
+                                const imgSrc = `${base}/images/committees/${committee.id}/${m.img}`;
+                                return (
+                                    <div class="team-card-wrapper">
+                                        <div
+                                            class="glass-card team-card person-card"
+                                            data-person-name={m.name}
+                                            data-person-role={m.role}
+                                            data-person-img={imgSrc}
+                                            data-person-desc={m.desc || ""}
+                                            data-person-img-pos={
+                                                m.img_position || ""
+                                            }
+                                            data-person-img-zoom={
+                                                m.img_zoom
+                                                    ? String(m.img_zoom)
+                                                    : ""
+                                            }
+                                            style={`cursor:pointer;${m.card_position ? ` --card-position:${m.card_position};` : ""}${m.card_zoom ? ` --card-zoom:${m.card_zoom};` : ""}`}
+                                        >
+                                            <img
+                                                src={imgSrc}
+                                                alt={m.name}
+                                                class="team-img-bg"
+                                                onerror="this.style.display='none'"
+                                            />
+                                            <div class="team-card-overlay" />
+                                            <div class="team-card-content">
+                                                <h3>{m.name}</h3>
+                                                <p class="team-role">
+                                                    {m.role}
+                                                </p>
                                             </div>
                                         </div>
-                                    );
-                                })
-                            }
+                                    </div>
+                                );
+                            })}
                         </div>
                     )
                 }
             </div>
-
         </div>
     </div>
 
@@ -325,7 +375,14 @@ if (hasCabinets) {
                         const imgPos = card.dataset.personImgPos || "";
                         const imgZoom = card.dataset.personImgZoom || "";
                         if ((window as any).__openPersonPopup) {
-                            (window as any).__openPersonPopup(name, role, img, desc, imgPos, imgZoom);
+                            (window as any).__openPersonPopup(
+                                name,
+                                role,
+                                img,
+                                desc,
+                                imgPos,
+                                imgZoom,
+                            );
                         }
                     });
                 });
@@ -334,18 +391,18 @@ if (hasCabinets) {
         document.addEventListener("astro:page-load", bindPersonCards);
 
         function initStudyGuideBtn() {
-            document.querySelectorAll(".study-guide-btn").forEach(btn => {
+            document.querySelectorAll(".study-guide-btn").forEach((btn) => {
                 if (btn.getAttribute("data-has-guide") === "false") {
                     if ((btn as any).__guideBound) return;
                     (btn as any).__guideBound = true;
-                    
+
                     let timeout: any = null;
                     btn.addEventListener("click", (e) => {
                         e.preventDefault();
                         if (btn.textContent?.trim() === "Coming Soon") return;
-                        
+
                         btn.textContent = "Coming Soon";
-                        
+
                         if (timeout) clearTimeout(timeout);
                         timeout = setTimeout(() => {
                             btn.textContent = "Study Guide";
@@ -365,57 +422,114 @@ if (hasCabinets) {
                     document.body.classList.remove("is-scrolled");
                 }
             };
-            
+
             window.addEventListener("scroll", handleScroll);
             handleScroll(); // init
-            
+
             // Cleanup on page leave (important for View Transitions)
-            document.addEventListener("astro:before-swap", () => {
-                window.removeEventListener("scroll", handleScroll);
-                document.body.classList.remove("is-scrolled");
-            }, { once: true });
+            document.addEventListener(
+                "astro:before-swap",
+                () => {
+                    window.removeEventListener("scroll", handleScroll);
+                    document.body.classList.remove("is-scrolled");
+                },
+                { once: true },
+            );
         });
     </script>
 
     <style>
-        /* Initial logo state: lighter opacity but still has the mask */
-        :global(body:not(.is-scrolled)) .committee-overlay-bg {
-            opacity: 0.4 !important; /* Lighter than 0.15, keeps the gradient fade mask */
-            transition: opacity 0.5s ease;
+        /* ── Committee hero logo (above acronym) ─────────────── */
+        /* ── Committee hero logo (background overlay behind text) ── */
+        .committee-hero-logo {
+            position: absolute;
+            top: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            height: clamp(280px, 45vh, 480px);
+            width: auto;
+            max-width: 90vw;
+            object-fit: contain;
+            opacity: 0.9;
+            z-index: 0;
+            filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.6));
+            pointer-events: none;
+            transition:
+                opacity 0.5s ease,
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        :global(body.is-scrolled) .committee-overlay-bg {
-            opacity: 0.15 !important;
-            transition: opacity 0.5s ease;
+        /* ── Logo fades out when scrolled ─────────────────────── */
+        :global(body.is-scrolled) .committee-hero-logo {
+            opacity: 0;
+            transform: translateX(-50%) scale(0.85) translateY(-20px);
         }
 
+        /* Ensure text sits cleanly above the background logo */
+        .committee-overlay-acronym,
+        .committee-overlay-fullname,
+        .committee-agenda-dynamic,
+        .committee-overlay-quick-info {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Acronym: always visible ─────────────────────────── */
+        :global(body:not(.is-scrolled)) .committee-overlay-acronym {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        :global(body.is-scrolled) .committee-overlay-acronym {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        :global(body:not(.is-scrolled)) .committee-overlay-fullname {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        :global(body.is-scrolled) .committee-overlay-fullname {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        /* ── Agenda: large at top, smaller when scrolled ────── */
         .committee-agenda-dynamic {
             font-family: var(--font-display);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: bold;
             text-align: center;
             max-width: 800px;
-            line-height: 1.4;
-            margin-top: 1.5rem;
+            line-height: 1.35;
+            margin-top: 1rem;
             opacity: 1;
-            transition: font-size 0.5s ease, font-weight 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+            transition:
+                font-size 0.5s ease,
+                font-weight 0.5s ease,
+                opacity 0.5s ease,
+                margin-top 0.5s ease;
         }
 
         :global(body.is-scrolled) .committee-agenda-dynamic {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: normal;
             opacity: 0.9;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
         }
 
-        /* Hide quick info initially, fade in on scroll */
+        /* ── Quick info: fade in on scroll ──────────────────── */
         .committee-overlay-quick-info {
             opacity: 0;
             visibility: hidden;
             transform: translateY(15px);
             pointer-events: none;
-            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-            margin-top: 1.5rem;
+            transition:
+                opacity 0.5s ease,
+                transform 0.5s ease,
+                visibility 0.5s ease;
+            margin-top: 1rem;
         }
 
         :global(body.is-scrolled) .committee-overlay-quick-info {
@@ -426,15 +540,18 @@ if (hasCabinets) {
         }
 
         .committee-hero-layout {
+            position: relative;
             min-height: calc(100vh - 80px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            padding-bottom: 4rem !important;
+            padding-top: 1rem !important;
+            padding-bottom: 3.5rem !important;
+            box-sizing: border-box;
+            overflow: hidden;
         }
-        
-        /* Make the back link stay at the top */
+
         .committee-hero-layout .committee-back-link {
             margin-top: 1rem;
         }

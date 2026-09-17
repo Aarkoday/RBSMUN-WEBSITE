@@ -7,3 +7,8 @@
 // ============================================================
 
 export const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdQmhAkR5ozkMK8efUl8M53Z0YgLBJEImgqoXhEHoNxHLunQg/viewform?usp=publish-editor";
+
+// ── DEV: Light Mode Preview ──────────────────────────────────
+// Flip to `true` to render the site in light mode for testing.
+// Set back to `false` before deploying to production.
+export const DEV_LIGHT_MODE = false;
