@@ -17,9 +17,9 @@
     --bg-glass-hover: rgba(40, 40, 42, 0.55);
 
     --text-primary: #f0f0f2;
-    --text-secondary: #98989d;
-    --text-tertiary: #808080;
-    --text-ghost: #3a3a3c;
+    --text-secondary: #c8c8cc;
+    --text-tertiary: #b0b0b5;
+    --text-ghost: #6e6e73;
 
     --border-glass: rgba(255, 255, 255, 0.06);
     --border-glass-mid: rgba(255, 255, 255, 0.1);
@@ -28,9 +28,9 @@
     --accent-glow: rgba(255, 255, 255, 0.05);
     --accent-glow-strong: rgba(255, 255, 255, 0.08);
 
-    --font-display: 'Syne', system-ui, sans-serif;
-    --font-heading: 'Space Grotesk', system-ui, sans-serif;
-    --font-body: 'Lora', serif;
+    --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+    --font-heading: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
 
     --glass-blur: blur(14px) saturate(140%);
     --glass-blur-heavy: blur(30px) saturate(180%);
@@ -225,7 +225,7 @@ img {
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 0.5rem 1.2rem;
@@ -315,7 +315,7 @@ img {
     display: inline-flex;
     align-items: center;
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: -0.04em;
     color: var(--text-primary);
@@ -341,7 +341,7 @@ img {
 .nav-links a {
     font-family: var(--font-heading);
     font-size: 0.82rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-tertiary);
     transition: color 0.3s, transform 0.3s;
     position: relative;
@@ -370,7 +370,7 @@ img {
 .nav-cta {
     font-family: var(--font-heading);
     font-size: 0.78rem;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0.55rem 1.4rem;
     border-radius: 999px;
     background: var(--text-primary);
@@ -543,12 +543,14 @@ img {
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(4rem, 12vw, 9rem);
-    font-weight: 800;
-    letter-spacing: -0.05em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 0.9;
     margin: 0 auto 1.5rem;
     text-align: center;
     width: 100%;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 72;
 }
 
 .title-line {
@@ -558,9 +560,17 @@ img {
 }
 
 .title-outline {
-    -webkit-text-stroke: 1.5px var(--text-primary);
-    -webkit-text-fill-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0.6;
+}
+
+.hero-2026-svg {
+    height: clamp(3.2rem, 9.5vw, 7.2rem);
+    width: auto;
+    color: var(--text-primary);
+    overflow: visible;
 }
 
 .hero-subtitle {
@@ -622,7 +632,7 @@ img {
 .page-hero-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 7vw, 5rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.15;
     margin: 0 auto 1rem auto;
@@ -654,7 +664,7 @@ img {
     justify-content: center;
     gap: 0.5rem;
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.85rem;
     padding: 0.8rem 1.8rem;
     border-radius: 999px;
@@ -785,8 +795,8 @@ img {
 .section-eyebrow {
     font-family: var(--font-heading);
     font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-ghost);
     margin-bottom: 0.75rem;
@@ -795,9 +805,11 @@ img {
 .section-title {
     font-family: var(--font-display);
     font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     line-height: 1.05;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 48;
 }
 
 .glass-card {
@@ -858,7 +870,7 @@ img {
 .about-card h3 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.75rem;
     letter-spacing: -0.01em;
 }
@@ -906,17 +918,18 @@ img {
 }
 
 .stat-number {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 0.8;
+    font-variant-numeric: tabular-nums;
 }
 
 .stat-suffix {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-tertiary);
     margin-left: -0.3rem;
     line-height: 0.8;
@@ -925,7 +938,7 @@ img {
 .stat-label {
     font-family: var(--font-heading);
     font-size: 0.72rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-ghost);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -951,16 +964,18 @@ img {
 .letter-greeting {
     font-family: var(--font-heading);
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
 }
 
 .letter-text {
-    font-size: 0.95rem;
-    line-height: 1.85;
+    font-size: clamp(1.0625rem, 1vw + 0.9rem, 1.1875rem);
+    line-height: 1.7;
     color: var(--text-secondary);
     margin-bottom: 1.25rem;
+    max-width: 68ch;
+    font-weight: 400;
 }
 
 .letter-signature {
@@ -977,7 +992,7 @@ img {
 .signature-name {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.02em;
 }
@@ -1016,7 +1031,7 @@ img {
 .committee-massive-acronym {
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.04em;
     background: linear-gradient(135deg, #ffffff, #8c8ca5);
@@ -1040,7 +1055,7 @@ img {
     height: 50px;
     border-radius: var(--glass-radius-xs);
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 0.7rem;
     letter-spacing: 0.06em;
     color: var(--text-secondary);
@@ -1050,7 +1065,7 @@ img {
 .committee-card h3 {
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
@@ -1066,7 +1081,7 @@ img {
     display: inline-block;
     font-family: var(--font-heading);
     font-size: 0.65rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.35rem 0.85rem;
@@ -1138,7 +1153,7 @@ img {
 .committee-overlay-acronym {
     font-family: var(--font-display);
     font-size: clamp(3.5rem, 10vw, 7rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.05em;
     background: linear-gradient(135deg, #ffffff, #8c8ca5);
     -webkit-background-clip: text;
@@ -1356,7 +1371,7 @@ img {
 .person-popup-name {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.25;
     margin: 0;
@@ -1365,7 +1380,7 @@ img {
 .person-popup-role {
     font-family: var(--font-heading);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-secondary);
@@ -1544,7 +1559,7 @@ img {
 .team-card-content h3 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.2rem;
     color: #fff;
 }
@@ -1589,7 +1604,7 @@ img {
 .cta-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.04em;
     margin-bottom: 1rem;
     line-height: 1.1;
@@ -1625,7 +1640,7 @@ img {
 
 .footer-logo {
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
     letter-spacing: -0.03em;
@@ -1639,7 +1654,7 @@ img {
 
 .footer-col h4 {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.78rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -1716,7 +1731,7 @@ img {
 .table-title {
     font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
     border-bottom: 1px solid var(--border-glass-mid);
@@ -1750,7 +1765,7 @@ img {
 
 .time-col {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary) !important;
     white-space: nowrap;
     width: 140px;
@@ -1802,7 +1817,7 @@ img {
     .nav-links a:not(.mobile-nav-cta) {
         font-family: var(--font-display);
         font-size: 1.8rem;
-        font-weight: 700;
+        font-weight: 600;
         position: relative;
         display: inline-block;
         color: var(--text-primary);
@@ -1822,7 +1837,7 @@ img {
     .mobile-nav-cta {
         font-family: var(--font-heading) !important;
         font-size: 1rem !important;
-        font-weight: 600 !important;
+        font-weight: 500 !important;
         padding: 0.8rem 1.5rem !important;
         border-radius: 999px;
         background: var(--text-primary);
@@ -2168,9 +2183,9 @@ html.lenis {
 }
 
 .about-big-number {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: clamp(5rem, 10vw, 8rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.05em;
     background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.4) 100%);
     -webkit-background-clip: text;
@@ -2182,7 +2197,7 @@ html.lenis {
 .about-big-label {
     font-family: var(--font-heading);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--text-tertiary);
@@ -2199,7 +2214,7 @@ html.lenis {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     color: var(--text-tertiary);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
@@ -2611,7 +2626,7 @@ svg {
     gap: 0.4rem;
     font-family: var(--font-display);
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-secondary);
     text-decoration: none;
     letter-spacing: 0.04em;

@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import { DEV_LIGHT_MODE } from "../data/site-config";
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/source-serif-4';
 
 interface Props {
     title: string;
@@ -50,12 +52,6 @@ const canonicalURL = new URL(
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, canonicalURL)} />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Mukta:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet"
-        />
     </head>
     <body>
         <div id="global-loader">
@@ -118,7 +114,7 @@ const canonicalURL = new URL(
                 }
 
                 const otherHeroContent = hero.querySelectorAll(
-                    ".hero-badge, .hero-subtitle",
+                    ".hero-badge, .hero-subtitle, .hero-dates",
                 );
                 if (otherHeroContent && otherHeroContent.length > 0) {
                     gsap.set(otherHeroContent, { opacity: 0 });
@@ -129,6 +125,30 @@ const canonicalURL = new URL(
                     const isOutline = (line as HTMLElement).classList.contains(
                         "title-outline",
                     );
+                    const svg = (line as HTMLElement).querySelector("svg");
+                    if (svg) {
+                        const digitGroups = svg.querySelectorAll(".digit-group");
+                        if (digitGroups.length > 0) {
+                            digitGroups.forEach((g: Element) => {
+                                (g as HTMLElement).style.transformOrigin = "center center";
+                                (g as HTMLElement).style.willChange = "transform";
+                                (g as HTMLElement).style.color = "#000000";
+                                gsap.set(g, {
+                                    x: (Math.random() - 0.5) * 400,
+                                    y: (Math.random() - 0.5) * 300,
+                                    rotation: (Math.random() - 0.5) * 150,
+                                });
+                            });
+                        } else {
+                            (svg as HTMLElement).style.color = "#000000";
+                            gsap.set(svg, {
+                                x: (Math.random() - 0.5) * 400,
+                                y: (Math.random() - 0.5) * 300,
+                                rotation: (Math.random() - 0.5) * 150,
+                            });
+                        }
+                        return;
+                    }
                     const text = (line as HTMLElement).textContent!.trim();
                     (line as HTMLElement).innerHTML = "";
                     text.split("").forEach((char) => {
@@ -152,32 +172,32 @@ const canonicalURL = new URL(
                     });
                 });
 
-                const allSpans = heroTitle.querySelectorAll("span");
+                const allAnimatable = heroTitle.querySelectorAll("span, .digit-group");
                 const solidSpans = heroTitle.querySelectorAll(
                     ".title-line:not(.title-outline) span",
                 );
                 const outlineSpans = heroTitle.querySelectorAll(
-                    ".title-outline span",
+                    ".title-outline span, .digit-group",
                 );
 
                 const tl = gsap.timeline({
                     delay: 1,
                     onComplete: () => {
                         if (whiteOverlay) whiteOverlay.remove();
-                        allSpans.forEach((span: Element) => {
-                            (span as HTMLElement).style.color = "";
-                            (span as HTMLElement).style.webkitTextFillColor =
+                        allAnimatable.forEach((el: Element) => {
+                            (el as HTMLElement).style.color = "";
+                            (el as HTMLElement).style.webkitTextFillColor =
                                 "";
-                            (span as HTMLElement).style.willChange = "";
+                            (el as HTMLElement).style.willChange = "";
                         });
                         document.body.style.overflow = "";
                         lenis.start();
                     },
                 });
 
-                if (allSpans.length > 0)
+                if (allAnimatable.length > 0)
                     tl.to(
-                        allSpans,
+                        allAnimatable,
                         {
                             x: 0,
                             y: 0,
@@ -204,6 +224,7 @@ const canonicalURL = new URL(
                         {
                             webkitTextStroke: "1.5px #f0f0f2",
                             webkitTextFillColor: "transparent",
+                            color: "#f0f0f2",
                             duration: 0.8,
                             ease: "power2.inOut",
                         },
