@@ -1222,6 +1222,7 @@ img {
 
 .committee-overlay-section .section-title {
     margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
 }
 
 .committee-overlay-section .glass-card {
